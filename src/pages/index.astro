@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VicsoThemes — Mobile Apps & Dev Studio</title>
+  <meta name="description" content="Independent developer building language learning apps, admin tools, and web apps. Flutter, Kotlin, Next.js, Django." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #080808;
+      --bg-card:   #0f0f0f;
+      --bg-hover:  #141414;
+      --border:    rgba(255,255,255,0.07);
+      --border-hi: rgba(255,255,255,0.14);
+      --text:      #e8e8e8;
+      --muted:     rgba(255,255,255,0.38);
+      --accent-h:  #4ade80;
+      --accent-k:  #60a5fa;
+      --accent-e:  #2dd4bf;
+      --accent-w:  #fbbf24;
+      --accent-d:  #a78bfa;
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Onest', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.15;
+    }
+    .orb-1 { width: 600px; height: 600px; background: #22c55e; top: -200px; left: -200px; }
+    .orb-2 { width: 500px; height: 500px; background: #3b82f6; bottom: -150px; right: -150px; }
+    .orb-3 { width: 400px; height: 400px; background: #a78bfa; top: 60%; left: 40%; opacity: 0.08; }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .logo span { color: var(--accent-h); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 120px 0 96px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      margin-bottom: 32px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-h);
+      box-shadow: 0 0 8px var(--accent-h);
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent-h), var(--accent-k));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: var(--mono);
+      font-size: 28px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Sections spacing ── */
+    .section { padding: 0 0 96px; }
+
+    /* ── App cards ── */
+    .app-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 400px;
+    }
+    .app-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+
+    .app-card--hebrew { --card-accent: var(--accent-h); }
+    .app-card--hangul { --card-accent: var(--accent-k); }
+    .app-card--estonian { --card-accent: var(--accent-e); }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--card-accent), transparent);
+      opacity: 0.6;
+    }
+
+    .card-content {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--card-accent);
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 30px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 28px;
+    }
+
+    .card-features {
+      list-style: none;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card-features li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-features li::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--card-accent);
+      flex-shrink: 0;
+    }
+
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+      width: fit-content;
+    }
+    .btn-play:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: var(--border-hi);
+    }
+    .btn-play svg { width: 18px; height: 18px; opacity: 0.7; }
+
+    .card-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .card-visual-bg { position: absolute; inset: 0; opacity: 0.06; }
+
+    .app-card--hebrew .card-visual-bg { background: radial-gradient(ellipse at center, var(--accent-h), transparent 70%); }
+    .app-card--hangul .card-visual-bg  { background: radial-gradient(ellipse at center, var(--accent-k), transparent 70%); }
+    .app-card--estonian .card-visual-bg{ background: radial-gradient(ellipse at center, var(--accent-e), transparent 70%); }
+
+    .card-emoji {
+      font-size: 96px;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 0 40px rgba(255,255,255,0.1));
+      animation: float 4s ease-in-out infinite;
+    }
+    .app-card:nth-child(2) .card-emoji { animation-delay: -2s; }
+    .app-card:nth-child(3) .card-emoji { animation-delay: -1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    /* ── Dashboard card ── */
+    .dashboard-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .dashboard-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+    .dashboard-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-d), transparent);
+      opacity: 0.7;
+    }
+
+    .dashboard-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      min-height: 380px;
+    }
+
+    .dashboard-info {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .dashboard-preview {
+      position: relative;
+      overflow: hidden;
+      background: #0a0a12;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    /* Fake admin UI */
+    .fake-admin {
+      width: 100%;
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .fake-sidebar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 150px;
+      background: rgba(255,255,255,0.03);
+      border-right: 1px solid var(--border);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .fake-sidebar-title {
+      font-size: 10px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .fake-nav-item {
+      padding: 6px 8px;
+      border-radius: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      cursor: default;
+    }
+    .fake-nav-item.active {
+      background: rgba(167,139,250,0.15);
+      color: var(--accent-d);
+    }
+    .fake-nav-section {
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      margin: 8px 0 4px;
+      padding-left: 8px;
+    }
+
+    .fake-main {
+      margin-left: 155px;
+      padding: 16px;
+    }
+
+    .fake-main-title {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .fake-main-sub {
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .fake-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .fake-stat-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .fake-stat-box .label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+    .fake-stat-box .value { font-size: 16px; color: #fff; font-weight: 500; }
+    .fake-stat-box.green .value { color: var(--accent-h); }
+    .fake-stat-box.blue  .value { color: var(--accent-k); }
+    .fake-stat-box.amber .value { color: var(--accent-w); }
+
+    .fake-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .fake-lesson-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px;
+    }
+    .fake-lesson-card .lc-badges {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .fake-badge {
+      font-size: 8px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: var(--mono);
+    }
+    .fake-badge.green { background: rgba(74,222,128,0.15); color: var(--accent-h); }
+    .fake-badge.blue  { background: rgba(96,165,250,0.15); color: var(--accent-k); }
+    .fake-lesson-card .lc-name { font-size: 10px; color: #fff; margin-bottom: 3px; }
+    .fake-lesson-card .lc-desc { font-size: 9px; color: var(--muted); line-height: 1.4; }
+    .fake-lesson-card .lc-actions {
+      display: flex;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .fake-btn {
+      font-size: 8px;
+      padding: 3px 6px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+    }
+    .fake-btn.blue  { border-color: rgba(96,165,250,0.3); color: var(--accent-k); }
+    .fake-btn.red   { border-color: rgba(248,113,113,0.3); color: #f87171; }
+
+    /* Gradient overlay on dashboard preview */
+    .dashboard-preview::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(167,139,250,0.05) 100%);
+      pointer-events: none;
+    }
+
+    /* ── Web App card ── */
+    .webapp-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .webapp-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+    .webapp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-w), transparent);
+      opacity: 0.7;
+    }
+
+    .webapp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      min-height: 340px;
+    }
+
+    .webapp-info {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .webapp-preview {
+      position: relative;
+      overflow: hidden;
+      background: #06060a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* Fake eestisoned UI */
+    .fake-webapp {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .fake-webapp-header {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px 10px 0 0;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: none;
+    }
+    .fake-url-bar {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 4px 10px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .fake-webapp-body {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 0 0 10px 10px;
+      padding: 16px;
+    }
+    .fw-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .fw-search {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-family: var(--mono);
+      width: 100%;
+    }
+    .fw-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .fw-word-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 8px 10px;
+    }
+    .fw-est { font-size: 13px; color: #fff; font-weight: 500; margin-bottom: 2px; }
+    .fw-ru  { font-size: 10px; color: var(--muted); }
+    .fw-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 8px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      background: rgba(251,191,36,0.12);
+      color: var(--accent-w);
+      margin-top: 4px;
+    }
+
+    .webapp-preview::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(251,191,36,0.04) 100%);
+      pointer-events: none;
+    }
+
+    /* ── Tech Stack ── */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .tech-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-card);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: default;
+    }
+    .tech-item:hover {
+      border-color: var(--border-hi);
+      background: var(--bg-hover);
+    }
+    .tech-icon {
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .tech-name {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 400;
+    }
+    .tech-sub {
+      font-size: 10px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    /* ── Services ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 28px;
+      transition: border-color 0.3s, transform 0.3s;
+      overflow: hidden;
+    }
+    .service-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--s-accent, var(--accent-h)), transparent);
+      opacity: 0.5;
+    }
+    .service-card:nth-child(1) { --s-accent: var(--accent-h); }
+    .service-card:nth-child(2) { --s-accent: var(--accent-k); }
+    .service-card:nth-child(3) { --s-accent: var(--accent-e); }
+    .service-card:nth-child(4) { --s-accent: var(--accent-w); }
+
+    .service-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .service-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* ── CTA ── */
+    .cta-block {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      padding: 64px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent);
+      opacity: 0.5;
+    }
+    .cta-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .cta-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .cta-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent-h), var(--accent-e));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #080808;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 24px;
+      font-size: 14px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: var(--border-hi);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      margin-top: 96px;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .app-card,
+      .dashboard-inner,
+      .webapp-inner { grid-template-columns: 1fr; }
+      .card-visual { height: 200px; }
+      .card-content,
+      .dashboard-info,
+      .webapp-info { padding: 32px 24px; }
+      .hero { padding: 80px 0 64px; }
+      .hero-stats { gap: 32px; }
+      .nav-links { display: none; }
+      .card-emoji { font-size: 72px; }
+      .fake-sidebar { display: none; }
+      .fake-main { margin-left: 0; }
+      .dashboard-preview,
+      .webapp-preview { min-height: 220px; }
+      .cta-block { padding: 40px 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .tech-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+    }
+
+    /* ── Animations ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.7s ease forwards;
+    }
+    .fade-up:nth-child(1) { animation-delay: 0.1s; }
+    .fade-up:nth-child(2) { animation-delay: 0.2s; }
+    .fade-up:nth-child(3) { animation-delay: 0.3s; }
+    .fade-up:nth-child(4) { animation-delay: 0.4s; }
+    .fade-up:nth-child(5) { animation-delay: 0.5s; }
+    .fade-up:nth-child(6) { animation-delay: 0.55s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll-triggered fade for lower sections */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="/" class="logo">vicso<span>themes</span></a>
+        <ul class="nav-links">
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="fade-up">
+        <div class="hero-badge">Independent developer · Tallinn, Estonia</div>
+      </div>
+      <h1 class="fade-up">Apps that make<br /><em>languages click</em></h1>
+      <p class="hero-sub fade-up">
+        Structured lessons, spaced repetition, and AI-powered tools
+        to help you read and speak a new language from day one.
+      </p>
+      <div class="hero-stats fade-up">
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Apps on Play Store</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">10K+</div>
+          <div class="stat-label">Downloads</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4.8★</div>
+          <div class="stat-label">Avg. Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Android Apps -->
+  <section class="section" id="apps">
+    <div class="wrap">
+      <div class="section-label">Android Apps</div>
+
+      <!-- Hebrew -->
+      <div class="app-card app-card--hebrew reveal">
+        <div class="card-content">
+          <div class="card-tag">Language Learning · Hebrew</div>
+          <h2 class="card-title">Learn Hebrew —<br />Read & Speak</h2>
+          <p class="card-desc">
+            Master the Hebrew alphabet with structured lessons,
+            AI word explanations, and spaced repetition.
+          </p>
+          <ul class="card-features">
+            <li>Full alphabet with nikud (vowel marks)</li>
+            <li>AI Tutor — tap any word for instant breakdown</li>
+            <li>Reading practice with real stories</li>
+            <li>Spaced repetition vocabulary system</li>
+          </ul>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hebrewforbeginners" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+        <div class="card-visual">
+          <div class="card-visual-bg"></div>
+          <div class="card-emoji">🇮🇱</div>
+        </div>
+      </div>
+
+      <!-- Hangul -->
+      <div class="app-card app-card--hangul reveal">
+        <div class="card-visual">
+          <div class="card-visual-bg"></div>
+          <div class="card-emoji">🇰🇷</div>
+        </div>
+        <div class="card-content">
+          <div class="card-tag">Language Learning · Korean</div>
+          <h2 class="card-title">Learn Korean<br />Alphabet: Hangul</h2>
+          <p class="card-desc">
+            Learn to read Hangul in days. Consonants, vowels,
+            reading rules, and quiz-based practice.
+          </p>
+          <ul class="card-features">
+            <li>All consonants and vowels with audio</li>
+            <li>Reading rules and complex combinations</li>
+            <li>Spaced repetition drill sessions</li>
+            <li>Badges and progress tracking</li>
+          </ul>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hangulhero" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Estonian Verbs -->
+      <div class="app-card app-card--estonian reveal">
+        <div class="card-content">
+          <div class="card-tag">Language Learning · Estonian</div>
+          <h2 class="card-title">Estonian Verbs —<br />Learn Estonian</h2>
+          <p class="card-desc">
+            A conjugation trainer built on real phrases, not isolated words.
+            50 A1–B1 verbs with five exercise types and adaptive spaced repetition.
+          </p>
+          <ul class="card-features">
+            <li>5 exercise types: choose, build, translate, switch person, fix the error</li>
+            <li>7 progressive blocks per verb — from warm-up to dialogues</li>
+            <li>Spaced repetition adapts to your level automatically</li>
+            <li>Interface in English and Russian · works offline</li>
+          </ul>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.eesti_verbid" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+        <div class="card-visual">
+          <div class="card-visual-bg"></div>
+          <div class="card-emoji">🇪🇪</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Dashboard -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-label">App Dashboard</div>
+      <div class="dashboard-card reveal">
+        <div class="dashboard-inner">
+          <div class="dashboard-info">
+            <div class="card-tag" style="color: var(--accent-d);">Internal Tool · Hebrew Learning</div>
+            <h2 class="card-title">Hebrew Learning<br />Admin</h2>
+            <p class="card-desc">
+              Custom Django admin panel built to manage lessons, study materials,
+              and exercises for the Hebrew learning app. Full CRUD with
+              content structuring, lesson categorisation, and API tooling
+              for the mobile client.
+            </p>
+            <ul class="card-features" style="--card-accent: var(--accent-d);">
+              <li>Lesson management with materials & exercises</li>
+              <li>Stories & Dictionary management</li>
+              <li>REST API with test connection tools</li>
+              <li>Built with Django · Python</li>
+            </ul>
+          </div>
+          <div class="dashboard-preview">
+            <!-- Fake admin UI matching the screenshot style -->
+            <div class="fake-sidebar">
+              <div class="fake-sidebar-title">Hebrew Learning Admin</div>
+              <div class="fake-nav-section">Stories</div>
+              <div class="fake-nav-item">All Stories</div>
+              <div class="fake-nav-item">+ Add Story</div>
+              <div class="fake-nav-section">Dictionary</div>
+              <div class="fake-nav-item">All Words</div>
+              <div class="fake-nav-item">+ Add Word</div>
+              <div class="fake-nav-item">Categories</div>
+              <div class="fake-nav-section">Lessons</div>
+              <div class="fake-nav-item active">All Lessons</div>
+              <div class="fake-nav-item">+ Add Lesson</div>
+              <div class="fake-nav-section">API & Tools</div>
+              <div class="fake-nav-item">Stories API</div>
+              <div class="fake-nav-item">Words API</div>
+            </div>
+            <div class="fake-main">
+              <div class="fake-main-title">Lessons Management</div>
+              <div class="fake-main-sub">Manage your Hebrew learning lessons</div>
+              <div class="fake-stats-row">
+                <div class="fake-stat-box green">
+                  <div class="label">Total Lessons</div>
+                  <div class="value">22</div>
+                </div>
+                <div class="fake-stat-box blue">
+                  <div class="label">Study Materials</div>
+                  <div class="value">362</div>
+                </div>
+                <div class="fake-stat-box amber">
+                  <div class="label">Exercises</div>
+                  <div class="value">319</div>
+                </div>
+              </div>
+              <div class="fake-grid">
+                <div class="fake-lesson-card">
+                  <div class="lc-badges">
+                    <span class="fake-badge green">11 materials</span>
+                    <span class="fake-badge blue">14 exercises</span>
+                  </div>
+                  <div class="lc-name">Lesson 1</div>
+                  <div class="lc-desc">Exploring Aleph: The Foundation of the Hebrew Alphabet</div>
+                  <div class="lc-actions">
+                    <span class="fake-btn blue">Edit</span>
+                    <span class="fake-btn blue">Exercises</span>
+                    <span class="fake-btn red">Delete</span>
+                  </div>
+                </div>
+                <div class="fake-lesson-card">
+                  <div class="lc-badges">
+                    <span class="fake-badge green">20 materials</span>
+                    <span class="fake-badge blue">13 exercises</span>
+                  </div>
+                  <div class="lc-name">Lesson 2</div>
+                  <div class="lc-desc">Exploring Bet: The Foundation of the Hebrew Alphabet</div>
+                  <div class="lc-actions">
+                    <span class="fake-btn blue">Edit</span>
+                    <span class="fake-btn blue">Exercises</span>
+                    <span class="fake-btn red">Delete</span>
+                  </div>
+                </div>
+                <div class="fake-lesson-card">
+                  <div class="lc-badges">
+                    <span class="fake-badge green">9 materials</span>
+                    <span class="fake-badge blue">12 exercises</span>
+                  </div>
+                  <div class="lc-name">Lesson 3</div>
+                  <div class="lc-desc">Exploring Gimel: The Foundation of the Hebrew Alphabet</div>
+                  <div class="lc-actions">
+                    <span class="fake-btn blue">Edit</span>
+                    <span class="fake-btn blue">Exercises</span>
+                    <span class="fake-btn red">Delete</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web App -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-label">Web App</div>
+      <div class="webapp-card reveal">
+        <div class="webapp-inner">
+          <div class="webapp-info">
+            <div class="card-tag" style="color: var(--accent-w);">Web · Estonian Vocabulary</div>
+            <h2 class="card-title">Eesti Sõned —<br />Estonian Words</h2>
+            <p class="card-desc">
+              A progressive web app for building Estonian vocabulary.
+              Frequency-based word lists, spaced repetition drills,
+              and an in-app dictionary — accessible from any device, no install needed.
+            </p>
+            <ul class="card-features" style="--card-accent: var(--accent-w);">
+              <li>Frequency-first vocabulary — most essential words first</li>
+              <li>Spaced repetition with SM-2 algorithm</li>
+              <li>Works offline as a PWA</li>
+              <li>Built with vanilla JS · GitHub Pages</li>
+            </ul>
+            <a class="btn-play" href="https://eestisoned.com/" target="_blank" rel="noopener" style="border-color: rgba(251,191,36,0.25); color: var(--accent-w);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              Open eestisoned.com
+            </a>
+          </div>
+          <div class="webapp-preview">
+            <div class="fake-webapp">
+              <div class="fake-webapp-header">
+                <div class="fake-url-bar">eestisoned.com</div>
+              </div>
+              <div class="fake-webapp-body">
+                <div class="fw-title">🇪🇪 Eesti Sõned</div>
+                <div class="fw-search">🔍  otsi sõna... / search...</div>
+                <div class="fw-cards">
+                  <div class="fw-word-card">
+                    <div class="fw-est">olema</div>
+                    <div class="fw-ru">быть, являться</div>
+                    <div class="fw-tag">verb · A1</div>
+                  </div>
+                  <div class="fw-word-card">
+                    <div class="fw-est">maja</div>
+                    <div class="fw-ru">дом, здание</div>
+                    <div class="fw-tag">noun · A1</div>
+                  </div>
+                  <div class="fw-word-card">
+                    <div class="fw-est">tegema</div>
+                    <div class="fw-ru">делать</div>
+                    <div class="fw-tag">verb · A1</div>
+                  </div>
+                  <div class="fw-word-card">
+                    <div class="fw-est">suur</div>
+                    <div class="fw-ru">большой</div>
+                    <div class="fw-tag">adj · A1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack & Services -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-label">Tech Stack</div>
+
+      <div class="tech-grid reveal">
+        <div class="tech-item">
+          <span class="tech-icon">🐦</span>
+          <div><div class="tech-name">Flutter</div><div class="tech-sub">mobile</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🤖</span>
+          <div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🧩</span>
+          <div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🐍</span>
+          <div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🌿</span>
+          <div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">▲</span>
+          <div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🚀</span>
+          <div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">☁️</span>
+          <div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔊</span>
+          <div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🤖</span>
+          <div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🌐</span>
+          <div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">📦</span>
+          <div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div>
+        </div>
+      </div>
+
+      <div style="height: 40px;"></div>
+      <div class="section-label">Services</div>
+
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <span class="service-icon">📱</span>
+          <div class="service-title">Mobile App Development</div>
+          <p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🌐</span>
+          <div class="service-title">Web & PWA</div>
+          <p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🧠</span>
+          <div class="service-title">EdTech & Learning Apps</div>
+          <p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚙️</span>
+          <div class="service-title">Backends & Admin Tools</div>
+          <p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="cta-block reveal">
+        <div class="cta-glow"></div>
+        <div class="cta-label">Work with me</div>
+        <h2 class="cta-title">Have a project in mind?<br /><em>Let's build it.</em></h2>
+        <p class="cta-sub">
+          Open to freelance projects — mobile apps, web tools, EdTech products.
+          Based in Tallinn, working remotely worldwide.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:vicsothemes@gmail.com" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Send email
+          </a>
+          <a href="#apps" class="btn-secondary">
+            View all apps ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 VicsoThemes. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="mailto:vicsothemes@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
