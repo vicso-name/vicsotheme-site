@@ -9,7 +9,7 @@ const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 ---
 
-<Layout title="Blog — VicsoThemes" description="Writing about mobile development, language learning apps, EdTech, and building as an indie developer.">
+<Layout title="Blog — VicsoTheme" description="Writing about mobile development, language learning apps, EdTech, and building as an indie developer.">
   <style>
     .orb { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; opacity: 0.11; }
     .orb-1 { width: 500px; height: 500px; background: #22c55e; top: -100px; left: -100px; }
@@ -19,7 +19,7 @@ const formatDate = (date: Date) =>
     .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; margin-bottom: 32px; transition: color 0.2s; }
     .back-link:hover { color: var(--text); }
     .page-title { font-size: clamp(32px, 5vw, 52px); font-weight: 300; letter-spacing: -0.03em; color: #fff; line-height: 1.1; margin-bottom: 14px; }
-    .page-title em { font-style: normal; background: linear-gradient(135deg, #4ade80, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-title em { font-style: normal; color: var(--accent-b) }
     .page-sub { font-size: 16px; color: var(--muted); font-weight: 300; line-height: 1.6; max-width: 440px; }
 
     .empty-state { border: 1px dashed var(--border); border-radius: 16px; padding: 80px 40px; text-align: center; margin-bottom: 96px; }

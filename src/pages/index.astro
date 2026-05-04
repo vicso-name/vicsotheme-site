@@ -24,7 +24,8 @@ import Layout from '../layouts/Layout.astro';
       align-items: center;
       gap: 6px;
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 12px;
+      line-height: 1.8;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
@@ -33,13 +34,7 @@ import Layout from '../layouts/Layout.astro';
       padding: 6px 14px;
       margin-bottom: 32px;
     }
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent-h);
-      box-shadow: 0 0 8px var(--accent-h);
-    }
+
 
     h1 {
       font-size: clamp(40px, 7vw, 72px);
@@ -89,7 +84,7 @@ import Layout from '../layouts/Layout.astro';
     /* ── Section label ── */
     .section-label {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 16px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
@@ -146,7 +141,7 @@ import Layout from '../layouts/Layout.astro';
 
     .card-tag {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--card-accent);
@@ -178,7 +173,7 @@ import Layout from '../layouts/Layout.astro';
       gap: 10px;
     }
     .card-features li {
-      font-size: 13px;
+      font-size: 14px;
       color: rgba(255,255,255,0.6);
       display: flex;
       align-items: center;
@@ -202,7 +197,7 @@ import Layout from '../layouts/Layout.astro';
       padding: 12px 20px;
       color: var(--text);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
       transition: background 0.2s, border-color 0.2s;
       width: fit-content;
@@ -332,12 +327,12 @@ import Layout from '../layouts/Layout.astro';
     .webapp-inner { display: grid; grid-template-columns: 1fr 1.6fr; min-height: 340px; }
     .webapp-info { padding: 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
     .webapp-preview { position: relative; overflow: hidden; background: #06060a; display: flex; align-items: center; justify-content: center; padding: 24px; }
-    .fake-webapp { width: 100%; max-width: 380px; }
+    .fake-webapp { width: 100%; max-width: 560px; }
     .fake-webapp-header { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px 10px 0 0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: none; }
     .fake-url-bar { flex: 1; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; color: var(--muted); }
     .fake-webapp-body { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 0 0 10px 10px; padding: 16px; }
     .fw-title { font-size: 13px; font-weight: 500; color: #fff; margin-bottom: 12px; text-align: center; }
-    .fw-search { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 11px; color: var(--muted); margin-bottom: 10px; font-family: var(--mono); width: 100%; display: block; }
+    .fw-search { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--mono); width: 100%; display: block; }
     .fw-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
     .fw-word-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; }
     .fw-est { font-size: 13px; color: #fff; font-weight: 500; margin-bottom: 2px; }
@@ -355,7 +350,7 @@ import Layout from '../layouts/Layout.astro';
 
     /* ── Tech Stack ── */
     .tech-group { margin-bottom: 28px; }
-    .tech-group-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 10px; padding-left: 2px; display: block; }
+    .tech-group-label { font-family: var(--mono); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-left: 2px; display: block; }
     .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
     .tech-item { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); padding: 12px 14px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background 0.2s; cursor: default; }
     .tech-item:hover { border-color: var(--border-hi); background: var(--bg-hover); }
@@ -364,7 +359,7 @@ import Layout from '../layouts/Layout.astro';
     .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
 
     /* ── Services ── */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
     .service-card { position: relative; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-card); padding: 28px; transition: border-color 0.3s, transform 0.3s; overflow: hidden; }
     .service-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--s-accent, var(--accent-h)), transparent); opacity: 0.5; }
@@ -380,7 +375,7 @@ import Layout from '../layouts/Layout.astro';
     .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent); opacity: 0.5; }
     .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.04) 0%, transparent 60%); pointer-events: none; }
-    .cta-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .cta-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: #fff; letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
     .cta-title em { font-style: normal; color:  var(--accent-b); }
     .cta-sub { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 36px; line-height: 1.6; font-weight: 300; }
@@ -404,7 +399,7 @@ import Layout from '../layouts/Layout.astro';
       .card-visual { height: 200px; }
       .card-content, .dashboard-info, .webapp-info { padding: 32px 24px; }
       .hero { padding: 80px 0 64px; }
-      .hero-stats { gap: 32px; }
+      .hero-stats { gap: 32px; justify-content: space-between;}
       .card-emoji { font-size: 72px; }
       .fake-sidebar { display: none; }
       .fake-main { margin-left: 0; }
@@ -419,7 +414,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="wrap">
       <div class="fade-up">
-        <div class="hero-badge">Independent developer · Tallinn, Estonia</div>
+        <div class="hero-badge">Independent Full Stack Developer · Pärnu, Estonia</div>
       </div>
       <h1 class="fade-up">Apps that make<br /><em>languages click</em></h1>
       <p class="hero-sub fade-up">
@@ -428,7 +423,7 @@ import Layout from '../layouts/Layout.astro';
       </p>
       <div class="hero-stats fade-up">
         <div class="stat">
-          <div class="stat-num">3</div>
+          <div class="stat-num">6</div>
           <div class="stat-label">Apps on Play Store</div>
         </div>
         <div class="stat">
@@ -465,14 +460,12 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
         <div class="card-visual">
-          <div class="card-visual-bg"></div>
           <div class="card-emoji">🇮🇱</div>
         </div>
       </div>
 
       <div class="app-card app-card--hangul reveal">
         <div class="card-visual">
-          <div class="card-visual-bg"></div>
           <div class="card-emoji">🇰🇷</div>
         </div>
         <div class="card-content">
@@ -509,7 +502,6 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
         <div class="card-visual">
-          <div class="card-visual-bg"></div>
           <div class="card-emoji">🇪🇪</div>
         </div>
       </div>
@@ -704,9 +696,9 @@ import Layout from '../layouts/Layout.astro';
       <div class="section-label">Services</div>
       <div class="services-grid reveal">
         <div class="service-card"><img src="/services/service-mobile.svg" class="service-icon" alt="" /><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
-        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
-        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
-        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backends & Admin Tools</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
+        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA App Development</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
+        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Language Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
+        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backend Architecture & Admin Systems</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
       </div>
     </div>
   </section>
