@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — VicsoThemes</title>
+  <meta name="description" content="Writing about mobile development, language learning apps, EdTech, and building as an indie developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#080808;--bg-card:#0f0f0f;--border:rgba(255,255,255,0.07);
+      --border-hi:rgba(255,255,255,0.14);--text:#e8e8e8;--muted:rgba(255,255,255,0.38);
+      --accent:#4ade80;--mono:'JetBrains Mono',monospace;--sans:'Onest',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;opacity:.11}
+    .orb-1{width:500px;height:500px;background:#22c55e;top:-100px;left:-100px}
+    .orb-2{width:400px;height:400px;background:#3b82f6;bottom:-100px;right:-100px}
+    .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
+    nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(8,8,8,.85);backdrop-filter:blur(12px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+    .logo{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--text);text-decoration:none;letter-spacing:.04em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:32px;list-style:none}
+    .nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .page-header{padding:80px 0 64px}
+    .back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.04em;margin-bottom:32px;transition:color .2s}
+    .back-link:hover{color:var(--text)}
+    .page-title{font-size:clamp(32px,5vw,52px);font-weight:300;letter-spacing:-.03em;color:#fff;line-height:1.1;margin-bottom:14px}
+    .page-title em{font-style:normal;background:linear-gradient(135deg,var(--accent),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .page-sub{font-size:16px;color:var(--muted);font-weight:300;line-height:1.6;max-width:440px}
+    .empty-state{border:1px dashed var(--border);border-radius:16px;padding:80px 40px;text-align:center;margin-bottom:96px}
+    .empty-icon{font-size:40px;margin-bottom:16px}
+    .empty-title{font-size:18px;font-weight:500;color:#fff;margin-bottom:8px}
+    .empty-sub{font-size:14px;color:var(--muted);line-height:1.6}
+    .posts-list{display:flex;flex-direction:column;gap:2px;margin-bottom:96px}
+    .post-row{display:grid;grid-template-columns:140px 1fr auto auto;align-items:center;gap:24px;padding:20px 12px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:background .2s;border-radius:8px}
+    .post-row:hover{background:rgba(255,255,255,.03)}
+    .post-row:hover .post-title{color:#fff}
+    .post-row:hover .post-arrow{opacity:1}
+    .post-date{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+    .post-info{min-width:0}
+    .post-title{font-size:16px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:4px;transition:color .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .post-desc{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .post-tags{display:flex;gap:6px;flex-shrink:0}
+    .post-tag{font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid var(--border);color:var(--muted);background:rgba(255,255,255,.03)}
+    .post-arrow{color:var(--muted);opacity:0;transition:opacity .2s;flex-shrink:0}
+    footer{border-top:1px solid var(--border);padding:32px 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-copy{font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .footer-links{display:flex;gap:24px}
+    .footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--text)}
+    @media(max-width:640px){.nav-links{display:none}.post-row{grid-template-columns:1fr;gap:6px}.post-tags,.post-arrow,.post-date{display:none}}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <nav>
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="/" class="logo">vicso<span>themes</span></a>
+        <ul class="nav-links">
+          <li><a href="/apps">Apps</a></li>
+          <li><a href="/blog" class="active">Blog</a></li>
+          <li><a href="/#stack">Stack</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header">
+    <div class="wrap">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to home
+      </a>
+      <h1 class="page-title">The <em>Blog</em></h1>
+      <p class="page-sub">Writing about indie dev, language learning apps, EdTech, and building things solo.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    {posts.length === 0 ? (
+      <div class="empty-state reveal">
+        <div class="empty-icon">✍️</div>
+        <div class="empty-title">First post coming soon</div>
+        <div class="empty-sub">Writing about mobile dev, language learning,<br />spaced repetition, and shipping apps solo.</div>
+      </div>
+    ) : (
+      <div class="posts-list">
+        {posts.map((post, i) => (
+          <a class="post-row reveal" style={`transition-delay:${i * 0.05}s`} href={`/blog/${post.id}`}>
+            <span class="post-date">{formatDate(post.data.date)}</span>
+            <div class="post-info">
+              <div class="post-title">{post.data.title}</div>
+              <div class="post-desc">{post.data.description}</div>
+            </div>
+            <div class="post-tags">
+              {(post.data.tags ?? []).slice(0, 2).map(tag => (
+                <span class="post-tag">{tag}</span>
+              ))}
+            </div>
+            <svg class="post-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 VicsoThemes. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="mailto:vicsothemes@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
