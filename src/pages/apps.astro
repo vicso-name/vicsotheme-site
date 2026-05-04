@@ -1,0 +1,775 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects — VicsoThemes</title>
+  <meta name="description" content="All apps and projects by VicsoThemes — language learning, puzzle games, web tools, and admin dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #080808;
+      --bg-card:   #0f0f0f;
+      --bg-hover:  #141414;
+      --border:    rgba(255,255,255,0.07);
+      --border-hi: rgba(255,255,255,0.14);
+      --text:      #e8e8e8;
+      --muted:     rgba(255,255,255,0.38);
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Onest', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.12;
+    }
+    .orb-1 { width: 500px; height: 500px; background: #22c55e; top: -150px; right: -150px; }
+    .orb-2 { width: 400px; height: 400px; background: #3b82f6; bottom: -100px; left: -100px; }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .logo span { color: #4ade80; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--text); }
+
+    /* ── Page header ── */
+    .page-header {
+      padding: 80px 0 64px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .page-title {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .page-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, #4ade80, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-sub {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    /* ── Filter tabs ── */
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .filter-btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--border-hi);
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+    }
+    .filter-btn.active {
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Apps grid ── */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+
+    .app-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: border-color 0.3s, transform 0.3s;
+      overflow: hidden;
+      cursor: default;
+    }
+    .app-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-3px);
+    }
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.7;
+    }
+
+    /* Accent glow in corner */
+    .app-card::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: var(--accent);
+      filter: blur(50px);
+      opacity: 0.07;
+      pointer-events: none;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .card-emoji-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .card-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+    }
+    .badge-type {
+      border-color: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+    }
+    .badge-accent {
+      border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+    }
+
+    .card-name {
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-pkg {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.02em;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .card-link:hover { opacity: 1; }
+    .card-link svg { width: 13px; height: 13px; }
+
+    /* ── Wide cards (2-col) for non-Android ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 96px;
+    }
+
+    .project-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s, transform 0.3s;
+      overflow: hidden;
+    }
+    .project-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-3px);
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.6;
+    }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: var(--accent);
+      filter: blur(60px);
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .project-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .project-meta { flex: 1; }
+    .project-type {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+    .project-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .project-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .project-link:hover { opacity: 1; }
+    .project-link svg { width: 14px; height: 14px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .apps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .apps-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .page-header { padding: 56px 0 40px; }
+    }
+
+    /* ── Animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 0.05s; }
+    .stagger-2 { transition-delay: 0.10s; }
+    .stagger-3 { transition-delay: 0.15s; }
+    .stagger-4 { transition-delay: 0.20s; }
+    .stagger-5 { transition-delay: 0.25s; }
+    .stagger-6 { transition-delay: 0.30s; }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="/" class="logo">vicso<span>themes</span></a>
+        <ul class="nav-links">
+          <li><a href="/apps" class="active">Apps</a></li>
+          <li><a href="/#stack">Stack</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="wrap">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to home
+      </a>
+      <h1 class="page-title">All <em>Projects</em></h1>
+      <p class="page-sub">6 Android apps, 1 web app, and 1 custom admin tool — all built solo.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- Android Apps -->
+    <div class="section-label">Android Apps</div>
+
+    <div class="apps-grid">
+
+      <!-- Hebrew -->
+      <div class="app-card reveal stagger-1" style="--accent: #4ade80;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🇮🇱</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">EdTech</span>
+          </div>
+        </div>
+        <div class="card-name">Learn Hebrew — Read & Speak</div>
+        <div class="card-desc">Master the Hebrew alphabet with AI word explanations, structured lessons, and spaced repetition vocabulary.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.hebrewforbeginners</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hebrewforbeginners" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hangul -->
+      <div class="app-card reveal stagger-2" style="--accent: #60a5fa;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🇰🇷</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">EdTech</span>
+          </div>
+        </div>
+        <div class="card-name">Learn Korean Alphabet: Hangul</div>
+        <div class="card-desc">Learn to read Hangul in days. Consonants, vowels, reading rules, spaced repetition drills, and badges.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.hangulhero</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hangulhero" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Estonian Verbs -->
+      <div class="app-card reveal stagger-3" style="--accent: #2dd4bf;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🇪🇪</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">EdTech</span>
+          </div>
+        </div>
+        <div class="card-name">Estonian Verbs — Learn Estonian</div>
+        <div class="card-desc">Conjugation trainer with 50 A1–B1 verbs, 5 exercise types, and spaced repetition. English and Russian UI.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.eesti_verbid</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.eesti_verbid" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2048 -->
+      <div class="app-card reveal stagger-4" style="--accent: #fb923c;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🧩</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">Puzzle</span>
+          </div>
+        </div>
+        <div class="card-name">2048 Offline Puzzle Game</div>
+        <div class="card-desc">Classic 2048 number puzzle designed for calm, distraction-free play. No timers, no internet, fully offline.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.game_2048</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.game_2048" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Movies by Mood -->
+      <div class="app-card reveal stagger-5" style="--accent: #e879f9;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🎬</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">Entertainment</span>
+          </div>
+        </div>
+        <div class="card-name">Game Movies by Mood</div>
+        <div class="card-desc">Movie discovery without decision fatigue. Pick your mood or actor — get instant recommendations with streaming info.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.movie_by_mood</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.movie_by_mood" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Snake Game -->
+      <div class="app-card reveal stagger-6" style="--accent: #a3e635;">
+        <div class="card-top">
+          <div class="card-emoji-wrap">🐍</div>
+          <div class="card-badges">
+            <span class="badge badge-type">Android</span>
+            <span class="badge badge-accent">Arcade</span>
+          </div>
+        </div>
+        <div class="card-name">Snake Game: Offline Arcade</div>
+        <div class="card-desc">Fast, skill-based arcade snake with structured levels, progressive difficulty, and stars. No internet needed.</div>
+        <div class="card-footer">
+          <span class="card-pkg">com.vicsothemes.snakeclassic</span>
+          <a class="card-link" href="https://play.google.com/store/apps/details?id=com.vicsothemes.snakeclassic" target="_blank" rel="noopener">
+            Play Store
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Web & Tools -->
+    <div class="section-label">Web & Tools</div>
+
+    <div class="projects-grid">
+
+      <!-- eestisoned.com -->
+      <div class="project-card reveal stagger-1" style="--accent: #fbbf24;">
+        <div class="project-top">
+          <div class="project-icon">🇪🇪</div>
+          <div class="project-meta">
+            <div class="project-type">Web App · PWA</div>
+            <div class="project-name">Eesti Sõned</div>
+          </div>
+        </div>
+        <p class="project-desc">
+          Progressive web app for building Estonian vocabulary. Frequency-based word lists, SM-2 spaced repetition, and an in-app dictionary. Works offline, no install needed.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">PWA</span>
+          <span class="tag">SM-2 SRS</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">Google TTS</span>
+        </div>
+        <div class="project-footer">
+          <a class="project-link" href="https://eestisoned.com/" target="_blank" rel="noopener">
+            Open eestisoned.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hebrew Admin -->
+      <div class="project-card reveal stagger-2" style="--accent: #a78bfa;">
+        <div class="project-top">
+          <div class="project-icon">⚙️</div>
+          <div class="project-meta">
+            <div class="project-type">Internal Tool · Admin</div>
+            <div class="project-name">Hebrew Learning Admin</div>
+          </div>
+        </div>
+        <p class="project-desc">
+          Custom Django admin panel for managing all content in the Hebrew learning app — lessons, study materials, exercises, stories, and dictionary. Includes a REST API and test connection tools for the mobile client.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Admin Panel</span>
+          <span class="tag">CMS</span>
+        </div>
+        <div class="project-footer">
+          <span style="font-family: var(--mono); font-size: 11px; color: var(--muted);">Internal tool · no public link</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 VicsoThemes. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="mailto:vicsothemes@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
