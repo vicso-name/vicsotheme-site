@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
       --accent-w:  #fbbf24;
       --accent-d:  #a78bfa;
     }
-    
+
     /* ── Hero ── */
     .hero {
       padding: 120px 0 96px;
@@ -346,10 +346,20 @@ import Layout from '../layouts/Layout.astro';
     .webapp-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(251,191,36,0.04) 100%); pointer-events: none; }
 
     /* ── Tech Stack ── */
-    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 24px; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
     .tech-item { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); padding: 14px 16px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background 0.2s; cursor: default; }
     .tech-item:hover { border-color: var(--border-hi); background: var(--bg-hover); }
-    .tech-icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+    .tech-icon { width: 62px; height: 62px; flex-shrink: 0; object-fit: contain; }
+    .tech-name { font-size: 13px; color: var(--text); font-weight: 400; }
+    .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
+
+    /* ── Tech Stack ── */
+    .tech-group { margin-bottom: 28px; }
+    .tech-group-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 10px; padding-left: 2px; display: block; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+    .tech-item { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); padding: 12px 14px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background 0.2s; cursor: default; }
+    .tech-item:hover { border-color: var(--border-hi); background: var(--bg-hover); }
+    .tech-icon { width: 62px; height: 62px; flex-shrink: 0; object-fit: contain; }
     .tech-name { font-size: 13px; color: var(--text); font-weight: 400; }
     .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
 
@@ -362,7 +372,7 @@ import Layout from '../layouts/Layout.astro';
     .service-card:nth-child(2) { --s-accent: var(--accent-k); }
     .service-card:nth-child(3) { --s-accent: var(--accent-e); }
     .service-card:nth-child(4) { --s-accent: var(--accent-w); }
-    .service-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+    .service-icon { width: 55px; height: 55px; margin-bottom: 16px; display: block; object-fit: contain; }
     .service-title { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 10px; }
     .service-desc { font-size: 13px; line-height: 1.65; color: var(--muted); font-weight: 300; }
 
@@ -372,7 +382,7 @@ import Layout from '../layouts/Layout.astro';
     .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.04) 0%, transparent 60%); pointer-events: none; }
     .cta-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: #fff; letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
-    .cta-title em { font-style: normal; background: linear-gradient(135deg, var(--accent-h), var(--accent-e)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-title em { font-style: normal; color:  var(--accent-b); }
     .cta-sub { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 36px; line-height: 1.6; font-weight: 300; }
     .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #080808; border: none; border-radius: 10px; padding: 13px 24px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
@@ -401,7 +411,7 @@ import Layout from '../layouts/Layout.astro';
       .dashboard-preview, .webapp-preview { min-height: 220px; }
       .cta-block { padding: 40px 24px; }
       .services-grid { grid-template-columns: 1fr; }
-      .tech-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+      .tech-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 
@@ -626,28 +636,77 @@ import Layout from '../layouts/Layout.astro';
   <section class="section" id="stack">
     <div class="wrap">
       <div class="section-label">Tech Stack</div>
-      <div class="tech-grid reveal">
-        <div class="tech-item"><span class="tech-icon">🐦</span><div><div class="tech-name">Flutter</div><div class="tech-sub">mobile</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🤖</span><div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🧩</span><div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🐍</span><div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🌿</span><div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div></div>
-        <div class="tech-item"><span class="tech-icon">▲</span><div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🚀</span><div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div></div>
-        <div class="tech-item"><span class="tech-icon">☁️</span><div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🔊</span><div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🤖</span><div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div></div>
-        <div class="tech-item"><span class="tech-icon">🌐</span><div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div></div>
-        <div class="tech-item"><span class="tech-icon">📦</span><div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div></div>
+
+      <!-- Mobile -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Mobile</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/flutter.svg" alt="Flutter" /><div><div class="tech-name">Flutter</div><div class="tech-sub">cross-platform</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/kotlin.svg" alt="Kotlin" /><div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/jetpackcompose.svg" alt="Jetpack Compose" /><div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/revenuecat.svg" alt="RevenueCat" /><div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div></div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Backend</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/python.svg" alt="Python" /><div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/django.svg" alt="Django" /><div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/php.svg" alt="PHP" /><div><div class="tech-name">PHP</div><div class="tech-sub">backend</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/postgresql.svg" alt="PostgreSQL" /><div><div class="tech-name">PostgreSQL</div><div class="tech-sub">database</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/redis.svg" alt="Redis" /><div><div class="tech-name">Redis</div><div class="tech-sub">cache</div></div></div>
+        </div>
+      </div>
+
+      <!-- Web & CMS -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Web & CMS</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/nextjs.svg" alt="Next.js" /><div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/astro.svg" alt="Astro" /><div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/wordpress.svg" alt="WordPress" /><div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/strapi.svg" alt="Strapi" /><div><div class="tech-name">Strapi</div><div class="tech-sub">headless CMS</div></div></div>
+        </div>
+      </div>
+
+      <!-- DevOps & Tools -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">DevOps & Tools</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/docker.svg" alt="Docker" /><div><div class="tech-name">Docker</div><div class="tech-sub">containers</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/nginx.svg" alt="Nginx" /><div><div class="tech-name">Nginx</div><div class="tech-sub">web server</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/git.svg" alt="Git" /><div><div class="tech-name">Git</div><div class="tech-sub">version control</div></div></div>
+        </div>
+      </div>
+
+      <!-- AI & Cloud -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">AI & Cloud</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/openai.svg" alt="OpenAI" /><div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/claude.svg" alt="Claude" /><div><div class="tech-name">Claude</div><div class="tech-sub">LLM tooling</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/google-tts.svg" alt="Google TTS" /><div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/firebase.svg" alt="Firebase" /><div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div></div>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Design</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/figma.svg" alt="Figma" /><div><div class="tech-name">Figma</div><div class="tech-sub">design</div></div></div>
+        </div>
       </div>
 
       <div style="height: 40px;"></div>
       <div class="section-label">Services</div>
       <div class="services-grid reveal">
-        <div class="service-card"><span class="service-icon">📱</span><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
-        <div class="service-card"><span class="service-icon">🌐</span><div class="service-title">Web & PWA</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
-        <div class="service-card"><span class="service-icon">🧠</span><div class="service-title">EdTech & Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
-        <div class="service-card"><span class="service-icon">⚙️</span><div class="service-title">Backends & Admin Tools</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
+        <div class="service-card"><img src="/services/service-mobile.svg" class="service-icon" alt="" /><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
+        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
+        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
+        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backends & Admin Tools</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
       </div>
     </div>
   </section>
