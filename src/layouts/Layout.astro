@@ -1,0 +1,358 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Independent developer building language learning apps, web tools, and mobile products.' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style is:global>
+    :root {
+      --bg:        #080808;
+      --bg-card:   #0f0f0f;
+      --bg-hover:  #141414;
+      --border:    rgba(255,255,255,0.07);
+      --border-hi: rgba(255,255,255,0.14);
+      --text:      #e8e8e8;
+      --muted:     rgba(255,255,255,0.7);
+      --accent:    #4ade80;
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Onest', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stagger-1 { transition-delay: 0.05s; }
+    .stagger-2 { transition-delay: 0.10s; }
+    .stagger-3 { transition-delay: 0.15s; }
+    .stagger-4 { transition-delay: 0.20s; }
+    .stagger-5 { transition-delay: 0.25s; }
+    .stagger-6 { transition-delay: 0.30s; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 110;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .logo {
+      font-family: var(--mono);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 110;
+    }
+    .logo span { color: var(--accent-b); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text); }
+
+    /* ── Hamburger ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 110;
+      gap: 0;
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                  opacity 0.25s ease,
+                  top 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+      position: absolute;
+    }
+
+    .hamburger-line:nth-child(1) { top: 11px; }
+    .hamburger-line:nth-child(2) { top: 17.5px; }
+    .hamburger-line:nth-child(3) { top: 24px; }
+
+    /* Open state */
+    .hamburger.is-open .hamburger-line:nth-child(1) {
+      top: 17.5px;
+      transform: rotate(45deg);
+    }
+    .hamburger.is-open .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .hamburger.is-open .hamburger-line:nth-child(3) {
+      top: 17.5px;
+      transform: rotate(-45deg);
+    }
+
+    /* ── Mobile overlay ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 106;
+      background: rgba(8,8,8,0.97);
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .mobile-menu.is-open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 16px 32px;
+      transition: color 0.2s, transform 0.2s;
+      transform: translateY(8px);
+      opacity: 0;
+      transition: color 0.2s, transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .mobile-menu.is-open .mobile-nav-link {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .mobile-menu.is-open .mobile-nav-link:nth-child(1) { transition-delay: 0.05s; }
+    .mobile-menu.is-open .mobile-nav-link:nth-child(2) { transition-delay: 0.10s; }
+    .mobile-menu.is-open .mobile-nav-link:nth-child(3) { transition-delay: 0.15s; }
+    .mobile-menu.is-open .mobile-nav-link:nth-child(4) { transition-delay: 0.20s; }
+    .mobile-menu.is-open .mobile-nav-link:nth-child(5) { transition-delay: 0.25s; }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--text); }
+
+    .mobile-menu-divider {
+      width: 1px;
+      height: 32px;
+      background: var(--border);
+      margin: 8px 0;
+    }
+
+    .mobile-menu-contact {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      margin-top: 96px;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/apps" class="mobile-nav-link">Apps</a>
+    <a href="/blog" class="mobile-nav-link">Blog</a>
+    <a href="/#stack" class="mobile-nav-link">Stack</a>
+    <div class="mobile-menu-divider"></div>
+    <a href="mailto:vic.sokoliuk@gmail.com" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="/" class="logo">vicso<span>themes</span></a>
+        <ul class="nav-links">
+          <li><a href="/apps">Apps</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/#stack">Stack</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <slot />
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 VicsoThemes. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="mailto:vic.sokoliuk@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger?.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('is-open');
+      mobileMenu?.classList.toggle('is-open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close on link click
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger?.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
