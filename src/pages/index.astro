@@ -315,6 +315,12 @@ import ROICalculator from '../components/ROICalculator.astro';
     .service-title-link:hover { color: var(--s-accent, var(--accent)); }
     .service-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; border: 1px solid color-mix(in srgb, var(--s-accent, var(--accent-h)) 30%, transparent); color: var(--s-accent, var(--accent-h));  width: fit-content; }
 
+    .services-more {
+      display: flex;
+      justify-content: center;
+      padding-top: 8px;
+    }
+
     /* ── CTA ── */
     .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent); opacity: 0.5; }
@@ -620,101 +626,15 @@ import ROICalculator from '../components/ROICalculator.astro';
         </div>
       </div>
 
-      <!-- Backend -->
-      <div class="services-group reveal">
-        <span class="services-group-label">Backend & Infrastructure</span>
-        <div class="services-grid">
-          <div class="service-card" style="--s-accent: var(--accent-e);">
-            <div class="service-card-top">
-              <img src="/services/service-backend.svg" class="service-icon" alt="" />
-              <a href="/services/api-development" class="service-title service-title-link">API Development</a>
-            </div>
-            <p class="service-desc">Django REST APIs with authentication, permissions, and documentation. Built to scale and easy to integrate.</p>
-            <span class="service-badge">Django · Python</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-e);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">⚙️</span>
-              <a href="/services/admin-dashboards" class="service-title service-title-link">Admin Dashboards</a>
-            </div>
-            <p class="service-desc">Custom admin panels for managing content, users, and data — built to replace generic tools with tailored workflows.</p>
-            <span class="service-badge">Custom CMS</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-e);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🗄️</span>
-              <a href="/services/database-architecture" class="service-title service-title-link">Database Architecture</a>
-            </div>
-            <p class="service-desc">PostgreSQL schema design, migrations, query optimization, and Redis caching for performant data layers.</p>
-            <span class="service-badge">PostgreSQL · Redis</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI -->
-      <div class="services-group reveal">
-        <span class="services-group-label">AI & Automation</span>
-        <div class="services-grid">
-          <div class="service-card" style="--s-accent: var(--accent-d);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🤖</span>
-              <a href="/services/ai-chatbot-development" class="service-title service-title-link">AI Chatbot Development</a>
-            </div>
-            <p class="service-desc">Conversational AI assistants powered by Claude or GPT — for customer support, lead qualification, and internal tools.</p>
-            <span class="service-badge">Claude · OpenAI</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-d);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🧠</span>
-              <a href="/services/llm-integration" class="service-title service-title-link">LLM Integration</a>
-            </div>
-            <p class="service-desc">Integrate large language models into existing products — summarization, classification, generation, and RAG pipelines.</p>
-            <span class="service-badge">GPT · Claude API</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-d);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
-              <a href="/services/content-pipelines" class="service-title service-title-link">Content Pipelines</a>
-            </div>
-            <p class="service-desc">Automated content generation, transformation, and validation pipelines — audio, text, and structured data at scale.</p>
-            <span class="service-badge">Python · GCP TTS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- EdTech -->
-      <div class="services-group reveal">
-        <span class="services-group-label">EdTech & Learning Products</span>
-        <div class="services-grid">
-          <div class="service-card" style="--s-accent: var(--accent-w);">
-            <div class="service-card-top">
-              <img src="/services/service-edtech.svg" class="service-icon" alt="" />
-              <a href="/services/language-learning-apps" class="service-title service-title-link">Language Learning Apps</a>
-            </div>
-            <p class="service-desc">Structured learning apps with spaced repetition, exercise types, progress tracking, and AI-powered explanations.</p>
-            <span class="service-badge">SRS · Flutter</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-w);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🔁</span>
-              <a href="/services/spaced-repetition-systems" class="service-title service-title-link">Spaced Repetition Systems</a>
-            </div>
-            <p class="service-desc">SM-2 and custom SRS algorithms with adaptive scheduling, performance analytics, and streak mechanics.</p>
-            <span class="service-badge">SM-2 · adaptive</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-w);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">💡</span>
-              <a href="/services/edtech-consulting" class="service-title service-title-link">EdTech Consulting</a>
-            </div>
-            <p class="service-desc">Pedagogy-first product design — applying Testing Effect, Noticing Hypothesis, and spaced practice to digital learning tools.</p>
-            <span class="service-badge">Pedagogy · UX</span>
-          </div>
-        </div>
+      <div class="services-more reveal">
+        <a href="/services" class="btn-secondary">
+          View all 15 services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
 
     </div>
-  </section> 
+  </section>
 
   <!-- Tech Stack & Services -->
   <section class="section" id="stack">

@@ -48,7 +48,7 @@ faq:
     a: "Yes — I've migrated WordPress sites to Astro and rebuilt legacy apps in Next.js. Usually faster and cleaner than the original."
 caseStudy:
   title: "vicsotheme.com — This Site"
-  desc: "Built with Astro, deployed on GitHub Pages. Light/dark theme system, AI sales chatbot via Cloudflare Workers, ROI calculator, blog with content collections. Zero dependencies on paid hosting."
+  desc: "Built with Astro, deployed on GitHub Pages. Light/dark theme system, AI sales chatbot via Cloudflare Workers, Cost Estimator, blog with content collections. Zero dependencies on paid hosting."
   result: "Lighthouse 98+ · Deployed in CI/CD · AI-powered features"
 draft: false
 ---

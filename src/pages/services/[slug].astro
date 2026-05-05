@@ -14,6 +14,11 @@ export async function getStaticPaths() {
 const { service } = Astro.props;
 const { data } = service;
 const accent = data.accent;
+
+const allServices = await getCollection('services', ({ data }) => !data.draft);
+const relatedServices = allServices
+  .filter(s => s.id !== service.id && s.data.category === data.category)
+  .slice(0, 3);
  
 const pageUrl = `https://vicsotheme.com/services/${service.id}`;
  
@@ -68,7 +73,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 2,
       "name": "Services",
-      "item": "https://vicsotheme.com/#services"
+      "item": "https://vicsotheme.com/services"
     },
     {
       "@type": "ListItem",
@@ -444,6 +449,64 @@ const breadcrumbSchema = {
     .cta-title { font-size: clamp(26px, 4vw, 38px); font-weight: 300; color: var(--heading); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.2; }
     .cta-sub { font-size: 15px; color: var(--muted); max-width: 420px; margin: 0 auto 32px; line-height: 1.6; font-weight: 300; }
 
+    /* ── Related Services ── */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .related-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 28px 28px 24px;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+   
+    .related-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
+
+    .related-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .related-card-icon { font-size: 26px; line-height: 1; }
+    .related-card-arrow {
+      color: var(--muted);
+      font-size: 16px;
+      transition: transform 0.2s, color 0.2s;
+      line-height: 1;
+    }
+    .related-card:hover .related-card-arrow {
+      transform: translate(3px, -3px);
+      color: var(--card-accent, var(--accent-color));
+    }
+
+    .related-card-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--heading);
+      line-height: 1.3;
+      margin-bottom: 10px;
+      max-width: 190px;
+    }
+    .related-card-badge {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      display: inline-block;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 700px) {
       .service-hero { padding: 56px 0 48px; }
@@ -462,7 +525,7 @@ const breadcrumbSchema = {
   <!-- Hero -->
   <section class="service-hero">
     <div class="wrap">
-      <a href="/#services" class="back-link">
+      <a href="/services" class="back-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
         All services
       </a>
@@ -547,16 +610,6 @@ const breadcrumbSchema = {
             <div class="case-title">{data.caseStudy.title}</div>
             <p class="case-desc">{data.caseStudy.desc}</p>
             <div class="case-result">{data.caseStudy.result}</div>
-            {data.caseStudy.link && (
-              <a href={data.caseStudy.link} class="case-link" target="_blank" rel="noopener">
-                View on Play Store
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-              </a>
-            )}
           </div>
           <div style="font-size: 64px; opacity: 0.15;">{data.icon}</div>
         </div>
@@ -564,7 +617,7 @@ const breadcrumbSchema = {
     </section>
   )}
 
-  <!-- ROI Calculator -->
+  <!-- Cost Estimator -->
   <section class="content-section">
     <div class="wrap">
       <ROICalculator />
@@ -588,6 +641,31 @@ const breadcrumbSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Related Services -->
+  {relatedServices.length > 0 && (
+    <section class="content-section">
+      <div class="wrap">
+        <div class="section-label">Related services</div>
+        <div class="related-grid">
+          {relatedServices.map(s => (
+            <a
+              href={`/services/${s.id}`}
+              class="related-card reveal"
+              style={`--card-accent: ${s.data.accent}`}
+            >
+              <div class="related-card-top">
+                <span class="related-card-icon">{s.data.icon}</span>
+                <span class="related-card-arrow">↗</span>
+              </div>
+              <div class="related-card-title">{s.data.headline.replace(/\n/g, ' ')}</div>
+              <span class="related-card-badge">{s.data.badge}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- CTA -->
   <div class="wrap">

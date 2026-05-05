@@ -1,0 +1,425 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allServices = await getCollection('services', ({ data }) => !data.draft);
+
+const CATEGORY_ORDER = [
+  'Mobile Development',
+  'Web & Frontend',
+  'Backend & Infrastructure',
+  'AI & Automation',
+  'EdTech & Learning Products',
+];
+
+const CATEGORY_META: Record<string, { accent: string; desc: string }> = {
+  'Mobile Development':         { accent: 'var(--accent-k)', desc: 'Flutter, Kotlin — from concept to Play Store.' },
+  'Web & Frontend':             { accent: 'var(--accent-k)', desc: 'Next.js, Astro, WordPress — fast, SEO-ready.' },
+  'Backend & Infrastructure':   { accent: 'var(--accent-e)', desc: 'APIs, dashboards, databases — built to scale.' },
+  'AI & Automation':            { accent: 'var(--accent-d)', desc: 'LLM integrations, chatbots, content pipelines.' },
+  'EdTech & Learning Products': { accent: 'var(--accent-w)', desc: 'SRS engines, language apps, EdTech consulting.' },
+};
+
+const grouped = CATEGORY_ORDER.map(cat => ({
+  name: cat,
+  ...CATEGORY_META[cat],
+  services: allServices
+    .filter(s => s.data.category === cat)
+    .sort((a, b) => a.id.localeCompare(b.id)),
+})).filter(g => g.services.length > 0);
+
+const title = "Development Services | Viktor Sokoliuk";
+const description = "Mobile apps, web applications, backend systems, AI integrations, and EdTech products. Independent developer based in Tallinn — agency quality, freelancer pricing.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vicsotheme.com" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://vicsotheme.com/services" },
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <style>
+    .orb { position: fixed; border-radius: 50%; filter: blur(140px); pointer-events: none; z-index: 0; opacity: 0.07; }
+    .orb-1 { width: 700px; height: 700px; top: -200px; left: -200px; }
+    .orb-2 { width: 500px; height: 500px; bottom: -150px; right: -150px; }
+
+    /* ── Hero ── */
+    .services-hero {
+      padding: 80px 0 64px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      margin-bottom: 40px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 5.5vw, 60px);
+      font-weight: 300;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 520px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item { display: flex; flex-direction: column; gap: 4px; }
+    .stat-num {
+      font-family: var(--mono);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Category group ── */
+    .services-body {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 96px;
+    }
+
+    .category-group {
+      margin-bottom: 72px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .category-name {
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cat-accent);
+    }
+
+    .category-desc {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .category-count {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ── Service cards ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 28px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .card-icon { font-size: 28px; line-height: 1; }
+    .card-arrow {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.25s, color 0.25s;
+    }
+    .service-card:hover .card-arrow {
+      transform: translate(3px, -3px);
+      color: var(--card-accent);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--heading);
+      line-height: 1.3;
+      margin-bottom: 10px;
+      max-width: 190px;
+    }
+
+    .card-badge {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      display: inline-block;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+
+    .card-meta {
+      margin-top: auto;
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .card-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .card-meta-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .card-meta-value {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--heading);
+    }
+
+    /* ── Bottom CTA ── */
+    .services-cta {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 96px;
+      z-index: 1;
+    }
+    .services-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-k), var(--accent-d), transparent);
+      opacity: 0.5;
+    }
+    .cta-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .cta-title {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 300;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .cta-sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 400px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 10px;
+      padding: 13px 28px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      font-family: var(--sans);
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .services-hero { padding: 56px 0 48px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .category-header { flex-wrap: wrap; gap: 8px; }
+      .category-count { margin-left: 0; }
+      .services-cta { padding: 36px 24px; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+
+  <!-- Background orbs -->
+  <div class="orb orb-1" style="background: var(--accent-k);"></div>
+  <div class="orb orb-2" style="background: var(--accent-d);"></div>
+
+  <!-- Hero -->
+  <section class="services-hero">
+    <div class="wrap">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+        Home
+      </a>
+
+      <div class="hero-eyebrow">What I build</div>
+      <h1 class="hero-title">All Services</h1>
+      <p class="hero-desc">
+        End-to-end development across mobile, web, backend, AI, and EdTech.
+        One developer, full accountability — no handoffs, no surprises.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">15</span>
+          <span class="stat-label">Services</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Specialisations</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Apps on Play Store</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service groups -->
+  <div class="services-body">
+    <div class="wrap">
+
+      {grouped.map(group => (
+        <div class="category-group" style={`--cat-accent: ${group.accent}`}>
+          <div class="category-header">
+            <span class="category-name">{group.name}</span>
+            <span class="category-desc">{group.desc}</span>
+            <span class="category-count">{group.services.length} services</span>
+          </div>
+
+          <div class="services-grid">
+            {group.services.map(s => (
+              <a
+                href={`/services/${s.id}`}
+                class="service-card"
+                style={`--card-accent: ${s.data.accent}`}
+              >
+                <div class="card-top">
+                  <span class="card-icon">{s.data.icon}</span>
+                  <span class="card-arrow">↗</span>
+                </div>
+                <div class="card-title">{s.data.headline.replace(/\n/g, ' ')}</div>
+                <span class="card-badge">{s.data.badge}</span>
+                <div class="card-meta">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Timeline</span>
+                    <span class="card-meta-value">{s.data.timeline}</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">From</span>
+                    <span class="card-meta-value">{s.data.priceRange.split('–')[0].trim()}</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="wrap">
+      <div class="services-cta">
+        <div class="cta-label">Not sure what you need?</div>
+        <h2 class="cta-title">Let's figure it out together</h2>
+        <p class="cta-sub">Describe your idea — I'll tell you what's realistic, how long it takes, and what it costs.</p>
+        <a href="/contact" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Get a free estimate
+        </a>
+      </div>
+    </div>
+  </div>
+
+</Layout>
