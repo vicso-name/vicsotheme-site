@@ -301,22 +301,22 @@ import ROICalculator from '../components/ROICalculator.astro';
     .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
 
     /* ── Services ── */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
-    .service-card { position: relative; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-card); padding: 28px; transition: border-color 0.3s, transform 0.3s; overflow: hidden; }
+    .services-group { margin-bottom: 32px; }
+    .services-group-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-left: 2px; display: block; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px; }
+    .service-card { position: relative; border: 1px solid var(--border); border-radius: 14px; background: var(--bg-card); padding: 22px 24px; transition: border-color 0.3s, transform 0.3s; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }
     .service-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--s-accent, var(--accent-h)), transparent); opacity: 0.5; }
-    .service-card:nth-child(1) { --s-accent: var(--accent-h); }
-    .service-card:nth-child(2) { --s-accent: var(--accent-k); }
-    .service-card:nth-child(3) { --s-accent: var(--accent-e); }
-    .service-card:nth-child(4) { --s-accent: var(--accent-w); }
-    .service-icon { width: 55px; height: 55px; margin-bottom: 16px; display: block; object-fit: contain; }
-    .service-title { font-size: 16px; font-weight: 500; color: var(--heading); margin-bottom: 10px; }
-    .service-desc { font-size: 13px; line-height: 1.65; color: var(--muted); font-weight: 300; }
+    .service-card-top { display: flex; align-items: center; gap: 12px; }
+    .service-icon { width: 36px; height: 36px; flex-shrink: 0; object-fit: contain; }
+    .service-title { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.3; }
+    .service-desc { font-size: 12px; line-height: 1.6; color: var(--muted); font-weight: 300; }
+    .service-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; border: 1px solid color-mix(in srgb, var(--s-accent, var(--accent-h)) 30%, transparent); color: var(--s-accent, var(--accent-h));  width: fit-content; }
 
     /* ── CTA ── */
     .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent); opacity: 0.5; }
-    .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.04) 0%, transparent 60%); pointer-events: none; }
+    .cta-glow { position: absolute; inset: 0; pointer-events: none; }
     .cta-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--heading); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
     .cta-title em { font-style: normal; color:  var(--accent-b); }
@@ -351,7 +351,6 @@ import ROICalculator from '../components/ROICalculator.astro';
     .why-hero-glow {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 50% -20%, rgba(74,222,128,0.06) 0%, transparent 60%);
       pointer-events: none;
     }
     .why-kicker {
@@ -560,12 +559,162 @@ import ROICalculator from '../components/ROICalculator.astro';
   <section class="services section" id="services">
     <div class="wrap">
       <div class="section-label">Services</div>
-      <div class="services-grid reveal">
-        <div class="service-card"><img src="/services/service-mobile.svg" class="service-icon" alt="" /><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
-        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA App Development</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
-        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Language Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
-        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backend Architecture & Admin Systems</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
+
+      <!-- Mobile -->
+      <div class="services-group reveal">
+        <span class="services-group-label">Mobile Development</span>
+        <div class="services-grid">
+          <div class="service-card" style="--s-accent: var(--accent-h);">
+            <div class="service-card-top">
+              <img src="/services/service-mobile.svg" class="service-icon" alt="" />
+              <div class="service-title">Mobile App Development</div>
+            </div>
+            <p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p>
+            <span class="service-badge">Flutter · Kotlin</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-h);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">📱</span>
+              <div class="service-title">PoC & MVP Development</div>
+            </div>
+            <p class="service-desc">Rapid prototypes and minimum viable products — validate your idea fast before investing in a full build.</p>
+            <span class="service-badge">2–4 weeks</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-h);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🏪</span>
+              <div class="service-title">Play Store Launch</div>
+            </div>
+            <p class="service-desc">Full release pipeline — app signing, store listing, screenshots, descriptions, and post-launch monitoring.</p>
+            <span class="service-badge">Google Play</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Web -->
+      <div class="services-group reveal">
+        <span class="services-group-label">Web & Frontend</span>
+        <div class="services-grid">
+          <div class="service-card" style="--s-accent: var(--accent-k);">
+            <div class="service-card-top">
+              <img src="/services/service-web.svg" class="service-icon" alt="" />
+              <div class="service-title">Web App Development</div>
+            </div>
+            <p class="service-desc">Progressive web apps and static sites with Next.js or Astro. Fast, SEO-friendly, and production-ready.</p>
+            <span class="service-badge">Next.js · Astro</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-k);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🌐</span>
+              <div class="service-title">WordPress Development</div>
+            </div>
+            <p class="service-desc">Custom themes, ACF Gutenberg blocks, plugin development, and performance optimization for WordPress sites.</p>
+            <span class="service-badge">ACF · Gutenberg</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-k);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
+              <div class="service-title">PWA Development</div>
+            </div>
+            <p class="service-desc">Installable web apps with offline support, push notifications, and native-like UX — no app store needed.</p>
+            <span class="service-badge">Offline · installable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="services-group reveal">
+        <span class="services-group-label">Backend & Infrastructure</span>
+        <div class="services-grid">
+          <div class="service-card" style="--s-accent: var(--accent-e);">
+            <div class="service-card-top">
+              <img src="/services/service-backend.svg" class="service-icon" alt="" />
+              <div class="service-title">API Development</div>
+            </div>
+            <p class="service-desc">Django REST APIs with authentication, permissions, and documentation. Built to scale and easy to integrate.</p>
+            <span class="service-badge">Django · Python</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-e);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">⚙️</span>
+              <div class="service-title">Admin Dashboards</div>
+            </div>
+            <p class="service-desc">Custom admin panels for managing content, users, and data — built to replace generic tools with tailored workflows.</p>
+            <span class="service-badge">Custom CMS</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-e);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🗄️</span>
+              <div class="service-title">Database Architecture</div>
+            </div>
+            <p class="service-desc">PostgreSQL schema design, migrations, query optimization, and Redis caching for performant data layers.</p>
+            <span class="service-badge">PostgreSQL · Redis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI -->
+      <div class="services-group reveal">
+        <span class="services-group-label">AI & Automation</span>
+        <div class="services-grid">
+          <div class="service-card" style="--s-accent: var(--accent-d);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🤖</span>
+              <div class="service-title">AI Chatbot Development</div>
+            </div>
+            <p class="service-desc">Conversational AI assistants powered by Claude or GPT — for customer support, lead qualification, and internal tools.</p>
+            <span class="service-badge">Claude · OpenAI</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-d);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🧠</span>
+              <div class="service-title">LLM Integration</div>
+            </div>
+            <p class="service-desc">Integrate large language models into existing products — summarization, classification, generation, and RAG pipelines.</p>
+            <span class="service-badge">GPT · Claude API</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-d);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
+              <div class="service-title">Content Pipelines</div>
+            </div>
+            <p class="service-desc">Automated content generation, transformation, and validation pipelines — audio, text, and structured data at scale.</p>
+            <span class="service-badge">Python · GCP TTS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EdTech -->
+      <div class="services-group reveal">
+        <span class="services-group-label">EdTech & Learning Products</span>
+        <div class="services-grid">
+          <div class="service-card" style="--s-accent: var(--accent-w);">
+            <div class="service-card-top">
+              <img src="/services/service-edtech.svg" class="service-icon" alt="" />
+              <div class="service-title">Language Learning Apps</div>
+            </div>
+            <p class="service-desc">Structured learning apps with spaced repetition, exercise types, progress tracking, and AI-powered explanations.</p>
+            <span class="service-badge">SRS · Flutter</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-w);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">🔁</span>
+              <div class="service-title">Spaced Repetition Systems</div>
+            </div>
+            <p class="service-desc">SM-2 and custom SRS algorithms with adaptive scheduling, performance analytics, and streak mechanics.</p>
+            <span class="service-badge">SM-2 · adaptive</span>
+          </div>
+          <div class="service-card" style="--s-accent: var(--accent-w);">
+            <div class="service-card-top">
+              <span style="font-size: 28px; flex-shrink: 0;">💡</span>
+              <div class="service-title">EdTech Consulting</div>
+            </div>
+            <p class="service-desc">Pedagogy-first product design — applying Testing Effect, Noticing Hypothesis, and spaced practice to digital learning tools.</p>
+            <span class="service-badge">Pedagogy · UX</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section> 
 
