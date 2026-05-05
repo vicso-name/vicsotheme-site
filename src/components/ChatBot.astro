@@ -439,16 +439,14 @@ EMAIL_INPUT`;
     showTyping();
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 300,
-          system: SYSTEM_PROMPT,
-          messages: messages.map(m => ({ role: m.role, content: m.content }))
-        })
-      });
+      const response = await fetch('https://vicso-claude-proxy.vic-sokoliuk.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                system: SYSTEM_PROMPT,
+                messages: messages.map(m => ({ role: m.role, content: m.content }))
+            })
+    });
 
       const data = await response.json();
       hideTyping();
