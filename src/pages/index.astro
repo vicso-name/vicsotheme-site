@@ -385,6 +385,190 @@ import Layout from '../layouts/Layout.astro';
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 10px; padding: 13px 24px; font-size: 14px; color: var(--text); text-decoration: none; font-weight: 400; transition: background 0.2s, border-color 0.2s; }
     .btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: var(--border-hi); }
 
+    /* ── Why Me? ── */
+    .why-section { padding: 0 0 96px; }
+ 
+    .why-hero {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      padding: 64px 56px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .why-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), var(--accent-e), transparent);
+      opacity: 0.6;
+    }
+    .why-hero-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% -20%, rgba(74,222,128,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .why-kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-h);
+      margin-bottom: 20px;
+    }
+    .why-headline {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .why-headline strong {
+      font-weight: 500;
+      background: linear-gradient(135deg, var(--accent-h), var(--accent-e));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .why-lead {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .why-numbers {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .why-num { text-align: center; }
+    .why-num-val {
+      font-family: var(--mono);
+      font-size: 32px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .why-num-val span { color: var(--accent-h); }
+    .why-num-label { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
+ 
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+ 
+    .comparison-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .comparison-card.is-me {
+      border-color: rgba(74,222,128,0.2);
+      background: rgba(74,222,128,0.03);
+    }
+    .comparison-card.is-me::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-h), transparent);
+      opacity: 0.7;
+    }
+ 
+    .comp-badge {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .comp-badge.agency { border: 1px solid rgba(255,255,255,0.1); color: var(--muted); }
+    .comp-badge.me { border: 1px solid rgba(74,222,128,0.3); color: var(--accent-h); }
+ 
+    .comp-title { font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 20px; }
+ 
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .comp-list li {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .comp-list li .icon { flex-shrink: 0; margin-top: 1px; }
+    .comp-list li .icon.bad { color: #f87171; }
+    .comp-list li .icon.good { color: var(--accent-h); }
+    .comp-list.is-me li { color: rgba(255,255,255,0.75); }
+ 
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+ 
+    .reason-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .reason-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
+    .reason-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--r-accent, var(--accent-h)), transparent);
+      opacity: 0.5;
+    }
+    .reason-card:nth-child(1) { --r-accent: var(--accent-h); }
+    .reason-card:nth-child(2) { --r-accent: var(--accent-k); }
+    .reason-card:nth-child(3) { --r-accent: var(--accent-e); }
+    .reason-card:nth-child(4) { --r-accent: var(--accent-w); }
+    .reason-card:nth-child(5) { --r-accent: var(--accent-d); }
+    .reason-card:nth-child(6) { --r-accent: #fb923c; }
+ 
+    .reason-num {
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--r-accent, var(--accent-h));
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+    .reason-title { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+    .reason-desc { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; }
+ 
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+      .reasons-grid { grid-template-columns: 1fr 1fr; }
+      .why-hero { padding: 40px 24px; }
+      .why-numbers { gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .reasons-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Animations ── */
     .fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.7s ease forwards; }
     .fade-up:nth-child(1) { animation-delay: 0.1s; }
@@ -700,6 +884,117 @@ import Layout from '../layouts/Layout.astro';
         <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Language Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
         <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backend Architecture & Admin Systems</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Why Me? -->
+
+  <section class="why-section" id="why">
+    <div class="wrap">
+ 
+      <!-- Hero statement -->
+      <div class="why-hero reveal">
+        <div class="why-hero-glow"></div>
+        <div class="why-kicker">Why work with an independent developer</div>
+        <h2 class="why-headline">
+          Studio quality.<br />
+          <strong>Without the studio overhead.</strong>
+        </h2>
+        <p class="why-lead">
+          Got an idea? I'll turn it into a working product in weeks, not months. AI-powered workflow cuts development time by 3× — and that saving goes directly to your timeline and budget. From $2K MVP to $10K full product, built by one senior developer who actually ships.
+        </p>
+        <div class="why-numbers">
+          <div class="why-num">
+            <div class="why-num-val">3<span>×</span></div>
+            <div class="why-num-label">Faster than agency avg.</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">60<span>%</span></div>
+            <div class="why-num-label">Lower cost vs studio</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">0</div>
+            <div class="why-num-label">Middlemen between us</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">24<span>h</span></div>
+            <div class="why-num-label">Max response time</div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Comparison -->
+      <div class="comparison-grid reveal">
+ 
+        <div class="comparison-card">
+          <span class="comp-badge agency">Typical Agency</span>
+          <div class="comp-title">What you usually get</div>
+          <ul class="comp-list">
+            <li><span class="icon bad">✕</span> Account manager → project manager → developer chain</li>
+            <li><span class="icon bad">✕</span> $15K–50K+ for a basic mobile app</li>
+            <li><span class="icon bad">✕</span> 4–8 month delivery timelines</li>
+            <li><span class="icon bad">✕</span> Junior devs on your project, seniors on the pitch</li>
+            <li><span class="icon bad">✕</span> Contracts, retainers, hidden scope fees</li>
+            <li><span class="icon bad">✕</span> You explain your idea 5 times to 5 people</li>
+          </ul>
+        </div>
+ 
+        <div class="comparison-card is-me">
+          <span class="comp-badge me">Working with me</span>
+          <div class="comp-title">What you actually get</div>
+          <ul class="comp-list is-me">
+            <li><span class="icon good">✓</span> You talk directly to the person writing your code</li>
+            <li><span class="icon good">✓</span> Transparent pricing, no hidden fees</li>
+            <li><span class="icon good">✓</span> MVP in 4–8 weeks, full product in 2–4 months</li>
+            <li><span class="icon good">✓</span> Senior full-stack + AI tools on every task</li>
+            <li><span class="icon good">✓</span> Flexible engagement — fixed price or hourly</li>
+            <li><span class="icon good">✓</span> One briefing. One person. Clear ownership.</li>
+          </ul>
+        </div>
+ 
+      </div>
+ 
+      <!-- 6 Reasons -->
+      <div class="reasons-grid reveal">
+ 
+        <div class="reason-card">
+          <div class="reason-num">01</div>
+          <div class="reason-title">AI-powered development</div>
+          <p class="reason-desc">I use Claude, Cursor, and custom AI pipelines daily. Tasks that take a junior dev a week take me a day. That speed savings goes directly to your budget and timeline.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">02</div>
+          <div class="reason-title">Full-stack ownership</div>
+          <p class="reason-desc">Mobile (Flutter/Kotlin), backend (Django/Python), web (Next.js/Astro), DevOps (Docker/Nginx). One person sees the full picture — no handoff gaps, no blame-shifting between teams.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">03</div>
+          <div class="reason-title">You talk to the builder</div>
+          <p class="reason-desc">No account managers, no project coordinators. You message me directly. I understand your requirements firsthand and make technical decisions without a telephone game.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">04</div>
+          <div class="reason-title">Shipped products, not prototypes</div>
+          <p class="reason-desc">6 apps live on Google Play. Real users, real reviews, real revenue systems. I know what it takes to get from idea to production — not just to demo.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">05</div>
+          <div class="reason-title">EdTech & product expertise</div>
+          <p class="reason-desc">Spaced repetition, content pipelines, subscription systems, admin dashboards — I've built these, not just read about them. Domain knowledge you can't hire for cheap at an agency.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">06</div>
+          <div class="reason-title">Fair price, honest scope</div>
+          <p class="reason-desc">I quote based on actual work, not on what the market will bear. If your project is simpler than you think — I'll tell you. If it needs more — I'll explain exactly why.</p>
+        </div>
+ 
+      </div>
+ 
     </div>
   </section>
 
