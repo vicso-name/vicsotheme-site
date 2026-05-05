@@ -20,19 +20,65 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
+  <!-- Prevent flash of wrong theme -->
+  <script is:inline>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <style is:global>
+    /* ── Light theme (default) ── */
     :root {
-      --bg:         #080808;
-      --bg-card:    #0f0f0f;
-      --bg-hover:   #141414;
-      --border:     rgba(255,255,255,0.07);
-      --border-hi:  rgba(255,255,255,0.14);
-      --text:       #e8e8e8;
-      --muted:      rgba(255,255,255,0.7);
-      --accent:     #4ade80;
-      --accent-b:   #369e5c;
-      --mono:      'JetBrains Mono', monospace;
-      --sans:      'Onest', sans-serif;
+      --bg:              #f8fafc;
+      --bg-card:         #ffffff;
+      --bg-hover:        #f1f5f9;
+      --border:          rgba(0,0,0,0.08);
+      --border-hi:       rgba(0,0,0,0.16);
+      --text:            #0f172a;
+      --heading:         #0f172a;
+      --muted:           rgba(15,23,42,0.5);
+      --muted-hi:        rgba(15,23,42,0.7);
+      --accent:          #16a34a;
+      --accent-h:        #16a34a;
+      --accent-k:        #2563eb;
+      --accent-e:        #0d9488;
+      --accent-w:        #d97706;
+      --accent-d:        #7c3aed;
+      --accent-b:        #16a34a;
+      --grid-color:      rgba(0,0,0,0.04);
+      --nav-bg:          rgba(248,250,252,0.88);
+      --mobile-menu-bg:  rgba(248,250,252,0.98);
+      --card-text:       rgba(15,23,42,0.65);
+      --mono:            'JetBrains Mono', monospace;
+      --sans:            'Onest', sans-serif;
+    }
+
+    /* ── Dark theme ── */
+    [data-theme="dark"] {
+      --bg:              #080808;
+      --bg-card:         #0f0f0f;
+      --bg-hover:        #141414;
+      --border:          rgba(255,255,255,0.07);
+      --border-hi:       rgba(255,255,255,0.14);
+      --text:            #e8e8e8;
+      --heading:         #ffffff;
+      --muted:           rgba(255,255,255,0.45);
+      --muted-hi:        rgba(255,255,255,0.7);
+      --accent:          #4ade80;
+      --accent-h:        #4ade80;
+      --accent-k:        #60a5fa;
+      --accent-e:        #2dd4bf;
+      --accent-w:        #fbbf24;
+      --accent-d:        #a78bfa;
+      --accent-b:        #4ade80;
+      --grid-color:      rgba(255,255,255,0.025);
+      --nav-bg:          rgba(8,8,8,0.88);
+      --mobile-menu-bg:  rgba(8,8,8,0.97);
+      --card-text:       rgba(255,255,255,0.6);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,6 +91,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       min-height: 100vh;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     body::before {
@@ -52,8 +99,8 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
       background-size: 48px 48px;
       pointer-events: none;
       z-index: 0;
@@ -73,10 +120,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       transform: translateY(18px);
       transition: opacity 0.55s ease, transform 0.55s ease;
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     .stagger-1 { transition-delay: 0.05s; }
     .stagger-2 { transition-delay: 0.10s; }
     .stagger-3 { transition-delay: 0.15s; }
@@ -90,8 +134,9 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       top: 0;
       z-index: 110;
       border-bottom: 1px solid var(--border);
-      background: rgba(8,8,8,0.85);
+      background: var(--nav-bg);
       backdrop-filter: blur(12px);
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
     .nav-inner {
@@ -99,6 +144,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       align-items: center;
       justify-content: space-between;
       height: 56px;
+      gap: 16px;
     }
 
     .logo {
@@ -110,6 +156,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       letter-spacing: 0.04em;
       position: relative;
       z-index: 110;
+      transition: color 0.3s;
     }
     .logo span { color: var(--accent-b); }
 
@@ -117,6 +164,8 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       display: flex;
       gap: 32px;
       list-style: none;
+      flex: 1;
+      justify-content: center;
     }
     .nav-links a {
       font-size: 14px;
@@ -127,6 +176,42 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
     }
     .nav-links a:hover,
     .nav-links a.active { color: var(--text); }
+
+    /* ── Nav right side ── */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      position: relative;
+      z-index: 110;
+    }
+    .theme-toggle:hover { color: var(--text); border-color: var(--border-hi); }
+
+    .theme-toggle .icon-sun,
+    .theme-toggle .icon-moon { position: absolute; transition: opacity 0.2s, transform 0.3s; }
+
+    /* Light mode: show moon (to switch to dark) */
+    :root .theme-toggle .icon-sun  { opacity: 0; transform: rotate(90deg); }
+    :root .theme-toggle .icon-moon { opacity: 1; transform: rotate(0deg); }
+
+    /* Dark mode: show sun (to switch to light) */
+    [data-theme="dark"] .theme-toggle .icon-sun  { opacity: 1; transform: rotate(0deg); }
+    [data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: rotate(-90deg); }
 
     /* ── Hamburger ── */
     .hamburger {
@@ -141,7 +226,6 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       cursor: pointer;
       position: relative;
       z-index: 110;
-      gap: 0;
     }
 
     .hamburger-line {
@@ -160,88 +244,78 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
     .hamburger-line:nth-child(2) { top: 17.5px; }
     .hamburger-line:nth-child(3) { top: 24px; }
 
-    /* Open state */
-    .hamburger.is-open .hamburger-line:nth-child(1) {
-      top: 17.5px;
-      transform: rotate(45deg);
+    .hamburger.is-open .hamburger-line:nth-child(1) { top: 17.5px; transform: rotate(45deg); }
+    .hamburger.is-open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.is-open .hamburger-line:nth-child(3) { top: 17.5px; transform: rotate(-45deg); }
+
+    /* ── Shared utility classes ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-    .hamburger.is-open .hamburger-line:nth-child(2) {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-    .hamburger.is-open .hamburger-line:nth-child(3) {
-      top: 17.5px;
-      transform: rotate(-45deg);
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
     }
 
-  /* ── Shared utility classes ── */
-  .section-label {
-    font-family: var(--mono);
-    font-size: 18px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+    .card-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--card-accent, var(--accent));
+      margin-bottom: 20px;
+    }
 
-  .card-tag {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--card-accent);
-    margin-bottom: 20px;
-  }
+    .card-title {
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--heading);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
 
-  .card-title {
-    font-size: 30px;
-    font-weight: 500;
-    color: #fff;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin-bottom: 14px;
-  }
+    .card-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 28px;
+    }
 
-  .card-desc {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--muted);
-    font-weight: 300;
-    margin-bottom: 28px;
-  }
+    .card-features {
+      list-style: none;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card-features li {
+      font-size: 13px;
+      color: var(--card-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-features li::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--card-accent, var(--accent));
+      flex-shrink: 0;
+    }
 
-  .card-features {
-    list-style: none;
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .card-features li {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .card-features li::before {
-    content: '';
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: var(--card-accent);
-    flex-shrink: 0;
-  }
-
-  .section { padding: 0 0 96px; }
+    .section { padding: 0 0 96px; }
 
     /* ── Mobile overlay ── */
     .mobile-menu {
@@ -249,7 +323,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       position: fixed;
       inset: 0;
       z-index: 106;
-      background: rgba(8,8,8,0.97);
+      background: var(--mobile-menu-bg);
       backdrop-filter: blur(20px);
       flex-direction: column;
       align-items: center;
@@ -259,11 +333,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       pointer-events: none;
       transition: opacity 0.35s ease;
     }
-
-    .mobile-menu.is-open {
-      opacity: 1;
-      pointer-events: all;
-    }
+    .mobile-menu.is-open { opacity: 1; pointer-events: all; }
 
     .mobile-nav-link {
       font-family: var(--mono);
@@ -273,38 +343,24 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       color: var(--muted);
       text-decoration: none;
       padding: 16px 32px;
-      transition: color 0.2s, transform 0.2s;
       transform: translateY(8px);
       opacity: 0;
       transition: color 0.2s, transform 0.4s ease, opacity 0.4s ease;
     }
-
-    .mobile-menu.is-open .mobile-nav-link {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
+    .mobile-menu.is-open .mobile-nav-link { transform: translateY(0); opacity: 1; }
     .mobile-menu.is-open .mobile-nav-link:nth-child(1) { transition-delay: 0.05s; }
     .mobile-menu.is-open .mobile-nav-link:nth-child(2) { transition-delay: 0.10s; }
     .mobile-menu.is-open .mobile-nav-link:nth-child(3) { transition-delay: 0.15s; }
     .mobile-menu.is-open .mobile-nav-link:nth-child(4) { transition-delay: 0.20s; }
     .mobile-menu.is-open .mobile-nav-link:nth-child(5) { transition-delay: 0.25s; }
-
-    .mobile-nav-link:hover,
-    .mobile-nav-link.active { color: var(--text); }
+    .mobile-menu.is-open .mobile-nav-link:nth-child(6) { transition-delay: 0.30s; }
+    .mobile-nav-link:hover, .mobile-nav-link.active { color: var(--text); }
 
     .mobile-menu-divider {
       width: 1px;
       height: 32px;
       background: var(--border);
       margin: 8px 0;
-    }
-
-    .mobile-menu-contact {
-      margin-top: 8px;
-      font-size: 12px;
-      color: var(--muted);
-      font-family: var(--mono);
     }
 
     /* ── Footer ── */
@@ -320,21 +376,9 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       flex-wrap: wrap;
       gap: 16px;
     }
-    .footer-copy {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-    .footer-links a {
-      font-size: 12px;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .footer-copy { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text); }
 
     /* ── Responsive ── */
@@ -372,11 +416,33 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
           <li><a href="/#stack">Stack</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+        <div class="nav-right">
+          <!-- Theme toggle -->
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <!-- Hamburger -->
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -399,7 +465,18 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
   </footer>
 
   <script>
-    // Hamburger toggle
+    // ── Theme toggle ──
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    themeToggle?.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // ── Hamburger toggle ──
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -409,7 +486,6 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close on link click
     mobileMenu?.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger?.classList.remove('is-open');
@@ -418,7 +494,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
       });
     });
 
-    // Scroll reveal
+    // ── Scroll reveal ──
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -430,6 +506,7 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
+
   <ChatBot />
 </body>
 </html>

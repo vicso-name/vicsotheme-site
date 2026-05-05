@@ -7,15 +7,15 @@ import ROICalculator from '../components/ROICalculator.astro';
 <Layout title="Full Stack Developer for Hire | Flutter, Django, Next.js">
 
   <style>
-    :root {
-      --accent-h:  #4ade80;
-      --accent-b:  #369e5c;
-      --accent-k:  #60a5fa;
-      --accent-e:  #2dd4bf;
-      --accent-w:  #fbbf24;
-      --accent-d:  #a78bfa;
-    }
 
+    /* ── Fix white SVG icons in light mode ── */
+    :root .tech-icon[src$="django.svg"],
+    :root .tech-icon[src$="nextjs.svg"],
+    :root .tech-icon[src$="astro.svg"],
+    :root .tech-icon[src$="openai.svg"] {
+      filter: invert(0.85);
+    }
+    
     /* ── Hero ── */
     .hero {
       padding: 120px 0 96px;
@@ -51,7 +51,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       font-weight: 300;
       line-height: 1.1;
       letter-spacing: -0.03em;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 20px;
     }
     h1 em {
@@ -80,7 +80,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       font-family: var(--mono);
       font-size: 28px;
       font-weight: 500;
-      color: #fff;
+      color: var(--heading);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -133,7 +133,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(255,255,255,0.05);
+      background: var(--bg-hover);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 12px 20px;
@@ -145,7 +145,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       width: fit-content;
     }
     .btn-play:hover {
-      background: rgba(255,255,255,0.09);
+      background: var(--bg-card);
       border-color: var(--border-hi);
     }
     .btn-play svg { width: 18px; height: 18px; opacity: 0.7; }
@@ -166,7 +166,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       font-size: 96px;
       position: relative;
       z-index: 1;
-      filter: drop-shadow(0 0 40px rgba(255,255,255,0.1));
+      filter: drop-shadow(0 0 40px rgba(0,0,0,0.12));
       animation: float 4s ease-in-out infinite;
     }
     .app-card:nth-child(2) .card-emoji { animation-delay: -2s; }
@@ -210,7 +210,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     .dashboard-preview {
       position: relative;
       overflow: hidden;
-      background: #0a0a12;
+      background: var(--bg-hover);
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
@@ -220,37 +220,37 @@ import ROICalculator from '../components/ROICalculator.astro';
       position: absolute;
       left: 0; top: 0; bottom: 0;
       width: 150px;
-      background: rgba(255,255,255,0.03);
+      background: var(--bg-card);
       border-right: 1px solid var(--border);
       padding: 16px 12px;
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
-    .fake-sidebar-title { font-size: 10px; color: #fff; font-weight: 500; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); font-family: var(--mono); }
+    .fake-sidebar-title { font-size: 10px; color: var(--heading); font-weight: 500; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); font-family: var(--mono); }
     .fake-nav-item { padding: 6px 8px; border-radius: 5px; color: var(--muted); font-size: 10px; cursor: default; font-family: var(--mono); }
     .fake-nav-item.active { background: rgba(167,139,250,0.15); color: var(--accent-d); }
-    .fake-nav-section { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin: 8px 0 4px; padding-left: 8px; font-family: var(--mono); }
+    .fake-nav-section { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; padding-left: 8px; font-family: var(--mono); }
     .fake-main { margin-left: 155px; padding: 16px; font-family: var(--mono); }
-    .fake-main-title { font-size: 14px; color: #fff; font-weight: 500; margin-bottom: 4px; }
+    .fake-main-title { font-size: 14px; color: var(--heading); font-weight: 500; margin-bottom: 4px; }
     .fake-main-sub { font-size: 10px; color: var(--muted); margin-bottom: 14px; }
     .fake-stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
-    .fake-stat-box { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+    .fake-stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
     .fake-stat-box .label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-    .fake-stat-box .value { font-size: 16px; color: #fff; font-weight: 500; }
+    .fake-stat-box .value { font-size: 16px; color: var(--heading); font-weight: 500; }
     .fake-stat-box.green .value { color: var(--accent-h); }
     .fake-stat-box.blue  .value { color: var(--accent-k); }
     .fake-stat-box.amber .value { color: var(--accent-w); }
     .fake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-    .fake-lesson-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 6px; padding: 8px; }
+    .fake-lesson-card { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 6px; padding: 8px; }
     .fake-lesson-card .lc-badges { display: flex; gap: 4px; margin-bottom: 6px; }
     .fake-badge { font-size: 8px; padding: 2px 5px; border-radius: 3px; font-family: var(--mono); }
     .fake-badge.green { background: rgba(74,222,128,0.15); color: var(--accent-h); }
     .fake-badge.blue  { background: rgba(96,165,250,0.15); color: var(--accent-k); }
-    .fake-lesson-card .lc-name { font-size: 10px; color: #fff; margin-bottom: 3px; }
+    .fake-lesson-card .lc-name { font-size: 10px; color: var(--heading); margin-bottom: 3px; }
     .fake-lesson-card .lc-desc { font-size: 9px; color: var(--muted); line-height: 1.4; }
     .fake-lesson-card .lc-actions { display: flex; gap: 4px; margin-top: 6px; }
-    .fake-btn { font-size: 8px; padding: 3px 6px; border-radius: 3px; border: 1px solid var(--border); color: var(--muted); background: rgba(255,255,255,0.04); }
+    .fake-btn { font-size: 8px; padding: 3px 6px; border-radius: 3px; border: 1px solid var(--border); color: var(--muted); background: var(--bg-card); }
     .fake-btn.blue { border-color: rgba(96,165,250,0.3); color: var(--accent-k); }
     .fake-btn.red  { border-color: rgba(248,113,113,0.3); color: #f87171; }
     .dashboard-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(167,139,250,0.05) 100%); pointer-events: none; }
@@ -268,16 +268,16 @@ import ROICalculator from '../components/ROICalculator.astro';
     .webapp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-w), transparent); opacity: 0.7; }
     .webapp-inner { display: grid; grid-template-columns: 1fr 1.6fr; min-height: 340px; }
     .webapp-info { padding: 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
-    .webapp-preview { position: relative; overflow: hidden; background: #06060a; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .webapp-preview { position: relative; overflow: hidden; background: var(--bg-hover); display: flex; align-items: center; justify-content: center; padding: 24px; }
     .fake-webapp { width: 100%; max-width: 560px; }
-    .fake-webapp-header { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px 10px 0 0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: none; }
-    .fake-url-bar { flex: 1; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; color: var(--muted); }
-    .fake-webapp-body { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 0 0 10px 10px; padding: 16px; }
-    .fw-title { font-size: 13px; font-weight: 500; color: #fff; margin-bottom: 12px; text-align: center; }
-    .fw-search { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--mono); width: 100%; display: block; }
+    .fake-webapp-header { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px 10px 0 0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: none; }
+    .fake-url-bar { flex: 1; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; color: var(--muted); }
+    .fake-webapp-body { background: var(--bg-card); border: 1px solid var(--border); border-radius: 0 0 10px 10px; padding: 16px; }
+    .fw-title { font-size: 13px; font-weight: 500; color: var(--heading); margin-bottom: 12px; text-align: center; }
+    .fw-search { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--mono); width: 100%; display: block; }
     .fw-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-    .fw-word-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; }
-    .fw-est { font-size: 13px; color: #fff; font-weight: 500; margin-bottom: 2px; }
+    .fw-word-card { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; }
+    .fw-est { font-size: 13px; color: var(--heading); font-weight: 500; margin-bottom: 2px; }
     .fw-ru  { font-size: 10px; color: var(--muted); }
     .fw-tag { display: inline-block; font-family: var(--mono); font-size: 8px; padding: 2px 5px; border-radius: 3px; background: rgba(251,191,36,0.12); color: var(--accent-w); margin-top: 4px; }
     .webapp-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(251,191,36,0.04) 100%); pointer-events: none; }
@@ -310,7 +310,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     .service-card:nth-child(3) { --s-accent: var(--accent-e); }
     .service-card:nth-child(4) { --s-accent: var(--accent-w); }
     .service-icon { width: 55px; height: 55px; margin-bottom: 16px; display: block; object-fit: contain; }
-    .service-title { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 10px; }
+    .service-title { font-size: 16px; font-weight: 500; color: var(--heading); margin-bottom: 10px; }
     .service-desc { font-size: 13px; line-height: 1.65; color: var(--muted); font-weight: 300; }
 
     /* ── CTA ── */
@@ -318,14 +318,14 @@ import ROICalculator from '../components/ROICalculator.astro';
     .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent); opacity: 0.5; }
     .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.04) 0%, transparent 60%); pointer-events: none; }
     .cta-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
-    .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: #fff; letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
+    .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--heading); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
     .cta-title em { font-style: normal; color:  var(--accent-b); }
     .cta-sub { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 36px; line-height: 1.6; font-weight: 300; }
     .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #080808; border: none; border-radius: 10px; padding: 13px 24px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: var(--bg); border: none; border-radius: 10px; padding: 13px 24px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
     .btn-primary:hover { opacity: 0.88; }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 10px; padding: 13px 24px; font-size: 14px; color: var(--text); text-decoration: none; font-weight: 400; transition: background 0.2s, border-color 0.2s; }
-    .btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: var(--border-hi); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 10px; padding: 13px 24px; font-size: 14px; color: var(--text); text-decoration: none; font-weight: 400; transition: background 0.2s, border-color 0.2s; }
+    .btn-secondary:hover { background: var(--bg-card); border-color: var(--border-hi); }
 
     /* ── Why Me? ── */
     .why-section { padding: 0 0 96px; }
@@ -365,7 +365,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     .why-headline {
       font-size: clamp(28px, 4vw, 44px);
       font-weight: 300;
-      color: #fff;
+      color: var(--heading);
       letter-spacing: -0.02em;
       line-height: 1.2;
       margin-bottom: 20px;
@@ -396,7 +396,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       font-family: var(--mono);
       font-size: 32px;
       font-weight: 500;
-      color: #fff;
+      color: var(--heading);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -441,10 +441,10 @@ import ROICalculator from '../components/ROICalculator.astro';
       display: inline-block;
       margin-bottom: 20px;
     }
-    .comp-badge.agency { border: 1px solid rgba(255,255,255,0.1); color: var(--muted); }
+    .comp-badge.agency { border: 1px solid var(--border); color: var(--muted); }
     .comp-badge.me { border: 1px solid rgba(74,222,128,0.3); color: var(--accent-h); }
  
-    .comp-title { font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 20px; }
+    .comp-title { font-size: 18px; font-weight: 500; color: var(--heading); margin-bottom: 20px; }
  
     .comp-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .comp-list li {
@@ -458,7 +458,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     .comp-list li .icon { flex-shrink: 0; margin-top: 1px; }
     .comp-list li .icon.bad { color: #f87171; }
     .comp-list li .icon.good { color: var(--accent-h); }
-    .comp-list.is-me li { color: rgba(255,255,255,0.75); }
+    .comp-list.is-me li { color: var(--muted-hi); }
  
     .reasons-grid {
       display: grid;
@@ -498,7 +498,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       letter-spacing: 0.06em;
       margin-bottom: 12px;
     }
-    .reason-title { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+    .reason-title { font-size: 15px; font-weight: 500; color: var(--heading); margin-bottom: 8px; line-height: 1.3; }
     .reason-desc { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; }
  
     @media (max-width: 768px) {

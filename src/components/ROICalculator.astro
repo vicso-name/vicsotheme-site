@@ -58,7 +58,7 @@
                 Me
               </div>
               <div class="calc-legend-item">
-                <div class="calc-legend-dot" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border);"></div>
+                <div class="calc-legend-dot" style="background: var(--bg-hover); border: 1px solid var(--border);"></div>
                 Agency
               </div>
             </div>
@@ -153,7 +153,7 @@
 
   .calc-select {
     width: 100%;
-    background: rgba(255,255,255,0.04);
+    background: var(--bg-hover);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 10px 14px;
@@ -180,7 +180,7 @@
 
   /* :global() needed — these classes are injected via innerHTML */
   :global(.calc-metric) {
-    background: rgba(255,255,255,0.04);
+    background: var(--bg-hover);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 14px 16px;
@@ -201,7 +201,7 @@
   :global(.calc-metric-value) {
     font-size: 20px;
     font-weight: 500;
-    color: #fff;
+    color: var(--heading);
     font-family: var(--mono);
   }
   :global(.calc-metric.highlight .calc-metric-value) { color: var(--accent-h); }
@@ -238,7 +238,7 @@
   }
   .calc-bar-agency {
     flex: 1;
-    background: rgba(255,255,255,0.04);
+    background: var(--bg-hover);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,8 +280,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: #fff;
-    color: #080808;
+    background: var(--text);
+    color: var(--bg);
     border: none;
     border-radius: 10px;
     padding: 13px 24px;
