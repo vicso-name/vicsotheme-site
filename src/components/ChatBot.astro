@@ -1,0 +1,519 @@
+---
+---
+
+<!-- Chat Toggle Button -->
+<button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+  <svg class="chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <svg class="chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+  <span class="chat-unread" id="chatUnread">1</span>
+</button>
+
+<!-- Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header">
+    <div class="chat-avatar">V</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Viktor's Assistant</div>
+      <div class="chat-header-status">
+        <span class="chat-status-dot"></span>
+        Online now
+      </div>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages"></div>
+
+  <div class="chat-quick-replies" id="chatQuickReplies"></div>
+
+  <div class="chat-input-wrap" id="chatInputWrap">
+    <input
+      class="chat-input"
+      id="chatInput"
+      type="text"
+      placeholder="Type a message..."
+      autocomplete="off"
+    />
+    <button class="chat-send" id="chatSend" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  /* Toggle button */
+  .chat-toggle {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 200;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-h, #4ade80);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #052e16;
+    box-shadow: 0 4px 24px rgba(74,222,128,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .chat-toggle:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(74,222,128,0.4); }
+
+  .chat-icon-open  { display: block; }
+  .chat-icon-close { display: none; }
+  .chat-toggle.is-open .chat-icon-open  { display: none; }
+  .chat-toggle.is-open .chat-icon-close { display: block; }
+
+  .chat-unread {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #f87171;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono, monospace);
+    border: 2px solid #080808;
+    transition: opacity 0.2s;
+  }
+  .chat-unread.hidden { opacity: 0; pointer-events: none; }
+
+  /* Widget */
+  .chat-widget {
+    position: fixed;
+    bottom: 96px;
+    right: 28px;
+    z-index: 199;
+    width: 360px;
+    max-height: 560px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    background: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+    transform: translateY(16px) scale(0.97);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.23,1,0.32,1), opacity 0.3s ease;
+  }
+  .chat-widget.is-open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Header */
+  .chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    flex-shrink: 0;
+  }
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4ade80, #60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #080808;
+    flex-shrink: 0;
+  }
+  .chat-header-info { flex: 1; }
+  .chat-header-name { font-size: 14px; font-weight: 500; color: #fff; }
+  .chat-header-status { display: flex; align-items: center; gap: 5px; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .chat-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px #4ade80; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .chat-close { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.3); padding: 4px; display: flex; transition: color 0.2s; }
+  .chat-close:hover { color: #fff; }
+
+  /* Messages */
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+  }
+
+  .msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.55;
+    animation: msgIn 0.25s ease forwards;
+  }
+  @keyframes msgIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+  .msg-bot {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.85);
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+  }
+  .msg-user {
+    background: #4ade80;
+    color: #052e16;
+    font-weight: 500;
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+  }
+
+  .msg-typing {
+    background: rgba(255,255,255,0.07);
+    align-self: flex-start;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border-bottom-left-radius: 4px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .msg-typing span {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    animation: typing 1.2s ease-in-out infinite;
+  }
+  .msg-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .msg-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+
+  /* Quick replies */
+  .chat-quick-replies {
+    padding: 8px 16px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .quick-reply {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .quick-reply:hover {
+    background: rgba(74,222,128,0.1);
+    border-color: rgba(74,222,128,0.3);
+    color: #4ade80;
+  }
+
+  /* Input */
+  .chat-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    flex-shrink: 0;
+  }
+  .chat-input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 9px 16px;
+    color: #e8e8e8;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .chat-input:focus { border-color: rgba(74,222,128,0.4); }
+  .chat-input::placeholder { color: rgba(255,255,255,0.25); }
+
+  .chat-send {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #4ade80;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #052e16;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+  }
+  .chat-send:hover { opacity: 0.85; }
+  .chat-send:disabled { opacity: 0.4; cursor: default; }
+
+  /* Email input state */
+  .chat-input.email-mode { border-color: rgba(74,222,128,0.3); }
+
+  @media (max-width: 420px) {
+    .chat-widget { width: calc(100vw - 32px); right: 16px; bottom: 88px; }
+    .chat-toggle { right: 16px; bottom: 16px; }
+  }
+</style>
+
+<script>
+  const SYSTEM_PROMPT = `You are a friendly and professional sales assistant for Viktor Sokoliuk, a senior full stack developer based in Tallinn, Estonia.
+
+Your goal is to qualify leads and guide them to book a project estimate. You are conversational, helpful, and concise — never more than 2-3 sentences per message.
+
+About Viktor:
+- Senior Full Stack Developer with 6+ apps on Google Play (10K+ downloads)
+- Specializes in: Flutter (mobile), Kotlin/Jetpack Compose (Android), Django/Python (backend), Next.js/Astro (web), WordPress
+- Uses AI tools (Claude, Cursor) to deliver 3x faster than traditional agencies
+- Pricing: $2K–15K depending on project scope
+- Available for new projects, response within 24h
+- Email: vicsothemes@gmail.com
+
+Qualification flow:
+1. Greet warmly, ask what brings them here
+2. Identify project type (mobile app / web app / backend / other)
+3. Understand timeline and urgency
+4. Discuss budget range naturally
+5. When qualified, ask for their email to connect them with Viktor directly
+
+Key rules:
+- Keep responses SHORT (2-3 sentences max)
+- Use quick reply buttons when possible (you'll suggest them as JSON at end of message)
+- Be encouraging and positive about their project idea
+- When user provides email, confirm you'll pass it to Viktor
+- Never make up specific prices — use ranges
+- If asked something you don't know, say Viktor will clarify directly
+
+When you want to suggest quick reply buttons, end your message with:
+BUTTONS: ["Option 1", "Option 2", "Option 3"]
+
+When you want to show an email input field, end your message with:
+EMAIL_INPUT`;
+
+  let messages: {role: string, content: string}[] = [];
+  let awaitingEmail = false;
+  let isLoading = false;
+
+  const toggle = document.getElementById('chatToggle')!;
+  const widget = document.getElementById('chatWidget')!;
+  const closeBtn = document.getElementById('chatClose')!;
+  const messagesEl = document.getElementById('chatMessages')!;
+  const quickRepliesEl = document.getElementById('chatQuickReplies')!;
+  const inputEl = document.getElementById('chatInput') as HTMLInputElement;
+  const sendBtn = document.getElementById('chatSend') as HTMLButtonElement;
+  const unreadEl = document.getElementById('chatUnread')!;
+
+  let opened = false;
+
+  function openChat() {
+    toggle.classList.add('is-open');
+    widget.classList.add('is-open');
+    unreadEl.classList.add('hidden');
+    if (!opened) {
+      opened = true;
+      setTimeout(() => startConversation(), 400);
+    }
+  }
+
+  function closeChat() {
+    toggle.classList.remove('is-open');
+    widget.classList.remove('is-open');
+  }
+
+  toggle.addEventListener('click', () => {
+    if (widget.classList.contains('is-open')) closeChat();
+    else openChat();
+  });
+  closeBtn.addEventListener('click', closeChat);
+
+  function addMessage(text: string, role: 'bot' | 'user') {
+    const div = document.createElement('div');
+    div.className = `msg msg-${role}`;
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    const div = document.createElement('div');
+    div.className = 'msg-typing';
+    div.id = 'typingIndicator';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    document.getElementById('typingIndicator')?.remove();
+  }
+
+  function setQuickReplies(options: string[]) {
+    quickRepliesEl.innerHTML = '';
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quick-reply';
+      btn.textContent = opt;
+      btn.addEventListener('click', () => {
+        sendMessage(opt);
+      });
+      quickRepliesEl.appendChild(btn);
+    });
+  }
+
+  function clearQuickReplies() {
+    quickRepliesEl.innerHTML = '';
+  }
+
+  function showEmailInput() {
+    awaitingEmail = true;
+    inputEl.type = 'email';
+    inputEl.placeholder = 'your@email.com';
+    inputEl.classList.add('email-mode');
+  }
+
+  function resetInput() {
+    awaitingEmail = false;
+    inputEl.type = 'text';
+    inputEl.placeholder = 'Type a message...';
+    inputEl.classList.remove('email-mode');
+  }
+
+  async function startConversation() {
+    showTyping();
+    await new Promise(r => setTimeout(r, 800));
+    hideTyping();
+    const greeting = "Hi there! 👋 I'm Viktor's assistant. What brings you here today?";
+    addMessage(greeting, 'bot');
+    messages.push({ role: 'assistant', content: greeting });
+    setQuickReplies(['I have a project idea', 'Looking to hire a developer', 'Just exploring']);
+  }
+
+  async function sendMessage(text: string) {
+    if (isLoading || !text.trim()) return;
+
+    clearQuickReplies();
+    addMessage(text, 'user');
+
+    if (awaitingEmail) {
+      await handleEmail(text);
+      return;
+    }
+
+    messages.push({ role: 'user', content: text });
+    inputEl.value = '';
+    isLoading = true;
+    sendBtn.disabled = true;
+
+    showTyping();
+
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 300,
+          system: SYSTEM_PROMPT,
+          messages: messages.map(m => ({ role: m.role, content: m.content }))
+        })
+      });
+
+      const data = await response.json();
+      hideTyping();
+
+      const fullText: string = data.content?.[0]?.text || "Sorry, I had a connection issue. You can reach Viktor directly at vicsothemes@gmail.com";
+
+      let botText = fullText;
+      let buttons: string[] = [];
+      let showEmail = false;
+
+      if (fullText.includes('BUTTONS:')) {
+        const parts = fullText.split('BUTTONS:');
+        botText = parts[0].trim();
+        try {
+          buttons = JSON.parse(parts[1].trim());
+        } catch {}
+      }
+
+      if (fullText.includes('EMAIL_INPUT')) {
+        botText = fullText.replace('EMAIL_INPUT', '').trim();
+        showEmail = true;
+      }
+
+      addMessage(botText, 'bot');
+      messages.push({ role: 'assistant', content: botText });
+
+      if (buttons.length > 0) setQuickReplies(buttons);
+      if (showEmail) showEmailInput();
+
+    } catch {
+      hideTyping();
+      addMessage("I'm having a connection issue. You can reach Viktor directly at vicsothemes@gmail.com", 'bot');
+    }
+
+    isLoading = false;
+    sendBtn.disabled = false;
+  }
+
+  async function handleEmail(email: string) {
+    resetInput();
+    isLoading = true;
+    sendBtn.disabled = true;
+
+    try {
+      await fetch('https://formspree.io/f/mdabeqkd', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          message: 'Lead from chat bot',
+          _subject: 'New lead from VicsoThemes chat',
+          conversation: messages.map(m => `${m.role}: ${m.content}`).join('\n')
+        })
+      });
+      addMessage("Perfect! I've passed your email to Viktor. He'll get back to you within 24 hours. 🚀", 'bot');
+    } catch {
+      addMessage("Got it! Please also email Viktor directly at vicsothemes@gmail.com to make sure he gets your message.", 'bot');
+    }
+
+    isLoading = false;
+    sendBtn.disabled = false;
+  }
+
+  sendBtn.addEventListener('click', () => sendMessage(inputEl.value));
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') sendMessage(inputEl.value);
+  });
+</script>

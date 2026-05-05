@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ROICalculator from '../components/ROICalculator.astro';
+import ChatBot from '../components/ChatBot.astro';
 ---
+<ChatBot />
 
 <Layout title="Full Stack Developer for Hire | Flutter, Django, Next.js">
 
@@ -556,6 +558,223 @@ import ROICalculator from '../components/ROICalculator.astro';
     </div>
   </section>
 
+  <section class="services section" id="services">
+    <div class="wrap">
+      <div class="section-label">Services</div>
+      <div class="services-grid reveal">
+        <div class="service-card"><img src="/services/service-mobile.svg" class="service-icon" alt="" /><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
+        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA App Development</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
+        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Language Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
+        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backend Architecture & Admin Systems</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
+      </div>
+    </div>
+  </section> 
+
+  <!-- Tech Stack & Services -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-label">Tech Stack</div>
+
+      <!-- Mobile -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Mobile</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/flutter.svg" alt="Flutter" /><div><div class="tech-name">Flutter</div><div class="tech-sub">cross-platform</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/kotlin.svg" alt="Kotlin" /><div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/jetpackcompose.svg" alt="Jetpack Compose" /><div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/revenuecat.svg" alt="RevenueCat" /><div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div></div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Backend</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/python.svg" alt="Python" /><div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/django.svg" alt="Django" /><div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/php.svg" alt="PHP" /><div><div class="tech-name">PHP</div><div class="tech-sub">backend</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/postgresql.svg" alt="PostgreSQL" /><div><div class="tech-name">PostgreSQL</div><div class="tech-sub">database</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/redis.svg" alt="Redis" /><div><div class="tech-name">Redis</div><div class="tech-sub">cache</div></div></div>
+        </div>
+      </div>
+
+      <!-- Web & CMS -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Web & CMS</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/nextjs.svg" alt="Next.js" /><div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/astro.svg" alt="Astro" /><div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/wordpress.svg" alt="WordPress" /><div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/strapi.svg" alt="Strapi" /><div><div class="tech-name">Strapi</div><div class="tech-sub">headless CMS</div></div></div>
+        </div>
+      </div>
+
+      <!-- DevOps & Tools -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">DevOps & Tools</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/docker.svg" alt="Docker" /><div><div class="tech-name">Docker</div><div class="tech-sub">containers</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/nginx.svg" alt="Nginx" /><div><div class="tech-name">Nginx</div><div class="tech-sub">web server</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/git.svg" alt="Git" /><div><div class="tech-name">Git</div><div class="tech-sub">version control</div></div></div>
+        </div>
+      </div>
+
+      <!-- AI & Cloud -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">AI & Cloud</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/openai.svg" alt="OpenAI" /><div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/claude.svg" alt="Claude" /><div><div class="tech-name">Claude</div><div class="tech-sub">LLM tooling</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/google-tts.svg" alt="Google TTS" /><div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div></div>
+          <div class="tech-item"><img class="tech-icon" src="/icons/firebase.svg" alt="Firebase" /><div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div></div>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="tech-group reveal">
+        <span class="tech-group-label">Design</span>
+        <div class="tech-grid">
+          <div class="tech-item"><img class="tech-icon" src="/icons/figma.svg" alt="Figma" /><div><div class="tech-name">Figma</div><div class="tech-sub">design</div></div></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+    <!-- Why Me? -->
+
+  <section class="why-section" id="why">
+    <div class="wrap">
+ 
+      <!-- Hero statement -->
+      <div class="why-hero reveal">
+        <div class="why-hero-glow"></div>
+        <div class="why-kicker">Why work with an independent developer</div>
+        <h2 class="why-headline">
+          Studio quality.<br />
+          <strong>Without the studio overhead.</strong>
+        </h2>
+        <p class="why-lead">
+          Got an idea? I'll turn it into a working product in weeks, not months. AI-powered workflow cuts development time by 3× — and that saving goes directly to your timeline and budget. From $2K MVP to $10K full product, built by one senior developer who actually ships.
+        </p>
+        <div class="why-numbers">
+          <div class="why-num">
+            <div class="why-num-val">3<span>×</span></div>
+            <div class="why-num-label">Faster than agency avg.</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">60<span>%</span></div>
+            <div class="why-num-label">Lower cost vs studio</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">0</div>
+            <div class="why-num-label">Middlemen between us</div>
+          </div>
+          <div class="why-num">
+            <div class="why-num-val">24<span>h</span></div>
+            <div class="why-num-label">Max response time</div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Comparison -->
+      <div class="comparison-grid reveal">
+ 
+        <div class="comparison-card">
+          <span class="comp-badge agency">Typical Agency</span>
+          <div class="comp-title">What you usually get</div>
+          <ul class="comp-list">
+            <li><span class="icon bad">✕</span> Account manager → project manager → developer chain</li>
+            <li><span class="icon bad">✕</span> $15K–50K+ for a basic mobile app</li>
+            <li><span class="icon bad">✕</span> 4–8 month delivery timelines</li>
+            <li><span class="icon bad">✕</span> Junior devs on your project, seniors on the pitch</li>
+            <li><span class="icon bad">✕</span> Contracts, retainers, hidden scope fees</li>
+            <li><span class="icon bad">✕</span> You explain your idea 5 times to 5 people</li>
+          </ul>
+        </div>
+ 
+        <div class="comparison-card is-me">
+          <span class="comp-badge me">Working with me</span>
+          <div class="comp-title">What you actually get</div>
+          <ul class="comp-list is-me">
+            <li><span class="icon good">✓</span> You talk directly to the person writing your code</li>
+            <li><span class="icon good">✓</span> Transparent pricing, no hidden fees</li>
+            <li><span class="icon good">✓</span> MVP in 4–8 weeks, full product in 2–4 months</li>
+            <li><span class="icon good">✓</span> Senior full-stack + AI tools on every task</li>
+            <li><span class="icon good">✓</span> Flexible engagement — fixed price or hourly</li>
+            <li><span class="icon good">✓</span> One briefing. One person. Clear ownership.</li>
+          </ul>
+        </div>
+ 
+      </div>
+ 
+      <!-- 6 Reasons -->
+      <div class="reasons-grid reveal">
+ 
+        <div class="reason-card">
+          <div class="reason-num">01</div>
+          <div class="reason-title">AI-powered development</div>
+          <p class="reason-desc">I use Claude, Cursor, and custom AI pipelines daily. Tasks that take a junior dev a week take me a day. That speed savings goes directly to your budget and timeline.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">02</div>
+          <div class="reason-title">Full-stack ownership</div>
+          <p class="reason-desc">Mobile (Flutter/Kotlin), backend (Django/Python), web (Next.js/Astro), DevOps (Docker/Nginx). One person sees the full picture — no handoff gaps, no blame-shifting between teams.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">03</div>
+          <div class="reason-title">You talk to the builder</div>
+          <p class="reason-desc">No account managers, no project coordinators. You message me directly. I understand your requirements firsthand and make technical decisions without a telephone game.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">04</div>
+          <div class="reason-title">Shipped products, not prototypes</div>
+          <p class="reason-desc">6 apps live on Google Play. Real users, real reviews, real revenue systems. I know what it takes to get from idea to production — not just to demo.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">05</div>
+          <div class="reason-title">EdTech & product expertise</div>
+          <p class="reason-desc">Spaced repetition, content pipelines, subscription systems, admin dashboards — I've built these, not just read about them. Domain knowledge you can't hire for cheap at an agency.</p>
+        </div>
+ 
+        <div class="reason-card">
+          <div class="reason-num">06</div>
+          <div class="reason-title">Fair price, honest scope</div>
+          <p class="reason-desc">I quote based on actual work, not on what the market will bear. If your project is simpler than you think — I'll tell you. If it needs more — I'll explain exactly why.</p>
+        </div>
+ 
+      </div>
+ 
+    </div>
+  </section>
+
+   <!-- CTA -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="cta-block reveal">
+        <div class="cta-glow"></div>
+        <div class="cta-label">Work with me</div>
+        <h2 class="cta-title">Have a project in mind?<br /><em>Let's build it.</em></h2>
+        <p class="cta-sub">Open to freelance projects — mobile apps, web tools, EdTech products. Based in Tallinn, working remotely worldwide.</p>
+        <div class="cta-actions">
+          <a href="mailto:vic.sokoliuk@gmail.com" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Send email
+          </a>
+          <a href="/apps" class="btn-secondary">View all apps ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Android Apps -->
   <section class="section" id="apps">
     <div class="wrap">
@@ -739,196 +958,6 @@ import ROICalculator from '../components/ROICalculator.astro';
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Tech Stack & Services -->
-  <section class="section" id="stack">
-    <div class="wrap">
-      <div class="section-label">Tech Stack</div>
-
-      <!-- Mobile -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Mobile</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/flutter.svg" alt="Flutter" /><div><div class="tech-name">Flutter</div><div class="tech-sub">cross-platform</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/kotlin.svg" alt="Kotlin" /><div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/jetpackcompose.svg" alt="Jetpack Compose" /><div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/revenuecat.svg" alt="RevenueCat" /><div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div></div>
-        </div>
-      </div>
-
-      <!-- Backend -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Backend</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/python.svg" alt="Python" /><div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/django.svg" alt="Django" /><div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/php.svg" alt="PHP" /><div><div class="tech-name">PHP</div><div class="tech-sub">backend</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/postgresql.svg" alt="PostgreSQL" /><div><div class="tech-name">PostgreSQL</div><div class="tech-sub">database</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/redis.svg" alt="Redis" /><div><div class="tech-name">Redis</div><div class="tech-sub">cache</div></div></div>
-        </div>
-      </div>
-
-      <!-- Web & CMS -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Web & CMS</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/nextjs.svg" alt="Next.js" /><div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/astro.svg" alt="Astro" /><div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/wordpress.svg" alt="WordPress" /><div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/strapi.svg" alt="Strapi" /><div><div class="tech-name">Strapi</div><div class="tech-sub">headless CMS</div></div></div>
-        </div>
-      </div>
-
-      <!-- DevOps & Tools -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">DevOps & Tools</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/docker.svg" alt="Docker" /><div><div class="tech-name">Docker</div><div class="tech-sub">containers</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/nginx.svg" alt="Nginx" /><div><div class="tech-name">Nginx</div><div class="tech-sub">web server</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/git.svg" alt="Git" /><div><div class="tech-name">Git</div><div class="tech-sub">version control</div></div></div>
-        </div>
-      </div>
-
-      <!-- AI & Cloud -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">AI & Cloud</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/openai.svg" alt="OpenAI" /><div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/claude.svg" alt="Claude" /><div><div class="tech-name">Claude</div><div class="tech-sub">LLM tooling</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/google-tts.svg" alt="Google TTS" /><div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/firebase.svg" alt="Firebase" /><div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div></div>
-        </div>
-      </div>
-
-      <!-- Design -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Design</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/figma.svg" alt="Figma" /><div><div class="tech-name">Figma</div><div class="tech-sub">design</div></div></div>
-        </div>
-      </div>
-
-      <div style="height: 40px;"></div>
-      <div class="section-label">Services</div>
-      <div class="services-grid reveal">
-        <div class="service-card"><img src="/services/service-mobile.svg" class="service-icon" alt="" /><div class="service-title">Mobile App Development</div><p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p></div>
-        <div class="service-card"><img src="/services/service-web.svg" class="service-icon" alt="" /><div class="service-title">Web & PWA App Development</div><p class="service-desc">Progressive web apps, static sites with Astro/Next.js, and WordPress projects with custom ACF blocks.</p></div>
-        <div class="service-card"><img src="/services/service-edtech.svg" class="service-icon" alt="" /><div class="service-title">EdTech & Language Learning Apps</div><p class="service-desc">Spaced repetition systems, content pipelines, AI-powered tutors, and structured language learning tools.</p></div>
-        <div class="service-card"><img src="/services/service-backend.svg" alt="" class="service-icon" /><div class="service-title">Backend Architecture & Admin Systems</div><p class="service-desc">Django REST APIs, custom admin dashboards, content management systems, and automated content generation.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Me? -->
-
-  <section class="why-section" id="why">
-    <div class="wrap">
- 
-      <!-- Hero statement -->
-      <div class="why-hero reveal">
-        <div class="why-hero-glow"></div>
-        <div class="why-kicker">Why work with an independent developer</div>
-        <h2 class="why-headline">
-          Studio quality.<br />
-          <strong>Without the studio overhead.</strong>
-        </h2>
-        <p class="why-lead">
-          Got an idea? I'll turn it into a working product in weeks, not months. AI-powered workflow cuts development time by 3× — and that saving goes directly to your timeline and budget. From $2K MVP to $10K full product, built by one senior developer who actually ships.
-        </p>
-        <div class="why-numbers">
-          <div class="why-num">
-            <div class="why-num-val">3<span>×</span></div>
-            <div class="why-num-label">Faster than agency avg.</div>
-          </div>
-          <div class="why-num">
-            <div class="why-num-val">60<span>%</span></div>
-            <div class="why-num-label">Lower cost vs studio</div>
-          </div>
-          <div class="why-num">
-            <div class="why-num-val">0</div>
-            <div class="why-num-label">Middlemen between us</div>
-          </div>
-          <div class="why-num">
-            <div class="why-num-val">24<span>h</span></div>
-            <div class="why-num-label">Max response time</div>
-          </div>
-        </div>
-      </div>
- 
-      <!-- Comparison -->
-      <div class="comparison-grid reveal">
- 
-        <div class="comparison-card">
-          <span class="comp-badge agency">Typical Agency</span>
-          <div class="comp-title">What you usually get</div>
-          <ul class="comp-list">
-            <li><span class="icon bad">✕</span> Account manager → project manager → developer chain</li>
-            <li><span class="icon bad">✕</span> $15K–50K+ for a basic mobile app</li>
-            <li><span class="icon bad">✕</span> 4–8 month delivery timelines</li>
-            <li><span class="icon bad">✕</span> Junior devs on your project, seniors on the pitch</li>
-            <li><span class="icon bad">✕</span> Contracts, retainers, hidden scope fees</li>
-            <li><span class="icon bad">✕</span> You explain your idea 5 times to 5 people</li>
-          </ul>
-        </div>
- 
-        <div class="comparison-card is-me">
-          <span class="comp-badge me">Working with me</span>
-          <div class="comp-title">What you actually get</div>
-          <ul class="comp-list is-me">
-            <li><span class="icon good">✓</span> You talk directly to the person writing your code</li>
-            <li><span class="icon good">✓</span> Transparent pricing, no hidden fees</li>
-            <li><span class="icon good">✓</span> MVP in 4–8 weeks, full product in 2–4 months</li>
-            <li><span class="icon good">✓</span> Senior full-stack + AI tools on every task</li>
-            <li><span class="icon good">✓</span> Flexible engagement — fixed price or hourly</li>
-            <li><span class="icon good">✓</span> One briefing. One person. Clear ownership.</li>
-          </ul>
-        </div>
- 
-      </div>
- 
-      <!-- 6 Reasons -->
-      <div class="reasons-grid reveal">
- 
-        <div class="reason-card">
-          <div class="reason-num">01</div>
-          <div class="reason-title">AI-powered development</div>
-          <p class="reason-desc">I use Claude, Cursor, and custom AI pipelines daily. Tasks that take a junior dev a week take me a day. That speed savings goes directly to your budget and timeline.</p>
-        </div>
- 
-        <div class="reason-card">
-          <div class="reason-num">02</div>
-          <div class="reason-title">Full-stack ownership</div>
-          <p class="reason-desc">Mobile (Flutter/Kotlin), backend (Django/Python), web (Next.js/Astro), DevOps (Docker/Nginx). One person sees the full picture — no handoff gaps, no blame-shifting between teams.</p>
-        </div>
- 
-        <div class="reason-card">
-          <div class="reason-num">03</div>
-          <div class="reason-title">You talk to the builder</div>
-          <p class="reason-desc">No account managers, no project coordinators. You message me directly. I understand your requirements firsthand and make technical decisions without a telephone game.</p>
-        </div>
- 
-        <div class="reason-card">
-          <div class="reason-num">04</div>
-          <div class="reason-title">Shipped products, not prototypes</div>
-          <p class="reason-desc">6 apps live on Google Play. Real users, real reviews, real revenue systems. I know what it takes to get from idea to production — not just to demo.</p>
-        </div>
- 
-        <div class="reason-card">
-          <div class="reason-num">05</div>
-          <div class="reason-title">EdTech & product expertise</div>
-          <p class="reason-desc">Spaced repetition, content pipelines, subscription systems, admin dashboards — I've built these, not just read about them. Domain knowledge you can't hire for cheap at an agency.</p>
-        </div>
- 
-        <div class="reason-card">
-          <div class="reason-num">06</div>
-          <div class="reason-title">Fair price, honest scope</div>
-          <p class="reason-desc">I quote based on actual work, not on what the market will bear. If your project is simpler than you think — I'll tell you. If it needs more — I'll explain exactly why.</p>
-        </div>
- 
-      </div>
- 
     </div>
   </section>
 
