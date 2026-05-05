@@ -1,7 +1,7 @@
 ---
-title: "EdTech Consulting"
+title: "EdTech Product Consulting | Pedagogy-First Learning Design"
 headline: "Learning Product Design\nGrounded in Real Science"
-description: "Pedagogy-first product design applying Testing Effect, Noticing Hypothesis, and spaced practice principles to digital learning tools. Strategy before code."
+description: "Learning product strategy grounded in Testing Effect, Noticing Hypothesis, and spaced practice research. Product audits, curriculum design, and exercise taxonomy for digital learning tools."
 category: "EdTech & Learning Products"
 accent: "#d97706"
 icon: "💡"

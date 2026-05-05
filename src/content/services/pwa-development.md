@@ -1,7 +1,7 @@
 ---
-title: "PWA Development"
+title: "Progressive Web App Development | Offline-First PWA Builder"
 headline: "Installable Web Apps\nWithout the App Store"
-description: "Progressive Web Apps that work offline, install on any device, and feel native — without Play Store fees, review times, or native development costs."
+description: "Installable web apps that work offline, feel native, and skip the app store. Service workers, push notifications, and sub-2s load times on any device."
 category: "Web & Frontend"
 accent: "#2563eb"
 icon: "⚡"

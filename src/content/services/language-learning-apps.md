@@ -1,7 +1,7 @@
 ---
 title: "Language Learning Apps"
-headline: "Language Learning Apps\nBuilt on Real Pedagogy"
-description: "Structured learning apps with spaced repetition, multiple exercise types, progress tracking, and AI-powered explanations. Built by someone who actually uses them to learn Estonian."
+headline: "Language Learning App Development | EdTech Mobile Apps"
+description: "Structured language learning apps with spaced repetition, multiple exercise types, and AI explanations. Built by a developer who actually uses them to learn Estonian."
 category: "EdTech & Learning Products"
 accent: "#d97706"
 icon: "🎓"

@@ -1,7 +1,7 @@
 ---
-title: "Spaced Repetition Systems"
+title: "Spaced Repetition System Development | SM-2 Algorithm Expert"
 headline: "Memory Systems That\nActually Work"
-description: "SM-2 and custom spaced repetition algorithms with adaptive scheduling, performance analytics, and streak mechanics. The science of memory, implemented correctly."
+description: "SM-2 and custom SRS algorithms with adaptive scheduling, performance analytics, and gamification. The science of memory, implemented correctly in production apps."
 category: "EdTech & Learning Products"
 accent: "#d97706"
 icon: "🔁"

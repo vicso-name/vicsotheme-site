@@ -1,7 +1,7 @@
 ---
-title: "Admin Dashboards"
+title: "Custom Admin Dashboard Development | Django & Next.js"
 headline: "Custom Admin Panels\nfor Your Product"
-description: "Tailored admin dashboards that replace generic tools with workflows built exactly for your data. Built with Django or Next.js — whatever fits your stack."
+description: "Tailored admin panels that replace spreadsheets and generic CMS tools. Built for your exact data model and team workflow — editors can manage content without touching code."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "⚙️"

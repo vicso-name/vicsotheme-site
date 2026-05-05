@@ -1,7 +1,7 @@
 ---
-title: "Play Store Launch"
+title: "Google Play Store Launch Service | ASO & App Publishing Expert"
 headline: "Your App on Google Play\nDone Right"
-description: "Full Play Store launch pipeline — app signing, store listing optimisation, screenshots, ASO, and post-launch monitoring. I've done it 6 times."
+description: "Full Play Store launch pipeline — signed build, store listing, ASO keyword research, screenshots, and post-launch monitoring. Done it 6 times, zero rejections."
 category: "Mobile Development"
 accent: "#16a34a"
 icon: "🏪"

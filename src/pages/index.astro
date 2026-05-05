@@ -311,6 +311,8 @@ import ROICalculator from '../components/ROICalculator.astro';
     .service-icon { width: 36px; height: 36px; flex-shrink: 0; object-fit: contain; }
     .service-title { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.3; }
     .service-desc { font-size: 12px; line-height: 1.6; color: var(--muted); font-weight: 300; }
+    .service-title-link { color: var(--heading); text-decoration: none; transition: color 0.2s; }
+    .service-title-link:hover { color: var(--s-accent, var(--accent)); }
     .service-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; border: 1px solid color-mix(in srgb, var(--s-accent, var(--accent-h)) 30%, transparent); color: var(--s-accent, var(--accent-h));  width: fit-content; }
 
     /* ── CTA ── */
@@ -416,10 +418,6 @@ import ROICalculator from '../components/ROICalculator.astro';
       padding: 32px;
       position: relative;
       overflow: hidden;
-    }
-    .comparison-card.is-me {
-      border-color: rgba(74,222,128,0.2);
-      background: rgba(74,222,128,0.03);
     }
     .comparison-card.is-me::before {
       content: '';
@@ -567,7 +565,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-h);">
             <div class="service-card-top">
               <img src="/services/service-mobile.svg" class="service-icon" alt="" />
-              <div class="service-title">Mobile App Development</div>
+              <a href="/services/mobile-app-development" class="service-title service-title-link">Mobile App Development</a>
             </div>
             <p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p>
             <span class="service-badge">Flutter · Kotlin</span>
@@ -575,7 +573,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-h);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">📱</span>
-              <div class="service-title">PoC & MVP Development</div>
+              <a href="/services/poc-mvp-development" class="service-title service-title-link">PoC & MVP Development</a>
             </div>
             <p class="service-desc">Rapid prototypes and minimum viable products — validate your idea fast before investing in a full build.</p>
             <span class="service-badge">2–4 weeks</span>
@@ -583,7 +581,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-h);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🏪</span>
-              <div class="service-title">Play Store Launch</div>
+              <a href="/services/play-store-launch" class="service-title service-title-link">Play Store Launch</a>
             </div>
             <p class="service-desc">Full release pipeline — app signing, store listing, screenshots, descriptions, and post-launch monitoring.</p>
             <span class="service-badge">Google Play</span>
@@ -598,7 +596,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-k);">
             <div class="service-card-top">
               <img src="/services/service-web.svg" class="service-icon" alt="" />
-              <div class="service-title">Web App Development</div>
+              <a href="/services/web-app-development" class="service-title service-title-link">Web App Development</a>
             </div>
             <p class="service-desc">Progressive web apps and static sites with Next.js or Astro. Fast, SEO-friendly, and production-ready.</p>
             <span class="service-badge">Next.js · Astro</span>
@@ -606,7 +604,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-k);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🌐</span>
-              <div class="service-title">WordPress Development</div>
+              <a href="/services/wordpress-development" class="service-title service-title-link">WordPress Development</a>
             </div>
             <p class="service-desc">Custom themes, ACF Gutenberg blocks, plugin development, and performance optimization for WordPress sites.</p>
             <span class="service-badge">ACF · Gutenberg</span>
@@ -614,7 +612,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-k);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
-              <div class="service-title">PWA Development</div>
+              <a href="/services/pwa-development" class="service-title service-title-link">PWA Development</a>
             </div>
             <p class="service-desc">Installable web apps with offline support, push notifications, and native-like UX — no app store needed.</p>
             <span class="service-badge">Offline · installable</span>
@@ -629,7 +627,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-e);">
             <div class="service-card-top">
               <img src="/services/service-backend.svg" class="service-icon" alt="" />
-              <div class="service-title">API Development</div>
+              <a href="/services/api-development" class="service-title service-title-link">API Development</a>
             </div>
             <p class="service-desc">Django REST APIs with authentication, permissions, and documentation. Built to scale and easy to integrate.</p>
             <span class="service-badge">Django · Python</span>
@@ -637,7 +635,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-e);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">⚙️</span>
-              <div class="service-title">Admin Dashboards</div>
+              <a href="/services/admin-dashboards" class="service-title service-title-link">Admin Dashboards</a>
             </div>
             <p class="service-desc">Custom admin panels for managing content, users, and data — built to replace generic tools with tailored workflows.</p>
             <span class="service-badge">Custom CMS</span>
@@ -645,7 +643,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-e);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🗄️</span>
-              <div class="service-title">Database Architecture</div>
+              <a href="/services/database-architecture" class="service-title service-title-link">Database Architecture</a>
             </div>
             <p class="service-desc">PostgreSQL schema design, migrations, query optimization, and Redis caching for performant data layers.</p>
             <span class="service-badge">PostgreSQL · Redis</span>
@@ -660,7 +658,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-d);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🤖</span>
-              <div class="service-title">AI Chatbot Development</div>
+              <a href="/services/ai-chatbot-development" class="service-title service-title-link">AI Chatbot Development</a>
             </div>
             <p class="service-desc">Conversational AI assistants powered by Claude or GPT — for customer support, lead qualification, and internal tools.</p>
             <span class="service-badge">Claude · OpenAI</span>
@@ -668,7 +666,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-d);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🧠</span>
-              <div class="service-title">LLM Integration</div>
+              <a href="/services/llm-integration" class="service-title service-title-link">LLM Integration</a>
             </div>
             <p class="service-desc">Integrate large language models into existing products — summarization, classification, generation, and RAG pipelines.</p>
             <span class="service-badge">GPT · Claude API</span>
@@ -676,7 +674,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-d);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
-              <div class="service-title">Content Pipelines</div>
+              <a href="/services/content-pipelines" class="service-title service-title-link">Content Pipelines</a>
             </div>
             <p class="service-desc">Automated content generation, transformation, and validation pipelines — audio, text, and structured data at scale.</p>
             <span class="service-badge">Python · GCP TTS</span>
@@ -691,7 +689,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-w);">
             <div class="service-card-top">
               <img src="/services/service-edtech.svg" class="service-icon" alt="" />
-              <div class="service-title">Language Learning Apps</div>
+              <a href="/services/language-learning-apps" class="service-title service-title-link">Language Learning Apps</a>
             </div>
             <p class="service-desc">Structured learning apps with spaced repetition, exercise types, progress tracking, and AI-powered explanations.</p>
             <span class="service-badge">SRS · Flutter</span>
@@ -699,7 +697,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-w);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">🔁</span>
-              <div class="service-title">Spaced Repetition Systems</div>
+              <a href="/services/spaced-repetition-systems" class="service-title service-title-link">Spaced Repetition Systems</a>
             </div>
             <p class="service-desc">SM-2 and custom SRS algorithms with adaptive scheduling, performance analytics, and streak mechanics.</p>
             <span class="service-badge">SM-2 · adaptive</span>
@@ -707,7 +705,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           <div class="service-card" style="--s-accent: var(--accent-w);">
             <div class="service-card-top">
               <span style="font-size: 28px; flex-shrink: 0;">💡</span>
-              <div class="service-title">EdTech Consulting</div>
+              <a href="/services/edtech-consulting" class="service-title service-title-link">EdTech Consulting</a>
             </div>
             <p class="service-desc">Pedagogy-first product design — applying Testing Effect, Noticing Hypothesis, and spaced practice to digital learning tools.</p>
             <span class="service-badge">Pedagogy · UX</span>

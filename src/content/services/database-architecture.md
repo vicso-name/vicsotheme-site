@@ -1,7 +1,7 @@
 ---
-title: "Database Architecture"
+title: "PostgreSQL Database Design & Optimisation Services"
 headline: "Data Architecture That\nDoesn't Come Back to Haunt You"
-description: "PostgreSQL schema design, query optimisation, and Redis caching for applications that need to scale. Getting the data model right from the start."
+description: "Schema design, query optimisation, Redis caching, and zero-downtime migrations for applications that need to scale. Getting the data model right from day one."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "🗄️"

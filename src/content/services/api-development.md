@@ -1,7 +1,7 @@
 ---
-title: "API Development"
+title: "Clean, documented Django REST APIs with authentication, role-based permissions, and PostgreSQL. Built to scale — serving mobile and web clients from one backend."
 headline: "Django REST APIs\nBuilt to Scale"
-description: "Clean, documented Django REST APIs with authentication, permissions, and the data architecture to support your product long-term."
+description: "Clean, documented Django REST APIs with authentication, role-based permissions, and PostgreSQL. Built to scale — serving mobile and web clients from one backend."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "🔌"

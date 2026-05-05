@@ -1,7 +1,7 @@
 ---
-title: "LLM Integration"
+title: "LLM Integration Services | Add AI to Your Existing Product"
 headline: "Add AI to Your Product\nWithout Starting Over"
-description: "Integrate large language models into your existing product — summarisation, classification, generation, and RAG pipelines. Practical AI, not hype."
+description: "Integrate Claude or GPT into your product — summarisation, classification, RAG pipelines, and content generation. Practical AI built for production, not demos."
 category: "AI & Automation"
 accent: "#7c3aed"
 icon: "🧠"

@@ -16,7 +16,10 @@ const { data } = service;
 const accent = data.accent;
 ---
 
-<Layout title={`${data.title} — VicsoThemes`} description={data.description}>
+<Layout title={data.title} description={data.description}>
+
+
+
   <style>
     .orb { position: fixed; border-radius: 50%; filter: blur(140px); pointer-events: none; z-index: 0; opacity: 0.1; }
     .orb-1 { width: 600px; height: 600px; top: -150px; left: -150px; }
@@ -45,7 +48,7 @@ const accent = data.accent;
 
     .hero-category {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent-color);
@@ -87,13 +90,13 @@ const accent = data.accent;
     }
     .meta-label {
       font-family: var(--mono);
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
     .meta-value {
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 500;
       color: var(--heading);
     }
@@ -147,7 +150,7 @@ const accent = data.accent;
     }
     .stack-badge {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 14px;
       padding: 5px 12px;
       border-radius: 100px;
       border: 1px solid var(--border);
@@ -160,7 +163,7 @@ const accent = data.accent;
 
     .section-label {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 18px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
@@ -387,8 +390,6 @@ const accent = data.accent;
   <!-- Accent color as CSS var -->
   <style define:vars={{ 'accent-color': accent }}></style>
 
-  <div class="orb orb-1" style={`background: ${accent};`}></div>
-  <div class="orb orb-2" style={`background: ${accent};`}></div>
 
   <!-- Hero -->
   <section class="service-hero">
@@ -399,7 +400,6 @@ const accent = data.accent;
       </a>
 
       <div class="hero-category">
-        <span>{data.icon}</span>
         {data.category}
       </div>
 
@@ -524,7 +524,7 @@ const accent = data.accent;
   <!-- CTA -->
   <div class="wrap">
     <div class="service-cta reveal">
-      <div class="service-cta-glow" style={`background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, ${accent} 8%, transparent) 0%, transparent 60%);`}></div>
+      <div class="service-cta-glow"></div>
       <div class="cta-label">Ready to start?</div>
       <h2 class="cta-title">Let's build your {data.title.toLowerCase()}</h2>
       <p class="cta-sub">Free estimate within 24 hours. No commitment, no pressure — just a clear scope and honest pricing.</p>

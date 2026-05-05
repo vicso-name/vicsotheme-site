@@ -1,7 +1,7 @@
 ---
-title: "Mobile App Development"
+title: "Flutter & Android App Development Services | MVP to Play Store"
 headline: "Mobile App Development\nfor iOS & Android"
-description: "Cross-platform Flutter apps or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch — built solo, delivered fast."
+description: "Build cross-platform mobile apps with Flutter or native Android in Kotlin. Senior solo developer — 6 apps shipped, AI-powered workflow, 3× faster than agencies."
 category: "Mobile Development"
 accent: "#16a34a"
 icon: "📱"

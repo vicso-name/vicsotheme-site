@@ -1,7 +1,7 @@
 ---
-title: "AI Chatbot Development"
+title: "AI Chatbot Development Services | Claude & GPT Integration"
 headline: "AI Chatbots That\nActually Convert"
-description: "Conversational AI assistants powered by Claude or GPT — for customer support, lead qualification, and internal tools. Built with real sales psychology, not just API wrappers."
+description: "Conversational AI chatbots that qualify leads, answer questions, and capture emails — powered by Claude or GPT with secure Cloudflare Workers API proxy."
 category: "AI & Automation"
 accent: "#7c3aed"
 icon: "🤖"
@@ -47,7 +47,7 @@ faq:
   - q: "Can I see an example of what you've built?"
     a: "Yes — the chatbot on this site is built exactly this way. Click the green button in the bottom right corner and try it."
 caseStudy:
-  title: "VicsoThemes Sales Bot"
+  title: "VicsoTheme Sales Bot"
   desc: "Qualification chatbot on this site — built with Claude API, Cloudflare Workers proxy for security, quick reply buttons for guided flow, email capture via Formspree, and full conversation logging."
   result: "Claude API · Cloudflare proxy · Lead capture pipeline"
 draft: false

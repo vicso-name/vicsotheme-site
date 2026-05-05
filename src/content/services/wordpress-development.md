@@ -1,7 +1,7 @@
 ---
-title: "WordPress Development"
+title: "WordPress Development Services | Custom Themes & ACF Blocks"
 headline: "WordPress That Works\nthe Way You Need"
-description: "Custom themes, ACF Gutenberg blocks, plugin development, and performance optimisation. Not cookie-cutter — built exactly for your content and workflow."
+description: "Custom WordPress themes, ACF Gutenberg blocks, and plugin development — no page builders, no bloat. Clean PHP, fast load times, editors who can manage content independently."
 category: "Web & Frontend"
 accent: "#2563eb"
 icon: "🔵"

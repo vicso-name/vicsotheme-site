@@ -1,7 +1,7 @@
 ---
-title: "Web App Development"
+title: "Web App Development Services | Next.js & Astro Expert"
 headline: "Web Applications Built\nto Last"
-description: "Full-stack web apps with Next.js or Astro — fast, SEO-friendly, and production-ready. From landing pages to complex interactive tools."
+description: "Fast, SEO-optimised web applications built with Next.js or Astro. From landing pages to complex interactive tools — production-ready, Core Web Vitals optimised."
 category: "Web & Frontend"
 accent: "#2563eb"
 icon: "🌐"

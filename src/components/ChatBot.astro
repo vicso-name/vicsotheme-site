@@ -324,7 +324,7 @@ About Viktor:
 - Uses AI tools (Claude, Cursor) to deliver 3x faster than traditional agencies
 - Pricing: $2K–15K depending on project scope
 - Available for new projects, response within 24h
-- Email: vicsothemes@gmail.com
+- Email: vic.sokoliuk@gmail.com
 
 Qualification flow:
 1. Greet warmly, ask what brings them here
@@ -476,7 +476,7 @@ EMAIL_INPUT`;
       const data = await response.json();
       hideTyping();
 
-      const fullText: string = data.content?.[0]?.text || "Sorry, I had a connection issue. You can reach Viktor directly at vicsothemes@gmail.com";
+      const fullText: string = data.content?.[0]?.text || "Sorry, I had a connection issue. You can reach Viktor directly at vic.sokoliuk@gmail.com";
 
       let botText = fullText;
       let buttons: string[] = [];
@@ -503,7 +503,7 @@ EMAIL_INPUT`;
 
     } catch {
       hideTyping();
-      addMessage("I'm having a connection issue. You can reach Viktor directly at vicsothemes@gmail.com", 'bot');
+      addMessage("I'm having a connection issue. You can reach Viktor directly at vic.sokoliuk@gmail.com", 'bot');
     }
 
     isLoading = false;
@@ -528,7 +528,7 @@ EMAIL_INPUT`;
       });
       addMessage("Perfect! I've passed your email to Viktor. He'll get back to you within 24 hours. 🚀", 'bot');
     } catch {
-      addMessage("Got it! Please also email Viktor directly at vicsothemes@gmail.com to make sure he gets your message.", 'bot');
+      addMessage("Got it! Please also email Viktor directly at vic.sokoliuk@gmail.com to make sure he gets your message.", 'bot');
     }
 
     isLoading = false;

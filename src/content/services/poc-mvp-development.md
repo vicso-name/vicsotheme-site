@@ -1,7 +1,7 @@
 ---
-title: "PoC & MVP Development"
+title: "MVP Development Service | Working Prototype in 2–4 Weeks"
 headline: "From Idea to Working\nProduct in Weeks"
-description: "Validate your concept fast with a real, working prototype. No overengineering — just the core features that prove your idea works and attract first users or investors."
+description: "Validate your idea with a real deployable product, not a mockup. Fixed scope, transparent pricing. Senior full-stack developer with AI-accelerated delivery."
 category: "Mobile Development"
 accent: "#16a34a"
 icon: "🚀"

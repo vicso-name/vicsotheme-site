@@ -1,7 +1,7 @@
 ---
-title: "Content Pipelines"
+title: "Automated Content Pipeline Development | AI & Google TTS"
 headline: "Automated Content at Scale\nWithout the Manual Work"
-description: "Python pipelines for automated content generation, transformation, and validation — text, audio, and structured data. Built for EdTech, publishing, and product teams."
+description: "Python pipelines for AI-powered content generation, validation, and audio synthesis at scale. Built for EdTech, publishing, and product teams with high content volume."
 category: "AI & Automation"
 accent: "#7c3aed"
 icon: "⚡"
