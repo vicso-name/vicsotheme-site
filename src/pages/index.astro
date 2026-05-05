@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import ROICalculator from '../components/ROICalculator.astro';
 ---
 
-<Layout title="VicsoThemes — Mobile Apps & Dev Studio">
+<Layout title="Full Stack Developer for Hire | Flutter, Django, Next.js">
+
   <style>
     :root {
       --accent-h:  #4ade80;
@@ -18,6 +19,13 @@ import ROICalculator from '../components/ROICalculator.astro';
     .hero {
       padding: 120px 0 96px;
       text-align: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .hero-badge {
@@ -531,26 +539,19 @@ import ROICalculator from '../components/ROICalculator.astro';
   <section class="hero">
     <div class="wrap">
       <div class="fade-up">
-        <div class="hero-badge">Independent Full Stack Developer · Pärnu, Estonia</div>
+        <div class="hero-badge">Full Stack + AI Developer · Pärnu, Estonia</div>
       </div>
-      <h1 class="fade-up">Apps that make<br /><em>languages click</em></h1>
-      <p class="hero-sub fade-up">
-        Structured lessons, spaced repetition, and AI-powered tools
-        to help you read and speak a new language from day one.
-      </p>
-      <div class="hero-stats fade-up">
-        <div class="stat">
-          <div class="stat-num">6</div>
-          <div class="stat-label">Apps on Play Store</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">10K+</div>
-          <div class="stat-label">Downloads</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">4.8★</div>
-          <div class="stat-label">Avg. Rating</div>
-        </div>
+      <h1 class="fade-up">Hire a Full Stack Developer<br />to <em>Build Your Product</em></h1>
+      <p class="hero-sub fade-up"> Mobile app development, web applications, and custom backends — built with Flutter, Django, and Next.js. AI-powered workflow delivers your MVP 3× faster than a traditional agency, at 60% lower cost. </p>
+      <div class="hero-actions fade-up">
+        <a href="/contact" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Get in touch
+        </a>
+        <a href="/apps" class="btn-secondary">View my work ↓</a>
       </div>
     </div>
   </section>
