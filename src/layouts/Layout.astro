@@ -1,4 +1,6 @@
 ---
+import ChatBot from '../components/ChatBot.astro';
+
 interface Props {
   title: string;
   description?: string;
@@ -428,6 +430,6 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
+  <ChatBot />
 </body>
 </html>
