@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
     .back-link:hover { color: var(--text); }
 
     .page-title { font-size: clamp(32px, 5vw, 52px); font-weight: 300; letter-spacing: -0.03em; color: var(--heading); line-height: 1.1; margin-bottom: 14px; }
-    .page-title em { font-style: normal; color: var(--accent-h); }
+    .page-title em { font-style: normal; color: var(--accent-b); }
     .page-sub { font-size: 16px; color: var(--muted); font-weight: 300; line-height: 1.6; max-width: 440px; }
 
     /* ── Layout ── */
@@ -37,14 +37,7 @@ import Layout from '../layouts/Layout.astro';
       position: relative;
       overflow: hidden;
     }
-    .info-block::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent, #4ade80), transparent);
-      opacity: 0.5;
-    }
+  
 
     .info-label {
       font-family: var(--mono);
@@ -99,14 +92,6 @@ import Layout from '../layouts/Layout.astro';
       padding: 40px;
       position: relative;
       overflow: hidden;
-    }
-    .form-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #4ade80, #60a5fa, transparent);
-      opacity: 0.4;
     }
 
     .form-title {

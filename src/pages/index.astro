@@ -323,7 +323,6 @@ import ROICalculator from '../components/ROICalculator.astro';
 
     /* ── CTA ── */
     .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), transparent); opacity: 0.5; }
     .cta-glow { position: absolute; inset: 0; pointer-events: none; }
     .cta-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--heading); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
@@ -348,14 +347,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       overflow: hidden;
       text-align: center;
     }
-    .why-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-h), var(--accent-k), var(--accent-e), transparent);
-      opacity: 0.6;
-    }
+
     .why-hero-glow {
       position: absolute;
       inset: 0;
@@ -363,7 +355,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     }
     .why-kicker {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 14px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent-h);
@@ -379,10 +371,7 @@ import ROICalculator from '../components/ROICalculator.astro';
     }
     .why-headline strong {
       font-weight: 500;
-      background: linear-gradient(135deg, var(--accent-h), var(--accent-e));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent-b);
     }
     .why-lead {
       font-size: 17px;
@@ -402,12 +391,12 @@ import ROICalculator from '../components/ROICalculator.astro';
     .why-num-val {
       font-family: var(--mono);
       font-size: 32px;
-      font-weight: 500;
+      font-weight: 700;
       color: var(--heading);
       line-height: 1;
       margin-bottom: 6px;
     }
-    .why-num-val span { color: var(--accent-h); }
+    .why-num-val span { color: var(--heading); }
     .why-num-label { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
  
     .comparison-grid {
@@ -425,14 +414,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       position: relative;
       overflow: hidden;
     }
-    .comparison-card.is-me::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-h), transparent);
-      opacity: 0.7;
-    }
+
  
     .comp-badge {
       font-family: var(--mono);
