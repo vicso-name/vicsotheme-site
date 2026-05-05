@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ROICalculator from '../../components/ROICalculator.astro';
 import { getCollection } from 'astro:content';
-
+ 
 export async function getStaticPaths() {
   const services = await getCollection('services', ({ data }) => !data.draft);
   return services.map(service => ({
@@ -10,15 +10,83 @@ export async function getStaticPaths() {
     props: { service },
   }));
 }
-
+ 
 const { service } = Astro.props;
 const { data } = service;
 const accent = data.accent;
+ 
+const pageUrl = `https://vicsotheme.com/services/${service.id}`;
+ 
+// FAQPage schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.faq.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
+ 
+// Service schema
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": data.title,
+  "description": data.description,
+  "url": pageUrl,
+  "provider": {
+    "@type": "Person",
+    "name": "Viktor Sokoliuk",
+    "url": "https://vicsotheme.com",
+    "jobTitle": "Full Stack Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tallinn",
+      "addressCountry": "EE"
+    }
+  },
+  "areaServed": "Worldwide",
+  "serviceType": data.category
+};
+ 
+// BreadcrumbList schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://vicsotheme.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vicsotheme.com/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": data.title,
+      "item": pageUrl
+    }
+  ]
+};
 ---
 
 <Layout title={data.title} description={data.description}>
 
-
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
 
   <style>
     .orb { position: fixed; border-radius: 50%; filter: blur(140px); pointer-events: none; z-index: 0; opacity: 0.1; }
