@@ -11,88 +11,489 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// Reading time estimate
+const wordsPerMinute = 200;
+const wordCount = post.body?.split(/\s+/).length ?? 0;
+const readTime = Math.max(1, Math.round(wordCount / wordsPerMinute));
+
+// Tag → accent color mapping
+const TAG_COLORS: Record<string, string> = {
+  'mobile app development': 'var(--accent-h)',
+  'flutter':                'var(--accent-h)',
+  'play store launch':      'var(--accent-h)',
+  'web app development':    'var(--accent-k)',
+  'wordpress':              'var(--accent-k)',
+  'pwa':                    'var(--accent-k)',
+  'backend':                'var(--accent-e)',
+  'api':                    'var(--accent-e)',
+  'database':               'var(--accent-e)',
+  'ai':                     'var(--accent-d)',
+  'llm':                    'var(--accent-d)',
+  'chatbot':                'var(--accent-d)',
+  'edtech':                 'var(--accent-w)',
+  'spaced repetition':      'var(--accent-w)',
+  'language learning':      'var(--accent-w)',
+};
+
+const firstTag = post.data.tags?.[0]?.toLowerCase() ?? '';
+const accentColor = Object.entries(TAG_COLORS).find(([k]) =>
+  firstTag.includes(k)
+)?.[1] ?? 'var(--accent-k)';
 ---
 
 <Layout title={`${post.data.title} — VicsoTheme`} description={post.data.description}>
   <style>
-    .orb { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; opacity: 0.1; }
-    .orb-1 { width: 500px; height: 500px; background: #22c55e; top: -100px; left: -200px; }
+    /* ── Hero ── */
+    .post-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 56px;
+      margin-bottom: 0;
+    }
+    .post-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, color-mix(in srgb, var(--post-accent) 12%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+    .post-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--post-accent), transparent);
+      opacity: 0.3;
+    }
 
-    .article-wrap { max-width: 680px; margin: 0 auto; padding: 72px 24px 120px; position: relative; z-index: 1; }
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
 
-    .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; margin-bottom: 40px; transition: color 0.2s; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
     .back-link:hover { color: var(--text); }
 
-    .post-header { margin-bottom: 48px; }
-    .post-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
-    .post-tag { font-family: var(--mono); font-size: 10px; padding: 4px 10px; border-radius: 5px; border: 1px solid rgba(74,222,128,0.2); color: #4ade80; background: rgba(74,222,128,0.06); }
-    .post-title { font-size: clamp(28px, 5vw, 44px); font-weight: 500; color: var(--heading); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 16px; }
-    .post-desc { font-size: 17px; line-height: 1.65; color: var(--muted); font-weight: 300; margin-bottom: 24px; }
+    .post-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .post-tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 100px;
+      border: 1px solid color-mix(in srgb, var(--post-accent) 30%, transparent);
+      color: var(--post-accent);
+      background: color-mix(in srgb, var(--post-accent) 6%, transparent);
+      text-transform: uppercase;
+    }
 
-    .post-meta { display: flex; align-items: center; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border); }
-    .meta-author { display: flex; align-items: center; gap: 8px; }
-    .author-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #4ade80, #60a5fa); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #080808; }
+    .post-title {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+
+    .post-desc {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .meta-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .author-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-h), var(--accent-k));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #080808;
+      flex-shrink: 0;
+    }
     .author-name { font-size: 13px; color: var(--text); font-weight: 500; }
-    .meta-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+    .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
     .meta-date { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .meta-read {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding: 3px 10px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+    }
 
-    .post-body { font-size: 16px; line-height: 1.8; color: var(--muted-hi); font-weight: 300; }
-    .post-body h2 { font-size: 22px; font-weight: 500; color: var(--heading); letter-spacing: -0.01em; margin: 48px 0 16px; line-height: 1.3; }
-    .post-body h3 { font-size: 18px; font-weight: 500; color: var(--text); margin: 32px 0 12px; }
-    .post-body p { margin-bottom: 20px; }
-    .post-body strong { color: var(--text); font-weight: 500; }
-    .post-body a { color: #4ade80; text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
-    .post-body a:hover { opacity: 0.75; }
-    .post-body ul, .post-body ol { padding-left: 20px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
-    .post-body li { color: var(--muted-hi); }
-    .post-body code { font-family: var(--mono); font-size: 13px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; color: var(--accent-h); }
-    .post-body pre { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; overflow-x: auto; margin-bottom: 24px; }
-    .post-body pre code { background: none; border: none; padding: 0; font-size: 13px; color: var(--text); }
-    .post-body blockquote { border-left: 2px solid #4ade80; padding-left: 20px; margin: 24px 0; color: var(--muted); font-style: italic; }
+    /* ── Article body ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 120px;
+      position: relative;
+      z-index: 1;
+    }
 
-    .post-footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); }
-    .back-to-blog { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    /* ── Footer ── */
+    .post-footer {
+      margin-top: 72px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .back-to-blog {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      font-family: var(--mono);
+      transition: color 0.2s;
+    }
     .back-to-blog:hover { color: var(--text); }
+
+    .footer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .footer-cta:hover { opacity: 0.85; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .post-hero { padding: 48px 0 40px; }
+      .post-title { font-size: 28px; }
+      .post-body h2 { font-size: 20px; }
+      .post-footer { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 
+  <style is:global>
+    /* Prose — must be global because <Content /> is dynamic HTML */
+    .post-body {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--muted-hi);
+      font-weight: 300;
+    }
+    .post-body > p:first-child {
+      font-size: 17px;
+      color: var(--text);
+      font-weight: 400;
+    }
+    .post-body h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+      margin: 64px 0 20px;
+      padding-left: 16px;
+      border-left: 3px solid var(--post-accent);
+    }
+    .post-body h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      margin: 40px 0 14px;
+      letter-spacing: -0.01em;
+    }
+    .post-body h4 {
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 28px 0 8px;
+    }
+    .post-body p { margin-bottom: 22px; }
+    .post-body strong { color: var(--text); font-weight: 500; }
 
-  <article class="article-wrap">
-    <a href="/blog" class="back-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
-      All posts
-    </a>
+    /* Links */
+    .post-body a {
+      color: var(--post-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: color-mix(in srgb, var(--post-accent) 35%, transparent);
+      transition: text-decoration-color 0.2s;
+    }
+    .post-body a:hover {
+      text-decoration-color: var(--post-accent);
+    }
 
-    <header class="post-header">
+    /* Key takeaways — first ul */
+    .post-body ul:first-of-type {
+      background: color-mix(in srgb, var(--post-accent) 5%, var(--bg-card));
+      border: 1px solid color-mix(in srgb, var(--post-accent) 20%, transparent);
+      border-radius: 12px;
+      padding: 20px 24px 20px 44px;
+      margin-bottom: 36px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .post-body ul:first-of-type li {
+      position: relative;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    .post-body ul:first-of-type li::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--post-accent);
+    }
+
+    /* Regular lists */
+    .post-body ul, .post-body ol {
+      padding-left: 24px;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .post-body li { color: var(--muted-hi); line-height: 1.7; }
+    .post-body ul li::marker { color: var(--post-accent); }
+    .post-body ol li::marker {
+      color: var(--post-accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+    }
+
+    /* Inline code */
+    .post-body :not(pre) > code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: var(--bg-hover);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 2px 7px;
+      color: var(--post-accent);
+    }
+
+    /* Code blocks — keep Shiki dark theme, just fix structure */
+    .post-body pre {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .post-body pre::before {
+      content: attr(data-lang);
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-body pre code {
+      display: block;
+      padding: 20px;
+      background: none !important;
+      border: none;
+      font-size: 13px;
+      line-height: 1.7;
+      overflow-x: auto;
+      /* No color override — Shiki controls token colors */
+    }
+
+    /* Tables */
+    .post-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+      font-size: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .post-body thead {
+      background: color-mix(in srgb, var(--post-accent) 8%, var(--bg-card));
+    }
+    .post-body thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--post-accent);
+      font-weight: 500;
+      border-bottom: 1px solid color-mix(in srgb, var(--post-accent) 20%, transparent);
+    }
+    .post-body tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .post-body tbody tr:last-child { border-bottom: none; }
+    .post-body tbody tr:hover { background: var(--bg-hover); }
+    .post-body td {
+      padding: 11px 16px;
+      color: var(--muted-hi);
+      line-height: 1.5;
+      vertical-align: middle;
+    }
+    .post-body td:first-child {
+      font-weight: 500;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* HR */
+    .post-body hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-hi), transparent);
+      margin: 52px 0;
+    }
+
+    /* Blockquote */
+    .post-body blockquote {
+      border-left: 3px solid var(--post-accent);
+      padding: 16px 20px;
+      margin: 28px 0;
+      background: color-mix(in srgb, var(--post-accent) 4%, var(--bg-card));
+      border-radius: 0 8px 8px 0;
+    }
+    .post-body blockquote p {
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+  </style>
+
+  <!-- Hero -->
+  <div class="post-hero" style={`--post-accent: ${accentColor}`}>
+    <div class="hero-inner">
+      <a href="/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        All posts
+      </a>
+
       {post.data.tags && post.data.tags.length > 0 && (
         <div class="post-tags">
           {post.data.tags.map(tag => <span class="post-tag">{tag}</span>)}
         </div>
       )}
+
       <h1 class="post-title">{post.data.title}</h1>
       <p class="post-desc">{post.data.description}</p>
+
       <div class="post-meta">
         <div class="meta-author">
           <div class="author-avatar">V</div>
           <span class="author-name">Viktor</span>
         </div>
-        <div class="meta-sep"></div>
+        <div class="meta-dot"></div>
         <span class="meta-date">{formatDate(post.data.date)}</span>
+        <div class="meta-dot"></div>
+        <span class="meta-read">{readTime} min read</span>
       </div>
-    </header>
+    </div>
+  </div>
 
+  <!-- Body -->
+  <article class="article-wrap" style={`--post-accent: ${accentColor}`}>
     <div class="post-body">
       <Content />
     </div>
 
     <div class="post-footer">
       <a href="/blog" class="back-to-blog">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
         Back to all posts
+      </a>
+      <a href="/contact" class="footer-cta">
+        Have a project in mind? Let's talk
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
       </a>
     </div>
   </article>
+
+  <script>
+    // Add data-lang attribute to pre blocks for the language label
+    document.querySelectorAll('pre').forEach(pre => {
+      const code = pre.querySelector('code');
+      if (!code) return;
+      const classList = [...code.classList];
+      const langClass = classList.find(c => c.startsWith('language-'));
+      if (langClass) {
+        const lang = langClass.replace('language-', '');
+        pre.setAttribute('data-lang', lang);
+      }
+    });
+  </script>
 </Layout>
