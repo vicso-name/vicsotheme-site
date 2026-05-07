@@ -1,11 +1,11 @@
 ---
-title: "Flutter & Android App Development Services | MVP to Play Store"
-headline: "Mobile App Development\nfor iOS & Android"
-description: "Build cross-platform mobile apps with Flutter or native Android in Kotlin. Senior solo developer — 6 apps shipped, AI-powered workflow, 3× faster than agencies."
+title: "Flutter App Development | AI & EdTech Mobile Apps"
+headline: "Flutter Apps\nBuilt for Real Users"
+description: "Cross-platform mobile apps built with Flutter and Kotlin — from MVPs to production-ready educational, AI-powered, and subscription-based products."
 category: "Mobile Development"
 accent: "#16a34a"
 icon: "📱"
-badge: "Flutter · Kotlin"
+badge: "Cross-Platform Apps"
 stack: ["Flutter", "Kotlin", "Jetpack Compose", "Firebase", "RevenueCat", "Google Play"]
 timeline: "4–10 weeks"
 priceRange: "$3,000–$12,000"

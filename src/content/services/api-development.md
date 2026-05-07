@@ -1,11 +1,11 @@
 ---
-title: "Clean, documented Django REST APIs with authentication, role-based permissions, and PostgreSQL. Built to scale — serving mobile and web clients from one backend."
+title: "Django REST API Development | Scalable Backend Systems"
 headline: "Django REST APIs\nBuilt to Scale"
-description: "Clean, documented Django REST APIs with authentication, role-based permissions, and PostgreSQL. Built to scale — serving mobile and web clients from one backend."
+description: "Scalable Django REST APIs with authentication, PostgreSQL, Redis, and Docker. Backend systems built for mobile apps, web platforms, and AI-powered products."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "🔌"
-badge: "Django · Python"
+badge: "Backend Systems"
 stack: ["Django", "Django REST Framework", "PostgreSQL", "Redis", "Docker", "Nginx", "JWT"]
 timeline: "3–8 weeks"
 priceRange: "$3,000–$12,000"

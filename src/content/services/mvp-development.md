@@ -1,11 +1,11 @@
 ---
-title: "MVP Development Service | Working Prototype in 2–4 Weeks"
+title: "MVP Development for Startups | Web & Mobile Products"
 headline: "From Idea to Working\nProduct in Weeks"
-description: "Validate your idea with a real deployable product, not a mockup. Fixed scope, transparent pricing. Senior full-stack developer with AI-accelerated delivery."
-category: "Mobile Development"
+description: "Rapid MVP development for startups and founders — web and mobile products built for real user validation, iteration, and long-term scalability."
+category: "MVP Development"
 accent: "#16a34a"
 icon: "🚀"
-badge: "2–4 weeks"
+badge: "Startup MVPs"
 stack: ["Flutter", "Django", "Next.js", "Astro", "Firebase", "PostgreSQL"]
 timeline: "2–4 weeks"
 priceRange: "$2,000–$6,000"

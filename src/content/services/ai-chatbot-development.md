@@ -2,7 +2,7 @@
 title: "AI Chatbot Development Services | Claude & GPT Integration"
 headline: "AI Chatbots That\nActually Convert"
 description: "Conversational AI chatbots that qualify leads, answer questions, and capture emails — powered by Claude or GPT with secure Cloudflare Workers API proxy."
-category: "AI & Automation"
+category: "AI Development"
 accent: "#7c3aed"
 icon: "🤖"
 badge: "Claude · OpenAI"

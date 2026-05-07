@@ -1,11 +1,11 @@
 ---
-title: "Language Learning Apps"
-headline: "Language Learning App Development | EdTech Mobile Apps"
-description: "Structured language learning apps with spaced repetition, multiple exercise types, and AI explanations. Built by a developer who actually uses them to learn Estonian."
-category: "EdTech & Learning Products"
+title: "Language Learning App Development | Flutter & AI-Powered EdTech"
+headline: "Language Learning Apps\nDesigned for Long-Term Retention"
+description: "Language learning apps built with Flutter, AI-assisted learning systems, spaced repetition, and multiple exercise types. Designed by a developer actively learning and building language products."
+category: "EdTech Development"
 accent: "#d97706"
 icon: "🎓"
-badge: "SRS · Flutter"
+badge: "Language Learning Systems"
 stack: ["Flutter", "Django", "Python", "Google TTS", "Claude API", "PostgreSQL", "Firebase"]
 timeline: "8–20 weeks"
 priceRange: "$5,000–$20,000"

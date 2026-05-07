@@ -1,11 +1,11 @@
 ---
-title: "EdTech Product Consulting | Pedagogy-First Learning Design"
+title: "EdTech Product Consulting | Learning App & Curriculum Design"
 headline: "Learning Product Design\nGrounded in Real Science"
-description: "Learning product strategy grounded in Testing Effect, Noticing Hypothesis, and spaced practice research. Product audits, curriculum design, and exercise taxonomy for digital learning tools."
-category: "EdTech & Learning Products"
+description: "EdTech product consulting for language learning apps and educational platforms. Learning design grounded in spaced repetition, active recall, cognitive science, and real-world product experience."
+category: "EdTech Development"
 accent: "#d97706"
 icon: "💡"
-badge: "Pedagogy · UX"
+badge: "Learning Systems"
 stack: ["Figma", "Python", "Django", "Flutter", "Claude API"]
 timeline: "1–4 weeks"
 priceRange: "$1,000–$5,000"

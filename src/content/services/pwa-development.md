@@ -1,11 +1,11 @@
 ---
-title: "Progressive Web App Development | Offline-First PWA Builder"
-headline: "Installable Web Apps\nWithout the App Store"
-description: "Installable web apps that work offline, feel native, and skip the app store. Service workers, push notifications, and sub-2s load times on any device."
-category: "Web & Frontend"
+title: "Offline-First Web App Development | Progressive Web Apps"
+headline: "Offline-First Web Apps\nThat Feel Native"
+description: "Offline-first web applications with installable PWA support, push notifications, fast loading, and native-like UX for educational tools, dashboards, and modern web products."
+category: "Web Development"
 accent: "#2563eb"
 icon: "⚡"
-badge: "Offline · Installable"
+badge: "Offline-First"
 stack: ["Vanilla JS", "Astro", "Next.js", "Service Workers", "Web App Manifest", "IndexedDB"]
 timeline: "2–5 weeks"
 priceRange: "$2,000–$7,000"

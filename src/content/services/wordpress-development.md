@@ -1,11 +1,11 @@
 ---
-title: "WordPress Development Services | Custom Themes & ACF Blocks"
-headline: "WordPress That Works\nthe Way You Need"
-description: "Custom WordPress themes, ACF Gutenberg blocks, and plugin development — no page builders, no bloat. Clean PHP, fast load times, editors who can manage content independently."
-category: "Web & Frontend"
+title: "Custom WordPress Development | ACF & Gutenberg Systems"
+headline: "Custom WordPress Systems\nBuilt Around Your Content"
+description: "Custom WordPress development with ACF Gutenberg blocks, editorial workflows, SEO-focused architecture, and scalable content management systems."
+category: "Web Development"
 accent: "#2563eb"
 icon: "🔵"
-badge: "ACF · Gutenberg"
+badge: "Editorial Systems"
 stack: ["WordPress", "PHP", "ACF Pro", "Gutenberg", "MySQL", "Nginx"]
 timeline: "2–6 weeks"
 priceRange: "$1,500–$8,000"

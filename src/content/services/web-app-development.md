@@ -1,11 +1,11 @@
 ---
-title: "Web App Development Services | Next.js & Astro Expert"
-headline: "Web Applications Built\nto Last"
-description: "Fast, SEO-optimised web applications built with Next.js or Astro. From landing pages to complex interactive tools — production-ready, Core Web Vitals optimised."
-category: "Web & Frontend"
+title: "Next.js & Astro Web Development | High-Performance Web Apps"
+headline: "High-Performance Web Apps\nBuilt for Real Products"
+description: "High-performance web applications built with Next.js and Astro — SEO-optimised, scalable, and designed for startups, educational platforms, and modern digital products."
+category: "Web Development"
 accent: "#2563eb"
 icon: "🌐"
-badge: "Next.js · Astro"
+badge: "High-Performance Web Apps"
 stack: ["Next.js", "Astro", "TypeScript", "Tailwind", "PostgreSQL", "Django", "Vercel"]
 timeline: "3–8 weeks"
 priceRange: "$2,500–$10,000"

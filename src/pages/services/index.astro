@@ -5,19 +5,39 @@ import { getCollection } from 'astro:content';
 const allServices = await getCollection('services', ({ data }) => !data.draft);
 
 const CATEGORY_ORDER = [
+  'AI Development',
+  'MVP Development',
+  'EdTech Development',
+  'Web Development',
   'Mobile Development',
-  'Web & Frontend',
   'Backend & Infrastructure',
-  'AI & Automation',
-  'EdTech & Learning Products',
 ];
 
 const CATEGORY_META: Record<string, { accent: string; desc: string }> = {
-  'Mobile Development':         { accent: 'var(--accent-k)', desc: 'Flutter, Kotlin — from concept to Play Store.' },
-  'Web & Frontend':             { accent: 'var(--accent-k)', desc: 'Next.js, Astro, WordPress — fast, SEO-ready.' },
-  'Backend & Infrastructure':   { accent: 'var(--accent-e)', desc: 'APIs, dashboards, databases — built to scale.' },
-  'AI & Automation':            { accent: 'var(--accent-d)', desc: 'LLM integrations, chatbots, content pipelines.' },
-  'EdTech & Learning Products': { accent: 'var(--accent-w)', desc: 'SRS engines, language apps, EdTech consulting.' },
+  'AI Development': {
+    accent: 'var(--accent-d)',
+    desc: 'Custom AI apps, chatbots, and LLM integrations.',
+  },
+  'MVP Development': {
+    accent: 'var(--accent-k)',
+    desc: 'Fast product prototypes for startups and founders.',
+  },
+  'EdTech Development': {
+    accent: 'var(--accent-w)',
+    desc: 'Language learning apps, SRS systems, and learning UX.',
+  },
+  'Web Development': {
+    accent: 'var(--accent-k)',
+    desc: 'Next.js, Astro, and WordPress websites built for speed.',
+  },
+  'Mobile Development': {
+    accent: 'var(--accent-k)',
+    desc: 'Flutter and Kotlin apps from concept to app store.',
+  },
+  'Backend & Infrastructure': {
+    accent: 'var(--accent-e)',
+    desc: 'APIs, admin dashboards, and scalable data architecture.',
+  },
 };
 
 const grouped = CATEGORY_ORDER.map(cat => ({

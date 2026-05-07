@@ -1,11 +1,11 @@
 ---
-title: "Automated Content Pipeline Development | AI & Google TTS"
-headline: "Automated Content at Scale\nWithout the Manual Work"
-description: "Python pipelines for AI-powered content generation, validation, and audio synthesis at scale. Built for EdTech, publishing, and product teams with high content volume."
-category: "AI & Automation"
+title: "AI Content Systems & Automation | Multilingual Generation Pipelines"
+headline: "AI Content Systems\nBuilt for Structured Workflows"
+description: "Structured AI content systems for multilingual apps, educational platforms, and high-volume workflows. Automated generation, validation, audio synthesis, and export pipelines built with Python and LLM APIs."
+category: "AI Development"
 accent: "#7c3aed"
 icon: "⚡"
-badge: "Python · GCP TTS"
+badge: "AI Content Systems"
 stack: ["Python", "Claude API", "OpenAI API", "Google Cloud TTS", "PostgreSQL", "Django", "YAML"]
 timeline: "2–6 weeks"
 priceRange: "$2,000–$8,000"

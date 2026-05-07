@@ -1,11 +1,11 @@
 ---
-title: "Custom Admin Dashboard Development | Django & Next.js"
-headline: "Custom Admin Panels\nfor Your Product"
-description: "Tailored admin panels that replace spreadsheets and generic CMS tools. Built for your exact data model and team workflow — editors can manage content without touching code."
+title: "Custom Admin Panel Development | Django, Next.js & Strapi"
+headline: "Custom Admin Panels\nBuilt Around Your Workflow"
+description: "Custom admin panels and internal tools built with Django, Next.js, and Strapi. Replace spreadsheets and generic CMS workflows with software tailored to your product and team."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "⚙️"
-badge: "Custom CMS"
+badge: "Internal Tools"
 stack: ["Django", "Python", "Next.js", "PostgreSQL", "REST API", "Strapi"]
 timeline: "3–7 weeks"
 priceRange: "$2,500–$9,000"

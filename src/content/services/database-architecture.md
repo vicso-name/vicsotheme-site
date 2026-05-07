@@ -1,11 +1,11 @@
 ---
-title: "PostgreSQL Database Design & Optimisation Services"
-headline: "Data Architecture That\nDoesn't Come Back to Haunt You"
-description: "Schema design, query optimisation, Redis caching, and zero-downtime migrations for applications that need to scale. Getting the data model right from day one."
+title: "Database Architecture & PostgreSQL Optimisation"
+headline: "Scalable Database Architecture\nfor Growing Products"
+description: "Database architecture, PostgreSQL optimisation, Redis caching, and scalable schema design for web apps, APIs, AI systems, and educational platforms."
 category: "Backend & Infrastructure"
 accent: "#0d9488"
 icon: "🗄️"
-badge: "PostgreSQL · Redis"
+badge: "Database Architecture"
 stack: ["PostgreSQL", "Redis", "Django ORM", "Docker", "pgAdmin", "Nginx"]
 timeline: "1–3 weeks"
 priceRange: "$1,500–$5,000"

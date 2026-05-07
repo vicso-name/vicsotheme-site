@@ -1,11 +1,11 @@
 ---
-title: "Google Play Store Launch Service | ASO & App Publishing Expert"
-headline: "Your App on Google Play\nDone Right"
-description: "Full Play Store launch pipeline — signed build, store listing, ASO keyword research, screenshots, and post-launch monitoring. Done it 6 times, zero rejections."
+title: "Mobile App Launch & Google Play Publishing"
+headline: "Mobile App Launch\nWithout Deployment Headaches"
+description: "Production-ready Google Play publishing for Flutter and Android apps — release builds, store optimisation, analytics setup, and launch support."
 category: "Mobile Development"
 accent: "#16a34a"
 icon: "🏪"
-badge: "Google Play"
+badge: "App Publishing"
 stack: ["Google Play Console", "Kotlin", "Flutter", "Firebase Analytics", "AdMob"]
 timeline: "1–2 weeks"
 priceRange: "$500–$2,000"

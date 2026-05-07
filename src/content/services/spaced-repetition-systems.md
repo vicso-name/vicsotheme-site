@@ -1,11 +1,11 @@
 ---
-title: "Spaced Repetition System Development | SM-2 Algorithm Expert"
-headline: "Memory Systems That\nActually Work"
-description: "SM-2 and custom SRS algorithms with adaptive scheduling, performance analytics, and gamification. The science of memory, implemented correctly in production apps."
-category: "EdTech & Learning Products"
+title: "Spaced Repetition System Development | SRS & SM-2 Algorithms"
+headline: "Spaced Repetition Systems\nBuilt for Long-Term Retention"
+description: "Spaced repetition systems with SM-2 algorithms, adaptive scheduling, learning analytics, and gamification for language learning apps and educational platforms."
+category: "EdTech Development"
 accent: "#d97706"
 icon: "🔁"
-badge: "SM-2 · Adaptive"
+badge: "SRS Algorithms"
 stack: ["Flutter", "Python", "Django", "PostgreSQL", "Firebase Analytics"]
 timeline: "3–8 weeks"
 priceRange: "$3,000–$10,000"
