@@ -1,7 +1,7 @@
 ---
 title: "Why I Build Language Learning Apps"
 description: "From learning Estonian as a foreigner in Tallinn to shipping three language apps on Google Play — here's what I've learned about EdTech, spaced repetition, and building tools you actually need."
-date: 2025-01-15
+date: 2026-04-11
 tags: ["edtech", "flutter", "language-learning"]
 draft: false
 ---

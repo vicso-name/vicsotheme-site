@@ -4,9 +4,21 @@ import ChatBot from '../components/ChatBot.astro';
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
+  canonical?: string;
 }
 
-const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter, Django, Next.js, AI-powered workflow. Mobile apps, web products, and backends. 3× faster than an agency, 60% lower cost. Available for freelance projects.' } = Astro.props;
+const {
+  title,
+  description = 'Senior Full Stack Developer in Pärnu — WordPress, Django, Next.js, AI-powered workflow. Mobile apps, web products, and backends. 3× faster than an agency, 60% lower cost. Available for freelance projects.',
+  noindex = false,
+  canonical
+} = Astro.props;
+
+const canonicalUrl =
+  canonical ??
+  new URL(Astro.url.pathname, Astro.site ?? 'https://vicsotheme.com').toString();
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +27,13 @@ const { title, description = 'Senior Full Stack Developer in Tallinn — Flutter
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+
+  <meta
+    name="robots"
+    content={noindex ? 'noindex,follow' : 'index,follow'}
+  />
+
+  <link rel="canonical" href={canonicalUrl} />
 
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />

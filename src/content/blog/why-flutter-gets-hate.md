@@ -1,7 +1,7 @@
 ---
 title: "Why Flutter Gets So Much Hate (And Why It's Wrong)"
 description: "Every few months someone publishes a 'Flutter is dying' piece. After building Flutter apps for years, here's what's actually behind the criticism."
-date: 2026-05-06
+date: 2026-04-14
 tags: ["mobile app development", "flutter", "cross-platform"]
 draft: false
 ---

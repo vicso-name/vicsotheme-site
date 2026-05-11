@@ -1,7 +1,7 @@
 ---
 title: "How to Publish a Flutter App to Google Play: Complete Guide"
 description: "Step-by-step guide to publishing a Flutter app on Google Play — bundle name, keystore setup, release build, and Play Console. From someone who ships Flutter apps to production."
-date: 2026-05-06
+date: 2026-04-28
 tags: ["mobile app development", "flutter", "google play", "play store launch"]
 draft: false
 ---
