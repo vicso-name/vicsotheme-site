@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ROICalculator from '../components/ROICalculator.astro';
+import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
 ---
 
 
@@ -301,26 +301,125 @@ import ROICalculator from '../components/ROICalculator.astro';
     .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
 
     /* ── Services ── */
-    .services-group { margin-bottom: 32px; }
-    .services-group-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-left: 2px; display: block; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px; }
-    .service-card { position: relative; border: 1px solid var(--border); border-radius: 14px; background: var(--bg-card); padding: 22px 24px; transition: border-color 0.3s, transform 0.3s; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }
-    .service-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
-    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--s-accent, var(--accent-h)), transparent); opacity: 0.5; }
-    .service-card-top { display: flex; align-items: center; gap: 12px; }
-    .service-icon { width: 36px; height: 36px; flex-shrink: 0; object-fit: contain; }
-    .service-title { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.3; }
-    .service-desc { font-size: 12px; line-height: 1.6; color: var(--muted); font-weight: 300; }
-    .service-title-link { color: var(--heading); text-decoration: none; transition: color 0.2s; }
-    .service-title-link:hover { color: var(--s-accent, var(--accent)); }
-    .service-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; border: 1px solid color-mix(in srgb, var(--s-accent, var(--accent-h)) 30%, transparent); color: var(--s-accent, var(--accent-h));  width: fit-content; }
+    .services-intro {
+      max-width: 680px;
+      margin-bottom: 32px;
+    }
+
+    .services-heading {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 300;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .services-lead {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-card);
+      text-decoration: none;
+      overflow: hidden;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 2px;
+      background: var(--s-accent, var(--accent-h));
+      opacity: 0.35;
+    }
+
+    .service-card:hover {
+      border-color: var(--border-hi);
+      background: var(--bg-hover);
+      transform: translateY(-2px);
+    }
+
+    .service-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .service-icon {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .service-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--heading);
+      line-height: 1.3;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .service-badge {
+      margin-top: auto;
+      width: fit-content;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--bg-hover);
+    }
 
     .services-more {
       display: flex;
       justify-content: center;
-      padding-top: 8px;
+      padding-top: 28px;
     }
 
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+    }
     /* ── CTA ── */
     .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-glow { position: absolute; inset: 0; pointer-events: none; }
@@ -358,8 +457,9 @@ import ROICalculator from '../components/ROICalculator.astro';
       font-size: 14px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent-h);
+      color: var(--heading);
       margin-bottom: 20px;
+      font-weight: 500;
     }
     .why-headline {
       font-size: clamp(28px, 4vw, 44px);
@@ -525,98 +625,130 @@ import ROICalculator from '../components/ROICalculator.astro';
   <section class="hero">
     <div class="wrap">
       <div class="fade-up">
-        <div class="hero-badge">Full Stack + AI Developer · Pärnu, Estonia</div>
+        <div class="hero-badge">AI-Augmented Product Engineer · Estonia</div>
       </div>
-      <h1 class="fade-up">Hire a Full Stack Developer<br />to <em>Build Your Product</em></h1>
-      <p class="hero-sub fade-up"> Mobile app development, web applications, and custom backends — built with Flutter, Django, and Next.js. AI-powered workflow delivers your MVP 3× faster than a traditional agency, at 60% lower cost. </p>
+
+      <h1 class="fade-up">
+        Building AI-powered products<br />
+        with <em>senior full-stack execution</em>
+      </h1>
+
+      <p class="hero-sub fade-up">
+        I help startups and businesses design, build, and optimize SaaS platforms,
+        mobile apps, CMS systems, and AI-driven workflows with a product-first
+        engineering approach.
+      </p>
+
       <div class="hero-actions fade-up">
         <a href="/contact" class="btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
-          Get in touch
+          Discuss your product
         </a>
-        <a href="/apps" class="btn-secondary">View my work ↓</a>
+
+        <a href="/services" class="btn-secondary">Explore capabilities ↓</a>
       </div>
     </div>
   </section>
 
   <section class="services section" id="services">
     <div class="wrap">
-      <div class="section-label">Services</div>
+      <div class="section-label">Core Expertise</div>
 
-      <!-- Mobile -->
-      <div class="services-group reveal">
-        <span class="services-group-label">Mobile Development</span>
-        <div class="services-grid">
-          <div class="service-card" style="--s-accent: var(--accent-h);">
-            <div class="service-card-top">
-              <img src="/services/service-mobile.svg" class="service-icon" alt="" />
-              <a href="/services/mobile-app-development" class="service-title service-title-link">Mobile App Development</a>
-            </div>
-            <p class="service-desc">Cross-platform apps with Flutter or native Android in Kotlin/Jetpack Compose. From MVP to Play Store launch.</p>
-            <span class="service-badge">Flutter · Kotlin</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-h);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">📱</span>
-              <a href="/services/poc-mvp-development" class="service-title service-title-link">PoC & MVP Development</a>
-            </div>
-            <p class="service-desc">Rapid prototypes and minimum viable products — validate your idea fast before investing in a full build.</p>
-            <span class="service-badge">2–4 weeks</span>
-          </div>
-          <div class="service-card" style="--s-accent: var(--accent-h);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🏪</span>
-              <a href="/services/play-store-launch" class="service-title service-title-link">Play Store Launch</a>
-            </div>
-            <p class="service-desc">Full release pipeline — app signing, store listing, screenshots, descriptions, and post-launch monitoring.</p>
-            <span class="service-badge">Google Play</span>
-          </div>
-        </div>
+      <div class="services-intro reveal">
+        <h2 class="services-heading">
+          Product engineering capabilities for AI-era digital products.
+        </h2>
+        <p class="services-lead">
+          Focused engineering directions instead of a noisy list of isolated services.
+          I help design, build, optimize, and launch scalable products across web, mobile,
+          AI, CMS, and EdTech systems.
+        </p>
       </div>
 
-      <!-- Web -->
-      <div class="services-group reveal">
-        <span class="services-group-label">Web & Frontend</span>
-        <div class="services-grid">
-          <div class="service-card" style="--s-accent: var(--accent-k);">
-            <div class="service-card-top">
-              <img src="/services/service-web.svg" class="service-icon" alt="" />
-              <a href="/services/web-app-development" class="service-title service-title-link">Web App Development</a>
-            </div>
-            <p class="service-desc">Progressive web apps and static sites with Next.js or Astro. Fast, SEO-friendly, and production-ready.</p>
-            <span class="service-badge">Next.js · Astro</span>
+      <div class="services-grid services-grid--pillars">
+        <a href="/services/ai-product-engineering" class="service-card reveal" style="--s-accent: var(--accent-d);">
+          <div class="service-card-top">
+            <img src="/icons/openai.svg" class="service-icon" alt="" />
+            <span class="service-title">AI Product Engineering</span>
           </div>
-          <div class="service-card" style="--s-accent: var(--accent-k);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">🌐</span>
-              <a href="/services/wordpress-development" class="service-title service-title-link">WordPress Development</a>
-            </div>
-            <p class="service-desc">Custom themes, ACF Gutenberg blocks, plugin development, and performance optimization for WordPress sites.</p>
-            <span class="service-badge">ACF · Gutenberg</span>
+          <p class="service-desc">
+            AI MVPs, LLM integrations, workflow automation, AI SaaS, internal tools, and product-focused AI systems.
+          </p>
+          <span class="service-badge">OpenAI · Claude · Next.js · Python</span>
+        </a>
+
+        <a href="/services/saas-platform-engineering" class="service-card reveal" style="--s-accent: var(--accent-k);">
+          <div class="service-card-top">
+            <img src="/services/service-web.svg" class="service-icon" alt="" />
+            <span class="service-title">SaaS Platform Engineering</span>
           </div>
-          <div class="service-card" style="--s-accent: var(--accent-k);">
-            <div class="service-card-top">
-              <span style="font-size: 28px; flex-shrink: 0;">⚡</span>
-              <a href="/services/pwa-development" class="service-title service-title-link">PWA Development</a>
-            </div>
-            <p class="service-desc">Installable web apps with offline support, push notifications, and native-like UX — no app store needed.</p>
-            <span class="service-badge">Offline · installable</span>
+          <p class="service-desc">
+            Scalable web platforms, dashboards, admin systems, product infrastructure, and full-stack SaaS architecture.
+          </p>
+          <span class="service-badge">Next.js · Django · PostgreSQL</span>
+        </a>
+
+        <a href="/services/mobile-product-engineering" class="service-card reveal" style="--s-accent: var(--accent-h);">
+          <div class="service-card-top">
+            <img src="/services/service-mobile.svg" class="service-icon" alt="" />
+            <span class="service-title">Mobile Product Engineering</span>
           </div>
-        </div>
+          <p class="service-desc">
+            Flutter apps, PWAs, subscription systems, cross-platform products, mobile UX, and app launch support.
+          </p>
+          <span class="service-badge">Flutter · RevenueCat · Firebase</span>
+        </a>
+
+        <a href="/services/cms-content-architecture" class="service-card reveal" style="--s-accent: var(--accent-e);">
+          <div class="service-card-top">
+            <img src="/icons/strapi.svg" class="service-icon" alt="" />
+            <span class="service-title">CMS & Content Architecture</span>
+          </div>
+          <p class="service-desc">
+            Strapi, headless CMS, WordPress architecture, editorial workflows, structured content, and SEO-ready systems.
+          </p>
+          <span class="service-badge">Strapi · WordPress · SEO</span>
+        </a>
+
+        <a href="/services/edtech-learning-systems" class="service-card reveal" style="--s-accent: var(--accent-w);">
+          <div class="service-card-top">
+            <img src="/services/service-edtech.svg" class="service-icon" alt="" />
+            <span class="service-title">EdTech & Learning Systems</span>
+          </div>
+          <p class="service-desc">
+            Language-learning products, spaced repetition systems, gamification, learning UX, and retention mechanics.
+          </p>
+          <span class="service-badge">SRS · Gamification · Retention</span>
+        </a>
+
+        <a href="/services/technical-strategy-optimization" class="service-card reveal" style="--s-accent: var(--accent-b);">
+          <div class="service-card-top">
+            <img src="/services/service-backend.svg" class="service-icon" alt="" />
+            <span class="service-title">Technical Strategy & Optimization</span>
+          </div>
+          <p class="service-desc">
+            Architecture audits, performance optimization, UX review, SEO improvements, monetization, and product strategy.
+          </p>
+          <span class="service-badge">Performance · UX · Architecture</span>
+        </a>
       </div>
 
       <div class="services-more reveal">
         <a href="/services" class="btn-secondary">
-          View all 15 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+          Explore all capabilities
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
         </a>
       </div>
-
     </div>
   </section>
+
+
+  <ProductScopeEstimator />
 
   <!-- Tech Stack & Services -->
   <section class="section" id="stack">
@@ -689,116 +821,111 @@ import ROICalculator from '../components/ROICalculator.astro';
     </div>
   </section>
 
-    <!-- Why Me? -->
+  <!-- Why Me? -->
 
   <section class="why-section" id="why">
     <div class="wrap">
- 
-      <!-- Hero statement -->
+
       <div class="why-hero reveal">
         <div class="why-hero-glow"></div>
-        <div class="why-kicker">Why work with an independent developer</div>
+
+        <div class="why-kicker">Why work with an independent product engineer</div>
+
         <h2 class="why-headline">
-          Studio quality.<br />
-          <strong>Without the studio overhead.</strong>
+          Senior execution.<br />
+          <strong>Direct technical ownership.</strong>
         </h2>
+
         <p class="why-lead">
-          Got an idea? I'll turn it into a working product in weeks, not months. AI-powered workflow cuts development time by 3× — and that saving goes directly to your timeline and budget. From $2K MVP to $10K full product, built by one senior developer who actually ships.
+          I work as a technical product partner — combining full-stack engineering,
+          AI-assisted workflows, UX thinking, and product architecture to help you
+          move from idea to a real, maintainable product without unnecessary process overhead.
         </p>
+
         <div class="why-numbers">
           <div class="why-num">
-            <div class="why-num-val">3<span>×</span></div>
-            <div class="why-num-label">Faster than agency avg.</div>
+            <div class="why-num-val">1</div>
+            <div class="why-num-label">Technical owner</div>
           </div>
+
           <div class="why-num">
-            <div class="why-num-val">60<span>%</span></div>
-            <div class="why-num-label">Lower cost vs studio</div>
+            <div class="why-num-val">6</div>
+            <div class="why-num-label">Core product pillars</div>
           </div>
+
+          <div class="why-num">
+            <div class="why-num-val">AI</div>
+            <div class="why-num-label">Assisted workflow</div>
+          </div>
+
           <div class="why-num">
             <div class="why-num-val">0</div>
-            <div class="why-num-label">Middlemen between us</div>
-          </div>
-          <div class="why-num">
-            <div class="why-num-val">24<span>h</span></div>
-            <div class="why-num-label">Max response time</div>
+            <div class="why-num-label">Middlemen</div>
           </div>
         </div>
       </div>
- 
-      <!-- Comparison -->
-      <div class="comparison-grid reveal">
- 
-        <div class="comparison-card">
-          <span class="comp-badge agency">Typical Agency</span>
-          <div class="comp-title">What you usually get</div>
-          <ul class="comp-list">
-            <li><span class="icon bad">✕</span> Account manager → project manager → developer chain</li>
-            <li><span class="icon bad">✕</span> $15K–50K+ for a basic mobile app</li>
-            <li><span class="icon bad">✕</span> 4–8 month delivery timelines</li>
-            <li><span class="icon bad">✕</span> Junior devs on your project, seniors on the pitch</li>
-            <li><span class="icon bad">✕</span> Contracts, retainers, hidden scope fees</li>
-            <li><span class="icon bad">✕</span> You explain your idea 5 times to 5 people</li>
-          </ul>
-        </div>
- 
-        <div class="comparison-card is-me">
-          <span class="comp-badge me">Working with me</span>
-          <div class="comp-title">What you actually get</div>
-          <ul class="comp-list is-me">
-            <li><span class="icon good">✓</span> You talk directly to the person writing your code</li>
-            <li><span class="icon good">✓</span> Transparent pricing, no hidden fees</li>
-            <li><span class="icon good">✓</span> MVP in 4–8 weeks, full product in 2–4 months</li>
-            <li><span class="icon good">✓</span> Senior full-stack + AI tools on every task</li>
-            <li><span class="icon good">✓</span> Flexible engagement — fixed price or hourly</li>
-            <li><span class="icon good">✓</span> One briefing. One person. Clear ownership.</li>
-          </ul>
-        </div>
- 
-      </div>
- 
-      <!-- 6 Reasons -->
+
       <div class="reasons-grid reveal">
- 
+
         <div class="reason-card">
           <div class="reason-num">01</div>
-          <div class="reason-title">AI-powered development</div>
-          <p class="reason-desc">I use Claude, Cursor, and custom AI pipelines daily. Tasks that take a junior dev a week take me a day. That speed savings goes directly to your budget and timeline.</p>
+          <div class="reason-title">Product-first engineering</div>
+          <p class="reason-desc">
+            I do not start with technology for its own sake. I start with the product goal,
+            user flow, business constraint, and then choose the simplest technical path that can scale.
+          </p>
         </div>
- 
+
         <div class="reason-card">
           <div class="reason-num">02</div>
-          <div class="reason-title">Full-stack ownership</div>
-          <p class="reason-desc">Mobile (Flutter/Kotlin), backend (Django/Python), web (Next.js/Astro), DevOps (Docker/Nginx). One person sees the full picture — no handoff gaps, no blame-shifting between teams.</p>
+          <div class="reason-title">AI-assisted execution</div>
+          <p class="reason-desc">
+            I use modern AI tools to speed up research, prototyping, implementation, refactoring,
+            and content workflows — while keeping architecture and product judgment human-led.
+          </p>
         </div>
- 
+
         <div class="reason-card">
           <div class="reason-num">03</div>
-          <div class="reason-title">You talk to the builder</div>
-          <p class="reason-desc">No account managers, no project coordinators. You message me directly. I understand your requirements firsthand and make technical decisions without a telephone game.</p>
+          <div class="reason-title">Full-stack ownership</div>
+          <p class="reason-desc">
+            Next.js, Astro, Django, Python, Strapi, WordPress, Flutter, Firebase, Docker,
+            PostgreSQL, and deployment workflows can be handled as one connected product system.
+          </p>
         </div>
- 
+
         <div class="reason-card">
           <div class="reason-num">04</div>
-          <div class="reason-title">Shipped products, not prototypes</div>
-          <p class="reason-desc">6 apps live on Google Play. Real users, real reviews, real revenue systems. I know what it takes to get from idea to production — not just to demo.</p>
+          <div class="reason-title">Real shipped products</div>
+          <p class="reason-desc">
+            I build and maintain real products, including mobile learning apps, subscription flows,
+            content systems, dashboards, and production websites — not just portfolio demos.
+          </p>
         </div>
- 
+
         <div class="reason-card">
           <div class="reason-num">05</div>
-          <div class="reason-title">EdTech & product expertise</div>
-          <p class="reason-desc">Spaced repetition, content pipelines, subscription systems, admin dashboards — I've built these, not just read about them. Domain knowledge you can't hire for cheap at an agency.</p>
+          <div class="reason-title">EdTech and retention expertise</div>
+          <p class="reason-desc">
+            Spaced repetition, language-learning flows, gamification, content architecture,
+            paywalls, and retention systems are part of my practical product experience.
+          </p>
         </div>
- 
+
         <div class="reason-card">
           <div class="reason-num">06</div>
-          <div class="reason-title">Fair price, honest scope</div>
-          <p class="reason-desc">I quote based on actual work, not on what the market will bear. If your project is simpler than you think — I'll tell you. If it needs more — I'll explain exactly why.</p>
+          <div class="reason-title">Clear technical direction</div>
+          <p class="reason-desc">
+            I help simplify scope, explain tradeoffs, avoid overengineering, and build systems
+            that are easier to launch, maintain, and improve after release.
+          </p>
         </div>
- 
+
       </div>
- 
+
     </div>
   </section>
+
 
    <!-- CTA -->
   <section class="section" id="contact">
@@ -1008,8 +1135,6 @@ import ROICalculator from '../components/ROICalculator.astro';
       </div>
     </div>
   </section>
-
-  <ROICalculator />
 
   <!-- CTA -->
   <section class="section" id="contact">

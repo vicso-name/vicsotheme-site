@@ -1,0 +1,597 @@
+---
+/**
+ * ProductScopeEstimator.astro
+ *
+ * Product scoping tool for the homepage.
+ * Replaces the old ROI / cost-savings calculator.
+ *
+ * Positioning:
+ * - scope clarity
+ * - product direction
+ * - technical complexity
+ * - recommended first milestone
+ *
+ * Usage:
+ * import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
+ * <ProductScopeEstimator />
+ */
+---
+
+<section class="scope-estimator section" id="scope-estimator">
+  <div class="wrap">
+    <div class="scope-shell reveal">
+      <div class="scope-copy">
+        <div class="scope-kicker">Product Scope Estimator</div>
+
+        <h2 class="scope-title">
+          Clarify what your product actually needs before building it.
+        </h2>
+
+        <p class="scope-lead">
+          Answer a few product questions and get a practical direction:
+          recommended approach, complexity level, likely technical areas,
+          and the best first milestone.
+        </p>
+      </div>
+
+      <div class="scope-panel" data-scope-estimator>
+        <div class="scope-step">
+          <label for="productType">What are you building?</label>
+
+          <div class="select-wrap">
+            <select id="productType" data-field="productType">
+              <option value="ai">AI tool or AI-powered product</option>
+              <option value="saas">SaaS platform or web app</option>
+              <option value="mobile">Mobile app</option>
+              <option value="cms">CMS / content platform</option>
+              <option value="edtech">EdTech or learning product</option>
+              <option value="internal">Internal dashboard or business tool</option>
+            </select>
+
+            <svg class="select-caret" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="scope-step">
+          <label for="productStage">Product stage</label>
+
+          <div class="select-wrap">
+            <select id="productStage" data-field="productStage">
+              <option value="idea">Idea / early concept</option>
+              <option value="mvp">MVP scope is roughly defined</option>
+              <option value="existing">Existing product needs improvement</option>
+              <option value="scale">Product is growing and needs better architecture</option>
+            </select>
+
+            <svg class="select-caret" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="scope-step">
+          <span class="scope-label">Core requirements</span>
+
+          <div class="scope-options">
+            <label><input type="checkbox" value="auth" data-requirement /> Authentication</label>
+            <label><input type="checkbox" value="ai" data-requirement /> AI integration</label>
+            <label><input type="checkbox" value="payments" data-requirement /> Payments / subscriptions</label>
+            <label><input type="checkbox" value="cms" data-requirement /> CMS / content management</label>
+            <label><input type="checkbox" value="dashboard" data-requirement /> Admin dashboard</label>
+            <label><input type="checkbox" value="mobile" data-requirement /> Mobile support</label>
+          </div>
+        </div>
+
+        <div class="scope-step">
+          <label for="priority">Main priority</label>
+
+          <div class="select-wrap">
+            <select id="priority" data-field="priority">
+              <option value="launch">Launch quickly</option>
+              <option value="ux">Improve UX and product clarity</option>
+              <option value="automation">Automate workflows</option>
+              <option value="performance">Improve performance / SEO</option>
+              <option value="monetization">Improve monetization</option>
+              <option value="architecture">Clean up architecture</option>
+            </select>
+
+            <svg class="select-caret" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="scope-result" aria-live="polite">
+          <div class="scope-result-head">
+            <span class="scope-result-label">Recommended direction</span>
+            <strong data-result-title>Lean AI MVP</strong>
+          </div>
+
+          <div class="scope-result-grid">
+            <div class="scope-result-card">
+              <span>Complexity</span>
+              <strong data-result-complexity>Medium</strong>
+            </div>
+
+            <div class="scope-result-card">
+              <span>Best first milestone</span>
+              <strong data-result-milestone>Validate the core workflow</strong>
+            </div>
+          </div>
+
+          <div class="scope-result-block">
+            <span>Suggested technical focus</span>
+            <p data-result-stack>
+              Product flow, AI integration, backend API, and a simple production-ready interface.
+            </p>
+          </div>
+
+          <div class="scope-result-block">
+            <span>Strategic note</span>
+            <p data-result-note>
+              Start with the smallest useful product experience before adding advanced automation or complex infrastructure.
+            </p>
+          </div>
+
+          <a href="/contact" class="scope-cta">Discuss this direction</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .scope-estimator {
+    padding: 0 0 96px;
+  }
+
+  .scope-shell {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .scope-copy,
+  .scope-panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--bg-card);
+  }
+
+  .scope-copy::before,
+  .scope-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-b), transparent);
+    opacity: 0.38;
+    pointer-events: none;
+  }
+
+  .scope-copy {
+    min-height: 100%;
+    padding: 48px;
+  }
+
+  .scope-panel {
+    padding: 28px;
+  }
+
+  .scope-kicker,
+  .scope-result-label,
+  .scope-result-card span,
+  .scope-result-block span {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .scope-kicker {
+    color: var(--accent-b);
+    margin-bottom: 18px;
+  }
+
+  .scope-title {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 300;
+    color: var(--heading);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .scope-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  .scope-step {
+    margin-bottom: 20px;
+  }
+
+  .scope-step label,
+  .scope-label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--heading);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .select-wrap {
+    position: relative;
+  }
+
+  .select-wrap select {
+    width: 100%;
+    height: 46px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-hover);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1;
+    padding: 0 46px 0 14px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+  }
+
+  .select-wrap select:hover {
+    border-color: var(--border-hi);
+    background: var(--bg-card);
+  }
+
+  .select-wrap select:focus {
+    border-color: color-mix(in srgb, var(--accent-b) 55%, var(--border));
+    background: var(--bg-card);
+  }
+
+  .select-caret {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  .select-caret polyline {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .select-wrap:hover .select-caret,
+  .select-wrap:focus-within .select-caret,
+  .select-wrap.is-open .select-caret {
+    color: var(--accent-b);
+  }
+
+  .select-wrap:focus-within .select-caret,
+  .select-wrap.is-open .select-caret {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .scope-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .scope-options label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 40px;
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-hover);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.35;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .scope-options label:hover {
+    border-color: var(--border-hi);
+    color: var(--text);
+    background: var(--bg-card);
+  }
+
+  .scope-options input {
+    accent-color: var(--accent-b);
+  }
+
+  .scope-result {
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .scope-result-label,
+  .scope-result-card span,
+  .scope-result-block span {
+    color: var(--muted);
+  }
+
+  .scope-result-head {
+    margin-bottom: 16px;
+  }
+
+  .scope-result-head strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--heading);
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .scope-result-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .scope-result-card,
+  .scope-result-block {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg-hover);
+    padding: 16px;
+  }
+
+  .scope-result-card strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--heading);
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  .scope-result-block {
+    margin-bottom: 12px;
+  }
+
+  .scope-result-block p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .scope-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 13px 24px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .scope-cta:hover {
+    opacity: 0.86;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 900px) {
+    .scope-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .scope-copy {
+      padding: 40px 32px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .scope-estimator {
+      padding-bottom: 72px;
+    }
+
+    .scope-copy,
+    .scope-panel {
+      border-radius: 18px;
+      padding: 28px 22px;
+    }
+
+    .scope-options,
+    .scope-result-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .scope-cta {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const estimator = document.querySelector('[data-scope-estimator]');
+
+  if (estimator) {
+    const fields = estimator.querySelectorAll('[data-field]');
+    const requirements = estimator.querySelectorAll('[data-requirement]');
+    const selectWraps = estimator.querySelectorAll('.select-wrap');
+
+    const resultTitle = estimator.querySelector('[data-result-title]');
+    const resultComplexity = estimator.querySelector('[data-result-complexity]');
+    const resultMilestone = estimator.querySelector('[data-result-milestone]');
+    const resultStack = estimator.querySelector('[data-result-stack]');
+    const resultNote = estimator.querySelector('[data-result-note]');
+
+    const productDirections = {
+      ai: {
+        title: 'Lean AI Product MVP',
+        stack: 'AI workflow design, backend API, OpenAI or Claude integration, structured prompts, and a focused web interface.',
+        note: 'Start with one high-value workflow before adding agents, advanced automation, or complex retrieval systems.',
+      },
+      saas: {
+        title: 'SaaS Platform Foundation',
+        stack: 'Next.js, backend API, authentication, PostgreSQL, dashboard flows, and production-ready deployment.',
+        note: 'Focus first on core product workflows, data model, and user roles before expanding feature depth.',
+      },
+      mobile: {
+        title: 'Cross-Platform Mobile Product',
+        stack: 'Flutter, backend integration, authentication, analytics, subscription logic, and launch preparation.',
+        note: 'Prioritize onboarding, core usage loop, and retention before adding secondary mobile features.',
+      },
+      cms: {
+        title: 'Structured Content Platform',
+        stack: 'Strapi or WordPress architecture, reusable content models, SEO structure, frontend integration, and publishing workflows.',
+        note: 'The first milestone should define content types and editorial workflows before visual implementation.',
+      },
+      edtech: {
+        title: 'Learning System MVP',
+        stack: 'Learning flow, spaced repetition logic, content architecture, progress tracking, and mobile-first UX.',
+        note: 'Start with a clear practice loop and retention mechanism before expanding content volume.',
+      },
+      internal: {
+        title: 'Internal Operations Tool',
+        stack: 'Admin dashboard, authentication, role-based access, workflow automation, reporting, and data management.',
+        note: 'Focus on reducing manual work and clarifying operational workflows before building advanced features.',
+      },
+    };
+
+    function getValue(name) {
+      return estimator.querySelector(`[data-field="${name}"]`)?.value;
+    }
+
+    function selectedRequirements() {
+      return Array.from(requirements)
+        .filter((item) => item.checked)
+        .map((item) => item.value);
+    }
+
+    function calculateComplexity(reqs, stage) {
+      let score = reqs.length;
+
+      if (reqs.includes('ai')) score += 1;
+      if (reqs.includes('payments')) score += 1;
+      if (reqs.includes('mobile')) score += 1;
+      if (stage === 'scale') score += 2;
+      if (stage === 'existing') score += 1;
+
+      if (score <= 2) return 'Low to medium';
+      if (score <= 5) return 'Medium';
+      return 'High';
+    }
+
+    function getMilestone(type, stage, priority) {
+      if (stage === 'existing') return 'Audit the current product and define the highest-impact fixes';
+      if (stage === 'scale') return 'Stabilize architecture and remove scaling bottlenecks';
+      if (priority === 'launch') return 'Build the smallest useful MVP workflow';
+      if (priority === 'automation') return 'Map the manual workflow and automate one critical path';
+      if (priority === 'performance') return 'Audit performance, SEO, and frontend delivery';
+      if (priority === 'monetization') return 'Validate premium feature logic and conversion flow';
+      if (type === 'edtech') return 'Validate the core learning loop';
+      return 'Validate the core product workflow';
+    }
+
+    function priorityNote(priority) {
+      const notes = {
+        launch: 'Avoid building the full platform first. Launch a focused version that proves the product workflow.',
+        ux: 'The first improvement should simplify the user journey and remove unclear product decisions.',
+        automation: 'Automation should start from a repeated manual workflow with clear business value.',
+        performance: 'Performance work should focus on measurable bottlenecks, not cosmetic optimization.',
+        monetization: 'Monetization should connect paywall, feature value, onboarding, and retention.',
+        architecture: 'Architecture cleanup should be prioritized around maintainability and future product changes.',
+      };
+
+      return notes[priority] || notes.launch;
+    }
+
+    function updateEstimator() {
+      const type = getValue('productType') || 'ai';
+      const stage = getValue('productStage') || 'idea';
+      const priority = getValue('priority') || 'launch';
+      const reqs = selectedRequirements();
+
+      const direction = productDirections[type] || productDirections.ai;
+      const complexity = calculateComplexity(reqs, stage);
+      const milestone = getMilestone(type, stage, priority);
+
+      resultTitle.textContent = direction.title;
+      resultComplexity.textContent = complexity;
+      resultMilestone.textContent = milestone;
+      resultStack.textContent = direction.stack;
+      resultNote.textContent = priorityNote(priority);
+    }
+
+    fields.forEach((field) => {
+      field.addEventListener('change', updateEstimator);
+
+      field.addEventListener('focus', () => {
+        field.closest('.select-wrap')?.classList.add('is-open');
+      });
+
+      field.addEventListener('blur', () => {
+        field.closest('.select-wrap')?.classList.remove('is-open');
+      });
+
+      field.addEventListener('mousedown', () => {
+        field.closest('.select-wrap')?.classList.add('is-open');
+      });
+
+      field.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' || event.key === 'Enter') {
+          field.closest('.select-wrap')?.classList.remove('is-open');
+        }
+      });
+    });
+
+    requirements.forEach((field) => {
+      field.addEventListener('change', updateEstimator);
+    });
+
+    document.addEventListener('click', (event) => {
+      selectWraps.forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove('is-open');
+        }
+      });
+    });
+
+    updateEstimator();
+  }
+</script>
