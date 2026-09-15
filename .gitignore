@@ -1,5 +1,7 @@
 # build output
 dist/
+# generated sitemap
+public/sitemap.xml
 # generated types
 .astro/
 

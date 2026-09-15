@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { service } = Astro.props;
 const { data } = service;
 
-const pageUrl = `https://vicsotheme.com/services/${service.id}`;
+const pageUrl = `https://vicsotheme.com/services/${service.id}/`;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -62,7 +62,7 @@ const serviceSchema = {
       </p>
 
       <div class="hero-actions">
-        <a href="/contact" class="btn-primary">
+        <a href="/contact/" class="btn-primary">
           Discuss Your Product
         </a>
 
@@ -199,7 +199,7 @@ const serviceSchema = {
           Let’s discuss your product, workflows, and technical direction before writing unnecessary code.
         </p>
 
-        <a href="/contact" class="btn-primary">
+        <a href="/contact/" class="btn-primary">
           Start a Conversation
         </a>
       </div>

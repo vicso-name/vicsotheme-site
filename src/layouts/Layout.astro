@@ -40,16 +40,12 @@ const canonicalUrl =
   <meta property="og:type" content="website" />
   <meta property="og:url" content={Astro.url} />
 
-  <meta property="og:image" content="https://vicsotheme.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="VicsoThemes" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://vicsotheme.com/og-image.png" />
   <meta name="google-site-verification" content="tx8IsE5ya6PCfZBcCKREggMUHuKMPRWN4T-xp9wtq3Q" />
   <slot name="head" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -418,13 +414,12 @@ const canonicalUrl =
 
   <!-- Mobile overlay menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/services" class="mobile-nav-link">Services</a>
+    <a href="/services/" class="mobile-nav-link">Services</a>
     <a href="/" class="mobile-nav-link">Home</a>
     <a href="/#scope-estimator" class="mobile-nav-link">Scope Estimator</a>
-    <a href="/apps" class="mobile-nav-link">Apps</a>
-    <a href="/blog" class="mobile-nav-link">Blog</a>
+    <a href="/apps/" class="mobile-nav-link">Apps</a>
     <div class="mobile-menu-divider"></div>
-    <a href="/contact" class="mobile-nav-link">Contact</a>
+    <a href="/contact/" class="mobile-nav-link">Contact</a>
   </div>
 
   <!-- Nav -->
@@ -433,11 +428,10 @@ const canonicalUrl =
       <div class="nav-inner">
         <a href="/" class="logo">vicso<span>theme</span></a>
         <ul class="nav-links">
-          <li><a href="/services">Services</a></li>
+          <li><a href="/services/">Services</a></li>
           <li><a href="/#scope-estimator">Scope Estimator</a></li>
-          <li><a href="/apps">Apps</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/apps/">Apps</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
         <div class="nav-right">
           <!-- Theme toggle -->
@@ -479,8 +473,6 @@ const canonicalUrl =
       <div class="footer-inner">
         <span class="footer-copy">© 2026 VicsoTheme. All rights reserved.</span>
         <div class="footer-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
           <a href="mailto:vic.sokoliuk@gmail.com">Contact</a>
         </div>
       </div>

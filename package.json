@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node src/utils/generate-sitemap.mjs && astro build",
+    "build": "node src/utils/generate-sitemap.mjs && astro build && npm run seo:check",
+    "seo:check": "node scripts/check-seo.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

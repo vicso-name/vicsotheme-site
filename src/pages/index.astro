@@ -1,6 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Viktor Sokoliuk",
+  "url": "https://vicsotheme.com/",
+  "jobTitle": "Full Stack Developer",
+  "description": "Senior Full Stack Developer in Tallinn specializing in Flutter, Django, Next.js, and AI-powered development.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pärnu",
+    "addressCountry": "EE"
+  },
+  "sameAs": [
+    "https://play.google.com/store/apps/developer?id=VicsoThemes"
+  ]
+};
 ---
 
 
@@ -640,7 +657,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
       </p>
 
       <div class="hero-actions fade-up">
-        <a href="/contact" class="btn-primary">
+        <a href="/contact/" class="btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
@@ -648,7 +665,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           Discuss your product
         </a>
 
-        <a href="/services" class="btn-secondary">Explore capabilities ↓</a>
+        <a href="/services/" class="btn-secondary">Explore capabilities ↓</a>
       </div>
     </div>
   </section>
@@ -669,7 +686,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
       </div>
 
       <div class="services-grid services-grid--pillars">
-        <a href="/services/ai-product-engineering" class="service-card reveal" style="--s-accent: var(--accent-d);">
+        <a href="/services/ai-product-engineering/" class="service-card reveal" style="--s-accent: var(--accent-d);">
           <div class="service-card-top">
             <span class="service-title">AI Product Engineering</span>
           </div>
@@ -679,7 +696,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           <span class="service-badge">OpenAI · Claude · Next.js · Python</span>
         </a>
 
-        <a href="/services/saas-platform-engineering" class="service-card reveal" style="--s-accent: var(--accent-k);">
+        <a href="/services/saas-platform-engineering/" class="service-card reveal" style="--s-accent: var(--accent-k);">
           <div class="service-card-top">
             <span class="service-title">SaaS Platform Engineering</span>
           </div>
@@ -689,7 +706,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           <span class="service-badge">Next.js · Django · PostgreSQL</span>
         </a>
 
-        <a href="/services/mobile-product-engineering" class="service-card reveal" style="--s-accent: var(--accent-h);">
+        <a href="/services/mobile-product-engineering/" class="service-card reveal" style="--s-accent: var(--accent-h);">
           <div class="service-card-top">
             <span class="service-title">Mobile Product Engineering</span>
           </div>
@@ -699,7 +716,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           <span class="service-badge">Flutter · RevenueCat · Firebase</span>
         </a>
 
-        <a href="/services/cms-content-architecture" class="service-card reveal" style="--s-accent: var(--accent-e);">
+        <a href="/services/cms-content-architecture/" class="service-card reveal" style="--s-accent: var(--accent-e);">
           <div class="service-card-top">
             <span class="service-title">CMS & Content Architecture</span>
           </div>
@@ -709,7 +726,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           <span class="service-badge">Strapi · WordPress · SEO</span>
         </a>
 
-        <a href="/services/edtech-learning-systems" class="service-card reveal" style="--s-accent: var(--accent-w);">
+        <a href="/services/edtech-learning-systems/" class="service-card reveal" style="--s-accent: var(--accent-w);">
           <div class="service-card-top">
             <span class="service-title">EdTech & Learning Systems</span>
           </div>
@@ -719,7 +736,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
           <span class="service-badge">SRS · Gamification · Retention</span>
         </a>
 
-        <a href="/services/technical-strategy-optimization" class="service-card reveal" style="--s-accent: var(--accent-b);">
+        <a href="/services/technical-strategy-optimization/" class="service-card reveal" style="--s-accent: var(--accent-b);">
           <div class="service-card-top">
             <span class="service-title">Technical Strategy & Optimization</span>
           </div>
@@ -731,7 +748,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
       </div>
 
       <div class="services-more reveal">
-        <a href="/services" class="btn-secondary">
+        <a href="/services/" class="btn-secondary">
           Explore all capabilities
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
             <polyline points="9 18 15 12 9 6"/>
@@ -937,7 +954,7 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
             </svg>
             Send email
           </a>
-          <a href="/apps" class="btn-secondary">View all apps ↓</a>
+          <a href="/apps/" class="btn-secondary">View all apps ↓</a>
         </div>
       </div>
     </div>
@@ -1146,29 +1163,15 @@ import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
             </svg>
             Send email
           </a>
-          <a href="/apps" class="btn-secondary">View all apps ↓</a>
+          <a href="/apps/" class="btn-secondary">View all apps ↓</a>
         </div>
       </div>
     </div>
   </section>
 
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Viktor Sokoliuk",
-      "url": "https://vicsotheme.com",
-      "jobTitle": "Full Stack Developer",
-      "description": "Senior Full Stack Developer in Tallinn specializing in Flutter, Django, Next.js, and AI-powered development.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pärnu",
-        "addressCountry": "EE"
-      },
-      "sameAs": [
-        "https://play.google.com/store/apps/developer?id=VicsoThemes"
-      ]
-    })}
-  </script>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(personSchema)}
+  />
 
 </Layout>

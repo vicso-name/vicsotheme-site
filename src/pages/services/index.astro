@@ -71,8 +71,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vicsotheme.com" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://vicsotheme.com/services" },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vicsotheme.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://vicsotheme.com/services/" },
   ]
 };
 
@@ -84,7 +84,7 @@ const itemListSchema = {
     "@type": "ListItem",
     "position": index + 1,
     "name": service.title,
-    "url": `https://vicsotheme.com/services/${service.slug}`
+    "url": `https://vicsotheme.com/services/${service.slug}/`
   }))
 };
 ---
@@ -746,7 +746,7 @@ const itemListSchema = {
 
         <div class="pillars-grid">
           {servicePillars.map(service => (
-            <a href={`/services/${service.slug}`} class="pillar-card">
+            <a href={`/services/${service.slug}/`} class="pillar-card">
               <div class="card-topline">
                 <span class="card-number">{service.number}</span>
                 <span class="card-arrow">↗</span>
@@ -828,8 +828,8 @@ const itemListSchema = {
           </p>
 
           <div class="cta-actions">
-            <a href="/contact" class="btn-primary">Discuss Your Project</a>
-            <a href="/apps" class="btn-secondary">View Product Work</a>
+            <a href="/contact/" class="btn-primary">Discuss Your Project</a>
+            <a href="/apps/" class="btn-secondary">View Product Work</a>
           </div>
         </div>
       </div>
