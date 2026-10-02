@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Habits Warm-up</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://vicsotheme.com/english-lessons/study-habits-warm-up/">
+<style>
+:root{
+  --purple:#4b148c; --purple2:#7d1ca4; --pink:#b42db0; --yellow:#ffc400;
+  --white:#fff; --ink:#23143b; --green:#2ea66a; --red:#d94d55; --muted:#f2eaff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,var(--purple),var(--purple2)); color:#fff; padding:24px;
+}
+.app{max-width:1100px;margin:auto}
+header{text-align:center;margin-bottom:18px}
+h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,52px);margin:0 0 8px}
+header p{margin:0;font-size:18px;opacity:.92}
+.progress{display:flex;gap:8px;margin:20px 0}
+.progress span{height:9px;flex:1;border-radius:99px;background:#ffffff30}
+.progress span.active,.progress span.done{background:var(--yellow)}
+.panel{
+  background:#ffffff12;border:2px solid #ffffff2d;border-radius:22px;padding:22px;
+  box-shadow:0 12px 30px #0002;
+}
+.hidden{display:none!important}
+.round-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.round-title h2{margin:0;font-size:28px}
+.badge{background:var(--yellow);color:var(--ink);font-weight:800;padding:8px 12px;border-radius:999px}
+.instructions{font-size:18px;line-height:1.5;margin:8px 0 18px}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.option{
+  background:#fff;color:var(--ink);border:3px solid transparent;border-radius:16px;
+  padding:15px;text-align:left;font-size:18px;cursor:pointer;transition:.15s;
+}
+.option:hover{transform:translateY(-1px)}
+.option.correct{border-color:var(--green);background:#effff6}
+.option.wrong{border-color:var(--red);background:#fff1f2}
+.prompt{
+  background:#fff;color:var(--ink);padding:20px;border-radius:18px;font-size:24px;
+  line-height:1.4;margin:14px 0;
+}
+.small{font-size:16px;opacity:.9}
+.controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+button{
+  border:0;border-radius:12px;padding:12px 18px;font-size:17px;font-weight:800;cursor:pointer;
+}
+.primary{background:var(--yellow);color:var(--ink)}
+.secondary{background:#fff;color:var(--purple)}
+.ghost{background:#ffffff20;color:#fff;border:1px solid #ffffff55}
+.status{text-align:center;font-weight:800;font-size:18px;min-height:28px;margin-top:14px}
+.wordbank{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
+.chip{
+  background:#fff;color:var(--ink);padding:10px 14px;border-radius:999px;font-size:17px;
+  border:3px solid transparent;cursor:pointer;
+}
+.chip.selected{border-color:var(--yellow);box-shadow:0 0 0 3px #ffc40033}
+.sentence-box{
+  min-height:76px;background:#ffffff12;border:2px dashed #ffffff70;border-radius:16px;padding:14px;
+  display:flex;align-items:center;justify-content:center;text-align:center;font-size:21px;
+}
+.freq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.freq{
+  background:#fff;color:var(--ink);padding:12px;border-radius:14px;text-align:center;font-weight:700;
+  cursor:pointer;border:3px solid transparent;
+}
+.freq.selected{border-color:var(--yellow)}
+.scenario{
+  background:#fff;color:var(--ink);border-radius:18px;padding:18px;font-size:21px;line-height:1.45;
+}
+.verdicts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.verdict{padding:14px;border-radius:14px;font-weight:800;cursor:pointer;border:0;font-size:18px}
+.smart{background:#eafaf2;color:#17673e}
+.problem{background:#fff0f1;color:#9b2830}
+.speaking-card{
+  background:linear-gradient(135deg,#fff,#f4ebff);color:var(--ink);border-radius:18px;
+  padding:20px;margin-top:16px;display:none;
+}
+.speaking-card.show{display:block}
+.speaking-card strong{display:block;font-size:20px;margin-bottom:8px}
+.final{
+  text-align:center;background:#fff;color:var(--ink);padding:28px;border-radius:22px;
+}
+.final h2{font-size:32px;margin-top:0}
+.score{font-size:42px;font-weight:900;color:var(--purple)}
+@media(max-width:760px){
+  .options,.verdicts{grid-template-columns:1fr}
+  .freq-grid{grid-template-columns:repeat(2,1fr)}
+  body{padding:14px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <h1>Study Habits Warm-up</h1>
+  <p>7-minute retrieval challenge • vocabulary + adverbs of frequency + speaking</p>
+</header>
+
+<div class="progress">
+  <span id="p1" class="active"></span><span id="p2"></span><span id="p3"></span><span id="p4"></span>
+</div>
+
+<section id="r1" class="panel">
+  <div class="round-title"><h2>Round 1 — Vocabulary Sprint</h2><span class="badge">2 min</span></div>
+  <p class="instructions">Choose the expression that best completes each sentence. No notes.</p>
+  <div id="vocabPrompt" class="prompt"></div>
+  <div id="vocabOptions" class="options"></div>
+  <div id="vocabStatus" class="status"></div>
+  <div class="controls">
+    <button class="primary" id="vocabNext" disabled>Next</button>
+  </div>
+</section>
+
+<section id="r2" class="panel hidden">
+  <div class="round-title"><h2>Round 2 — Make It True</h2><span class="badge">2 min</span></div>
+  <p class="instructions">Choose one study habit and one adverb of frequency. Then say a true sentence about yourself.</p>
+  <div class="wordbank" id="habitBank"></div>
+  <div class="freq-grid" id="freqBank"></div>
+  <div id="sentenceBox" class="sentence-box">Choose a habit + frequency word.</div>
+  <div class="controls">
+    <button class="primary" id="newSentence">New combination</button>
+    <button class="secondary" id="toRound3">I said my sentence →</button>
+  </div>
+</section>
+
+<section id="r3" class="panel hidden">
+  <div class="round-title"><h2>Round 3 — Smart Habit or Problem?</h2><span class="badge">2 min</span></div>
+  <p class="instructions">Read the mini-scenario. Decide if the habit is effective. Then explain your choice using <b>because</b>.</p>
+  <div id="scenario" class="scenario"></div>
+  <div class="verdicts">
+    <button class="verdict smart" data-v="smart">✓ Smart habit</button>
+    <button class="verdict problem" data-v="problem">⚠ Needs improvement</button>
+  </div>
+  <div id="scenarioStatus" class="status"></div>
+  <div id="speakingCard" class="speaking-card">
+    <strong>Speak for 20–30 seconds:</strong>
+    <div id="speakingPrompt"></div>
+  </div>
+  <div class="controls">
+    <button class="primary" id="scenarioNext" disabled>Next</button>
+  </div>
+</section>
+
+<section id="r4" class="panel hidden">
+  <div class="round-title"><h2>Round 4 — One-minute Challenge</h2><span class="badge">1 min</span></div>
+  <p class="instructions">Choose ONE prompt and speak without reading a model answer.</p>
+  <div class="options">
+    <button class="option speak-choice">Which study habit helps your academic performance most? Why?</button>
+    <button class="option speak-choice">Which habit do you need to improve? Give an example.</button>
+    <button class="option speak-choice">What does a student who works strategically usually do?</button>
+    <button class="option speak-choice">What do you do when you cannot figure out a problem?</button>
+  </div>
+  <div id="chosenPrompt" class="prompt hidden"></div>
+  <div class="controls">
+    <button class="primary" id="finishBtn">Finish warm-up</button>
+  </div>
+</section>
+
+<section id="final" class="hidden">
+  <div class="final">
+    <h2>Warm-up complete</h2>
+    <div class="score" id="score"></div>
+    <p>You have activated last lesson’s vocabulary. Now you’re ready for the next stage.</p>
+    <button class="primary" onclick="location.reload()">Play again</button>
+  </div>
+</section>
+</div>
+
+<script>
+const vocabItems = [
+  {
+    q:"I sometimes ______ difficult assignments until the last minute.",
+    options:["put off","cope with","note down","stay behind"],
+    a:"put off"
+  },
+  {
+    q:"Before a test, I ______ the most important ideas instead of copying everything.",
+    options:["make steady progress","note down key points","cope with pressure","figure out a problem"],
+    a:"note down key points"
+  },
+  {
+    q:"If I don’t understand a maths task, I try to ______ before I ask for help.",
+    options:["manage my time effectively","stay behind after class","figure out a problem","put off an assignment"],
+    a:"figure out a problem"
+  },
+  {
+    q:"A student who improves little by little makes ______.",
+    options:["academic performance","steady progress","pressure","a deadline"],
+    a:"steady progress"
+  },
+  {
+    q:"Being able to stay calm before an exam means you can ______.",
+    options:["cope with pressure","put off work","note down key points","stay behind"],
+    a:"cope with pressure"
+  }
+];
+
+const habits = [
+  "put off an assignment",
+  "manage my time effectively",
+  "note down key points",
+  "figure out a problem",
+  "stay behind after class",
+  "make steady progress",
+  "cope with pressure"
+];
+const freqs = ["always","usually","often","sometimes","hardly ever","never"];
+
+const scenarios = [
+  {
+    t:"Leo breaks a large assignment into smaller steps and works on one part at a time.",
+    a:"smart",
+    speak:"Explain why this habit can help a student manage time effectively."
+  },
+  {
+    t:"Mia copies every sentence from the textbook because she thinks more notes always mean better revision.",
+    a:"problem",
+    speak:"What could Mia do instead? Use “note down key points”."
+  },
+  {
+    t:"Sam cannot figure out a problem, so he gives up immediately and does nothing.",
+    a:"problem",
+    speak:"Give Sam one better strategy from the text."
+  },
+  {
+    t:"Nora gets a bad mark, checks the feedback and asks what she needs to improve.",
+    a:"smart",
+    speak:"Explain how this habit can help her make steady progress."
+  }
+];
+
+let score=0, vIndex=0, sIndex=0;
+let selectedHabit=null, selectedFreq=null;
+
+function showRound(n){
+  ["r1","r2","r3","r4","final"].forEach(id=>document.getElementById(id).classList.add("hidden"));
+  const id = n===5 ? "final" : "r"+n;
+  document.getElementById(id).classList.remove("hidden");
+  for(let i=1;i<=4;i++){
+    const p=document.getElementById("p"+i);
+    p.className = i<n ? "done" : (i===n ? "active" : "");
+  }
+}
+
+function loadVocab(){
+  const item=vocabItems[vIndex];
+  document.getElementById("vocabPrompt").textContent=item.q;
+  const box=document.getElementById("vocabOptions");
+  box.innerHTML="";
+  document.getElementById("vocabStatus").textContent="";
+  const next=document.getElementById("vocabNext");
+  next.disabled=true;
+  item.options.forEach(opt=>{
+    const b=document.createElement("button");
+    b.className="option"; b.textContent=opt;
+    b.onclick=()=>{
+      [...box.children].forEach(x=>x.disabled=true);
+      if(opt===item.a){
+        b.classList.add("correct"); score++;
+        document.getElementById("vocabStatus").textContent="Correct.";
+      } else {
+        b.classList.add("wrong");
+        [...box.children].find(x=>x.textContent===item.a).classList.add("correct");
+        document.getElementById("vocabStatus").textContent="Check the highlighted answer and say the full sentence aloud.";
+      }
+      next.disabled=false;
+    };
+    box.appendChild(b);
+  });
+}
+document.getElementById("vocabNext").onclick=()=>{
+  vIndex++;
+  if(vIndex<vocabItems.length) loadVocab();
+  else { showRound(2); buildRound2(); }
+};
+
+function buildRound2(){
+  const hb=document.getElementById("habitBank");
+  const fb=document.getElementById("freqBank");
+  hb.innerHTML=""; fb.innerHTML="";
+  habits.forEach(h=>{
+    const c=document.createElement("button");
+    c.className="chip"; c.textContent=h;
+    c.onclick=()=>{
+      [...hb.children].forEach(x=>x.classList.remove("selected"));
+      c.classList.add("selected"); selectedHabit=h; updateSentence();
+    }; hb.appendChild(c);
+  });
+  freqs.forEach(f=>{
+    const c=document.createElement("button");
+    c.className="freq"; c.textContent=f;
+    c.onclick=()=>{
+      [...fb.children].forEach(x=>x.classList.remove("selected"));
+      c.classList.add("selected"); selectedFreq=f; updateSentence();
+    }; fb.appendChild(c);
+  });
+}
+function updateSentence(){
+  const box=document.getElementById("sentenceBox");
+  if(selectedHabit && selectedFreq){
+    box.innerHTML=`Say a TRUE sentence: <b>I ${selectedFreq} ${selectedHabit}.</b><br><span class="small">Then add one reason or example.</span>`;
+  }
+}
+document.getElementById("newSentence").onclick=()=>{
+  selectedHabit=habits[Math.floor(Math.random()*habits.length)];
+  selectedFreq=freqs[Math.floor(Math.random()*freqs.length)];
+  const hb=[...document.getElementById("habitBank").children];
+  const fb=[...document.getElementById("freqBank").children];
+  hb.forEach(x=>x.classList.toggle("selected",x.textContent===selectedHabit));
+  fb.forEach(x=>x.classList.toggle("selected",x.textContent===selectedFreq));
+  updateSentence();
+};
+document.getElementById("toRound3").onclick=()=>{showRound(3);loadScenario();};
+
+function loadScenario(){
+  const item=scenarios[sIndex];
+  document.getElementById("scenario").textContent=item.t;
+  document.getElementById("scenarioStatus").textContent="";
+  document.getElementById("speakingCard").classList.remove("show");
+  document.getElementById("scenarioNext").disabled=true;
+  document.querySelectorAll(".verdict").forEach(b=>{b.disabled=false;b.style.opacity="1";});
+}
+document.querySelectorAll(".verdict").forEach(b=>{
+  b.onclick=()=>{
+    const item=scenarios[sIndex];
+    const val=b.dataset.v;
+    document.querySelectorAll(".verdict").forEach(x=>x.disabled=true);
+    if(val===item.a){
+      score++; document.getElementById("scenarioStatus").textContent="Good choice.";
+    }else{
+      document.getElementById("scenarioStatus").textContent="Look again at the habit and think about the reading.";
+    }
+    document.getElementById("speakingPrompt").textContent=item.speak;
+    document.getElementById("speakingCard").classList.add("show");
+    document.getElementById("scenarioNext").disabled=false;
+  };
+});
+document.getElementById("scenarioNext").onclick=()=>{
+  sIndex++;
+  if(sIndex<scenarios.length) loadScenario();
+  else showRound(4);
+};
+
+document.querySelectorAll(".speak-choice").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll(".speak-choice").forEach(x=>x.classList.remove("correct"));
+    b.classList.add("correct");
+    const p=document.getElementById("chosenPrompt");
+    p.textContent=b.textContent;
+    p.classList.remove("hidden");
+  };
+});
+document.getElementById("finishBtn").onclick=()=>{
+  showRound(5);
+  document.getElementById("score").textContent=`${score} / ${vocabItems.length + scenarios.length}`;
+};
+
+loadVocab();
+</script>
+</body>
+</html>
