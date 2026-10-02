@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Study Habits Drag & Drop</title>
+<link rel="canonical" href="https://vicsotheme.com/english-lessons/study-habits/">
+<meta name="robots" content="noindex,nofollow">
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#4d168f;color:white;min-height:100vh;padding:24px}
 .wrap{max-width:1100px;margin:auto}
@@ -98,7 +100,7 @@ document.querySelectorAll(".zone").forEach(z=>{
 document.getElementById("bank").addEventListener("dragover",e=>e.preventDefault());
 document.getElementById("bank").addEventListener("drop",e=>{
   e.preventDefault();
-  const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}"]`);
+  const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}\"]`);
   if(c) bankCards.appendChild(c);
 });
 document.getElementById("check").onclick=()=>{
