@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Habits Drag & Drop</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#4d168f;color:white;min-height:100vh;padding:24px}
+.wrap{max-width:1100px;margin:auto}
+h1{text-align:center;font-family:Georgia,serif;font-size:40px;margin:0 0 10px}
+.sub{text-align:center;font-size:18px;margin-bottom:22px}
+.bank,.zone{background:rgba(255,255,255,.08);border:2px dashed rgba(255,255,255,.45);border-radius:18px;padding:16px}
+.bank{min-height:130px}
+.cards{display:flex;flex-wrap:wrap;gap:12px;min-height:70px}
+.card{background:#fff;color:#24143c;padding:12px 16px;border-radius:999px;font-size:20px;cursor:grab;box-shadow:0 4px 12px #0004;border:3px solid transparent}
+.card.correct{border-color:#35b46c}.card.wrong{border-color:#e15454}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.zone{min-height:250px}
+.zone h2{text-align:center;background:#b72bb1;padding:13px;border-radius:12px;font-size:22px;margin:0 0 14px}
+.zone.over{border-color:#ffc400;background:rgba(255,196,0,.12)}
+.controls{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+button{border:0;border-radius:10px;padding:12px 18px;font-size:17px;font-weight:700;cursor:pointer}
+button.primary{background:#ffc400;color:#30105f}
+.status{text-align:center;font-size:19px;font-weight:700;margin-top:16px;min-height:28px}
+.note{text-align:center;font-size:14px;opacity:.85;margin-top:8px}
+@media(max-width:800px){.zones{grid-template-columns:1fr}.zone{min-height:160px}.card{font-size:17px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Put the expressions into three groups</h1>
+<div class="sub">Drag each expression into the best category.</div>
+
+<div class="bank" id="bank">
+  <strong>Expression bank</strong>
+  <div class="cards" id="bankCards"></div>
+</div>
+
+<div class="zones">
+  <div class="zone" data-zone="actions"><h2>STUDY ACTIONS</h2><div class="cards"></div></div>
+  <div class="zone" data-zone="results"><h2>PROGRESS / RESULTS</h2><div class="cards"></div></div>
+  <div class="zone" data-zone="pressure"><h2>PRESSURE / PROBLEMS</h2><div class="cards"></div></div>
+</div>
+
+<div class="controls">
+  <button class="primary" id="check">Check answers</button>
+  <button id="reset">Reset</button>
+  <button id="show">Show answers</button>
+</div>
+<div class="status" id="status"></div>
+<div class="note">Desktop: drag and drop. Touch device: tap a card, then tap a category.</div>
+</div>
+
+<script>
+const items=[
+["put off an assignment","actions"],
+["manage your time effectively","actions"],
+["note down key points","actions"],
+["figure out a problem","actions"],
+["stay behind after class","actions"],
+["academic performance","results"],
+["make steady progress","results"],
+["cope with pressure","pressure"]
+];
+let selected=null;
+const bankCards=document.getElementById("bankCards"),status=document.getElementById("status");
+
+function makeCard([text,answer],i){
+  const c=document.createElement("div");
+  c.className="card"; c.draggable=true; c.textContent=text; c.dataset.i=i;
+  c.addEventListener("dragstart",e=>e.dataTransfer.setData("text/plain",i));
+  c.addEventListener("click",()=>{
+    document.querySelectorAll(".card").forEach(x=>x.style.outline="none");
+    selected=c; c.style.outline="4px solid #ffc400";
+  });
+  return c;
+}
+function render(){
+  bankCards.innerHTML="";
+  document.querySelectorAll(".zone .cards").forEach(x=>x.innerHTML="");
+  items.forEach((x,i)=>bankCards.appendChild(makeCard(x,i)));
+  status.textContent=""; selected=null;
+}
+document.querySelectorAll(".zone").forEach(z=>{
+  z.addEventListener("dragover",e=>{e.preventDefault();z.classList.add("over")});
+  z.addEventListener("dragleave",()=>z.classList.remove("over"));
+  z.addEventListener("drop",e=>{
+    e.preventDefault();z.classList.remove("over");
+    const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}"]`);
+    if(c) z.querySelector(".cards").appendChild(c);
+  });
+  z.addEventListener("click",e=>{
+    if(selected && !e.target.classList.contains("card")){
+      z.querySelector(".cards").appendChild(selected);selected.style.outline="none";selected=null;
+    }
+  });
+});
+document.getElementById("bank").addEventListener("dragover",e=>e.preventDefault());
+document.getElementById("bank").addEventListener("drop",e=>{
+  e.preventDefault();
+  const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}"]`);
+  if(c) bankCards.appendChild(c);
+});
+document.getElementById("check").onclick=()=>{
+  let ok=0;
+  document.querySelectorAll(".card").forEach(c=>{
+    c.classList.remove("correct","wrong");
+    const z=c.closest(".zone");
+    if(z && items[+c.dataset.i][1]===z.dataset.zone){c.classList.add("correct");ok++}
+    else c.classList.add("wrong");
+  });
+  status.textContent=ok===items.length?`Perfect! ${ok}/${items.length} correct.`:`${ok}/${items.length} correct. Move the red cards and try again.`;
+};
+document.getElementById("reset").onclick=render;
+document.getElementById("show").onclick=()=>{
+  render();
+  items.forEach((x,i)=>{
+    const c=document.querySelector(`.card[data-i="${i}"]`);
+    document.querySelector(`.zone[data-zone="${x[1]}"] .cards`).appendChild(c);
+    c.classList.add("correct");
+  });
+  status.textContent="Answer key shown.";
+};
+render();
+</script>
+</body>
+</html>
