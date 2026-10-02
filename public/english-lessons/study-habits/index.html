@@ -100,7 +100,7 @@ document.querySelectorAll(".zone").forEach(z=>{
 document.getElementById("bank").addEventListener("dragover",e=>e.preventDefault());
 document.getElementById("bank").addEventListener("drop",e=>{
   e.preventDefault();
-  const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}\"]`);
+  const c=document.querySelector(`.card[data-i="${e.dataTransfer.getData("text/plain")}"]`);
   if(c) bankCards.appendChild(c);
 });
 document.getElementById("check").onclick=()=>{
