@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pulling an All-Nighter — 60-minute lesson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#151b38; --night2:#1f2a55; --lamp:#f5c451; --lamp-soft:#f9dd94;
+  --paper:#f2f5fa; --rule:#b9cbe4; --margin:#d9605a; --ink:#1d2340; --ink-soft:#4b5375;
+  --ok:#2e8b57; --bad:#c0392b; --dawn:#f3a99c;
+  --sky:var(--night);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --paper:#e9eef6; } }
+:root[data-theme="dark"]{ --paper:#e9eef6; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sky);color:var(--paper);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:18px;line-height:1.55;transition:background .4s linear}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;line-height:1.1;margin:0}
+.hand{font-family:"Kalam","Comic Sans MS",cursive}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--lamp);outline-offset:2px}
+
+/* HERO */
+.hero{position:relative;min-height:0;display:grid;place-items:center;padding:40px 20px 28px;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-10%;width:900px;height:900px;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(245,196,81,.30),rgba(245,196,81,.08) 60%,transparent);pointer-events:none}
+.hero-inner{position:relative;max-width:900px;text-align:center}
+.clock{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(72px,14vw,160px);letter-spacing:-.04em;line-height:.9;color:var(--lamp);
+  text-shadow:0 0 40px rgba(245,196,81,.45)}
+.clock .colon{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:.15}}
+@media (prefers-reduced-motion: reduce){.clock .colon{animation:none}}
+.clock small{font-size:.28em;letter-spacing:0;margin-left:.15em}
+.hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;margin-top:18px}
+.hero p.quote{font-family:"Kalam",cursive;font-size:22px;color:var(--lamp-soft);margin:14px 0 0}
+.hero p.meta{color:#aab3d6;margin:10px 0 0;font-size:16px}
+
+/* AGENDA */
+.agenda-wrap{position:relative;border-bottom:1px solid rgba(245,196,81,.25)}
+.minibar{position:fixed;left:0;right:0;top:0;z-index:30;background:rgba(21,27,56,.95);backdrop-filter:blur(6px);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid rgba(245,196,81,.25);transform:translateY(-110%);transition:transform .25s}
+.minibar.on{transform:none}
+.agenda-full{max-width:1040px;margin:0 auto;padding:22px 20px 26px}
+.agenda-full h2{font-size:28px;color:var(--lamp)}
+.agenda-full .sub{color:#aab3d6;margin:4px 0 16px;font-size:16px}
+.strip{display:flex;gap:4px;min-height:96px}
+.seg{flex-grow:var(--m);flex-basis:0;min-width:112px;background:var(--night2);border:1px solid rgba(255,255,255,.08);border-radius:8px;
+  color:var(--paper);text-decoration:none;padding:10px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.seg:hover{border-color:var(--lamp)}
+.seg .t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;color:var(--lamp);font-size:15px;white-space:nowrap}
+.seg .n{font-size:14px;line-height:1.25}
+.seg.now{background:var(--lamp);color:var(--ink)}
+.seg.now .t{color:var(--ink)}
+.seg.done{opacity:.45}
+.seg .fill{position:absolute;left:0;bottom:0;height:4px;background:var(--lamp);width:0}
+.seg.now .fill{background:var(--ink)}
+.timer-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px}
+.btn{background:var(--lamp);color:var(--ink);border:0;border-radius:999px;padding:9px 18px;font-weight:700}
+.btn.ghost{background:transparent;color:var(--paper);border:1.5px solid rgba(255,255,255,.35)}
+.btn.small{padding:6px 14px;font-size:15px}
+#elapsed{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;color:var(--lamp)}
+.mini{display:flex;gap:4px;max-width:1040px;margin:0 auto;padding:8px 12px;overflow-x:auto}
+.mini a{flex:0 0 auto;font-size:14px;color:var(--paper);text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.2);white-space:nowrap}
+.mini a.now{background:var(--lamp);color:var(--ink);border-color:var(--lamp)}
+@media (max-width:760px){
+  .strip{flex-direction:column;min-height:0}
+  .seg{flex-direction:row;align-items:center;gap:12px;padding:8px 12px}
+  .seg .t{width:76px;flex:0 0 auto}
+}
+
+/* SECTIONS = notebook sheets */
+main{max-width:920px;margin:0 auto;padding:40px 16px 80px}
+.block{margin:0 0 64px}
+.block-head{display:flex;align-items:baseline;gap:14px;margin:0 0 16px;flex-wrap:wrap}
+.block-head .time{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;color:var(--lamp);font-size:20px}
+.block-head h2{font-size:clamp(28px,4.5vw,42px)}
+.sheet{background:var(--paper);color:var(--ink);border-radius:4px 4px 14px 4px;padding:26px 24px 26px 64px;margin:0 0 22px;position:relative;
+  background-image:linear-gradient(90deg,transparent 46px,var(--margin) 46px,var(--margin) 48px,transparent 48px),
+  repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px);
+  box-shadow:0 18px 40px rgba(0,0,0,.35)}
+@media (max-width:600px){.sheet{padding:22px 16px 22px 34px;background-image:linear-gradient(90deg,transparent 20px,var(--margin) 20px,var(--margin) 22px,transparent 22px),repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px)}}
+.sheet h3{font-size:24px;margin:0 0 6px;color:var(--night)}
+.sheet .src{font-size:14px;color:var(--ink-soft);margin:0 0 12px}
+.sheet p{margin:0 0 12px}
+.sheet .dir{background:rgba(255,255,255,.75);padding:8px 12px;border-left:4px solid var(--lamp);margin:0 0 14px}
+.sheet ol,.sheet ul{padding-left:22px;margin:0 0 10px}
+.sheet li{margin:0 0 8px}
+.cartoon{border-radius:6px;margin:4px 0 14px;border:1px solid var(--rule)}
+
+/* dialogue */
+.dlg{margin:10px 0}
+.line{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start;padding:6px 0;border-bottom:1px dashed var(--rule)}
+.line .who{font-weight:700;color:var(--night)}
+.line .say{background:none;border:0;color:var(--ink-soft);font-size:15px;padding:2px 6px}
+.line.speaking{background:rgba(245,196,81,.25)}
+.stage{font-style:italic;color:var(--ink-soft);padding:8px 0}
+.hidden-text .line .txt{filter:blur(6px);user-select:none}
+.hidden-text .line .who{filter:none}
+.gloss{font-size:14px;color:var(--ink-soft)}
+
+/* controls */
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.check{background:var(--night);color:var(--paper);border:0;border-radius:999px;padding:8px 18px;font-weight:700}
+.reveal{background:transparent;color:var(--night);border:1.5px solid var(--night);border-radius:999px;padding:7px 16px;font-weight:700}
+.score{font-family:"Kalam",cursive;font-size:20px;color:var(--margin);font-weight:700}
+input[type=text],select,textarea{font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1.5px solid #9fb0cc;border-radius:6px;padding:4px 8px;max-width:100%}
+input[type=text].blank{width:12em}
+input.ok,select.ok{border-color:var(--ok);background:#e9f6ee}
+input.no,select.no{border-color:var(--bad);background:#fbecea}
+textarea{width:100%;min-height:120px;font-family:"Kalam",cursive;font-size:19px;line-height:32px;background:transparent;border:0;border-bottom:1.5px solid var(--rule)}
+.key{display:none;font-family:"Kalam",cursive;color:var(--margin);font-size:18px}
+.show-keys .key{display:inline}
+.tf{display:flex;gap:6px;flex:0 0 auto}
+.tf button{width:40px;height:36px;border-radius:6px;border:1.5px solid #9fb0cc;background:#fff;font-weight:700;color:var(--ink)}
+.tf button.sel{background:var(--night);color:#fff;border-color:var(--night)}
+.tf button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.tf button.no{background:var(--bad);border-color:var(--bad);color:#fff}
+.tfrow{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--rule)}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:700px){.match{grid-template-columns:1fr}}
+.match .qa{display:flex;gap:8px;align-items:flex-start;margin:0 0 10px}
+.match .qa select{flex:0 0 auto;width:64px}
+.opts{list-style:none;padding:0;margin:0}
+.opts li{margin:0 0 7px}
+.opts b{display:inline-block;width:22px}
+.err{margin:0 0 14px}
+.err .orig{display:block;margin-bottom:4px}
+.err input{width:100%}
+.wordbank{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.wordbank span{background:var(--lamp-soft);border-radius:4px;padding:2px 9px;font-size:16px}
+.diff ins{background:#d8f0df;text-decoration:none}
+.diff del{background:#f7d6d2}
+.diff{line-height:1.9;margin-top:10px}
+
+/* flashcards */
+.deck-tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{perspective:900px;height:240px;background:none;border:0;padding:0;text-align:left;color:inherit}
+.card .in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+@media (prefers-reduced-motion: reduce){.card .in{transition:none}}
+.card.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;padding:16px;display:flex;flex-direction:column}
+.front{background:var(--night2);border:1px solid rgba(245,196,81,.35);justify-content:center;align-items:center;text-align:center}
+.front .w{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:23px;color:var(--lamp);line-height:1.15}
+.front .hint{position:absolute;bottom:10px;font-size:13px;color:#8e98c2}
+.back{background:var(--paper);color:var(--ink);transform:rotateY(180deg);justify-content:space-between;overflow:auto}
+.back .def{font-size:16px;line-height:1.35}
+.back .ex{font-size:14px;color:var(--ink-soft);font-style:italic}
+.back .ru{font-family:"Kalam",cursive;font-size:19px;color:var(--margin);font-weight:700}
+.card.known .front{border-color:#5fd18f}
+.card.known .front::after{content:"✓ got it";position:absolute;top:8px;right:10px;font-size:13px;color:#5fd18f}
+
+.on-dark{color:var(--paper)}
+.on-dark p{max-width:68ch}
+.talk{display:grid;gap:14px}
+.talk .q{background:var(--night2);border-left:4px solid var(--lamp);padding:12px 16px;border-radius:0 8px 8px 0}
+footer{text-align:center;color:var(--ink);padding:40px 16px 60px;font-family:"Kalam",cursive;font-size:22px}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="clock" aria-label="4:20 AM">4<span class="colon">:</span>20<small>AM</small></div>
+    <h1>Pulling an All-Nighter</h1>
+    <p class="quote">“What time is it?” — “You don’t want to know… It’s 4:20.”</p>
+    <p class="meta">Theme: Students Under Pressure. A 60-minute lesson built on Lesson 2 of the book (pages 19–36).</p>
+  </div>
+</header>
+
+<nav class="agenda-wrap" id="agenda" aria-label="Lesson plan">
+  <div class="agenda-full">
+    <h2>Tonight’s plan: 60 minutes</h2>
+    <p class="sub">Tap a block to jump there. Start the clock and the current block lights up.</p>
+    <div class="strip" id="strip"></div>
+    <div class="timer-row">
+      <button class="btn" id="startBtn">Start the lesson clock</button>
+      <button class="btn ghost small" id="resetBtn">Reset</button>
+      <span id="elapsed">0:00</span>
+    </div>
+  </div>
+</nav>
+<nav class="minibar" id="minibar" aria-label="Lesson plan shortcut"><div class="mini" id="mini"></div></nav>
+
+<main id="main"></main>
+<footer id="dawn">Good morning. You made it through the night. ☀️</footer>
+<script>
+const CARTOON = "cartoon.jpg";
+const TRACK6 = "track6.mp3";
+const TRACK7 = "track7.mp3";
+const TRACK8 = "track8.mp3";
+const TRACK9 = "track9.mp3";
+const TRACK10 = "track10.mp3";
+</script>
+<script>
+(function(){
+"use strict";
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s).toLowerCase().replace(/[’‘]/g,"'").replace(/[“”]/g,'"').replace(/[.!?,;:]+$/,"").replace(/\s+/g," ").trim();
+const okIn=(v,ans)=>[].concat(ans).some(a=>norm(a)===norm(v));
+
+/* ---------- agenda ---------- */
+const AGENDA=[
+ {id:"warm",  from:0, to:5,  name:"Warm-up"},
+ {id:"listen",from:5, to:15, name:"Listen: Alan & Annette"},
+ {id:"words", from:15,to:28, name:"New expressions"},
+ {id:"ex",    from:28,to:44, name:"Exercises 1–3"},
+ {id:"night", from:44,to:52, name:"4:20 AM dialogue"},
+ {id:"dict",  from:52,to:57, name:"Dictation"},
+ {id:"wrap",  from:57,to:60, name:"Wrap-up & homework"}
+];
+
+/* ---------- speech ---------- */
+let voices=[];
+function loadVoices(){ if(!("speechSynthesis" in window)) return; voices=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang)); }
+if("speechSynthesis" in window){ loadVoices(); speechSynthesis.onvoiceschanged=loadVoices; }
+function pickVoice(kind){
+  if(!voices.length) return null;
+  const fem=/(female|samantha|victoria|karen|moira|tessa|zira|susan|serena|fiona|aria|jenny|libby|sonia|google us english|google uk english female)/i;
+  const mal=/(male|daniel|alex|fred|david|mark|george|guy|ryan|arthur|google uk english male)/i;
+  const pool=voices.filter(v=>(kind==="f"?fem:mal).test(v.name));
+  return pool[0]||voices[kind==="f"?0:Math.min(1,voices.length-1)];
+}
+function speak(text,kind,rate,onend){
+  if(!("speechSynthesis" in window)){ alert("Your browser cannot read text aloud. Read it yourself or ask your teacher."); return; }
+  const u=new SpeechSynthesisUtterance(text); u.lang="en-US"; u.rate=rate||.95;
+  const v=pickVoice(kind); if(v) u.voice=v; if(onend) u.onend=onend;
+  speechSynthesis.speak(u);
+}
+function stopSpeech(){ if("speechSynthesis" in window) speechSynthesis.cancel(); }
+
+/* ---------- content ---------- */
+const DIALOGUE=[
+ ["ALAN","m","Annette, is everything OK? You look really tired."],
+ ["ANNETTE","f","It’s that obvious? Well, you’re right. I am tired. Last night I pulled an all-nighter writing a paper for my psych class."],
+ ["ALAN","m","Did you finish it?"],
+ ["ANNETTE","f","Yeah, and just in the nick of time. I e-mailed it to my professor five minutes before the deadline."],
+ ["ALAN","m","Well, that was close. Are you going home now?"],
+ ["ANNETTE","f","No — I have to hurry to my history class. See you later."],
+ ["-","","(A few hours later)"],
+ ["ANNETTE","f","Alan — I’m really in hot water. My history teacher gave us a surprise quiz and I couldn’t remember anything. My mind went totally blank. I didn’t even want to hand in my quiz because I knew everything was wrong. Oh, I can’t believe this! I’m going to get an F on a test!"],
+ ["ALAN","m","That happened to me once, but it wasn’t a surprise quiz. I just got the date of the test wrong, so I didn’t study. I took the test cold and didn’t do well."],
+ ["ANNETTE","f","What grade did you get?"],
+ ["ALAN","m","I think I got a C."],
+ ["ANNETTE","f","Well, at least a C is passing. I’m going to get an F!"],
+ ["ALAN","m","Listen Annette, you need to take it easy. For all you know, you passed the quiz. So why don’t you go home and take a nap?"],
+ ["ANNETTE","f","That’s a good idea, but I have another class at 2:00, and we’re going to have a test. I need to go to the library to hit the books."],
+ ["ALAN","m","What a day you’re having!"],
+ ["ANNETTE","f","You can say that again!"]
+];
+const TF=[
+ ["Annette has a lot to do.","T"],
+ ["Alan has a lot to do.","?"],
+ ["Alan is Annette’s boyfriend.","?"],
+ ["Annette gave her paper to her psychology teacher late.","F"],
+ ["Annette is going to get an F on her history quiz.","?"]
+];
+const GUESS=[
+ ["study","hit the books"],
+ ["give (submit)","hand in"],
+ ["stayed up all night","pulled an all-nighter"],
+ ["sleep for a short time","take a nap"],
+ ["right (immediately) before the deadline (the last minute)","in the nick of time"]
+];
+const CARDS=[
+ ["pull an all-nighter","Stay awake all night to study.","I don’t want to pull an all-nighter again the night before the test.","не спать всю ночь, занимаясь"],
+ ["burn the midnight oil","Stay up very late working or studying (old-fashioned).","He burned the midnight oil to finish his project.","засиживаться допоздна за работой"],
+ ["cram (for a test)","Push a lot of information into your mind at one time; study at the last minute.","I crammed all night, and after the test I forgot everything!","зубрить в последний момент"],
+ ["stay up","Not go to bed (for any reason).","On New Year’s Eve, they stayed up all night.","не ложиться спать"],
+ ["(just) in the nick of time","Just in time; at the last possible moment.","We got there just in the nick of time.","в самый последний момент, как раз вовремя"],
+ ["be in hot water (with someone)","Be in trouble.","She’s in hot water with her teacher.","влипнуть, попасть в неприятности"],
+ ["my mind went (totally) blank","I suddenly couldn’t remember anything.","When I looked at the test, my mind went blank.","у меня всё вылетело из головы"],
+ ["hand in / turn in (something)","Submit; give work to a teacher.","I have to turn in two papers by next Tuesday.","сдавать (работу)"],
+ ["hand back","Return papers that students turned in.","I’ll hand them back in a few days.","возвращать (проверенные работы)"],
+ ["hand out","Give out papers to a class.","I’m ready to hand out the quizzes.","раздавать"],
+ ["handout","A sheet of lesson material that a teacher gives to each student.","Can I please have the handout?","раздаточный материал"],
+ ["get a(n) __ on (a test)","Get a grade on a test.","He got an A on the first test.","получить оценку (A, B…) за тест"],
+ ["get good / bad grades","Get high / low marks in school.","She got bad grades in school, but she became famous.","получать хорошие / плохие оценки"],
+ ["take a test cold","Take a test without studying for it.","I can’t believe I got an A! I took the test cold.","писать тест без подготовки"],
+ ["do well on (a test)","Get a good grade on a test.","I want to do well on this test.","хорошо написать тест"],
+ ["do well in (a class / school)","Get good results in a class or in school.","Last semester I did well in history.","хорошо учиться (по предмету)"],
+ ["take a nap","Sleep for a short time.","The baby takes two naps a day.","вздремнуть"],
+ ["hit the books","Study.","Sorry, I can’t talk now. I have to hit the books.","засесть за учебники"],
+ ["You can say THAT again!","I agree with you completely.","“That test was really long.” — “You can say that again!”","И не говори! / Полностью согласен!"]
+];
+const NICK=[
+ ["We","to the airport in the nick of time, so we didn’t miss our flight.","got"],
+ ["They","out of the house in the nick of time — right before the fire reached their house.","got"],
+ ["The car","in the nick of time, so luckily there wasn’t an accident.","turned"],
+ ["The taxi","at the hospital in the nick of time, so she didn’t have her baby in the back seat.","arrived"],
+ ["She","the chicken out of the oven in the nick of time, so luckily it didn’t burn.","took"]
+];
+const HAND=[
+ ["I didn’t write my paragraph last night, so I need to write it now. My teacher wants me to","by 2:00.",["hand it in","turn it in"]],
+ ["I know that we have to do three grammar exercises for homework. But I don’t know if our teacher wants us to","",["hand them in","turn them in"]],
+ ["Tests always make me nervous. On the day of a test, when my teacher","tests, my hands get cold.",["hands out"]],
+ ["After I take tests, I always worry about my grade. When my teacher","tests that she has corrected, my stomach hurts.",["hands back"]],
+ ["I studied my textbook and the","for the quiz.",["handouts","handout"]],
+ ["Last week, when my teacher","our tests and I saw that I got an A, I was really surprised.",["handed back"]],
+ ["I was absent yesterday. Can I make a copy of your","?",["handout","handouts"]],
+ ["Yesterday, when I","my homework late, my teacher told me that next time, she won’t accept any more late work.",["handed in","turned in"]]
+];
+const MD1A=["Uh-oh! I forgot to pick her up from the airport.","I slept only three hours last night.","I’d like you to take out the handout I gave you yesterday.","If you don’t hit the books a little more, you’ll be sorry.","I ran all the way. Am I late?","After I cram for a test, I forget everything I studied.","How did he do on the test?","Ssh! The baby’s taking a nap.","Can I ask you a question? Why did you take five points off my homework?"];
+const MD1B=["So do I. That’s the problem with studying at the last minute.","Sorry, I didn’t know.","Because you turned this assignment in late.","Well, you’re going to be in hot water when she sees you.","I can’t find it. Can I have another one please?","Why don’t you take a nap?","You’re right. I’ll try to work harder.","He always gets good grades.","I think he did pretty well.","No. You’re lucky. You got here in the nick of time."];
+const MD1K=["d","f","e","g","j","a","i","b","c"];
+const MD2A=["Let’s pull an all-nighter together.","English is a crazy language.","I was so nervous that my mind went blank.","His business is really successful.","Where are you going?","How did you do on the test?","Did you study?","Did you get your homework back?","Did you get your tests back?"];
+const MD2B=["You can say that again!","To bed. I can’t stay up late again tonight. I’m really tired.","For how long? The whole test?","No, I have to take the test cold.","Sorry, I need to go now and hit the books.","I know, and that really surprises me because he didn’t do well in school.","Uh-huh. She handed them back yesterday.","Uh-huh. She handed it back yesterday.","OK. But I didn’t get an A.","Sorry, I can’t. I need to sleep."];
+const MD2K=["j","a","c","f","b","i","d","h","g"];
+const GP=[
+ {dir:"Add an article.",items:[
+  ["He’s tired because he pulled","all-nighter.","an"],
+  ["Ssh! The baby’s taking","nap.","a"],
+  ["I’m going to the library to hit","books.","the"],
+  ["He’s happy because he got","A again!","an"],
+  ["She’s unhappy because she got","C.","a"],
+  ["They got to class in","nick of time.","the"]]},
+ {dir:"Add a preposition.",items:[
+  ["He’s happy because he got a good grade","his test.","on"],
+  ["Her parents are proud of her because she’s doing well","school.","in"],
+  ["Half of the students did well","the test, and half didn’t do well.","on"],
+  ["I crammed","the test this morning. I’m sure I’ll forget everything after the test.","for"],
+  ["You got here in the nick","time! We were going to leave without you.","of"],
+  ["I have to turn","my essay this morning, but after that I’ll be free to meet you for coffee.","in"],
+  ["She’s","hot water with her boss because she forgot to tell him she had to leave work early.","in"]]},
+ {dir:"Use past tense verbs.",items:[
+  ["They (cram)","all night.","crammed"],
+  ["They (stay up)","all night.","stayed up"],
+  ["We (negative: be)","in hot water.",["weren't","were not"]],
+  ["We (hand in)","our paragraphs.","handed in"],
+  ["We (negative: turn in)","our homework.",["didn't turn in","did not turn in"]],
+  ["She always (get)","high grades in school.","got"],
+  ["After his parents talked to him, he (hit)","the books.","hit"],
+  ["I (negative: take)","the test cold. I studied a lot!",["didn't take","did not take"]]]}
+];
+const ERR=[
+ ["My report was due yesterday, but I handed in it today.","My report was due yesterday, but I handed it in today."],
+ ["When the teacher handed it out the test, I was nervous.","When the teacher handed out the test, I was nervous."],
+ ["I keep my teacher’s hand outs organized in my binder.","I keep my teacher’s handouts organized in my binder."],
+ ["When the teacher hand back our tests, the students always look worried.","When the teacher hands back our tests, the students always look worried."],
+ ["I need to turn in my homework. I don’t want to turn them in late.","I need to turn in my homework. I don’t want to turn it in late."],
+ ["Great! I got A!!!","Great! I got an A!!!"],
+ ["When he was in his native country, he often takes naps in the afternoon.","When he was in his native country, he often took naps in the afternoon."],
+ ["She hit the books to study last night.","She hit the books last night."],
+ ["I hope I do well in my next test.","I hope I do well on my next test."],
+ ["When we were teenagers, every Saturday night we are staying up late.","When we were teenagers, every Saturday night we stayed up late."]
+];
+const BANK=["You can say that again","pull an all-nighter","hand __ in","turn __ in","do well in","hit the books","be in hot water","stay up","take a nap"];
+const NIGHT=[
+ ["CHARLIE","What time is it?"],
+ ["ALAN","You don’t want to know… It’s 4:20."],
+ ["CHARLIE","I’m so tired. I need to {1} and then I’ll study again."],
+ ["ALAN","No you don’t. Just get another cup of coffee."],
+ ["CHARLIE","I don’t want any more coffee. I just want my bed. I can’t {2} all night."],
+ ["ALAN","Well, if you can’t {3}, then you need to {4} every night. Can you do that?"],
+ ["CHARLIE","I can try. It’s better than having no sleep."],
+ ["ALAN","OK then. Good-night. But you told me your paper is due at 10:00. Are you going to {5} late?"],
+ ["CHARLIE","Probably. I’ll tell the teacher I was sick."],
+ ["ALAN","That’s not very honest. What will happen if you {6} late?"],
+ ["CHARLIE","Well, I’ll probably {7}. I already missed a test and my teacher’s not happy about that. I’m not {8} that class."],
+ ["ALAN","You’re too busy. It’s hard working full-time and going to school."],
+ ["CHARLIE","{9}! Well, good night my friend."],
+ ["ALAN","Good night. Sleep well. And I hope you won’t be sorry tomorrow!"]
+];
+const NIGHTK={
+ 1:["take a nap"],2:["stay up"],3:["pull an all-nighter","stay up"],4:["hit the books"],
+ 5:["turn it in","hand it in"],6:["turn it in","hand it in"],7:["be in hot water"],8:["doing well in"],9:["You can say that again"]
+};
+const DICT="Annette is having a bad day. She’s very tired because last night she pulled an all-nighter writing a paper. Luckily she finished it in the nick of time, so it wasn’t late. But she didn’t do well on a surprise quiz in her history class because her mind went blank. Her friend Alan told her to go home and take a nap, but Annette said she had to study for another test. Alan didn’t say this, but he thinks Annette needs to hit the books more.";
+const DISCUSS=[
+ "Have you ever pulled an all-nighter? If no, why not? If yes, where? When? What class was it for? What did you do to stay awake?",
+ "What kind of study habits do you have as a student? That is, do you hit the books every night or do you cram at the last minute?",
+ "Have you ever taken a test cold? Has your mind ever gone blank during a test? What happened?",
+ "Describe a situation in which you were (or someone you know was) in hot water. What happened?"
+];
+const JOE=`Hi! I’m Joe. I think I have a lot of problems at school. I don’t study very much. When I have a test, I usually <b>study the night before</b>. Sometimes I <b>don’t get any sleep before a test</b>, so I’m tired and <b>forget everything</b>. And there are times when I <b>don’t study at all</b>.</p><p>When my teachers <b>give us our tests</b>, I get really nervous. And I’m even more nervous when they <b>give us the tests back</b> and I see my grade. Sometimes I don’t pass. I have <b>pretty low grades</b>.</p><p>Sometimes my teachers <b>collect homework</b>. Yes, you’re right. I don’t always do my homework, or I do it in a hurry <b>right before class</b>. My teachers know this and they tell me that <b>I’m in trouble</b> and that I need to <b>work hard and study more</b>.</p><p>They’re right. You should see my notebook. My <b>papers</b> are very disorganized. Maybe next week I’ll sit down and put things in order. Well, that’s all for now. I’m kind of tired and I need to <b>rest</b> before I watch TV.`;
+
+/* ---------- builders ---------- */
+const sel=(n,letters)=>`<select data-k="${n}" aria-label="answer"><option value="">–</option>${letters.map(l=>`<option>${l}</option>`).join("")}</select>`;
+const blank=(ans,w)=>`<input type="text" class="blank" data-ans="${esc(JSON.stringify([].concat(ans)))}" style="width:${w||10}em" autocomplete="off" spellcheck="false" aria-label="blank"> <span class="key">${esc([].concat(ans).join(" / "))}</span>`;
+const tools=(id)=>`<div class="row"><button class="check" data-check="${id}">Check answers</button><button class="reveal" data-reveal="${id}">Show answers</button><span class="score" id="s-${id}"></span></div>`;
+function block(a,inner){
+  return `<section class="block" id="${a.id}"><div class="block-head"><span class="time">${a.from}–${a.to} min</span><h2>${a.name}</h2></div>${inner}</section>`;
+}
+const L="abcdefghij".split("");
+
+let html="";
+/* warm-up */
+html+=block(AGENDA[0],`
+<div class="sheet"><h3>Warm-Up</h3><p class="src">Book p. 19</p>
+<ol><li>In your native country, is it common for students to stay up all night studying? If yes, when does this happen? What do they do to stay awake?</li>
+<li>Did you ever have to give work to a teacher late because you forgot to do it or because something happened? If yes, what did you do and what did your teacher say?</li></ol>
+<h3 style="margin-top:18px">Before You Listen</h3>
+<img class="cartoon" src="${CARTOON}" alt="Cartoon: Annette looks very tired; Alan talks to her as they walk across a college campus.">
+<p>Alan and Annette in the cartoon are walking together on a college campus. What do you think they are talking about?</p></div>`);
+
+/* listening */
+html+=block(AGENDA[1],`
+<div class="sheet" id="listenSheet"><h3>As You Listen</h3><p class="src">Book p. 20</p>
+<p class="dir">The text is hidden. First just listen and answer: <b>How does Annette feel? Why? Is Alan helpful?</b> Then listen again and read along.</p>
+<p class="src" style="margin:0 0 4px">Audio: CD 1, Track 6</p><audio id="trk6" controls preload="metadata" src="${TRACK6}" style="width:100%;margin:4px 0 8px"></audio><div class="row"><button class="reveal" id="showDlg">Show the text</button></div>
+<div class="dlg hidden-text" id="dlg">${DIALOGUE.map((d,i)=>d[0]==="-"?`<div class="stage">${d[2]}</div>`:`<div class="line" data-i="${i}"><span class="who">${d[0]}</span><span class="txt">${esc(d[2])}</span></div>`).join("")}</div>
+<p class="gloss">psych = psychology</p></div>
+
+<div class="sheet" id="tfS"><h3>After You Listen: True, False or ?</h3><p class="src">Book p. 21</p>
+<p class="dir">Circle T for true, F for false, or ? if you don’t know.</p>
+${TF.map((t,i)=>`<div class="tfrow" data-a="${t[1]}"><span>${i+1}. ${t[0]}</span><span class="tf">${["T","F","?"].map(x=>`<button data-v="${x}">${x}</button>`).join("")}</span></div>`).join("")}
+${tools("tf")}</div>
+
+<div class="sheet" id="gmS"><h3>Guess the Meanings</h3><p class="src">Book p. 21</p>
+<p class="dir">Find the idiomatic expression in the conversation for each paraphrase. Example: be in trouble = <i>be in hot water</i>.</p>
+${GUESS.map((g,i)=>`<p>${i+1}. ${g[0]} = ${blank(g[1],12)}</p>`).join("")}
+${tools("gm")}
+<p class="dir" style="margin-top:12px">Now read the conversation in pairs: one person is Alan, the other is Annette.</p></div>`);
+
+/* words */
+html+=block(AGENDA[2],`
+<div class="on-dark"><p>These are the expressions from the New Expression Collection (book p. 28). Say each one, try to remember its meaning, then tap the card to check. Mark the ones you know.</p></div>
+<div class="deck-tools"><button class="btn small" id="shuffle">Shuffle</button><button class="btn ghost small" id="flipAll">Flip all</button><button class="btn ghost small" id="unknownOnly">Show only “not yet”</button><span id="known" style="color:var(--lamp)"></span></div>
+<div class="cards" id="cards"></div>
+
+<div class="sheet" id="nkS" style="margin-top:28px"><h3>Your Turn: in the nick of time</h3><p class="src">Book p. 23</p>
+<p class="dir">Fill in the blanks with the past tense forms of these verbs: <i>arrive, get</i> (two times), <i>turn</i>, and <i>take</i>.</p>
+${NICK.map((n,i)=>`<p>${i+1}. ${n[0]} ${blank(n[2],7)} ${n[1]}</p>`).join("")}
+${tools("nk")}</div>
+
+<div class="sheet" id="lcS"><h3>Your Turn: Listening Challenge</h3><p class="src">Book p. 24. Audio: CD 1, Track 7</p>
+<p class="dir"><b>be in hot water (with someone)</b> = be in trouble. Listen to the recording to find out why the speaker is in hot water.</p>
+<audio controls preload="metadata" src="${TRACK7}" style="width:100%;margin:4px 0 12px"></audio>
+<p>He’s in hot water because <input type="text" style="width:100%;margin-top:6px" autocomplete="off" aria-label="Why is he in hot water?"></p>
+<p class="gloss">Tell your teacher your answer, then listen again to check.</p></div>
+
+<div class="sheet" id="hdS"><h3>Your Turn: hand in, turn in, hand back, hand out, handout</h3><p class="src">Book p. 25</p>
+<p class="dir">Teachers <i>hand things out, hand things back, give handouts</i>. Students <i>hand things in, turn things in, get handouts</i>. Pay attention to verb tenses and pronouns.</p>
+${HAND.map((h,i)=>`<p>${i+1}. ${h[0]} ${blank(h[2],9)} ${h[1]}</p>`).join("")}
+${tools("hd")}</div>`);
+
+/* exercises */
+const mdGrid=(A,B,K,id)=>`<div class="match"><div>${A.map((a,i)=>`<div class="qa">${sel(K[i],L)}<span>${i+1}. ${esc(a)} <span class="key">${K[i]}</span></span></div>`).join("")}</div><ul class="opts">${B.map((b,i)=>`<li><b>${L[i]}.</b>${esc(b)}</li>`).join("")}</ul></div>${tools(id)}`;
+html+=block(AGENDA[3],`
+<div class="sheet" id="m1S"><h3>1. Mini-Dialogues (1A / 1B)</h3><p class="src">Book p. 29</p>
+<p class="dir">Read the sentences in Column A. Choose the best response from Column B. Not all responses can be used. Then perform each mini-dialogue aloud.</p>
+<p class="src" style="margin:0 0 4px">Audio: CD 1, Track 8. Match first, then listen and check your answers.</p><audio controls preload="metadata" src="${TRACK8}" style="width:100%;margin:4px 0 14px"></audio>
+${mdGrid(MD1A,MD1B,MD1K,"m1")}</div>
+<div class="sheet" id="m2S"><h3>1. Mini-Dialogues (2A / 2B)</h3><p class="src">Book p. 29</p>
+${mdGrid(MD2A,MD2B,MD2K,"m2")}</div>
+<div class="sheet" id="gpS"><h3>2. Grammar Practice</h3><p class="src">Book p. 30</p>
+${GP.map((g,gi)=>`<h3 style="font-size:19px;margin-top:14px">${gi+1}. ${g.dir}</h3>${g.items.map((it,i)=>`<p>${L[i]}. ${esc(it[0])} ${blank(it[2],gi===2?8:4)} ${esc(it[1])}</p>`).join("")}`).join("")}
+${tools("gp")}</div>
+<div class="sheet" id="ecS"><h3>3. Error Correction</h3><p class="src">Book p. 31</p>
+<p class="dir">Find the errors and write each sentence correctly.</p>
+${ERR.map((e,i)=>`<div class="err"><span class="orig">${i+1}. ${esc(e[0])}</span><input type="text" data-ans="${esc(JSON.stringify([e[1]]))}" value="${esc(e[0])}" autocomplete="off" spellcheck="false" aria-label="corrected sentence ${i+1}"><span class="key">${esc(e[1])}</span></div>`).join("")}
+${tools("ec")}</div>`);
+
+/* night dialogue */
+let nightHTML=NIGHT.map(([w,t])=>`<div class="line" style="grid-template-columns:92px 1fr"><span class="who">${w}</span><span>${esc(t).replace(/\{(\d)\}/g,(m,n)=>`(${n}) ${blank(NIGHTK[n],10)}`)}</span></div>`).join("");
+html+=block(AGENDA[4],`
+<div class="sheet" id="ngS"><h3>4. Choosing the Idiom</h3><p class="src">Book pp. 31–32</p>
+<p class="dir">Alan and Charlie are roommates. They are pulling an all-nighter and talking about being tired. Fill in the blanks with the best expressions from the box. Think about verb tenses, subject-verb agreement and pronouns. Then read the dialogue aloud.</p>
+<div class="wordbank">${BANK.map(b=>`<span>${b}</span>`).join("")}</div>
+<div class="dlg">${nightHTML}</div>
+<p class="src" style="margin:14px 0 4px">Audio: CD 1, Track 9. Fill in the blanks first, then listen and check.</p><audio controls preload="metadata" src="${TRACK9}" style="width:100%;margin:4px 0 6px"></audio>
+${tools("ng")}</div>`);
+
+/* dictation */
+html+=block(AGENDA[5],`
+<div class="sheet" id="dcS"><h3>6. Dictation</h3><p class="src">Book p. 33</p>
+<p class="dir">You will hear the dictation three times. First, just listen. Second, write. Third, listen again and check. Key words: <i>a paper, better-organized</i>.</p>
+<p class="src" style="margin:0 0 4px">Audio: CD 1, Track 10</p><audio controls preload="metadata" src="${TRACK10}" style="width:100%;margin:4px 0 12px"></audio>
+<textarea id="dictIn" placeholder="Write here…" aria-label="Your dictation"></textarea>
+<div class="row"><button class="check" id="dCompare">Compare with the text</button></div>
+<div class="diff" id="dOut"></div></div>`);
+
+/* wrap */
+html+=block(AGENDA[6],`
+<div class="on-dark"><h3 style="font-size:24px;color:var(--lamp);margin-bottom:10px">Talk about it</h3><p>Choose two questions and answer them using expressions from today (book p. 34).</p>
+<div class="talk">${DISCUSS.map(q=>`<div class="q">${esc(q)}</div>`).join("")}</div></div>
+<div class="sheet" style="margin-top:26px"><h3>Homework: 5. Sentence Writing</h3><p class="src">Book p. 33</p>
+<p class="dir">Read Joe’s story. Then write sentences about him. In each sentence, use at least one expression from the box. The bold words show where expressions can go. Remember the <b>-s</b> on present tense verbs.</p>
+<p>${JOE}</p>
+<div class="wordbank">${["take tests cold","get a(n) __ on a test","do well","take a nap","hand in","handout(s)","my mind __ blank","be in hot water","in the nick of time","pull an all-nighter","stay up late","cram","hand out","hand back","hit the books"].map(b=>`<span>${b}</span>`).join("")}</div>
+<p><i>Example: When Joe has a test, he usually stays up late.</i></p>
+<textarea placeholder="1. …" aria-label="Your sentences about Joe"></textarea></div>`);
+
+$("#main").innerHTML=html;
+
+/* ---------- agenda render + timer ---------- */
+$("#strip").innerHTML=AGENDA.map(a=>`<a class="seg" href="#${a.id}" data-id="${a.id}" style="--m:${a.to-a.from}"><span class="t">${a.from}–${a.to}′</span><span class="n">${a.name}</span><span class="fill"></span></a>`).join("");
+$("#mini").innerHTML=AGENDA.map(a=>`<a href="#${a.id}" data-id="${a.id}">${a.from}′ ${a.name}</a>`).join("");
+let acc=0,runStart=null,tick=null;
+const elapsedMs=()=>acc+(runStart?Date.now()-runStart:0);
+function render(){
+  const ms=elapsedMs(), sec=Math.floor(ms/1000), min=sec/60, active=ms>0;
+  $("#elapsed").textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")} / 60:00`;
+  AGENDA.forEach(a=>{
+    const now=active&&min>=a.from&&min<a.to, done=active&&min>=a.to;
+    $$(`[data-id="${a.id}"]`).forEach(el=>{el.classList.toggle("now",now);el.classList.toggle("done",done&&el.classList.contains("seg"));});
+    const f=$(`.seg[data-id="${a.id}"] .fill`); if(f) f.style.width=now?((min-a.from)/(a.to-a.from)*100)+"%":(done?"100%":"0");
+  });
+}
+$("#startBtn").onclick=()=>{
+  if(runStart){acc+=Date.now()-runStart;runStart=null;clearInterval(tick);tick=null;$("#startBtn").textContent="Resume";}
+  else{runStart=Date.now();tick=setInterval(render,1000);$("#startBtn").textContent="Pause";}
+  render();
+};
+$("#resetBtn").onclick=()=>{clearInterval(tick);tick=null;runStart=null;acc=0;$("#startBtn").textContent="Start the lesson clock";render();};
+render();
+const agendaEl=$("#agenda");
+function onScroll(){
+  const y=window.scrollY, max=document.documentElement.scrollHeight-innerHeight;
+  $("#minibar").classList.toggle("on", y>agendaEl.offsetTop+agendaEl.offsetHeight-20);
+  // night -> dawn
+  const p=Math.max(0,Math.min(1,(y/max-0.75)/0.25));
+  const c1=[21,27,56],c2=[243,169,156];
+  const mix=c1.map((v,i)=>Math.round(v+(c2[i]-v)*p));
+  document.body.style.setProperty("--sky",`rgb(${mix.join(",")})`);
+}
+addEventListener("scroll",onScroll,{passive:true}); onScroll();
+
+$("#showDlg").onclick=e=>{const h=$("#dlg").classList.toggle("hidden-text");e.target.textContent=h?"Show the text":"Hide the text";};
+
+/* ---------- T/F ---------- */
+$$("#tfS .tfrow").forEach(r=>$$("button",r).forEach(b=>b.onclick=()=>{$$("button",r).forEach(x=>x.className="");b.className="sel";}));
+
+/* ---------- generic check ---------- */
+function checkSheet(id,reveal){
+  const sheet=$("#"+id+"S"); let ok=0,total=0;
+  if(id==="tf"){
+    $$(".tfrow",sheet).forEach(r=>{total++;const s=$("button.sel,button.ok,button.no",r);
+      $$("button",r).forEach(b=>{b.classList.remove("ok","no");});
+      if(reveal){$$("button",r).forEach(b=>{b.className=b.dataset.v===r.dataset.a?"ok":"";});return;}
+      if(s){const good=s.dataset.v===r.dataset.a;s.className=good?"ok":"no";if(good)ok++;}});
+  }
+  $$("select[data-k]",sheet).forEach(s=>{total++;s.classList.remove("ok","no");if(reveal){s.value=s.dataset.k;}
+    if(s.value){const g=s.value===s.dataset.k;s.classList.add(g?"ok":"no");if(g)ok++;}});
+  $$("input[data-ans]",sheet).forEach(inp=>{total++;inp.classList.remove("ok","no");const ans=JSON.parse(inp.dataset.ans);
+    if(reveal){inp.value=ans[0];}
+    if(inp.value.trim()){const g=okIn(inp.value,ans);inp.classList.add(g?"ok":"no");if(g)ok++;}});
+  if(reveal) sheet.classList.add("show-keys");
+  $("#s-"+id).textContent=reveal?"Answers shown":`${ok} / ${total}`;
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-check]"); if(c) checkSheet(c.dataset.check,false);
+  const r=e.target.closest("[data-reveal]"); if(r) checkSheet(r.dataset.reveal,true);
+});
+
+/* ---------- flashcards ---------- */
+const known=new Set(); let order=CARDS.map((_,i)=>i), onlyUnknown=false;
+function drawCards(){
+  $("#cards").innerHTML=order.filter(i=>!onlyUnknown||!known.has(i)).map(i=>{const c=CARDS[i];return `
+  <div class="card ${known.has(i)?"known":""}" data-i="${i}" role="button" tabindex="0" aria-label="Flashcard: ${esc(c[0])}">
+   <div class="in"><div class="face front"><span class="w">${esc(c[0])}</span><span class="hint">tap to flip</span></div>
+   <div class="face back"><div><div class="def">${esc(c[1])}</div><div class="ex">${esc(c[2])}</div></div><div class="ru">${esc(c[3])}</div>
+   <div class="row" style="margin:6px 0 0"><button class="reveal" data-say="${i}" style="padding:3px 10px;font-size:14px">🔊</button><button class="check" data-know="${i}" style="padding:4px 12px;font-size:14px">${known.has(i)?"Not yet":"Got it"}</button></div></div></div></div>`;}).join("");
+  $("#known").textContent=`${known.size} / ${CARDS.length} known`;
+}
+$("#cards").addEventListener("click",e=>{
+  const s=e.target.closest("[data-say]"); if(s){e.stopPropagation();stopSpeech();speak(CARDS[+s.dataset.say][0].replace(/\(.*?\)|__|\//g," "),"f",.9);return;}
+  const k=e.target.closest("[data-know]"); if(k){e.stopPropagation();const i=+k.dataset.know;known.has(i)?known.delete(i):known.add(i);drawCards();return;}
+  const c=e.target.closest(".card"); if(c) c.classList.toggle("flip");
+});
+$("#cards").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("card")){e.preventDefault();e.target.classList.toggle("flip");}});
+$("#shuffle").onclick=()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}drawCards();};
+let allFlipped=false;
+$("#flipAll").onclick=()=>{allFlipped=!allFlipped;$$("#cards .card").forEach(c=>c.classList.toggle("flip",allFlipped));};
+$("#unknownOnly").onclick=e=>{onlyUnknown=!onlyUnknown;e.target.textContent=onlyUnknown?"Show all cards":"Show only “not yet”";drawCards();};
+drawCards();
+
+/* ---------- dictation ---------- */
+$("#dCompare").onclick=()=>{
+  const tok=s=>s.replace(/[’]/g,"'").split(/\s+/).filter(Boolean);
+  const a=tok(DICT), b=tok($("#dictIn").value), clean=w=>w.toLowerCase().replace(/[^a-z0-9']/g,"");
+  const n=a.length,m=b.length,dp=Array.from({length:n+1},()=>new Array(m+1).fill(0));
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)dp[i][j]=clean(a[i])===clean(b[j])?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+  let i=0,j=0,out=[],good=0;
+  while(i<n||j<m){
+    if(i<n&&j<m&&clean(a[i])===clean(b[j])){out.push(esc(a[i]));i++;j++;good++;}
+    else if(j<m&&(i>=n||dp[i][j+1]>=dp[i+1][j])){out.push(`<del title="extra or wrong">${esc(b[j])}</del>`);j++;}
+    else {out.push(`<ins title="missing">${esc(a[i])}</ins>`);i++;}
+  }
+  $("#dOut").innerHTML=`<p class="score">${good} / ${n} words correct</p><p>${out.join(" ")}</p><p class="gloss"><ins>green</ins> = missing word, <del>red</del> = extra or misspelled word.</p>`;
+};
+})();
+
+</script>
+</body>
+</html>
