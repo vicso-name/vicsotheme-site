@@ -9,7 +9,9 @@
 | R3–R6 | ⏳ ждёт ключ | — | |
 | R7 | ❌ `serp/google-ai-mode` отвечает 400 VALIDATION_ERROR у провайдера на любой запрос (не тарифицируется); повторить позже | $0 | `scripts/seo/17-ai-mode.mjs` |
 | R8 | ✅ бесплатно из кэша overview (поле `trend`, ~8 лет помесячно). `seo/trends` отдаёт пустой timeline и при этом списывает $0.02 — не использовать | $0.08 (впустую) | `18-seasonality.json` |
-| R9 | ⏳ бесплатный, можно делать без ключа | — | |
+| R9 | ✅ бесплатно: подсказки App Store + Google Play (196 запросов × 2 магазина) и выдача приложений по 40 главным терминам | $0 | `aso-suggestions.csv` (903 термина, 88 в обоих магазинах), `aso-serp.csv`, `19-aso.json` |
+
+**R9 — выводы для листингов.** Hangul Hero уже в топе Play по алфавиту: #1 `learn korean alphabet hangul`, #4 `korean alphabet writing hangul`, #5 `korean alphabet` и `learn korean alphabet`, #8 `korean writing`, #10–13 `hangul`, `learn hangul`, `hangul practice`, `hangul flashcards`. Вне топ-30 Play по фразам (`korean phrases`, `learn korean phrases`), словам (`korean words`, `korean vocabulary`), играм (`korean games`, `learn korean game`), `learn korean offline`, `korean pronunciation` — хотя Phrase X-Ray, квизы и офлайн в приложении есть, листинг их не таргетирует. В App Store по `korean alphabet` медиана оценок в топ-10 — 24 (`korean words` 37, `korean vocabulary` 16, `hangul flashcards` 0): слабая конкуренция для iOS-запуска.
 
 Цель v2: заменить оценочные решения v1 проверенными данными —
 кластеры по реальной выдаче (а не по правилам), полный список конкурентов и их запросов,
