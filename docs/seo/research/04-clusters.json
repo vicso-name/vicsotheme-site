@@ -1,0 +1,465 @@
+[
+ {
+  "segment": "exclude",
+  "cluster": "brand",
+  "fit": "exclude",
+  "keywords": 27,
+  "volume": 1734360,
+  "head": "duolingo",
+  "headVolume": 1500000,
+  "avgKd": 18,
+  "competitors": [
+   "lingrow.io",
+   "geniusee.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "hangul-alphabet",
+  "fit": "target",
+  "keywords": 62,
+  "volume": 364390,
+  "head": "alphabet korean",
+  "headVolume": 60500,
+  "avgKd": 10,
+  "competitors": [
+   "letslearnhangul.com",
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "lang-apps",
+  "cluster": "best-language-learning-app",
+  "fit": "park",
+  "keywords": 19,
+  "volume": 266900,
+  "head": "best app for language learning",
+  "headVolume": 22200,
+  "avgKd": 8,
+  "competitors": []
+ },
+ {
+  "segment": "lang-apps",
+  "cluster": "language-learning-app",
+  "fit": "park",
+  "keywords": 7,
+  "volume": 201700,
+  "head": "app for language learning",
+  "headVolume": 33100,
+  "avgKd": 18,
+  "competitors": []
+ },
+ {
+  "segment": "ko",
+  "cluster": "learn-korean",
+  "fit": "target",
+  "keywords": 20,
+  "volume": 142900,
+  "head": "korean language how to learn",
+  "headVolume": 110000,
+  "avgKd": 20,
+  "competitors": [
+   "letslearnhangul.com",
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "exclude",
+  "cluster": "other-language",
+  "fit": "exclude",
+  "keywords": 15,
+  "volume": 116210,
+  "head": "spanish language learning app",
+  "headVolume": 40500,
+  "avgKd": 12,
+  "competitors": [
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "korean-keyboard",
+  "fit": "tool-idea",
+  "keywords": 40,
+  "volume": 113180,
+  "head": "korean keyboard",
+  "headVolume": 27100,
+  "avgKd": 9,
+  "competitors": [
+   "lingrow.io",
+   "letslearnhangul.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "korean-name-converter",
+  "fit": "tool-idea",
+  "keywords": 46,
+  "volume": 83030,
+  "head": "english to korean converter",
+  "headVolume": 60500,
+  "avgKd": 3,
+  "competitors": [
+   "lingrow.io",
+   "letslearnhangul.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "hangul-writing-practice",
+  "fit": "target",
+  "keywords": 28,
+  "volume": 81590,
+  "head": "korean writing alphabet",
+  "headVolume": 60500,
+  "avgKd": 10,
+  "competitors": [
+   "letslearnhangul.com",
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "topic",
+  "cluster": "what-is-edtech",
+  "fit": "park",
+  "keywords": 58,
+  "volume": 52620,
+  "head": "ed tech",
+  "headVolume": 12100,
+  "avgKd": 15,
+  "competitors": [
+   "geniusee.com",
+   "mindinventory.com",
+   "riseapps.co"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "korean-alphabet-chart",
+  "fit": "target",
+  "keywords": 19,
+  "volume": 41490,
+  "head": "korean alphabet chart",
+  "headVolume": 5400,
+  "avgKd": 9,
+  "competitors": [
+   "letslearnhangul.com",
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "korean-learning-apps",
+  "fit": "target",
+  "keywords": 15,
+  "volume": 41360,
+  "head": "app for learning korean language",
+  "headVolume": 9900,
+  "avgKd": 14,
+  "competitors": [
+   "lingrow.io",
+   "letslearnhangul.com",
+   "hangl.app"
+  ]
+ },
+ {
+  "segment": "et",
+  "cluster": "estonian-language",
+  "fit": "target",
+  "keywords": 30,
+  "volume": 27530,
+  "head": "estonian language",
+  "headVolume": 8100,
+  "avgKd": 5,
+  "competitors": []
+ },
+ {
+  "segment": "topic",
+  "cluster": "ai-in-education",
+  "fit": "park",
+  "keywords": 31,
+  "volume": 18200,
+  "head": "ai powered education platform",
+  "headVolume": 6600,
+  "avgKd": 24,
+  "competitors": [
+   "geniusee.com",
+   "citrusbug.com",
+   "mindinventory.com",
+   "binariks.com",
+   "sapient.pro",
+   "riseapps.co"
+  ]
+ },
+ {
+  "segment": "exclude",
+  "cluster": "off-topic",
+  "fit": "exclude",
+  "keywords": 13,
+  "volume": 12990,
+  "head": "ai disease symptoms",
+  "headVolume": 9900,
+  "avgKd": 15,
+  "competitors": [
+   "binariks.com",
+   "letslearnhangul.com",
+   "geniusee.com",
+   "learnhebrewalphabet.com"
+  ]
+ },
+ {
+  "segment": "hebrew",
+  "cluster": "hebrew",
+  "fit": "hebrewedu",
+  "keywords": 68,
+  "volume": 12390,
+  "head": "hebrew alphabet pronunciation",
+  "headVolume": 1300,
+  "avgKd": 5,
+  "competitors": [
+   "learnhebrewalphabet.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "hangul-pronunciation",
+  "fit": "target",
+  "keywords": 4,
+  "volume": 7600,
+  "head": "hangul pronunciation",
+  "headVolume": 1900,
+  "avgKd": 7,
+  "competitors": [
+   "letslearnhangul.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "korean-dictionary",
+  "fit": "tool-idea",
+  "keywords": 5,
+  "volume": 6680,
+  "head": "dictionary korea",
+  "headVolume": 2900,
+  "avgKd": 6,
+  "competitors": [
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "dev",
+  "cluster": "edtech-app-development-company",
+  "fit": "target",
+  "keywords": 56,
+  "volume": 6220,
+  "head": "digital education company",
+  "headVolume": 1300,
+  "avgKd": 9,
+  "competitors": [
+   "geniusee.com",
+   "mindinventory.com",
+   "citrusbug.com",
+   "binariks.com",
+   "sapient.pro"
+  ]
+ },
+ {
+  "segment": "topic",
+  "cluster": "gamification-in-education",
+  "fit": "park",
+  "keywords": 4,
+  "volume": 5810,
+  "head": "gamification in education",
+  "headVolume": 1900,
+  "avgKd": 30,
+  "competitors": [
+   "geniusee.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "topik-practice-test",
+  "fit": "target",
+  "keywords": 13,
+  "volume": 5440,
+  "head": "korean module",
+  "headVolume": 880,
+  "avgKd": 6,
+  "competitors": [
+   "letslearnhangul.com",
+   "lingrow.io"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "hangul-quiz-games",
+  "fit": "target",
+  "keywords": 15,
+  "volume": 4400,
+  "head": "korean language learning games",
+  "headVolume": 480,
+  "avgKd": 0,
+  "competitors": [
+   "letslearnhangul.com"
+  ]
+ },
+ {
+  "segment": "ko",
+  "cluster": "how-to-read-korean",
+  "fit": "target",
+  "keywords": 3,
+  "volume": 3600,
+  "head": "how to read korean",
+  "headVolume": 1300,
+  "avgKd": 3,
+  "competitors": [
+   "letslearnhangul.com"
+  ]
+ },
+ {
+  "segment": "topic",
+  "cluster": "personalized-learning",
+  "fit": "park",
+  "keywords": 8,
+  "volume": 3230,
+  "head": "personalized learning platforms",
+  "headVolume": 1900,
+  "avgKd": 12,
+  "competitors": [
+   "geniusee.com"
+  ]
+ },
+ {
+  "segment": "exclude",
+  "cluster": "translation",
+  "fit": "exclude",
+  "keywords": 6,
+  "volume": 2140,
+  "head": "estonian language translation to english",
+  "headVolume": 590,
+  "avgKd": 3,
+  "competitors": []
+ },
+ {
+  "segment": "et",
+  "cluster": "learn-estonian",
+  "fit": "target",
+  "keywords": 33,
+  "volume": 1530,
+  "head": "estonian language course",
+  "headVolume": 170,
+  "avgKd": 7,
+  "competitors": []
+ },
+ {
+  "segment": "dev",
+  "cluster": "how-to-build-educational-app",
+  "fit": "target",
+  "keywords": 15,
+  "volume": 870,
+  "head": "what is an educational app",
+  "headVolume": 210,
+  "avgKd": 6,
+  "competitors": [
+   "mindinventory.com",
+   "geniusee.com",
+   "sapient.pro",
+   "riseapps.co"
+  ]
+ },
+ {
+  "segment": "topic",
+  "cluster": "edtech-trends",
+  "fit": "park",
+  "keywords": 5,
+  "volume": 370,
+  "head": "tech trends in education",
+  "headVolume": 170,
+  "avgKd": 13,
+  "competitors": [
+   "citrusbug.com"
+  ]
+ },
+ {
+  "segment": "dev",
+  "cluster": "educational-app-ideas",
+  "fit": "target",
+  "keywords": 4,
+  "volume": 280,
+  "head": "unique app ideas for students",
+  "headVolume": 110,
+  "avgKd": 4,
+  "competitors": [
+   "mindinventory.com"
+  ]
+ },
+ {
+  "segment": "et",
+  "cluster": "estonian-grammar",
+  "fit": "target",
+  "keywords": 10,
+  "volume": 160,
+  "head": "estonian grammar",
+  "headVolume": 40,
+  "avgKd": 0,
+  "competitors": []
+ },
+ {
+  "segment": "et",
+  "cluster": "is-estonian-hard",
+  "fit": "target",
+  "keywords": 7,
+  "volume": 150,
+  "head": "is estonian hard to learn",
+  "headVolume": 70,
+  "avgKd": 0,
+  "competitors": []
+ },
+ {
+  "segment": "dev",
+  "cluster": "edtech-app-development-cost",
+  "fit": "target",
+  "keywords": 3,
+  "volume": 80,
+  "head": "education app development cost",
+  "headVolume": 40,
+  "avgKd": 3,
+  "competitors": [
+   "mindinventory.com",
+   "binariks.com"
+  ]
+ },
+ {
+  "segment": "et",
+  "cluster": "estonian-phrases",
+  "fit": "target",
+  "keywords": 2,
+  "volume": 60,
+  "head": "estonian language phrases",
+  "headVolume": 50,
+  "avgKd": 0,
+  "competitors": []
+ },
+ {
+  "segment": "dev",
+  "cluster": "language-learning-app-development",
+  "fit": "target",
+  "keywords": 5,
+  "volume": 50,
+  "head": "language learning app development",
+  "headVolume": 10,
+  "avgKd": 5,
+  "competitors": []
+ },
+ {
+  "segment": "et",
+  "cluster": "estonian-learning-apps",
+  "fit": "target",
+  "keywords": 1,
+  "volume": 10,
+  "head": "learn estonian app",
+  "headVolume": 10,
+  "avgKd": 50,
+  "competitors": []
+ }
+]

@@ -1,0 +1,71 @@
+timestamp,endpoint,params,cost_usd,note
+2026-10-27T09:51:27.209Z,/v1/serp/google,"serp ""how to build a language learning app"" us/en d10",0.0100,discovery build
+2026-10-27T09:51:39.250Z,/v1/serp/google,"serp ""build an app like duolingo"" us/en d10",0.0100,discovery build
+2026-10-27T09:51:41.723Z,/v1/serp/google,"serp ""language learning app development"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:14.659Z,/v1/serp/google,"serp ""spaced repetition app development"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:17.608Z,/v1/serp/google,"serp ""flutter language learning app"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:24.580Z,/v1/serp/google,"serp ""gamification in language learning apps"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:27.704Z,/v1/serp/google,"serp ""edtech app developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:31.383Z,/v1/serp/google,"serp ""edtech app development company"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:35.406Z,/v1/serp/google,"serp ""educational app development"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:40.048Z,/v1/serp/google,"serp ""edtech mvp development"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:43.450Z,/v1/serp/google,"serp ""hire edtech developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:45.713Z,/v1/serp/google,"serp ""freelance edtech developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:53:29.621Z,/v1/serp/google,"serp ""indie language learning app"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:41.642Z,/v1/serp/google,"serp ""indie edtech founder"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:44.456Z,/v1/serp/google,"serp ""solo developer language app"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:47.759Z,/v1/serp/google,"serp ""learn hebrew alphabet app"" us/en d10",0.0100,discovery products
+2026-10-27T09:53:51.655Z,/v1/serp/google,"serp ""learn hangul app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:18.553Z,/v1/serp/google,"serp ""estonian verbs app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:25.117Z,/v1/serp/google,"serp ""learn estonian app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:28.527Z,/v1/serp/google,"serp ""korean alphabet learning app"" us/en d10",0.0100,discovery products
+2026-10-27T10:00:14.259Z,/v1/seo/domain/keywords,domain/keywords latvianapps.com us/en limit 150,0.0300,competitor indie
+2026-10-27T10:00:15.282Z,/v1/seo/domain/keywords,domain/keywords hangl.app us/en limit 150,0.0400,competitor indie
+2026-10-27T10:00:16.472Z,/v1/seo/domain/keywords,domain/keywords letslearnhangul.com us/en limit 150,0.0800,competitor indie
+2026-10-27T10:00:17.430Z,/v1/seo/domain/keywords,domain/keywords learnhebrewalphabet.com us/en limit 150,0.0600,competitor indie
+2026-10-27T10:00:18.335Z,/v1/seo/domain/keywords,domain/keywords lingrow.io us/en limit 150,0.0800,competitor indie
+2026-10-27T10:00:19.836Z,/v1/seo/domain/keywords,domain/keywords thesponge.app us/en limit 150,0.0400,competitor indie
+2026-10-27T10:00:20.279Z,/v1/seo/domain/keywords,domain/keywords memokat.com us/en limit 150,0.0300,competitor indie
+2026-10-27T10:00:20.959Z,/v1/seo/domain/keywords,domain/keywords mindinventory.com us/en limit 100,0.0600,competitor agency
+2026-10-27T10:00:21.607Z,/v1/seo/domain/keywords,domain/keywords citrusbug.com us/en limit 100,0.0500,competitor agency
+2026-10-27T10:00:22.212Z,/v1/seo/domain/keywords,domain/keywords geniusee.com us/en limit 100,0.0600,competitor agency
+2026-10-27T10:00:22.802Z,/v1/seo/domain/keywords,domain/keywords riseapps.co us/en limit 100,0.0400,competitor agency
+2026-10-27T10:00:23.534Z,/v1/seo/domain/keywords,domain/keywords sapient.pro us/en limit 100,0.0400,competitor agency
+2026-10-27T10:00:24.619Z,/v1/seo/domain/keywords,domain/keywords binariks.com us/en limit 100,0.0400,competitor agency
+2026-10-27T10:01:20.262Z,/v1/seo/keywords/ideas,"ideas ""learn estonian"" us/en limit 50",0.0500,ideas estonian
+2026-10-27T10:01:20.507Z,/v1/seo/keywords/ideas,"ideas ""estonian verbs"" us/en limit 50",0.0400,ideas estonian
+2026-10-27T10:01:20.786Z,/v1/seo/keywords/ideas,"ideas ""estonian grammar"" us/en limit 50",0.0400,ideas estonian
+2026-10-27T10:01:21.124Z,/v1/seo/keywords/ideas,"ideas ""estonian language"" us/en limit 50",0.0500,ideas estonian
+2026-10-27T10:01:21.343Z,/v1/seo/keywords/ideas,"ideas ""language learning app development"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:21.605Z,/v1/seo/keywords/ideas,"ideas ""educational app development"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:22.381Z,/v1/seo/keywords/ideas,"ideas ""how to make a language learning app"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:22.992Z,/v1/seo/keywords/ideas,"ideas ""language learning app"" us/en limit 50",0.0500,ideas product
+2026-10-27T10:01:27.553Z,/v1/seo/keywords/overview,overview 700 kw us/en,0.2400,overview pool
+2026-10-27T10:01:56.433Z,/v1/seo/keywords/overview,overview 92 kw us/en,0.0400,overview pool
+2026-10-27T10:04:09.536Z,/v1/serp/google,"serp ""korean alphabet"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:12.556Z,/v1/serp/google,"serp ""hangul alphabet"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:15.239Z,/v1/serp/google,"serp ""learn hangul"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:19.203Z,/v1/serp/google,"serp ""korean alphabet chart"" us/en d10",0.0100,validate ko/korean-alphabet-chart
+2026-10-27T10:04:26.130Z,/v1/serp/google,"serp ""how to read korean"" us/en d10",0.0100,validate ko/how-to-read-korean
+2026-10-27T10:04:28.860Z,/v1/serp/google,"serp ""hangul pronunciation"" us/en d10",0.0100,validate ko/hangul-pronunciation
+2026-10-27T10:04:32.388Z,/v1/serp/google,"serp ""korean writing practice"" us/en d10",0.0100,validate ko/hangul-writing-practice
+2026-10-27T10:04:35.559Z,/v1/serp/google,"serp ""hangul quiz"" us/en d10",0.0100,validate ko/hangul-quiz-games
+2026-10-27T10:04:40.956Z,/v1/serp/google,"serp ""korean language learning games"" us/en d10",0.0100,validate ko/hangul-quiz-games
+2026-10-27T10:04:44.675Z,/v1/serp/google,"serp ""best apps to learn korean"" us/en d10",0.0100,validate ko/korean-learning-apps
+2026-10-27T10:04:57.734Z,/v1/serp/google,"serp ""learn korean"" us/en d10",0.0100,validate ko/learn-korean
+2026-10-27T10:05:00.127Z,/v1/serp/google,"serp ""topik practice test"" us/en d10",0.0100,validate ko/topik-practice-test
+2026-10-27T10:05:03.255Z,/v1/serp/google,"serp ""korean keyboard"" us/en d10",0.0100,validate ko/korean-keyboard
+2026-10-27T10:05:06.042Z,/v1/serp/google,"serp ""my name in korean"" us/en d10",0.0100,validate ko/korean-name-converter
+2026-10-27T10:05:10.664Z,/v1/serp/google,"serp ""estonian language"" us/en d10",0.0100,validate et/estonian-language
+2026-10-27T10:05:13.950Z,/v1/serp/google,"serp ""learn estonian"" us/en d10",0.0100,validate et/learn-estonian
+2026-10-27T10:05:21.188Z,/v1/serp/google,"serp ""estonian grammar"" us/en d10",0.0100,validate et/estonian-grammar
+2026-10-27T10:05:23.678Z,/v1/serp/google,"serp ""is estonian hard to learn"" us/en d10",0.0100,validate et/is-estonian-hard
+2026-10-27T10:05:26.807Z,/v1/serp/google,"serp ""education app development company"" us/en d10",0.0100,validate dev/edtech-app-development-company
+2026-10-27T10:05:30.947Z,/v1/serp/google,"serp ""how to make an educational app"" us/en d10",0.0100,validate dev/how-to-build-educational-app
+2026-10-27T10:05:34.124Z,/v1/serp/google,"serp ""education app development cost"" us/en d10",0.0100,validate dev/edtech-app-development-cost
+2026-10-27T10:05:41.573Z,/v1/serp/google,"serp ""educational app ideas"" us/en d10",0.0100,validate dev/educational-app-ideas
+2026-10-27T10:05:45.224Z,/v1/serp/google,"serp ""best language learning app"" us/en d10",0.0100,validate lang-apps/best-language-learning-app
+2026-10-27T10:05:51.116Z,/v1/serp/google,"serp ""gamification in education"" us/en d10",0.0100,validate topic/gamification-in-education
+2026-10-27T10:05:54.625Z,/v1/serp/google,"serp ""ai in language learning"" us/en d10",0.0100,validate topic/ai-in-education
+2026-10-27T10:47:40.371Z,/v1/seo/keywords/overview,overview 700 kw us/en,0.1900,hangulhero overview
+2026-10-27T10:47:41.375Z,/v1/seo/keywords/overview,overview 100 kw us/en,0.0500,hangulhero overview

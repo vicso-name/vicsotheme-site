@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# paid SEO API response cache (may carry account identifiers)
+docs/seo/research/responses/

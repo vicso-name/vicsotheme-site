@@ -1,0 +1,6175 @@
+[
+ {
+  "kind": "indie",
+  "domain": "latvianapps.com",
+  "total": 0,
+  "keywords": []
+ },
+ {
+  "kind": "indie",
+  "domain": "hangl.app",
+  "total": 4,
+  "keywords": [
+   {
+    "cpc": 0,
+    "keyword": "hangul learning apps",
+    "position": 26,
+    "traffic": 0.335999995470047,
+    "trafficPercent": 0,
+    "url": "https://hangl.app/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangl",
+    "position": 4,
+    "traffic": 14.579999923706056,
+    "trafficPercent": 0,
+    "url": "https://hangl.app/",
+    "volume": 90
+   },
+   {
+    "cpc": 4.03000020980835,
+    "keyword": "hangul learning app",
+    "position": 24,
+    "traffic": 0.1679999977350235,
+    "trafficPercent": 0,
+    "url": "https://hangl.app/",
+    "volume": 70
+   },
+   {
+    "cpc": 4.03000020980835,
+    "keyword": "learn hangul app",
+    "position": 19,
+    "traffic": 0.3009999990463257,
+    "trafficPercent": 0,
+    "url": "https://hangl.app/",
+    "volume": 70
+   }
+  ]
+ },
+ {
+  "kind": "indie",
+  "domain": "letslearnhangul.com",
+  "total": 383,
+  "keywords": [
+   {
+    "cpc": 2.8899998664855957,
+    "keyword": "korean language how to learn",
+    "position": 26,
+    "traffic": 217.1999969482422,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 90500
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "alphabet korean",
+    "position": 5,
+    "traffic": 9801,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 60500
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "hangul alphabet",
+    "position": 2,
+    "traffic": 18392,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 60500
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "korean alphabet",
+    "position": 2,
+    "traffic": 18392,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 60500
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "korean language alphabet",
+    "position": 4,
+    "traffic": 9801,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 60500
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "korean writing alphabet",
+    "position": 4,
+    "traffic": 9801,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 60500
+   },
+   {
+    "cpc": 7.730000019073486,
+    "keyword": "hangul",
+    "position": 4,
+    "traffic": 5362.2001953125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 33100
+   },
+   {
+    "cpc": 7.730000019073486,
+    "keyword": "hangul in korean letters",
+    "position": 5,
+    "traffic": 5362.2001953125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 33100
+   },
+   {
+    "cpc": 0.3100000023841858,
+    "keyword": "hangul letters",
+    "position": 4,
+    "traffic": 1603.800048828125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 9900
+   },
+   {
+    "cpc": 0.3100000023841858,
+    "keyword": "korean letters",
+    "position": 7,
+    "traffic": 963.27001953125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 9900
+   },
+   {
+    "cpc": 4.760000228881836,
+    "keyword": "learn korean",
+    "position": 15,
+    "traffic": 91.52999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 8100
+   },
+   {
+    "cpc": 0.18000000715255737,
+    "keyword": "write korean words",
+    "position": 4,
+    "traffic": 434.94000244140625,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 6600
+   },
+   {
+    "cpc": 0.27000001072883606,
+    "keyword": "korean alphabet chart",
+    "position": 7,
+    "traffic": 253.2599945068359,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 5400
+   },
+   {
+    "cpc": 0.27000001072883606,
+    "keyword": "korean hangul alphabet chart",
+    "position": 5,
+    "traffic": 355.8599853515625,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 5400
+   },
+   {
+    "cpc": 1.1699999570846558,
+    "keyword": "korean characters",
+    "position": 7,
+    "traffic": 206.36000061035156,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 4400
+   },
+   {
+    "cpc": 1.149999976158142,
+    "keyword": "korea hangul",
+    "position": 4,
+    "traffic": 583.2000122070312,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 3600
+   },
+   {
+    "cpc": 1.149999976158142,
+    "keyword": "korean hangul",
+    "position": 2,
+    "traffic": 1094.4000244140625,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 3600
+   },
+   {
+    "cpc": 0.07999999821186066,
+    "keyword": "korean alphabet a to z",
+    "position": 17,
+    "traffic": 32.77000045776367,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 2900
+   },
+   {
+    "cpc": 0.07999999821186066,
+    "keyword": "korean language alphabet a to z",
+    "position": 14,
+    "traffic": 43.5,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 2900
+   },
+   {
+    "cpc": 0.07999999821186066,
+    "keyword": "korean letters a to z",
+    "position": 15,
+    "traffic": 26.38999938964844,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 2900
+   },
+   {
+    "cpc": 0.4699999988079071,
+    "keyword": "hangul in korean",
+    "position": 2,
+    "traffic": 729.5999755859375,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 2400
+   },
+   {
+    "cpc": 0.4699999988079071,
+    "keyword": "korean hangul alphabet",
+    "position": 3,
+    "traffic": 388.7999877929687,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 2400
+   },
+   {
+    "cpc": 2.869999885559082,
+    "keyword": "hangul pronunciation",
+    "position": 15,
+    "traffic": 17.290000915527344,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1900
+   },
+   {
+    "cpc": 2.869999885559082,
+    "keyword": "korean alphabet and pronunciation",
+    "position": 18,
+    "traffic": 14.25,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1900
+   },
+   {
+    "cpc": 2.869999885559082,
+    "keyword": "korean alphabet pronunciation",
+    "position": 24,
+    "traffic": 8.170000076293945,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1900
+   },
+   {
+    "cpc": 0.6899999976158142,
+    "keyword": "korean handwriting practice",
+    "position": 16,
+    "traffic": 11.210000038146973,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1900
+   },
+   {
+    "cpc": 2.869999885559082,
+    "keyword": "korean letter pronunciation",
+    "position": 21,
+    "traffic": 8.170000076293945,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1900
+   },
+   {
+    "cpc": 0.8399999737739563,
+    "keyword": "hangul english alphabet",
+    "position": 19,
+    "traffic": 8.960000038146973,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0,
+    "keyword": "i in hangul",
+    "position": 17,
+    "traffic": 14.5600004196167,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0.8399999737739563,
+    "keyword": "korean alphabet and english",
+    "position": 16,
+    "traffic": 18.079999923706055,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0.8399999737739563,
+    "keyword": "korean alphabet into english",
+    "position": 26,
+    "traffic": 5.28000020980835,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0.8399999737739563,
+    "keyword": "korean alphabet letters in english",
+    "position": 19,
+    "traffic": 9.4399995803833,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0.8399999737739563,
+    "keyword": "korean alphabet to english",
+    "position": 17,
+    "traffic": 18.079999923706055,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 5.239999771118164,
+    "keyword": "learn hangul",
+    "position": 1,
+    "traffic": 486.3999938964844,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 5.239999771118164,
+    "keyword": "learn hangul korean alphabet",
+    "position": 1,
+    "traffic": 486.3999938964844,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1600
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "a b c in korean",
+    "position": 15,
+    "traffic": 25.61000061035156,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "abc of korean",
+    "position": 9,
+    "traffic": 60.970001220703125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 4.260000228881836,
+    "keyword": "how to read korean",
+    "position": 2,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 4.260000228881836,
+    "keyword": "how to read korean language",
+    "position": 7,
+    "traffic": 85.66999816894531,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korea a b c",
+    "position": 15,
+    "traffic": 25.61000061035156,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean a b c",
+    "position": 14,
+    "traffic": 25.61000061035156,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean abc",
+    "position": 13,
+    "traffic": 33.279998779296875,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean homework",
+    "position": 29,
+    "traffic": 2.7300000190734863,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean language abc",
+    "position": 14,
+    "traffic": 33.279998779296875,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean words abc",
+    "position": 14,
+    "traffic": 25.61000061035156,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn alphabet korean language",
+    "position": 2,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn hangul alphabet",
+    "position": 1,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn korean abc",
+    "position": 2,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn korean alphabet",
+    "position": 2,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.75,
+    "keyword": "learn korean free",
+    "position": 18,
+    "traffic": 6.630000114440918,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn korean hangul",
+    "position": 1,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.75,
+    "keyword": "learn korean language free",
+    "position": 28,
+    "traffic": 2.7300000190734863,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn korean letters",
+    "position": 1,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 7.940000057220459,
+    "keyword": "learn korean online",
+    "position": 16,
+    "traffic": 7.670000076293945,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.75,
+    "keyword": "learn korean online free",
+    "position": 22,
+    "traffic": 4.289999961853027,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 2.549999952316284,
+    "keyword": "learn korean writing",
+    "position": 1,
+    "traffic": 395.2000122070313,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0,
+    "keyword": "example of korean writing",
+    "position": 16,
+    "traffic": 9.100000381469728,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1000
+   },
+   {
+    "cpc": 2.5399999618530273,
+    "keyword": "korean learning",
+    "position": 18,
+    "traffic": 5.900000095367432,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 1000
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard online",
+    "position": 29,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean module",
+    "position": 28,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "let's learn hangul",
+    "position": 1,
+    "traffic": 267.5199890136719,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "online korean keyboard",
+    "position": 25,
+    "traffic": 1.9359999895095823,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 5.639999866485596,
+    "keyword": "read in korean",
+    "position": 8,
+    "traffic": 22.527999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0.1599999964237213,
+    "keyword": "the korean alphabet",
+    "position": 4,
+    "traffic": 142.55999755859375,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is hangul",
+    "position": 13,
+    "traffic": 22.527999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul calligraphy practice",
+    "position": 20,
+    "traffic": 3.0959999561309814,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 720
+   },
+   {
+    "cpc": 1.3600000143051147,
+    "keyword": "hangul writing practice",
+    "position": 6,
+    "traffic": 33.768001556396484,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "korean alphabet beginners",
+    "position": 1,
+    "traffic": 218.8800048828125,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 720
+   },
+   {
+    "cpc": 1.3600000143051147,
+    "keyword": "korean writing practice",
+    "position": 8,
+    "traffic": 24.336000442504883,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.47999998927116394,
+    "keyword": "korean writing system",
+    "position": 4,
+    "traffic": 116.63999938964844,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 720
+   },
+   {
+    "cpc": 4.159999847412109,
+    "keyword": "learn korean language",
+    "position": 24,
+    "traffic": 2.5369999408721924,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is the korean alphabet called",
+    "position": 24,
+    "traffic": 2.5369999408721924,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 590
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "hangul alphabet in order",
+    "position": 17,
+    "traffic": 2.8320000171661377,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "hangul order",
+    "position": 21,
+    "traffic": 2.063999891281128,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0,
+    "keyword": "how to type in hangul",
+    "position": 20,
+    "traffic": 2.063999891281128,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean alphabet in order",
+    "position": 17,
+    "traffic": 4.368000030517578,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean alphabet name",
+    "position": 29,
+    "traffic": 1.1039999723434448,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean alphabet names",
+    "position": 29,
+    "traffic": 1.0080000162124634,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 2.309999942779541,
+    "keyword": "korean language learning games",
+    "position": 16,
+    "traffic": 2.8320000171661377,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.940000057220459,
+    "keyword": "korean language learning website",
+    "position": 25,
+    "traffic": 1.055999994277954,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 2.309999942779541,
+    "keyword": "korean learning games",
+    "position": 12,
+    "traffic": 4.368000030517578,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.940000057220459,
+    "keyword": "korean learning site",
+    "position": 18,
+    "traffic": 2.447999954223633,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.940000057220459,
+    "keyword": "korean learning website",
+    "position": 24,
+    "traffic": 1.1519999504089355,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean letter names",
+    "position": 30,
+    "traffic": 1.0080000162124634,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean letters name",
+    "position": 29,
+    "traffic": 1.055999994277954,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "korean letters names",
+    "position": 20,
+    "traffic": 2.687999963760376,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "name of korean alphabet",
+    "position": 25,
+    "traffic": 2.063999891281128,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "name of korean letters",
+    "position": 26,
+    "traffic": 1.2960000038146973,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "names of korean alphabet",
+    "position": 26,
+    "traffic": 1.1039999723434448,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "names of korean letters",
+    "position": 27,
+    "traffic": 1.1519999504089355,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "order of korean alphabet",
+    "position": 22,
+    "traffic": 2.063999891281128,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.0499999523162842,
+    "keyword": "south korea hangul",
+    "position": 20,
+    "traffic": 2.8320000171661377,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.0499999523162842,
+    "keyword": "south korean alphabet",
+    "position": 5,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.0499999523162842,
+    "keyword": "south korean language alphabet",
+    "position": 8,
+    "traffic": 31.631999969482425,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.07000000029802322,
+    "keyword": "south korean language hangul",
+    "position": 5,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.0499999523162842,
+    "keyword": "south korean script",
+    "position": 4,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 1.0499999523162842,
+    "keyword": "south korean writing",
+    "position": 6,
+    "traffic": 46.70399856567383,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.5699999928474426,
+    "keyword": "what is hangul in korean",
+    "position": 7,
+    "traffic": 46.70399856567383,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.5699999928474426,
+    "keyword": "what is korean alphabet",
+    "position": 5,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.5699999928474426,
+    "keyword": "what is the alphabet of korean",
+    "position": 5,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.5699999928474426,
+    "keyword": "what is the hangul alphabet",
+    "position": 6,
+    "traffic": 31.631999969482425,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.5699999928474426,
+    "keyword": "what is the korean alphabet",
+    "position": 5,
+    "traffic": 77.76000213623047,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 480
+   },
+   {
+    "cpc": 8.470000267028809,
+    "keyword": "hangul practice",
+    "position": 1,
+    "traffic": 118.55999755859376,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul write",
+    "position": 5,
+    "traffic": 37.946998596191406,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul writing",
+    "position": 3,
+    "traffic": 63.18000030517578,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul written",
+    "position": 5,
+    "traffic": 63.18000030517578,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 3.940000057220459,
+    "keyword": "how to learn hangul",
+    "position": 2,
+    "traffic": 118.55999755859376,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0.8899999856948853,
+    "keyword": "korean alphabet flashcards",
+    "position": 29,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "korean language a to z",
+    "position": 11,
+    "traffic": 9.984000205993652,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 3.8299999237060542,
+    "keyword": "learn korean free online",
+    "position": 27,
+    "traffic": 0.8970000147819519,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul 101",
+    "position": 8,
+    "traffic": 15.008000373840332,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul alphabet quizlet",
+    "position": 28,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.019999999552965164,
+    "keyword": "hangul characters",
+    "position": 4,
+    "traffic": 51.84000015258789,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 1.190000057220459,
+    "keyword": "hangul flashcards",
+    "position": 16,
+    "traffic": 2.9119999408721924,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.6600000262260437,
+    "keyword": "hangul practice worksheet",
+    "position": 16,
+    "traffic": 1.7920000553131104,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul quiz",
+    "position": 4,
+    "traffic": 21.08799934387207,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul quizzes",
+    "position": 8,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.6600000262260437,
+    "keyword": "hangul worksheet",
+    "position": 27,
+    "traffic": 0.7039999961853027,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 5.889999866485596,
+    "keyword": "how to learn korean alphabet",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 5.889999866485596,
+    "keyword": "how to learn the korean alphabet",
+    "position": 3,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 5.529999732971191,
+    "keyword": "how to read hangul",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.019999999552965164,
+    "keyword": "korean alphabet characters",
+    "position": 11,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 3.630000114440918,
+    "keyword": "korean alphabet practice sheet",
+    "position": 17,
+    "traffic": 1.7920000553131104,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean alphabet quiz",
+    "position": 3,
+    "traffic": 31.13599967956543,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean hangul quiz",
+    "position": 9,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 1.9800000190734863,
+    "keyword": "korean language writing",
+    "position": 9,
+    "traffic": 15.008000373840332,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 2.2699999809265137,
+    "keyword": "korean practice",
+    "position": 10,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean quiz hangul",
+    "position": 8,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean quiz: hangul",
+    "position": 8,
+    "traffic": 6.303999900817871,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 3.740000009536743,
+    "keyword": "learning korean language beginners",
+    "position": 24,
+    "traffic": 0.8640000224113464,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 1.9800000190734863,
+    "keyword": "write in hangul",
+    "position": 6,
+    "traffic": 31.13599967956543,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 1.9800000190734863,
+    "keyword": "writing in hangul",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letter in korean",
+    "position": 13,
+    "traffic": 8.788000106811523,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letter korean",
+    "position": 10,
+    "traffic": 6.656000137329102,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letter of korean",
+    "position": 9,
+    "traffic": 12.194000244140623,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letters korean",
+    "position": 6,
+    "traffic": 25.29800033569336,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letters of korea",
+    "position": 5,
+    "traffic": 42.119998931884766,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "alphabet letters of korean",
+    "position": 7,
+    "traffic": 25.29800033569336,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.10000000149011612,
+    "keyword": "english translation korean alphabet",
+    "position": 17,
+    "traffic": 1.5339999198913574,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul handwriting practice",
+    "position": 19,
+    "traffic": 1.3259999752044678,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean alphabet letter",
+    "position": 7,
+    "traffic": 17.134000778198242,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean alphabet letters",
+    "position": 8,
+    "traffic": 17.134000778198242,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean alphabet tutorial",
+    "position": 2,
+    "traffic": 79.04000091552734,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean characters alphabet",
+    "position": 10,
+    "traffic": 6.656000137329102,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 3.2300000190734863,
+    "keyword": "korean game online",
+    "position": 10,
+    "traffic": 5.122000217437744,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 3.2300000190734863,
+    "keyword": "korean games online",
+    "position": 13,
+    "traffic": 2.937999963760376,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean hangul tutorial",
+    "position": 3,
+    "traffic": 79.04000091552734,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean letter alphabet",
+    "position": 5,
+    "traffic": 42.119998931884766,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 3.2300000190734863,
+    "keyword": "korean online games",
+    "position": 16,
+    "traffic": 1.5339999198913574,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "korean words letters",
+    "position": 8,
+    "traffic": 12.194000244140623,
+    "trafficPercent": 0,
+    "url": "http://letslearnhangul.com/",
+    "volume": 260
+   }
+  ]
+ },
+ {
+  "kind": "indie",
+  "domain": "learnhebrewalphabet.com",
+  "total": 90,
+  "keywords": [
+   {
+    "cpc": 1.399999976158142,
+    "keyword": "hebrew alphabet pronunciation",
+    "position": 8,
+    "traffic": 85.66999816894531,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 1300
+   },
+   {
+    "cpc": 1.399999976158142,
+    "keyword": "hebrew letter pronunciation",
+    "position": 14,
+    "traffic": 25.61000061035156,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 1300
+   },
+   {
+    "cpc": 1.399999976158142,
+    "keyword": "pronounce hebrew alphabet",
+    "position": 14,
+    "traffic": 19.5,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 1300
+   },
+   {
+    "cpc": 1.399999976158142,
+    "keyword": "pronunciation of hebrew letters",
+    "position": 8,
+    "traffic": 85.66999816894531,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 1300
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letra en hebreo",
+    "position": 11,
+    "traffic": 14.184000015258787,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letra hebrea",
+    "position": 9,
+    "traffic": 33.768001556396484,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letra s en hebreo",
+    "position": 11,
+    "traffic": 14.184000015258787,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letras del hebreo",
+    "position": 11,
+    "traffic": 18.43199920654297,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letras en hebreo",
+    "position": 10,
+    "traffic": 24.336000442504883,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "letras hebreas",
+    "position": 8,
+    "traffic": 33.768001556396484,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 720
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "hebrew alphabet printable",
+    "position": 16,
+    "traffic": 2.687999963760376,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "print hebrew letters",
+    "position": 28,
+    "traffic": 1.1519999504089355,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "printable hebrew alphabet",
+    "position": 21,
+    "traffic": 1.2960000038146973,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "printable hebrew letters",
+    "position": 14,
+    "traffic": 3.5999999046325684,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 480
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "abecedario hebreo",
+    "position": 10,
+    "traffic": 13.182000160217283,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 390
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "aleph bet vowels",
+    "position": 18,
+    "traffic": 1.888000011444092,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "hebrew alphabet with vowels",
+    "position": 18,
+    "traffic": 1.7920000553131104,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 320
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "aleph bet worksheet",
+    "position": 14,
+    "traffic": 1.950000047683716,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "aleph bet worksheets",
+    "position": 11,
+    "traffic": 3.900000095367432,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew alef bet worksheets",
+    "position": 17,
+    "traffic": 1.3259999752044678,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew aleph bet worksheets",
+    "position": 17,
+    "traffic": 1.3259999752044678,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.019999999552965164,
+    "keyword": "hebrew alphabet handwriting",
+    "position": 18,
+    "traffic": 1.4559999704360962,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/handwriting/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "hebrew alphabet sounds",
+    "position": 5,
+    "traffic": 25.29800033569336,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew alphabet worksheet",
+    "position": 15,
+    "traffic": 1.5339999198913574,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew alphabet worksheets",
+    "position": 13,
+    "traffic": 2.365999937057495,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew letter worksheets",
+    "position": 15,
+    "traffic": 1.5339999198913574,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "hebrew letters and sounds",
+    "position": 8,
+    "traffic": 17.134000778198242,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "hebrew letters sounds",
+    "position": 9,
+    "traffic": 8.788000106811523,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew letters worksheet",
+    "position": 13,
+    "traffic": 2.365999937057495,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.6200000047683716,
+    "keyword": "hebrew script worksheets",
+    "position": 25,
+    "traffic": 0.5979999899864197,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 260
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "alfabeto en hebreo y español",
+    "position": 15,
+    "traffic": 1.5469999313354492,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "alfabeto hebreo a español",
+    "position": 16,
+    "traffic": 1.5469999313354492,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "alfabeto hebreo en español",
+    "position": 15,
+    "traffic": 1.9210000038146973,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "alfabeto hebreo español",
+    "position": 16,
+    "traffic": 1.274999976158142,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "alfabeto hebreo y español",
+    "position": 13,
+    "traffic": 2.549999952316284,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "hebreo alfabeto español",
+    "position": 14,
+    "traffic": 1.9210000038146973,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "letras en hebreo y su significado",
+    "position": 21,
+    "traffic": 0.8669999837875366,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 0.03999999910593033,
+    "keyword": "letras hebreas y significado",
+    "position": 20,
+    "traffic": 0.9520000219345092,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 170
+   },
+   {
+    "cpc": 4.28000020980835,
+    "keyword": "hebrew language worksheets",
+    "position": 20,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 140
+   },
+   {
+    "cpc": 4.28000020980835,
+    "keyword": "hebrew worksheet",
+    "position": 18,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 140
+   },
+   {
+    "cpc": 4.28000020980835,
+    "keyword": "hebrew worksheets",
+    "position": 16,
+    "traffic": 0.8259999752044678,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 140
+   },
+   {
+    "cpc": 0.5899999737739563,
+    "keyword": "children's hebrew alphabet",
+    "position": 8,
+    "traffic": 7.249000072479248,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "hebrew homework",
+    "position": 20,
+    "traffic": 0.4729999899864197,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 110
+   },
+   {
+    "cpc": 3.450000047683716,
+    "keyword": "how to pronounce the hebrew alphabet",
+    "position": 9,
+    "traffic": 3.7179999351501465,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 110
+   },
+   {
+    "cpc": 0.019999999552965164,
+    "keyword": "free printable hebrew alphabet chart",
+    "position": 19,
+    "traffic": 0.3869999945163727,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 90
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "hebrew consonant",
+    "position": 22,
+    "traffic": 0.3869999945163727,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 90
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "abecedario en hebreo y español",
+    "position": 14,
+    "traffic": 0.7910000085830688,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 70
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "abecedario español hebreo",
+    "position": 15,
+    "traffic": 1.0499999523162842,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 70
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "abecedario hebreo español",
+    "position": 10,
+    "traffic": 2.365999937057495,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 70
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "abecedario hebreo y español",
+    "position": 10,
+    "traffic": 1.7920000553131104,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 70
+   },
+   {
+    "cpc": 0.019999999552965164,
+    "keyword": "alphabet hébraïque",
+    "position": 19,
+    "traffic": 0.3919999897480011,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/fr/alphabet-chart/",
+    "volume": 70
+   },
+   {
+    "cpc": 3.7300000190734863,
+    "keyword": "hebrew alphabet game",
+    "position": 13,
+    "traffic": 0.7910000085830688,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 70
+   },
+   {
+    "cpc": 3.7300000190734863,
+    "keyword": "hebrew letter games",
+    "position": 18,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 70
+   },
+   {
+    "cpc": 3.7300000190734863,
+    "keyword": "hebrew letters game",
+    "position": 10,
+    "traffic": 1.0499999523162842,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "hebrew sound",
+    "position": 15,
+    "traffic": 0.7910000085830688,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "hebrew sounds",
+    "position": 20,
+    "traffic": 0.3919999897480011,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 70
+   },
+   {
+    "cpc": 1.2799999713897705,
+    "keyword": "alef bet games",
+    "position": 29,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 50
+   },
+   {
+    "cpc": 0.9800000190734864,
+    "keyword": "aleph bet writing practice",
+    "position": 20,
+    "traffic": 0.2150000035762787,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 50
+   },
+   {
+    "cpc": 0.2199999988079071,
+    "keyword": "el alfabeto en hebreo",
+    "position": 11,
+    "traffic": 1.2799999713897705,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 50
+   },
+   {
+    "cpc": 2.140000104904175,
+    "keyword": "free printable hebrew alphabet",
+    "position": 26,
+    "traffic": 0.10999999940395357,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 50
+   },
+   {
+    "cpc": 0.9800000190734864,
+    "keyword": "hebrew alphabet writing practice",
+    "position": 21,
+    "traffic": 0.2150000035762787,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/tracing/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "hebrew cursive worksheets",
+    "position": 29,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 50
+   },
+   {
+    "cpc": 12.369999885559082,
+    "keyword": "hebrew letters coloring pages",
+    "position": 18,
+    "traffic": 0.2150000035762787,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.2699999809265137,
+    "keyword": "hebrew phonetic alphabet",
+    "position": 14,
+    "traffic": 0.9850000143051147,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.340000033378601,
+    "keyword": "hebrew writing practice worksheets",
+    "position": 26,
+    "traffic": 0.10999999940395357,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.2699999809265137,
+    "keyword": "phonetic alphabet hebrew",
+    "position": 17,
+    "traffic": 0.45500001311302185,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.2699999809265137,
+    "keyword": "phonetic hebrew alphabet",
+    "position": 6,
+    "traffic": 3.2950000762939453,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.3899999856948853,
+    "keyword": "practice hebrew alphabet",
+    "position": 14,
+    "traffic": 0.5649999976158142,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/tracing/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "sounds in hebrew",
+    "position": 15,
+    "traffic": 0.5649999976158142,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/sounds/",
+    "volume": 50
+   },
+   {
+    "cpc": 1.309999942779541,
+    "keyword": "alef beis worksheets",
+    "position": 9,
+    "traffic": 0.7879999876022339,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 40
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "alfabeto hebreo letras",
+    "position": 6,
+    "traffic": 2.635999917984009,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "cuantas letras tiene el alfabeto hebreo",
+    "position": 5,
+    "traffic": 6.480000019073486,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "dalet cursive",
+    "position": 25,
+    "traffic": 0.1080000028014183,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/dalet/",
+    "volume": 40
+   },
+   {
+    "cpc": 0.4900000095367432,
+    "keyword": "hebrew language learning games",
+    "position": 25,
+    "traffic": 0.09200000017881392,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 40
+   },
+   {
+    "cpc": 0.4900000095367432,
+    "keyword": "hebrew learning games",
+    "position": 22,
+    "traffic": 0.1080000028014183,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 40
+   },
+   {
+    "cpc": 0.4900000095367432,
+    "keyword": "learn hebrew games",
+    "position": 26,
+    "traffic": 0.09200000017881392,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "primera letra del alfabeto hebreo",
+    "position": 21,
+    "traffic": 0.2039999961853027,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "alef bet worksheets",
+    "position": 12,
+    "traffic": 0.33899998664855957,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "aleph bet printable pdf free download",
+    "position": 30,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/bet/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "alephbeis app",
+    "position": 23,
+    "traffic": 0.07199999690055847,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 30
+   },
+   {
+    "cpc": 0.029999999329447743,
+    "keyword": "el abecedario hebreo",
+    "position": 13,
+    "traffic": 0.7680000066757202,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/alphabet-chart/",
+    "volume": 30
+   },
+   {
+    "cpc": 1.8899999856948853,
+    "keyword": "hebrew alphabet app",
+    "position": 4,
+    "traffic": 2.919000148773194,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 30
+   },
+   {
+    "cpc": 6.119999885559082,
+    "keyword": "hebrew alphabet learning games",
+    "position": 14,
+    "traffic": 0.1770000010728836,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 30
+   },
+   {
+    "cpc": 0.07999999821186066,
+    "keyword": "hebrew alphabet print and script",
+    "position": 28,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 30
+   },
+   {
+    "cpc": 16.84000015258789,
+    "keyword": "hebrew letter quiz",
+    "position": 21,
+    "traffic": 0.07199999690055847,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 30
+   },
+   {
+    "cpc": 0.25,
+    "keyword": "hebrew letters to print",
+    "position": 29,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "resh letra hebrea",
+    "position": 16,
+    "traffic": 0.22499999403953552,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/es/worksheets/resh/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "free printable hebrew worksheets",
+    "position": 14,
+    "traffic": 0.15000000596046448,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/worksheets/first-grade/",
+    "volume": 20
+   },
+   {
+    "cpc": 0,
+    "keyword": "wordwall hebrew letters",
+    "position": 25,
+    "traffic": 0.041999999433755875,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/tracing/",
+    "volume": 20
+   },
+   {
+    "cpc": 0,
+    "keyword": "write it hebrew app",
+    "position": 7,
+    "traffic": 0.9380000233650208,
+    "trafficPercent": 0,
+    "url": "https://learnhebrewalphabet.com/",
+    "volume": 20
+   }
+  ]
+ },
+ {
+  "kind": "indie",
+  "domain": "lingrow.io",
+  "total": 608,
+  "keywords": [
+   {
+    "cpc": 1.5199999809265137,
+    "keyword": "english to korean converter",
+    "position": 17,
+    "traffic": 308.54998779296875,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 60500
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "korean keyboard",
+    "position": 11,
+    "traffic": 533.8699951171875,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 27100
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "korean language keyboard",
+    "position": 18,
+    "traffic": 159.88999938964844,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 27100
+   },
+   {
+    "cpc": 0.25999999046325684,
+    "keyword": "korean word keyboard",
+    "position": 11,
+    "traffic": 533.8699951171875,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 27100
+   },
+   {
+    "cpc": 2.450000047683716,
+    "keyword": "korean learning apps",
+    "position": 22,
+    "traffic": 32.66999816894531,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 9900
+   },
+   {
+    "cpc": 5.269999980926514,
+    "keyword": "jumpspeak reviews",
+    "position": 29,
+    "traffic": 17.010000228881836,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 8100
+   },
+   {
+    "cpc": 4.03000020980835,
+    "keyword": "pingo",
+    "position": 28,
+    "traffic": 17.010000228881836,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 8100
+   },
+   {
+    "cpc": 0.27000001072883606,
+    "keyword": "hangul chart",
+    "position": 13,
+    "traffic": 61.02000045776367,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/hangul-chart",
+    "volume": 5400
+   },
+   {
+    "cpc": 1.8899999856948853,
+    "keyword": "lingotok",
+    "position": 13,
+    "traffic": 40.040000915527344,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/lingotok-review",
+    "volume": 4400
+   },
+   {
+    "cpc": 1.2300000190734863,
+    "keyword": "dictionary korea",
+    "position": 24,
+    "traffic": 6.670000076293945,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary",
+    "volume": 2900
+   },
+   {
+    "cpc": 1.2300000190734863,
+    "keyword": "korean dictionary",
+    "position": 14,
+    "traffic": 21.75,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary",
+    "volume": 2900
+   },
+   {
+    "cpc": 0,
+    "keyword": "name in korean generator",
+    "position": 19,
+    "traffic": 12.470000267028809,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 2900
+   },
+   {
+    "cpc": 3.660000085830689,
+    "keyword": "good apps to learn korean",
+    "position": 19,
+    "traffic": 14.15999984741211,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 2400
+   },
+   {
+    "cpc": 3.740000009536743,
+    "keyword": "good chinese learning apps",
+    "position": 30,
+    "traffic": 5.039999961853027,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-chinese",
+    "volume": 2400
+   },
+   {
+    "cpc": 3.660000085830689,
+    "keyword": "good korean learning apps",
+    "position": 18,
+    "traffic": 13.4399995803833,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 2400
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean typing",
+    "position": 29,
+    "traffic": 5.039999961853027,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 2400
+   },
+   {
+    "cpc": 0,
+    "keyword": "type korean words",
+    "position": 13,
+    "traffic": 27.1200008392334,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 2400
+   },
+   {
+    "cpc": 0,
+    "keyword": "typing in hangul",
+    "position": 19,
+    "traffic": 10.31999969482422,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 2400
+   },
+   {
+    "cpc": 0,
+    "keyword": "typing korean words",
+    "position": 16,
+    "traffic": 18,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 2400
+   },
+   {
+    "cpc": 0.8199999928474426,
+    "keyword": "my name in korean",
+    "position": 9,
+    "traffic": 37.43000030517578,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 1900
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "hangul keyboard",
+    "position": 13,
+    "traffic": 11.300000190734863,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "hangul on keyboard",
+    "position": 22,
+    "traffic": 4.300000190734863,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "keyboard hangul",
+    "position": 10,
+    "traffic": 33.79999923706055,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean alphabet for keyboard",
+    "position": 11,
+    "traffic": 25.600000381469727,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean alphabet in keyboard",
+    "position": 13,
+    "traffic": 19.700000762939453,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean alphabet keyboard",
+    "position": 10,
+    "traffic": 19.700000762939453,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean alphabet on keyboard",
+    "position": 14,
+    "traffic": 15,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean letter keyboard",
+    "position": 12,
+    "traffic": 15,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean letters for keyboard",
+    "position": 19,
+    "traffic": 7.5,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean letters keyboard",
+    "position": 13,
+    "traffic": 15,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.6299999952316284,
+    "keyword": "korean to english dictionary",
+    "position": 26,
+    "traffic": 2.200000047683716,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary",
+    "volume": 1000
+   },
+   {
+    "cpc": 0.3700000047683716,
+    "keyword": "korean writing keyboard",
+    "position": 19,
+    "traffic": 5.599999904632568,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 1000
+   },
+   {
+    "cpc": 3.700000047683716,
+    "keyword": "how much does jumpspeak cost",
+    "position": 24,
+    "traffic": 2.111999988555908,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 880
+   },
+   {
+    "cpc": 2.559999942779541,
+    "keyword": "is pingo ai free",
+    "position": 9,
+    "traffic": 22.527999877929688,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "keyboard korean online",
+    "position": 4,
+    "traffic": 57.992000579833984,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard for iphone",
+    "position": 30,
+    "traffic": 2.0239999294281006,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard iphone",
+    "position": 29,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard online",
+    "position": 7,
+    "traffic": 29.743999481201172,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean language test sample",
+    "position": 19,
+    "traffic": 4.48799991607666,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean online keyboard",
+    "position": 6,
+    "traffic": 29.743999481201172,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 3.930000066757202,
+    "keyword": "korean test",
+    "position": 17,
+    "traffic": 4.927999973297119,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 880
+   },
+   {
+    "cpc": 7.150000095367432,
+    "keyword": "korean verb conjugator",
+    "position": 18,
+    "traffic": 4.48799991607666,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/verb-conjugator",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "online keyboard korean",
+    "position": 6,
+    "traffic": 41.27199935913086,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 0,
+    "keyword": "online korean keyboard",
+    "position": 7,
+    "traffic": 22.527999877929688,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 880
+   },
+   {
+    "cpc": 5.420000076293945,
+    "keyword": "jump speak reviews",
+    "position": 27,
+    "traffic": 1.656000018119812,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 720
+   },
+   {
+    "cpc": 0,
+    "keyword": "english korean name",
+    "position": 5,
+    "traffic": 57.40700149536133,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "english korean names",
+    "position": 9,
+    "traffic": 15.104000091552734,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "english name for korean",
+    "position": 4,
+    "traffic": 95.58000183105467,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 1.9700000286102295,
+    "keyword": "english to hangul",
+    "position": 17,
+    "traffic": 3.303999900817871,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 3.819999933242798,
+    "keyword": "is jumpspeak legit",
+    "position": 26,
+    "traffic": 1.4160000085830688,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "kimberly in korean",
+    "position": 30,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korea english name",
+    "position": 10,
+    "traffic": 11.623000144958496,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean and english names",
+    "position": 13,
+    "traffic": 6.666999816894531,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean english name",
+    "position": 8,
+    "traffic": 19.941999435424805,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean english names",
+    "position": 10,
+    "traffic": 11.623000144958496,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 5.849999904632568,
+    "keyword": "korean language name translation",
+    "position": 24,
+    "traffic": 1.4160000085830688,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean name and english name",
+    "position": 22,
+    "traffic": 1.5929999351501465,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean name english",
+    "position": 5,
+    "traffic": 57.40700149536133,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean name in english",
+    "position": 3,
+    "traffic": 95.58000183105467,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean names english",
+    "position": 11,
+    "traffic": 8.850000381469727,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean names in english",
+    "position": 7,
+    "traffic": 38.88100051879883,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean to english name",
+    "position": 6,
+    "traffic": 27.67099952697754,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean to english names",
+    "position": 8,
+    "traffic": 19.941999435424805,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 0.33000001311302185,
+    "keyword": "level korean",
+    "position": 24,
+    "traffic": 1.5929999351501465,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 590
+   },
+   {
+    "cpc": 2.490000009536743,
+    "keyword": "speak vs duolingo",
+    "position": 15,
+    "traffic": 6.666999816894531,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/duolingo-vs-speak-vs-lingrow",
+    "volume": 590
+   },
+   {
+    "cpc": 5.849999904632568,
+    "keyword": "translate name in korea",
+    "position": 9,
+    "traffic": 15.104000091552734,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 590
+   },
+   {
+    "cpc": 2.4800000190734863,
+    "keyword": "apps to learn korean",
+    "position": 27,
+    "traffic": 1.055999994277954,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 480
+   },
+   {
+    "cpc": 2.5199999809265137,
+    "keyword": "english to korean writing",
+    "position": 18,
+    "traffic": 2.447999954223633,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 480
+   },
+   {
+    "cpc": 4.130000114440918,
+    "keyword": "is jumpspeak worth it",
+    "position": 18,
+    "traffic": 2.8320000171661377,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 480
+   },
+   {
+    "cpc": 0,
+    "keyword": "john in korean language",
+    "position": 30,
+    "traffic": 1.0080000162124634,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 480
+   },
+   {
+    "cpc": 3.700000047683716,
+    "keyword": "langua reviews",
+    "position": 19,
+    "traffic": 2.687999963760376,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/langua-review",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "name in korean alphabet",
+    "position": 16,
+    "traffic": 2.8320000171661377,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 480
+   },
+   {
+    "cpc": 0.38999998569488525,
+    "keyword": "names in korean letters",
+    "position": 19,
+    "traffic": 2.447999954223633,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 480
+   },
+   {
+    "cpc": 0,
+    "keyword": "america in korean",
+    "position": 30,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary/%EB%AF%B8%EA%B5%AD",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "copy and paste korean letters",
+    "position": 9,
+    "traffic": 9.984000205993652,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "copy paste korean letters",
+    "position": 9,
+    "traffic": 7.683000087738037,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul writer",
+    "position": 9,
+    "traffic": 9.984000205993652,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean alphabet copy and paste",
+    "position": 3,
+    "traffic": 37.946998596191406,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean alphabet copy paste",
+    "position": 3,
+    "traffic": 37.946998596191406,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard for android",
+    "position": 25,
+    "traffic": 0.9359999895095824,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean letter copy and paste",
+    "position": 4,
+    "traffic": 25.701000213623047,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean letter copy paste",
+    "position": 4,
+    "traffic": 25.701000213623047,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean letters copy and paste",
+    "position": 4,
+    "traffic": 25.701000213623047,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean letters copy paste",
+    "position": 4,
+    "traffic": 25.701000213623047,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 390
+   },
+   {
+    "cpc": 1.9700000286102295,
+    "keyword": "korean level test",
+    "position": 15,
+    "traffic": 2.924999952316284,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 390
+   },
+   {
+    "cpc": 6.880000114440918,
+    "keyword": "korean topik practice test",
+    "position": 7,
+    "traffic": 9.984000205993652,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "pingo ai cost",
+    "position": 9,
+    "traffic": 13.182000160217283,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 390
+   },
+   {
+    "cpc": 6.880000114440918,
+    "keyword": "topik practice test",
+    "position": 9,
+    "traffic": 5.849999904632568,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 390
+   },
+   {
+    "cpc": 3.559999942779541,
+    "keyword": "what is the best app to learn japanese",
+    "position": 22,
+    "traffic": 1.6770000457763672,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-japanese",
+    "volume": 390
+   },
+   {
+    "cpc": 1.7400000095367432,
+    "keyword": "duolingo vs speak",
+    "position": 8,
+    "traffic": 15.008000373840332,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/duolingo-vs-speak-vs-lingrow",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "hangul to romanized",
+    "position": 30,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/romanization-converter",
+    "volume": 320
+   },
+   {
+    "cpc": 3.25,
+    "keyword": "how to write my name in korean",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 320
+   },
+   {
+    "cpc": 5.480000019073486,
+    "keyword": "japanese language learning software",
+    "position": 30,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-japanese",
+    "volume": 320
+   },
+   {
+    "cpc": 3.610000133514404,
+    "keyword": "jumpspeak pricing",
+    "position": 19,
+    "traffic": 1.375999927520752,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard lexilogos",
+    "position": 10,
+    "traffic": 4.800000190734863,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean language name",
+    "position": 15,
+    "traffic": 3.615999937057495,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "lexilogos korean keyboard",
+    "position": 15,
+    "traffic": 1.888000011444092,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 320
+   },
+   {
+    "cpc": 2.869999885559082,
+    "keyword": "lingotok app",
+    "position": 15,
+    "traffic": 2.4000000953674316,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/lingotok-review",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "romanized to hangul",
+    "position": 18,
+    "traffic": 1.375999927520752,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/romanization-converter",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "translate korean name to english",
+    "position": 25,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is pingo",
+    "position": 20,
+    "traffic": 1.375999927520752,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 320
+   },
+   {
+    "cpc": 1.9800000190734863,
+    "keyword": "write in hangul",
+    "position": 21,
+    "traffic": 1.375999927520752,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "agassi in korean",
+    "position": 17,
+    "traffic": 1.5339999198913574,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary/%EC%95%84%EA%B0%80%EC%94%A8",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "chunjiin keyboard",
+    "position": 29,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 260
+   },
+   {
+    "cpc": 5.449999809265137,
+    "keyword": "is jumpspeak free",
+    "position": 20,
+    "traffic": 1.118000030517578,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 260
+   },
+   {
+    "cpc": 2.9200000762939453,
+    "keyword": "is jumpspeak good",
+    "position": 14,
+    "traffic": 3.900000095367432,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 260
+   },
+   {
+    "cpc": 0.4000000059604645,
+    "keyword": "korean english keyboard",
+    "position": 23,
+    "traffic": 1.4559999704360962,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 260
+   },
+   {
+    "cpc": 0.3799999952316284,
+    "keyword": "korean typewriter",
+    "position": 10,
+    "traffic": 5.122000217437744,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "branah keyboard korean",
+    "position": 13,
+    "traffic": 1.5750000476837158,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "branah korean keyboard",
+    "position": 14,
+    "traffic": 1.5750000476837158,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "definition in korean",
+    "position": 27,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary",
+    "volume": 210
+   },
+   {
+    "cpc": 0.28999999165534973,
+    "keyword": "english to korean keyboard",
+    "position": 18,
+    "traffic": 1.0709999799728394,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 2.740000009536743,
+    "keyword": "free chinese learning app",
+    "position": 28,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-chinese",
+    "volume": 210
+   },
+   {
+    "cpc": 1.350000023841858,
+    "keyword": "is speak better than duolingo",
+    "position": 6,
+    "traffic": 20.433000564575195,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/duolingo-vs-speak-vs-lingrow",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean definitions",
+    "position": 25,
+    "traffic": 0.4830000102519989,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean key",
+    "position": 9,
+    "traffic": 7.0980000495910645,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean keyboard branah",
+    "position": 13,
+    "traffic": 1.9110000133514404,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 4.800000190734863,
+    "keyword": "korean keyboard translate",
+    "position": 16,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean level 1 test",
+    "position": 16,
+    "traffic": 1.1759999990463257,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 210
+   },
+   {
+    "cpc": 3.2799999713897705,
+    "keyword": "korean proficiency test",
+    "position": 26,
+    "traffic": 0.4620000123977661,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean romanization converter",
+    "position": 26,
+    "traffic": 0.4620000123977661,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/romanization-converter",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean test level 1",
+    "position": 20,
+    "traffic": 0.902999997138977,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/level-test",
+    "volume": 210
+   },
+   {
+    "cpc": 2.5199999809265137,
+    "keyword": "languatalk reviews",
+    "position": 18,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/langua-review",
+    "volume": 210
+   },
+   {
+    "cpc": 2.5999999046325684,
+    "keyword": "mandarin chinese language learning app",
+    "position": 18,
+    "traffic": 1.1759999990463257,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-chinese",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "michael in korean",
+    "position": 17,
+    "traffic": 1.1759999990463257,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "pingo ai reddit",
+    "position": 18,
+    "traffic": 1.1759999990463257,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 210
+   },
+   {
+    "cpc": 4.970000267028809,
+    "keyword": "topik 1",
+    "position": 6,
+    "traffic": 20.433000564575195,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "topik exam questions",
+    "position": 21,
+    "traffic": 0.902999997138977,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 210
+   },
+   {
+    "cpc": 1.0700000524520874,
+    "keyword": "translate to hangul",
+    "position": 26,
+    "traffic": 0.4620000123977661,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 210
+   },
+   {
+    "cpc": 3.5299999713897705,
+    "keyword": "what is the best app to learn korean",
+    "position": 17,
+    "traffic": 1.5750000476837158,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "agashi in korean",
+    "position": 25,
+    "traffic": 0.3910000026226044,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary/%EC%95%84%EA%B0%80%EC%94%A8",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "branah korean",
+    "position": 11,
+    "traffic": 1.9210000038146973,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 170
+   },
+   {
+    "cpc": 5.050000190734863,
+    "keyword": "convert name",
+    "position": 27,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 3.1700000762939453,
+    "keyword": "cost of jumpspeak",
+    "position": 23,
+    "traffic": 0.4079999923706054,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/jumpspeak-review",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "english to korean name",
+    "position": 8,
+    "traffic": 5.745999813079834,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "how much is pingo ai",
+    "position": 10,
+    "traffic": 3.3489999771118164,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "how to write korean in keyboard",
+    "position": 29,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/keyboard",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "is lingotok free",
+    "position": 7,
+    "traffic": 7.973000049591064,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/lingotok-review",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "is pingo ai worth it",
+    "position": 8,
+    "traffic": 11.20300006866455,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/pingo-ai-review",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "isabelle in korean",
+    "position": 25,
+    "traffic": 0.4079999923706054,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "james in korean",
+    "position": 30,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean agashi",
+    "position": 24,
+    "traffic": 0.4079999923706054,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary/%EC%95%84%EA%B0%80%EC%94%A8",
+    "volume": 170
+   },
+   {
+    "cpc": 4.349999904632568,
+    "keyword": "korean learning software",
+    "position": 27,
+    "traffic": 0.3910000026226044,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/blog/best-apps-to-learn-korean",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "korean word for panda",
+    "position": 25,
+    "traffic": 0.3910000026226044,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/dictionary/%ED%8C%90%EB%8B%A4",
+    "volume": 170
+   },
+   {
+    "cpc": 1.059999942779541,
+    "keyword": "my name in korean converter",
+    "position": 4,
+    "traffic": 11.20300006866455,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 1.059999942779541,
+    "keyword": "my name translate in korean",
+    "position": 20,
+    "traffic": 0.7310000061988831,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 1.059999942779541,
+    "keyword": "my name translated in korean",
+    "position": 8,
+    "traffic": 5.745999813079834,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "topik questions",
+    "position": 29,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "topik test questions",
+    "position": 24,
+    "traffic": 0.4079999923706054,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/topik-1-mock-test",
+    "volume": 170
+   },
+   {
+    "cpc": 1.059999942779541,
+    "keyword": "translate my name in korean",
+    "position": 17,
+    "traffic": 0.9520000219345092,
+    "trafficPercent": 0,
+    "url": "https://lingrow.io/tools/korean/name-converter",
+    "volume": 170
+   }
+  ]
+ },
+ {
+  "kind": "indie",
+  "domain": "thesponge.app",
+  "total": 2,
+  "keywords": [
+   {
+    "cpc": 0,
+    "keyword": "sponge ai",
+    "position": 22,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://thesponge.app/",
+    "volume": 140
+   },
+   {
+    "cpc": 2.6600000858306885,
+    "keyword": "sponge learning",
+    "position": 23,
+    "traffic": 0.13500000536441803,
+    "trafficPercent": 0,
+    "url": "https://thesponge.app/",
+    "volume": 50
+   }
+  ]
+ },
+ {
+  "kind": "indie",
+  "domain": "memokat.com",
+  "total": 0,
+  "keywords": []
+ },
+ {
+  "kind": "agency",
+  "domain": "mindinventory.com",
+  "total": 70,
+  "keywords": [
+   {
+    "cpc": 6.340000152587891,
+    "keyword": "education and software",
+    "position": 47,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/education-software-development/",
+    "volume": 720
+   },
+   {
+    "cpc": 0,
+    "keyword": "state of ml",
+    "position": 38,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/machine-learning-statistics/",
+    "volume": 720
+   },
+   {
+    "cpc": 9.68000030517578,
+    "keyword": "applications of ai in education",
+    "position": 18,
+    "traffic": 1.7920000553131104,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 320
+   },
+   {
+    "cpc": 9.68000030517578,
+    "keyword": "applications of artificial intelligence in education",
+    "position": 41,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 320
+   },
+   {
+    "cpc": 7.860000133514404,
+    "keyword": "machine learning development companies",
+    "position": 43,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 320
+   },
+   {
+    "cpc": 7.860000133514404,
+    "keyword": "machine learning development company",
+    "position": 46,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning trends 2024",
+    "position": 31,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/machine-learning-statistics/",
+    "volume": 320
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development companies",
+    "position": 30,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development company",
+    "position": 26,
+    "traffic": 0.5720000267028809,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "educational app development companies",
+    "position": 31,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "educational app development company",
+    "position": 25,
+    "traffic": 0.5979999899864197,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 260
+   },
+   {
+    "cpc": 111.31999969482422,
+    "keyword": "education software development",
+    "position": 36,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/education-software-development/",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development services",
+    "position": 41,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/educational-software-development/",
+    "volume": 210
+   },
+   {
+    "cpc": 111.31999969482422,
+    "keyword": "educational software development",
+    "position": 38,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/education-software-development/",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational software development services",
+    "position": 38,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/educational-software-development/",
+    "volume": 210
+   },
+   {
+    "cpc": 3.700000047683716,
+    "keyword": "how is ai used in education",
+    "position": 55,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is educational app",
+    "position": 43,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning app development services",
+    "position": 63,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning app development services",
+    "position": 64,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning app development services",
+    "position": 51,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 170
+   },
+   {
+    "cpc": 6.429999828338623,
+    "keyword": "machine learning developments",
+    "position": 37,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/machine-learning-statistics/",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning updates",
+    "position": 42,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/machine-learning-statistics/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "ml development service",
+    "position": 42,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "ml development services",
+    "position": 31,
+    "traffic": 0.27636000514030457,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "ml enterprise",
+    "position": 28,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "creating an educational app",
+    "position": 35,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "creating educational apps",
+    "position": 38,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning app development company",
+    "position": 48,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app development",
+    "position": 18,
+    "traffic": 0.6159999966621399,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "education application development",
+    "position": 22,
+    "traffic": 0.296999990940094,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational application development",
+    "position": 39,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning app development company",
+    "position": 49,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 110
+   },
+   {
+    "cpc": 2.6500000953674316,
+    "keyword": "unique app ideas for students",
+    "position": 26,
+    "traffic": 0.2419999986886978,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-ideas/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is an educational app",
+    "position": 43,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "app topics",
+    "position": 36,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-ideas/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "cloud computing for higher education",
+    "position": 97,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/cloud-computing-in-education-university/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "education technology software development",
+    "position": 44,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/education-software-development/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development services",
+    "position": 43,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "apps ideas for students",
+    "position": 39,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-ideas/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app developers",
+    "position": 20,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app developers",
+    "position": 15,
+    "traffic": 0.5249999761581421,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.38999938964844,
+    "keyword": "hire machine learning developers",
+    "position": 24,
+    "traffic": 0.1679999977350235,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/hire-machine-learning-developers/",
+    "volume": 70
+   },
+   {
+    "cpc": 44.7400016784668,
+    "keyword": "hire ml developers",
+    "position": 31,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/hire-machine-learning-developers/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to build an educational app",
+    "position": 29,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to create an educational app",
+    "position": 24,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to make education app",
+    "position": 29,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to make educational app",
+    "position": 30,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to make educational apps",
+    "position": 34,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 70
+   },
+   {
+    "cpc": 8.369999885559082,
+    "keyword": "ml dev",
+    "position": 73,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software solutions development",
+    "position": 29,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/education-software-development/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "examples of ai in education",
+    "position": 26,
+    "traffic": 0.10999999940395357,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "hire machine learning developer",
+    "position": 38,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/hire-machine-learning-developers/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning development firm",
+    "position": 50,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "ml model development services",
+    "position": 37,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech app development services",
+    "position": 10,
+    "traffic": 0.7879999876022339,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/educational-software-development/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app development cost",
+    "position": 82,
+    "traffic": 0.08399999886751175,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "education mobile app development",
+    "position": 79,
+    "traffic": 0.08399999886751175,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development cost",
+    "position": 52,
+    "traffic": 0.08399999886751175,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/educational-app-development-guide/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "hire ai ml developers",
+    "position": 19,
+    "traffic": 0.2039999961853027,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/hire-machine-learning-developers/",
+    "volume": 40
+   },
+   {
+    "cpc": 13.550000190734863,
+    "keyword": "ml developers",
+    "position": 72,
+    "traffic": 0.08399999886751175,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/machine-learning-development-services/",
+    "volume": 40
+   },
+   {
+    "cpc": 3.2200000286102295,
+    "keyword": "ai in the classroom examples",
+    "position": 32,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai use cases in education",
+    "position": 39,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/ai-in-education-use-cases-and-real-life-examples/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "app maker for education",
+    "position": 57,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 30
+   },
+   {
+    "cpc": 17.709999084472656,
+    "keyword": "cloud computing for universities",
+    "position": 86,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/cloud-computing-in-education-university/",
+    "volume": 30
+   },
+   {
+    "cpc": 17.709999084472656,
+    "keyword": "cloud computing in universities",
+    "position": 87,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/cloud-computing-in-education-university/",
+    "volume": 30
+   },
+   {
+    "cpc": 17.709999084472656,
+    "keyword": "cloud computing in university",
+    "position": 92,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/cloud-computing-in-education-university/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning mobile app development",
+    "position": 90,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning mobile app development",
+    "position": 84,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app builder",
+    "position": 54,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/education-app-development/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning market",
+    "position": 25,
+    "traffic": 0.0689999982714653,
+    "trafficPercent": 0,
+    "url": "https://www.mindinventory.com/blog/machine-learning-statistics/",
+    "volume": 30
+   }
+  ]
+ },
+ {
+  "kind": "agency",
+  "domain": "citrusbug.com",
+  "total": 46,
+  "keywords": [
+   {
+    "cpc": 0,
+    "keyword": "ai powered educational apps",
+    "position": 33,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 720
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai powered learning app",
+    "position": 41,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai powered learning apps",
+    "position": 54,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai-powered learning app",
+    "position": 38,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai-powered learning apps",
+    "position": 52,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development companies",
+    "position": 35,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development company",
+    "position": 60,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational software development companies",
+    "position": 38,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning software development",
+    "position": 50,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning software development companies",
+    "position": 45,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning software development company",
+    "position": 42,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning software development",
+    "position": 58,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning software development company",
+    "position": 43,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development companies",
+    "position": 18,
+    "traffic": 1.3259999752044678,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development company",
+    "position": 20,
+    "traffic": 1.118000030517578,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "educational app development companies",
+    "position": 28,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/education-app-development-companies-in-usa/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning software development company",
+    "position": 33,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning software development services",
+    "position": 57,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning software development services",
+    "position": 43,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 210
+   },
+   {
+    "cpc": 3.4600000381469727,
+    "keyword": "tech trends in education",
+    "position": 88,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/edtech-trends/",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "latest technology education",
+    "position": 84,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/edtech-trends/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "neural net vs machine learning",
+    "position": 42,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-vs-neural-networks/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "neural network vs machine learning",
+    "position": 19,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-vs-neural-networks/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "neural networks vs machine learning",
+    "position": 40,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-vs-neural-networks/",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app development",
+    "position": 71,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/education-app-development-services/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "e learning software company",
+    "position": 36,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development services",
+    "position": 48,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/education-app-development-services/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning software companies",
+    "position": 30,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning software company",
+    "position": 40,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech trend",
+    "position": 69,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/edtech-trends/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech trends",
+    "position": 72,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/edtech-trends/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app developers",
+    "position": 34,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/top-education-app-development-companies/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app developers",
+    "position": 50,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/top-education-app-development-companies/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "why is python used for ai",
+    "position": 84,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/python-for-ai-and-machine-learning/",
+    "volume": 70
+   },
+   {
+    "cpc": 6.929999828338623,
+    "keyword": "ai education apps",
+    "position": 55,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "elearning software solutions",
+    "position": 50,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/elearning-software-development-company/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning for inventory management",
+    "position": 53,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-in-inventory-management/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning in inventory management",
+    "position": 42,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-in-inventory-management/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning inventory management",
+    "position": 51,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-in-inventory-management/",
+    "volume": 50
+   },
+   {
+    "cpc": 6.619999885559082,
+    "keyword": "ai apps for education",
+    "position": 47,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 30
+   },
+   {
+    "cpc": 12.829999923706056,
+    "keyword": "education ai app",
+    "position": 36,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 30
+   },
+   {
+    "cpc": 12.829999923706056,
+    "keyword": "education ai apps",
+    "position": 62,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 30
+   },
+   {
+    "cpc": 12.829999923706056,
+    "keyword": "educational ai apps",
+    "position": 60,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/ai-education-apps-for-students/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning use cases in manufacturing",
+    "position": 29,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/machine-learning-in-manufacturing/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "why does ai use python",
+    "position": 75,
+    "traffic": 0.041999999433755875,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/python-for-ai-and-machine-learning/",
+    "volume": 20
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech update",
+    "position": 86,
+    "traffic": 0.020999999716877937,
+    "trafficPercent": 0,
+    "url": "https://citrusbug.com/blog/edtech-trends/",
+    "volume": 10
+   }
+  ]
+ },
+ {
+  "kind": "agency",
+  "domain": "geniusee.com",
+  "total": 168,
+  "keywords": [
+   {
+    "cpc": 9.710000038146973,
+    "keyword": "ed tech",
+    "position": 28,
+    "traffic": 26.6200008392334,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 12100
+   },
+   {
+    "cpc": 9.710000038146973,
+    "keyword": "educational technology",
+    "position": 55,
+    "traffic": 25.40999984741211,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 12100
+   },
+   {
+    "cpc": 8.180000305175781,
+    "keyword": "edtech",
+    "position": 66,
+    "traffic": 20.790000915527344,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 9900
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai powered education platform",
+    "position": 27,
+    "traffic": 13.859999656677246,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/ai-in-edtech",
+    "volume": 6600
+   },
+   {
+    "cpc": 12.989999771118164,
+    "keyword": "gamification in education",
+    "position": 35,
+    "traffic": 3.990000009536743,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/gamification-in-education",
+    "volume": 1900
+   },
+   {
+    "cpc": 12.989999771118164,
+    "keyword": "gamified education",
+    "position": 30,
+    "traffic": 3.990000009536743,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/gamification-in-education",
+    "volume": 1900
+   },
+   {
+    "cpc": 12.989999771118164,
+    "keyword": "gamifying education",
+    "position": 39,
+    "traffic": 3.990000009536743,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/gamification-in-education",
+    "volume": 1900
+   },
+   {
+    "cpc": 26.440000534057617,
+    "keyword": "personalized learning platforms",
+    "position": 27,
+    "traffic": 4.179999828338623,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 1900
+   },
+   {
+    "cpc": 11.770000457763672,
+    "keyword": "tech ed",
+    "position": 81,
+    "traffic": 3.3600001335144043,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 1600
+   },
+   {
+    "cpc": 0,
+    "keyword": "digital education company",
+    "position": 58,
+    "traffic": 2.7300000190734863,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 1300
+   },
+   {
+    "cpc": 20.65999984741211,
+    "keyword": "what are educational technologies",
+    "position": 48,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 880
+   },
+   {
+    "cpc": 2.5199999809265137,
+    "keyword": "what is edtech",
+    "position": 31,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 880
+   },
+   {
+    "cpc": 20.65999984741211,
+    "keyword": "what is educational technology",
+    "position": 41,
+    "traffic": 1.8480000495910645,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 880
+   },
+   {
+    "cpc": 6.340000152587891,
+    "keyword": "education and software",
+    "position": 38,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 720
+   },
+   {
+    "cpc": 0,
+    "keyword": "personalized learning education",
+    "position": 29,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 720
+   },
+   {
+    "cpc": 50.79999923706055,
+    "keyword": "tech education",
+    "position": 63,
+    "traffic": 1.5120000839233398,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 720
+   },
+   {
+    "cpc": 12.029999732971191,
+    "keyword": "education information technology",
+    "position": 32,
+    "traffic": 1.2389999628067017,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 590
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is an ed tech",
+    "position": 36,
+    "traffic": 1.0080000162124634,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 480
+   },
+   {
+    "cpc": 0,
+    "keyword": "define education technology",
+    "position": 38,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "define educational technology",
+    "position": 38,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "define technology education",
+    "position": 46,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "define technology of education",
+    "position": 44,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "definition educational technology",
+    "position": 31,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "definition of education technology",
+    "position": 28,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "definition of educational technology",
+    "position": 34,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "definition of technology education",
+    "position": 43,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "definitions of educational technology",
+    "position": 36,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "ed tech definition",
+    "position": 28,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "ed tech meaning",
+    "position": 24,
+    "traffic": 0.9359999895095824,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech definition",
+    "position": 22,
+    "traffic": 1.2869999408721924,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "education technology definition",
+    "position": 31,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "education technology meaning",
+    "position": 29,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "education technology means",
+    "position": 21,
+    "traffic": 1.2869999408721924,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational technology defined",
+    "position": 36,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational technology definition",
+    "position": 32,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational technology definitions",
+    "position": 33,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational technology meaning",
+    "position": 22,
+    "traffic": 1.0529999732971191,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "meaning of education technology",
+    "position": 25,
+    "traffic": 0.8970000147819519,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "meaning of educational technology",
+    "position": 25,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology definition in education",
+    "position": 42,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology education definition",
+    "position": 44,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology in education definition",
+    "position": 43,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology in education meaning",
+    "position": 38,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology of education definition",
+    "position": 36,
+    "traffic": 0.8190000057220459,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 390
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development companies",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development company",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational software development companies",
+    "position": 2,
+    "traffic": 97.27999877929688,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 320
+   },
+   {
+    "cpc": 0,
+    "keyword": "programming natural language",
+    "position": 28,
+    "traffic": 0.671999990940094,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/natural-language-processing",
+    "volume": 320
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development companies",
+    "position": 52,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "education app development company",
+    "position": 60,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "educational app development companies",
+    "position": 60,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 260
+   },
+   {
+    "cpc": 16.020000457763672,
+    "keyword": "educational app development company",
+    "position": 61,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 260
+   },
+   {
+    "cpc": 0,
+    "keyword": "what does an ed tech do",
+    "position": 35,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 260
+   },
+   {
+    "cpc": 3.880000114440918,
+    "keyword": "ed tech examples",
+    "position": 33,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 18.63999938964844,
+    "keyword": "edu tech",
+    "position": 82,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 18.63999938964844,
+    "keyword": "edu technology",
+    "position": 57,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 18.63999938964844,
+    "keyword": "edu-tech",
+    "position": 80,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 10,
+    "keyword": "education software company",
+    "position": 30,
+    "traffic": 0.4620000123977661,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 111.31999969482422,
+    "keyword": "education software development",
+    "position": 14,
+    "traffic": 3.1500000953674316,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "education software development services",
+    "position": 5,
+    "traffic": 13.83899974822998,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 10,
+    "keyword": "educational software companies",
+    "position": 30,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 111.31999969482422,
+    "keyword": "educational software development",
+    "position": 14,
+    "traffic": 1.9110000133514404,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational software development services",
+    "position": 7,
+    "traffic": 9.848999977111816,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 40.709999084472656,
+    "keyword": "it in education",
+    "position": 32,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 0.3100000023841858,
+    "keyword": "learndesk",
+    "position": 55,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology education design",
+    "position": 48,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 210
+   },
+   {
+    "cpc": 10.6899995803833,
+    "keyword": "ai education platforms",
+    "position": 49,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/ai-in-edtech",
+    "volume": 170
+   },
+   {
+    "cpc": 15.699999809265137,
+    "keyword": "custom llm",
+    "position": 14,
+    "traffic": 1.274999976158142,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/large-language-model-development",
+    "volume": 170
+   },
+   {
+    "cpc": 9.880000114440918,
+    "keyword": "educosys",
+    "position": 35,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/ai-in-edtech",
+    "volume": 170
+   },
+   {
+    "cpc": 0,
+    "keyword": "personalized learning tools for students",
+    "position": 27,
+    "traffic": 0.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 170
+   },
+   {
+    "cpc": 5.150000095367432,
+    "keyword": "chatbot education",
+    "position": 20,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/chatbots-education-changing-learning-landscape",
+    "volume": 140
+   },
+   {
+    "cpc": 5.150000095367432,
+    "keyword": "chatbot in education",
+    "position": 21,
+    "traffic": 0.6019999980926514,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/chatbots-education-changing-learning-landscape",
+    "volume": 140
+   },
+   {
+    "cpc": 5.150000095367432,
+    "keyword": "chatbots in education",
+    "position": 29,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/chatbots-education-changing-learning-landscape",
+    "volume": 140
+   },
+   {
+    "cpc": 1.680000066757202,
+    "keyword": "edtechnology",
+    "position": 49,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 140
+   },
+   {
+    "cpc": 7.380000114440918,
+    "keyword": "llm service",
+    "position": 49,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/large-language-model-development",
+    "volume": 140
+   },
+   {
+    "cpc": 7.380000114440918,
+    "keyword": "llm services",
+    "position": 47,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/large-language-model-development",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "personalised learning technology",
+    "position": 27,
+    "traffic": 0.30799999833106995,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "personalized learning technology",
+    "position": 17,
+    "traffic": 0.8259999752044678,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "personalized learning with technology",
+    "position": 23,
+    "traffic": 0.3779999911785126,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "technology and personalized learning",
+    "position": 19,
+    "traffic": 0.7139999866485596,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is tech ed",
+    "position": 40,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 140
+   },
+   {
+    "cpc": 23.219999313354492,
+    "keyword": "ed tech class",
+    "position": 32,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 14.039999961853027,
+    "keyword": "education technology information",
+    "position": 27,
+    "traffic": 0.2419999986886978,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 23.219999313354492,
+    "keyword": "educational technology course",
+    "position": 41,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 16.760000228881836,
+    "keyword": "gamification in education enhances learning outcomes",
+    "position": 37,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/gamification-in-education",
+    "volume": 110
+   },
+   {
+    "cpc": 14.039999961853027,
+    "keyword": "information education technology",
+    "position": 38,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 1.4900000095367432,
+    "keyword": "teaching educational technology",
+    "position": 36,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 14.039999961853027,
+    "keyword": "technology education information",
+    "position": 32,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 1.4900000095367432,
+    "keyword": "technology education teaching",
+    "position": 58,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 110
+   },
+   {
+    "cpc": 6.199999809265137,
+    "keyword": "ai education companies",
+    "position": 31,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/ai-in-edtech",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "education it solution",
+    "position": 49,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/ai-in-edtech",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "education technology software development",
+    "position": 38,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 90
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development services",
+    "position": 72,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/edtech",
+    "volume": 90
+   },
+   {
+    "cpc": 0.33000001311302185,
+    "keyword": "personalized learning tools",
+    "position": 29,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/growing-trend-of-personalized-learning-education-technology",
+    "volume": 90
+   },
+   {
+    "cpc": 7.860000133514404,
+    "keyword": "create your own language app",
+    "position": 64,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/create-a-language-learning-app",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "digital education technology",
+    "position": 44,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "ed tech classroom",
+    "position": 40,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 70
+   },
+   {
+    "cpc": 12.760000228881836,
+    "keyword": "ed tech training",
+    "position": 43,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/education-technology-a-complete-guide-to-edtech",
+    "volume": 70
+   },
+   {
+    "cpc": 2.4700000286102295,
+    "keyword": "edtech ai",
+    "position": 16,
+    "traffic": 0.4129999876022339,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/single-blog/ai-in-edtech",
+    "volume": 70
+   },
+   {
+    "cpc": 6.599999904632568,
+    "keyword": "education ai platforms",
+    "position": 51,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://geniusee.com/ai-in-edtech",
+    "volume": 70
+   }
+  ]
+ },
+ {
+  "kind": "agency",
+  "domain": "riseapps.co",
+  "total": 14,
+  "keywords": [
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to create an educational app",
+    "position": 60,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/creating-an-educational-app-android-ios/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to make educational app",
+    "position": 68,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/creating-an-educational-app-android-ios/",
+    "volume": 70
+   },
+   {
+    "cpc": 33.77000045776367,
+    "keyword": "how to make educational apps",
+    "position": 69,
+    "traffic": 0.1469999998807907,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/creating-an-educational-app-android-ios/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "big data and education",
+    "position": 33,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-big-data-is-used-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "big data education",
+    "position": 38,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-big-data-is-used-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "big data in education",
+    "position": 30,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-big-data-is-used-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "big data on education",
+    "position": 41,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-big-data-is-used-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "education and big data",
+    "position": 32,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-big-data-is-used-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "internet of things and education",
+    "position": 48,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/iot-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "internet of things education",
+    "position": 43,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/iot-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "internet of things in education",
+    "position": 56,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/iot-in-education/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai in language learning",
+    "position": 39,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/ai-in-language-learning/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "artificial intelligence in language learning",
+    "position": 38,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/ai-in-language-learning/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "what is an edtech company",
+    "position": 46,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://riseapps.co/how-to-start-an-edtech-startup/",
+    "volume": 30
+   }
+  ]
+ },
+ {
+  "kind": "agency",
+  "domain": "sapient.pro",
+  "total": 21,
+  "keywords": [
+   {
+    "cpc": 0,
+    "keyword": "programming language ml",
+    "position": 30,
+    "traffic": 1.0080000162124634,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 480
+   },
+   {
+    "cpc": 3.880000114440918,
+    "keyword": "language for machine learning",
+    "position": 35,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 260
+   },
+   {
+    "cpc": 3.880000114440918,
+    "keyword": "languages for machine learning",
+    "position": 26,
+    "traffic": 0.5979999899864197,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 260
+   },
+   {
+    "cpc": 3.880000114440918,
+    "keyword": "machine learning language",
+    "position": 37,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 260
+   },
+   {
+    "cpc": 3.880000114440918,
+    "keyword": "machine learning languages",
+    "position": 36,
+    "traffic": 0.5460000038146973,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 260
+   },
+   {
+    "cpc": 30.239999771118164,
+    "keyword": "nlp pipeline",
+    "position": 58,
+    "traffic": 0.4410000145435333,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-natural-language-processing-examples",
+    "volume": 210
+   },
+   {
+    "cpc": 0,
+    "keyword": "natural language interface example",
+    "position": 86,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-natural-language-processing-examples",
+    "volume": 140
+   },
+   {
+    "cpc": 0,
+    "keyword": "best language machine learning",
+    "position": 28,
+    "traffic": 0.1889999955892563,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 90
+   },
+   {
+    "cpc": 7.860000133514404,
+    "keyword": "create your own language app",
+    "position": 26,
+    "traffic": 0.16099999845027924,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-ai-based-language-learning-app",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai-based learning platforms",
+    "position": 28,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-an-online-education-platform",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "digital learning platform for teachers",
+    "position": 89,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-an-online-education-platform",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning designer education",
+    "position": 29,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-an-online-education-platform",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "e-learning software solutions",
+    "position": 29,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/how-to-build-an-online-education-platform",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning coding language",
+    "position": 27,
+    "traffic": 0.10999999940395357,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning coding languages",
+    "position": 24,
+    "traffic": 0.11500000208616255,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning programming languages",
+    "position": 26,
+    "traffic": 0.11500000208616255,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "programming language for machine learning",
+    "position": 20,
+    "traffic": 0.2150000035762787,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "programming languages for machine learning",
+    "position": 20,
+    "traffic": 0.2150000035762787,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "programming languages machine learning",
+    "position": 44,
+    "traffic": 0.10499999672174454,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "what language is used for machine learning",
+    "position": 31,
+    "traffic": 0.08399999886751175,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "ml programming languages",
+    "position": 43,
+    "traffic": 0.020999999716877937,
+    "trafficPercent": 0,
+    "url": "https://sapient.pro/blog/best-programming-languages-for-machine-learning",
+    "volume": 10
+   }
+  ]
+ },
+ {
+  "kind": "agency",
+  "domain": "binariks.com",
+  "total": 29,
+  "keywords": [
+   {
+    "cpc": 5.900000095367432,
+    "keyword": "ai disease symptoms",
+    "position": 18,
+    "traffic": 50.4900016784668,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-early-disease-detection/",
+    "volume": 9900
+   },
+   {
+    "cpc": 21.290000915527344,
+    "keyword": "machine learning and fraud detection",
+    "position": 26,
+    "traffic": 1.3569999933242798,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 590
+   },
+   {
+    "cpc": 0.14000000059604645,
+    "keyword": "artificial intelligence disease",
+    "position": 27,
+    "traffic": 0.37400001287460327,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-early-disease-detection/",
+    "volume": 170
+   },
+   {
+    "cpc": 15.949999809265137,
+    "keyword": "fraud detection using machine learning",
+    "position": 43,
+    "traffic": 0.2939999997615814,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 140
+   },
+   {
+    "cpc": 8.640000343322754,
+    "keyword": "detecting financial fraud",
+    "position": 18,
+    "traffic": 0.6489999890327454,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "education app development",
+    "position": 21,
+    "traffic": 0.4729999899864197,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "education application development",
+    "position": 21,
+    "traffic": 0.3630000054836273,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development",
+    "position": 20,
+    "traffic": 0.4729999899864197,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational application development",
+    "position": 19,
+    "traffic": 0.5609999895095825,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 110
+   },
+   {
+    "cpc": 8.640000343322754,
+    "keyword": "finance fraud detection",
+    "position": 24,
+    "traffic": 0.2639999985694885,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 110
+   },
+   {
+    "cpc": 8.640000343322754,
+    "keyword": "financial fraud detection",
+    "position": 41,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 110
+   },
+   {
+    "cpc": 14.81999969482422,
+    "keyword": "machine learning for banks",
+    "position": 44,
+    "traffic": 0.23100000619888303,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/machine-learning-in-banking/",
+    "volume": 110
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai in e learning",
+    "position": 25,
+    "traffic": 0.1679999977350235,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/use-of-ai-tools-in-elearning/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai in e-learning",
+    "position": 25,
+    "traffic": 0.1679999977350235,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/use-of-ai-tools-in-elearning/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "artificial intelligence in elearning",
+    "position": 27,
+    "traffic": 0.16099999845027924,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/use-of-ai-tools-in-elearning/",
+    "volume": 70
+   },
+   {
+    "cpc": 0,
+    "keyword": "ai disease detection",
+    "position": 18,
+    "traffic": 0.2800000011920929,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-early-disease-detection/",
+    "volume": 50
+   },
+   {
+    "cpc": 0,
+    "keyword": "edtech app development services",
+    "position": 21,
+    "traffic": 0.13199999928474426,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/the-future-of-custom-education-software-development/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "education mobile app development",
+    "position": 14,
+    "traffic": 0.3639999926090241,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 40
+   },
+   {
+    "cpc": 0,
+    "keyword": "educational app development cost",
+    "position": 14,
+    "traffic": 0.3639999926090241,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/education-mobile-app-development-guide/",
+    "volume": 40
+   },
+   {
+    "cpc": 43.08000183105469,
+    "keyword": "financial fraud-detection using machine learning",
+    "position": 25,
+    "traffic": 0.08799999952316284,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 40
+   },
+   {
+    "cpc": 69.76000213623047,
+    "keyword": "data quality and machine learning",
+    "position": 38,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-data-quality/",
+    "volume": 30
+   },
+   {
+    "cpc": 69.76000213623047,
+    "keyword": "data quality machine learning",
+    "position": 36,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-data-quality/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "disease detection using machine learning",
+    "position": 8,
+    "traffic": 0.7680000066757202,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-early-disease-detection/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "edu-api",
+    "position": 61,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/data-interoperability-in-educational-technology-and-why-you-need-apis-for-it/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "fraud detection in banking using machine learning",
+    "position": 31,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "fraud detection machine learning algorithms",
+    "position": 33,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "fraud-detection in banking using machine learning",
+    "position": 30,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/financial-fraud-detection-machine-learning/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning for quality assurance",
+    "position": 44,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-data-quality/",
+    "volume": 30
+   },
+   {
+    "cpc": 0,
+    "keyword": "machine learning in quality assurance",
+    "position": 44,
+    "traffic": 0.06300000101327896,
+    "trafficPercent": 0,
+    "url": "https://binariks.com/blog/ai-machine-learning-for-data-quality/",
+    "volume": 30
+   }
+  ]
+ }
+]
