@@ -1,13 +1,17 @@
 # План полного прогона СЯ v2 — hanguledu.com (Hangul Hero)
 
-Статус на 2026-10-27: ключ №2 ($5.00) израсходован до $0.57 — **ждёт ключ №3** для R3–R6. Ключ кладётся в `~/.config/yepapi/key`; перед стартом и после каждого шага — бесплатная сверка `/v1/account/balance` с `spend.csv`.
+Статус на 2026-10-27: **все шаги прогнаны.** Ключ №2 ($5.00) — R1, R2, R8; ключ №1, пополненный до $10.08 (бюджет ≤ $10) — R3–R6, потрачено $9.17, остаток $0.91. Ключ кладётся в `~/.config/yepapi/key`; перед стартом и после каждого шага — бесплатная сверка `/v1/account/balance` с `spend.csv`.
 
 | Шаг | Статус | Потрачено | Выход |
 |---|---|---:|---|
 | R1 | ✅ готово | $0.42 | `competitors.csv`, `10-competitors.json` |
 | R2 | ✅ готово, кроме `domain/pages` для 90daykorean, koreanclass101, howtostudykorean (кап) | $3.93 | `gap.csv` (4 878 запросов вне ядра v1), `11-competitor-keywords.json` |
-| R3–R6 | ⏳ ждёт ключ | — | |
-| R7 | ❌ `serp/google-ai-mode` отвечает 400 VALIDATION_ERROR у провайдера на любой запрос (не тарифицируется); повторить позже | $0 | `scripts/seo/17-ai-mode.mjs` |
+| R3 | ✅ related по 20 фразам W1 и 8 пакам, ideas по 12 темам лексики; 40 jamo и iOS — кандидаты в R4 | $1.70 | `12-expansion.json` (695 запросов с данными, 537 новых) |
+| R4 | ✅ clickstream для топ-100 W1; замер кандидатов R3, бэклога v1 и gap (≥ ~400/мес; хвост gap — с частотой из R2) | $1.35 | `13-measured.json` |
+| merge | ✅ бесплатно: ядро v2 — 7 126 строк, 6 091 в ядре, 3 239 групп вариантов | $0 | `semantic-core-v2-raw.csv` (`scripts/seo/14-core-v2.mjs`) |
+| R5 | ✅ SERP по главным запросам 550 групп (≥ 1 000/мес); кластеры: синонимы → ≥ 2 общих URL «голова к голове» | $5.43 | `15-serp.json`, `clusters-v2.json` (351 кластер, 271 новый против v1), `semantic-core-v2.csv` |
+| R6 | ✅ топ-200 в GB/CA/AU/PH/IN/SG/ID; рынки es/pt/id/fr | $0.69 | `16-markets.json` |
+| R7 | ⚠️ `serp/google-ai-mode` отвечает 400 у провайдера (не тарифицируется). Заменено бесплатно: источники AI Overview из SERP R5 (`clusters-v2.json` → `ai_cited`) | $0 | `scripts/seo/17-ai-mode.mjs` |
 | R8 | ✅ бесплатно из кэша overview (поле `trend`, ~8 лет помесячно). `seo/trends` отдаёт пустой timeline и при этом списывает $0.02 — не использовать | $0.08 (впустую) | `18-seasonality.json` |
 | R9 | ✅ бесплатно: подсказки App Store + Google Play (196 запросов × 2 магазина) и выдача приложений по 40 главным терминам | $0 | `aso-suggestions.csv` (903 термина, 88 в обоих магазинах), `aso-serp.csv`, `19-aso.json` |
 
@@ -87,3 +91,12 @@ CTR-риски по фразам, рынки помимо US, данные дл�
 - Каждый шаг — отдельный скрипт `scripts/seo/1x-*.mjs` с жёстким капом; шаг, который может превысить кап, не отправляется.
 - После каждого шага — сверка баланса и короткий отчёт; R2 и R5 стартуют только после точки проверки.
 - Падения 503 — повтор с backoff; неудачные запросы не оплачиваются.
+
+## Итоги прогона v2 (2026-10-27)
+
+- **Clickstream (реальные поиски) против рекламной оценки:** фразы 25–65% (`hello in korean` 20.7K, `sorry` 65%), алфавит 42% (`korean alphabet` 25.7K), `hangul` 66%. App-intent — 0–3% (`learn korean app` 0, `korean learning apps` 203): главная страница трафика не даст, установки — через контент.
+- **SERP:** AI Overview в 346 из 351 кластера, PAA в 290, видео в 200. Органики в топ-10 остаётся ~8 мест; медиана «слабых» мест (UGC/форумы/малые сайты) — 7 из ~8, у 274 кластеров ≥ 6. Ниша пробиваемая.
+- **AI Overview цитирует** YouTube, Reddit, Wikipedia, Instagram, Quora, TikTok, затем preply, koreanclass101, migaku, noun.town — видео и UGC важны для AI-видимости.
+- **Новые кластеры** (нет в v1): nicknames 54K, aegyo 49.5K, swear words 46K, mom/dad/grandma/aunt (семья) 27.9K/19.8K/16.2K/8.8K, korean keyboard layout 27K, family names 27K, «you» 26K, dog/cat, numbers 1–10 6.7K, food names 7.2K, honorifics 7.2K, days of the week 5.8K, weather 5.8K, Korean New Year 6.5K.
+- **Рынки:** India = 43% от US, Philippines 24%, UK 9% → писать на глобальном английском. Локализация: **pt-BR первой** (`alfabeto coreano` 22–27K), затем fr (8.1K), id (6.6K), es-MX (5.4K).
+- **Не вошло (бюджет):** SERP для групп < 1 000/мес (2 689 групп) — привязываются к кластерам по правилам при сборке `pages-v2.csv`; `domain/pages` для 3 крупных конкурентов.
