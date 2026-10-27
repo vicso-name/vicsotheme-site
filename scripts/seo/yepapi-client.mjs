@@ -116,11 +116,21 @@ export const perKeywordPricing = (limit) => ({
   price: (data) => Math.ceil((0.03 + 0.03 * ((data.keywords?.length ?? 0) / 100)) * 100) / 100,
 });
 
-/** Spend so far, summed from the ledger (TOTAL rows excluded). */
-export async function ledgerSpent(ledger = LEDGER) {
+/**
+ * Spend so far, summed from the ledger (TOTAL rows excluded). `notePrefix`
+ * limits the sum to one research step (e.g. "R1") so each step keeps its own cap.
+ */
+export async function ledgerSpent(ledger = LEDGER, { notePrefix = '' } = {}) {
   try {
     return (await readFile(ledger, 'utf8')).trim().split('\n').slice(1)
-      .map((l) => l.match(/,(\d+\.\d{4}),[^,]*$/))
-      .reduce((sum, m) => sum + (m ? Number(m[1]) : 0), 0);
+      .map((l) => l.match(/,(\d+\.\d{4}),("[^"]*"|[^,]*)$/))
+      .filter((m) => m && m[2].replace(/^"/, '').startsWith(notePrefix))
+      .reduce((sum, m) => sum + Number(m[1]), 0);
   } catch { return 0; }
 }
+
+/** $0.03 per call + $0.03 per 100 domains returned — competitors/serp, competitors/domain. */
+export const perDomainPricing = (limit) => ({
+  worstCase: Math.ceil((0.03 + 0.03 * (limit / 100)) * 100) / 100,
+  price: (data) => Math.ceil((0.03 + 0.03 * ((data.competitors?.length ?? 0) / 100)) * 100) / 100,
+});

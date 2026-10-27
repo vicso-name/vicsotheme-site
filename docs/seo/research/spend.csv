@@ -69,3 +69,31 @@ timestamp,endpoint,params,cost_usd,note
 2026-10-27T10:05:54.625Z,/v1/serp/google,"serp ""ai in language learning"" us/en d10",0.0100,validate topic/ai-in-education
 2026-10-27T10:47:40.371Z,/v1/seo/keywords/overview,overview 700 kw us/en,0.1900,hangulhero overview
 2026-10-27T10:47:41.375Z,/v1/seo/keywords/overview,overview 100 kw us/en,0.0500,hangulhero overview
+2026-10-27T19:06:56.886Z,/v1/seo/competitors/serp,competitors/serp alphabet 181 kw us/en limit 100,0.0600,R1 serp alphabet
+2026-10-27T19:06:57.720Z,/v1/seo/competitors/serp,competitors/serp learning 166 kw us/en limit 100,0.0600,R1 serp learning
+2026-10-27T19:06:58.121Z,/v1/seo/competitors/serp,competitors/serp phrases 200 kw us/en limit 100,0.0600,R1 serp phrases
+2026-10-27T19:06:58.555Z,/v1/seo/competitors/serp,competitors/serp app 53 kw us/en limit 100,0.0600,R1 serp app
+2026-10-27T19:06:59.492Z,/v1/seo/competitors/domain,competitors/domain letslearnhangul.com us/en limit 100,0.0600,R1 domain letslearnhangul.com
+2026-10-27T19:07:00.698Z,/v1/seo/competitors/domain,competitors/domain lingrow.io us/en limit 100,0.0600,R1 domain lingrow.io
+2026-10-27T19:07:04.273Z,/v1/seo/competitors/domain,competitors/domain 90daykorean.com us/en limit 100,0.0600,R1 domain 90daykorean.com
+2026-10-27T19:09:38.511Z,/v1/seo/domain/keywords,domain/keywords hangul.fun whole us/en limit 1000,0.0700,R2 keywords hangul.fun
+2026-10-27T19:09:39.785Z,/v1/seo/domain/keywords,domain/keywords zkorean.com whole us/en limit 1000,0.2200,R2 keywords zkorean.com
+2026-10-27T19:09:40.981Z,/v1/seo/domain/keywords,domain/keywords learning-korean.com whole us/en limit 1000,0.2200,R2 keywords learning-korean.com
+2026-10-27T19:09:42.340Z,/v1/seo/domain/keywords,domain/keywords mykoreanlesson.com whole us/en limit 1000,0.2800,R2 keywords mykoreanlesson.com
+2026-10-27T19:09:43.234Z,/v1/seo/domain/keywords,domain/keywords letslearnhangul.com whole us/en limit 1000,0.1500,R2 keywords letslearnhangul.com
+2026-10-27T19:09:44.074Z,/v1/seo/domain/keywords,domain/keywords learnkorean24.com whole us/en limit 1000,0.1000,R2 keywords learnkorean24.com
+2026-10-27T19:09:46.257Z,/v1/seo/domain/keywords,domain/keywords howtostudykorean.com whole us/en limit 1000,0.3300,R2 keywords howtostudykorean.com
+2026-10-27T19:09:48.503Z,/v1/seo/domain/keywords,domain/keywords 90daykorean.com whole us/en limit 1000,0.3300,R2 keywords 90daykorean.com
+2026-10-27T19:09:50.584Z,/v1/seo/domain/keywords,domain/keywords koreanclass101.com whole us/en limit 1000,0.3300,R2 keywords koreanclass101.com
+2026-10-27T19:09:51.465Z,/v1/seo/domain/keywords,domain/keywords languagebird.com korean-urls us/en limit 1000,0.1200,R2 keywords languagebird.com
+2026-10-27T19:09:53.537Z,/v1/seo/domain/keywords,domain/keywords flexiclasses.com korean-urls us/en limit 1000,0.3300,R2 keywords flexiclasses.com
+2026-10-27T19:09:55.766Z,/v1/seo/domain/keywords,domain/keywords ling-app.com korean-urls us/en limit 1000,0.3300,R2 keywords ling-app.com
+2026-10-27T19:09:57.689Z,/v1/seo/domain/keywords,domain/keywords talkpal.ai korean-urls us/en limit 1000,0.3300,R2 keywords talkpal.ai
+2026-10-27T19:09:59.981Z,/v1/seo/domain/keywords,domain/keywords blog.lingodeer.com korean-urls us/en limit 1000,0.3300,R2 keywords blog.lingodeer.com
+2026-10-27T19:10:02.342Z,/v1/seo/domain/keywords,domain/keywords migaku.com korean-urls us/en limit 1000,0.3300,R2 keywords migaku.com
+2026-10-27T19:10:02.776Z,/v1/seo/domain/pages,domain/pages letslearnhangul.com us/en limit 200,0.0400,R2 pages letslearnhangul.com
+2026-10-27T19:10:04.419Z,/v1/seo/domain/pages,domain/pages zkorean.com us/en limit 200,0.0900,R2 pages zkorean.com
+2026-10-27T19:11:05.945Z,/v1/seo/trends,trends us korean alphabet | learn korean | hangul | korean phrases | learn korean app,0.0200,R8 trends learn korean
+2026-10-27T19:11:11.203Z,/v1/seo/trends,trends us korean alphabet | hello in korean | thank you in korean | i love you in korean | oppa,0.0200,R8 trends hello in korean
+2026-10-27T19:11:20.454Z,/v1/seo/trends,trends us korean alphabet | hangul day | korean slang | kdrama | korean words,0.0200,R8 trends hangul day
+2026-10-27T19:11:40.332Z,/v1/seo/trends,trends probe korean alphabet default loc,0.0200,R8 probe
