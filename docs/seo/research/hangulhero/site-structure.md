@@ -1,5 +1,7 @@
 # Структура сайта Hangul Hero
 
+> **Устарело — см. `site-structure-v2.md`** (СЯ v2, SERP-кластеры, сайт как учебная инфраструктура).
+
 Фаза 2. Основа — `semantic-core.csv` (843 запроса). Карта генерируется скриптом
 `scripts/seo/08-hangulhero-url-map.mjs`:
 
