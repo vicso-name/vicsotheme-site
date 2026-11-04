@@ -74,4 +74,24 @@ export const site = {
 /** Booking CTA target: the booking tool when set, otherwise the contact page. */
 export const bookingHref = isSet(site.bookingUrl) ? site.bookingUrl : '/contact/';
 
-export const legalLine = `${site.companyName} OÜ, ${site.city}`;
+export const hasCompany = isSet(site.companyName);
+
+/** Footer legal line; omitted until the company name is known. */
+export const legalLine = hasCompany ? `${site.companyName} OÜ, ${site.city}` : null;
+
+/** Contract/invoice copy: Estonian company + VAT once registered, neutral EUR wording until then. */
+export const billing = hasCompany
+  ? {
+      intro: 'Invoices from an Estonian company, EU VAT handled.',
+      euTitle: 'EU contracts & GDPR',
+      euText: 'Estonian company, EU VAT invoices, data processing agreement on request.',
+      compareCell: 'EU company, VAT invoice',
+      contact: 'Estonian company, EU VAT invoices, NDA on request.',
+    }
+  : {
+      intro: 'Contracts and invoices in EUR.',
+      euTitle: 'EU-based, EU-friendly',
+      euText: 'Based in Estonia, contracts and invoices in EUR, data processing agreement on request.',
+      compareCell: 'Direct contract, EUR invoice',
+      contact: 'Direct contract, invoices in EUR, NDA on request.',
+    };

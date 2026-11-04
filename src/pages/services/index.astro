@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Button from '../../components/Button.astro';
 import ServiceList from '../../components/ServiceList.astro';
 import { services } from '../../data/services';
-import { bookingHref } from '../../config/site';
+import { bookingHref, billing } from '../../config/site';
 ---
 <Base
   title="Services — MVP Development, Fractional CTO, White-Label & WordPress | Viktor Sokoliuk"
@@ -13,7 +13,7 @@ import { bookingHref } from '../../config/site';
   <section class="wrap hero">
     <p class="eyebrow">Services</p>
     <h1 class="h1">Four ways to work together</h1>
-    <p class="lead hero-lead">Fixed scope or a monthly retainer. Invoices from an Estonian company, EU VAT handled.</p>
+    <p class="lead hero-lead">Fixed scope or a monthly retainer. {billing.intro}</p>
   </section>
 
   <section class="wrap list">

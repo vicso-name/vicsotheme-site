@@ -14,7 +14,7 @@ const links = (Astro.props.links ?? defaults).filter((l) => isSet(l.href));
 ---
 <footer class="site-footer">
   <div class="wrap site-footer-inner">
-    <span>© {year} {site.name} · {legalLine}</span>
+    <span>© {year} {site.name}{legalLine && ` · ${legalLine}`}</span>
     <span class="footer-links">
       {links.map((l) => (
         <a href={l.href} {...(l.href.startsWith('http') ? { rel: 'me noopener' } : {})}>{l.label}</a>

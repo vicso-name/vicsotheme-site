@@ -6,7 +6,8 @@ import MetricGrid from '../components/MetricGrid.astro';
 import Faq from '../components/Faq.astro';
 import ServiceList from '../components/ServiceList.astro';
 import { services } from '../data/services';
-import { site, bookingHref } from '../config/site';
+import { person, professionalService } from '../lib/schema';
+import { site, bookingHref, billing } from '../config/site';
 
 const { prices } = site;
 
@@ -28,7 +29,7 @@ const stack = [
 
 const reasons = [
   { t: 'CET+1 time zone', d: 'Overlap with all of Europe and the US East Coast mornings.' },
-  { t: 'EU contracts &amp; GDPR', d: 'Estonian company, EU VAT invoices, data processing agreement on request.' },
+  { t: billing.euTitle, d: billing.euText },
   { t: 'You own everything', d: 'Code, accounts and store listings sit in your name from day one.' },
   { t: 'Product thinking', d: 'I run paywalls and retention for my own apps — and bring that to yours.' },
 ];
@@ -50,6 +51,7 @@ const faqs = [
 ---
 <Base
   title="Viktor Sokoliuk — Mobile App & MVP Developer in the EU"
+  schema={[person(), professionalService()]}
   description={`Independent developer in ${site.city}, ${site.country}. Android, iOS and Flutter apps for founders, white-label WordPress for agencies, fixed-price MVPs in 6–8 weeks.`}
 >
   <section class="wrap hero">
@@ -73,7 +75,7 @@ const faqs = [
 
   <section id="services" class="wrap services">
     <SectionHeading title="Four ways to work together">
-      Fixed scope or a monthly retainer. Invoices from an Estonian company, EU VAT handled.
+      Fixed scope or a monthly retainer. {billing.intro}
     </SectionHeading>
     <ServiceList
       items={services}
@@ -120,7 +122,7 @@ const faqs = [
       </div>
       <ul class="why-list">
         {reasons.map((r) => (
-          <li><span class="why-t" set:html={r.t} /><span class="why-d">{r.d}</span></li>
+          <li><span class="why-t">{r.t}</span><span class="why-d">{r.d}</span></li>
         ))}
       </ul>
     </div>
@@ -141,7 +143,7 @@ const faqs = [
       <div class="estimator-cta">
         <div>
           <div class="estimator-cta-t">Not sure about budget yet?</div>
-          <div class="estimator-cta-d">The estimator gives a price range for your app in about two minutes.</div>
+          <div class="estimator-cta-d">The estimator shows which approach and complexity fit your app in about two minutes.</div>
         </div>
         <Button href="/estimator/" variant="inverse">Open the estimator</Button>
       </div>

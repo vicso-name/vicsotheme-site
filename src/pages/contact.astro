@@ -2,12 +2,12 @@
 import Base from '../layouts/Base.astro';
 import Button from '../components/Button.astro';
 import LeadForm from '../components/LeadForm.astro';
-import { site, isSet } from '../config/site';
+import { site, isSet, billing } from '../config/site';
 
 const details = [
   { t: 'Reply time', d: 'Within one working day, Monday to Friday.' },
   { t: 'Location', d: `${site.city}, ${site.country}. CET+1, overlaps with all of Europe.` },
-  { t: 'Contracts', d: 'Estonian company, EU VAT invoices, NDA on request.' },
+  { t: 'Contracts', d: billing.contact },
 ];
 ---
 <Base

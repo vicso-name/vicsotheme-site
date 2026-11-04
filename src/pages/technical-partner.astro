@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Button from '../components/Button.astro';
 import Faq from '../components/Faq.astro';
 import { site, bookingHref } from '../config/site';
+import { service, faqPage } from '../lib/schema';
 
 const { prices } = site;
 const DEFAULT = 1;
@@ -42,6 +43,16 @@ const check = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24
   title="Fractional CTO for Startups — Part-Time Technical Lead | Viktor Sokoliuk"
   description="Fractional CTO for early-stage startups in the EU: architecture, hiring, vendor control, roadmap and code review a few days a month. Advisor, part-time and hands-on plans."
   breadcrumbs={[{ name: 'Fractional CTO', path: '/technical-partner/' }]}
+  schema={[
+    service({
+      name: 'Fractional CTO',
+      serviceType: 'Fractional CTO and technical leadership',
+      description: 'Part-time technical lead for early-stage startups: architecture, hiring, vendor control, roadmap and code review.',
+      path: '/technical-partner/',
+      offers: models.map((m) => ({ name: m.name, description: `${m.time}. ${m.desc}` })),
+    }),
+    faqPage(faqs),
+  ]}
   footerLinks={[{ href: '/', label: 'Home' }, { href: '/mvp/', label: 'MVP development' }]}
 >
   <section class="wrap hero">

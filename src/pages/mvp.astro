@@ -4,7 +4,8 @@ import Button from '../components/Button.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Faq from '../components/Faq.astro';
 import LeadForm from '../components/LeadForm.astro';
-import { site, isSet } from '../config/site';
+import { site, isSet, billing } from '../config/site';
+import { service, faqPage } from '../lib/schema';
 
 const { prices, testimonial } = site;
 const DEFAULT = 1;
@@ -36,7 +37,7 @@ const compare = {
     ['Who writes the code', 'Unknown until hired', 'Rotating juniors', 'The person on the call'],
     ['Price', 'Hourly, open-ended', 'Fixed, with overhead', 'Fixed, no overhead'],
     ['Has shipped paid apps', 'Rarely', 'For clients', 'Own products, own revenue'],
-    ['Contract &amp; invoices', 'Via platform', 'Varies', 'EU company, VAT invoice'],
+    ['Contract &amp; invoices', 'Via platform', 'Varies', billing.compareCell],
   ],
 };
 
@@ -54,6 +55,16 @@ const check = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24
   title="MVP Development for Founders — Fixed Price, 6–8 Weeks | Viktor Sokoliuk"
   description="Mobile and AI-powered MVP development for non-technical founders: App Store and Google Play release in 6–8 weeks, fixed price agreed upfront, code and accounts in your name."
   breadcrumbs={[{ name: 'MVP development', path: '/mvp/' }]}
+  schema={[
+    service({
+      name: 'MVP development',
+      serviceType: 'Mobile and AI MVP development',
+      description: 'Fixed-price mobile and AI-powered MVPs for non-technical founders, released to the App Store and Google Play in 6–8 weeks.',
+      path: '/mvp/',
+      offers: packages.map((p) => ({ name: p.name, description: `${p.weeks}. ${p.desc}` })),
+    }),
+    faqPage(faqs),
+  ]}
   footerLinks={[{ href: '/', label: 'Home' }, { href: '/technical-partner/', label: 'Fractional CTO' }]}
 >
   <section class="wrap hero">

@@ -1,7 +1,41 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Button from '../../components/Button.astro';
-import { site, bookingHref } from '../../config/site';
+import { site, bookingHref, isSet } from '../../config/site';
+import { abs, personId } from '../../lib/schema';
+
+const title = 'Learn Hebrew: one developer, two platforms, a subscription business';
+const description = 'How one developer took a Hebrew learning app from an Android side project to 10K+ downloads, a native SwiftUI iOS port and 4× subscription revenue in 12 months.';
+const published = '2026-11-04';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: published,
+    dateModified: published,
+    image: abs(site.ogImage),
+    mainEntityOfPage: abs('/cases/hebrew-app/'),
+    author: { '@type': 'Person', '@id': personId, name: site.name, url: abs('/') },
+    publisher: { '@type': 'Person', '@id': personId, name: site.name },
+    about: { '@id': abs('/cases/hebrew-app/#app') },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    '@id': abs('/cases/hebrew-app/#app'),
+    name: 'Learn Hebrew – Read & Speak',
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Android, iOS',
+    description: 'Hebrew alphabet, reading and verb trainer with native audio, AI word explanations and spaced repetition.',
+    url: site.hebrewedu,
+    sameAs: [site.playStore.hebrew, site.appStore.hebrew],
+    author: { '@type': 'Person', '@id': personId, name: site.name },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.2', ratingCount: '109', bestRating: '5' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free with daily limits; Premium $4.99/month or $29.99/year.' },
+  },
+];
 
 const stats = [
   { v: '10K+', l: 'downloads on Google Play' },
@@ -13,7 +47,7 @@ const stats = [
 
 const facts = [
   { t: 'My role', d: 'Everything: product, UX, Android, iOS, backend, content pipeline, ASO, analytics.' },
-  { t: 'Platforms', d: `Android (since ${site.heroYear}), iPhone (2026), web: hebrewedu.com in English and French.` },
+  { t: 'Platforms', d: `Android${isSet(site.heroYear) ? ` (since ${site.heroYear})` : ''}, iPhone (2026), web: hebrewedu.com in English and French.` },
   { t: 'Stack', d: 'Kotlin, Jetpack Compose, Swift, SwiftUI, Django, RevenueCat, Firebase, Astro.' },
   { t: 'Business model', d: 'Freemium with daily limits. Premium $4.99/month or $29.99/year.' },
 ];
@@ -50,8 +84,9 @@ const storeLinks = [
 ---
 <Base
   title="Case: Learn Hebrew App — Solo-Built Subscription Business | Viktor Sokoliuk"
-  description="How one developer took a Hebrew learning app from an Android side project to 10K+ downloads, a native SwiftUI iOS port and 4× subscription revenue in 12 months."
+  description={description}
   ogType="article"
+  schema={schema}
   breadcrumbs={[{ name: 'Cases', path: '/cases/' }, { name: 'Learn Hebrew app', path: '/cases/hebrew-app/' }]}
   footerLinks={[{ href: '/', label: 'Home' }, { href: '/cases/', label: 'Cases' }]}
 >
