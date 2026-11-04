@@ -1,21 +1,16 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import { redirects } from './src/config/redirects.mjs';
+
+const site = 'https://vicsotheme.com';
+const redirectSources = new Set(Object.keys(redirects).map((p) => `${site}${p}/`));
 
 export default defineConfig({
-  site: 'https://vicsotheme.com',
-  redirects: {
-    '/blog': '/',
-    '/blog/astro-vs-wordpress-2026': '/services/cms-content-architecture/',
-    '/blog/how-to-publish-google-play': '/services/mobile-product-engineering/',
-    '/blog/why-flutter-gets-hate': '/services/mobile-product-engineering/',
-    '/blog/why-i-build-language-apps': '/services/edtech-learning-systems/',
-  },
-  markdown: {
-    shikiConfig: {
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
-      wrap: false,
-    },
-  },
+  site,
+  redirects,
+  integrations: [
+    sitemap({
+      filter: (page) => !redirectSources.has(page) && !/\/404\/?$/.test(page),
+    }),
+  ],
 });

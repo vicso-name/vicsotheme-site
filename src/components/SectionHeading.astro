@@ -1,0 +1,36 @@
+---
+/**
+ * Section h2 with an optional lead paragraph (slot) aligned to the right,
+ * as in the "Four ways to work together" header.
+ */
+interface Props {
+  title: string;
+  id?: string;
+  level?: 'h2' | 'h3';
+  size?: 'section' | 'cta';
+  class?: string;
+}
+const { title, id, level: Tag = 'h2', size = 'section', class: extra } = Astro.props;
+const hasLead = Astro.slots.has('default');
+---
+{hasLead ? (
+  <div class:list={['section-heading', extra]}>
+    <Tag id={id} class:list={[size === 'cta' ? 'h-cta' : 'h2', 'section-heading-title']} set:html={title} />
+    <p class="section-heading-lead"><slot /></p>
+  </div>
+) : (
+  <Tag id={id} class:list={[size === 'cta' ? 'h-cta' : 'h2', extra]} set:html={title} />
+)}
+
+<style>
+  .section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .section-heading-title { max-width: 40rem; }
+  .section-heading-lead { max-width: 26rem; color: var(--text-2); }
+</style>

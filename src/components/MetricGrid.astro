@@ -1,0 +1,71 @@
+---
+/**
+ * Bordered card of big mono numbers with a caption under each, with an
+ * optional file-style title bar ("my_products.log · updated Nov 2026").
+ */
+interface Props {
+  items: { value: string; label: string; accent?: boolean }[];
+  head?: { left: string; right?: string };
+  cols?: number;
+  class?: string;
+}
+const { items, head, cols = 2, class: extra } = Astro.props;
+---
+<div class:list={['metric-card', extra]}>
+  {head && (
+    <div class="metric-head">
+      <span>{head.left}</span>
+      {head.right && <span>{head.right}</span>}
+    </div>
+  )}
+  <div class="metric-clip">
+    <dl class="metric-grid" style={`--cols:${cols}`}>
+      {items.map((m) => (
+        <div class="metric">
+          <dt class:list={['metric-value', { accent: m.accent }]}>{m.value}</dt>
+          <dd class="metric-label">{m.label}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</div>
+
+<style>
+  .metric-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+  .metric-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .metric-clip { overflow: hidden; }
+  /* Every cell draws right + bottom lines; the negative margin hides the outer ones. */
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    margin: 0 -1px -1px 0;
+  }
+  .metric {
+    padding: 24px 20px;
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .metric-value {
+    font-family: var(--mono);
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .metric-value.accent { color: var(--accent); }
+  .metric-label { margin: 0; font-size: 14px; color: var(--muted); }
+</style>

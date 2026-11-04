@@ -1,0 +1,55 @@
+---
+/**
+ * primary   – accent fill, white text
+ * secondary – ink outline
+ * inverse   – light fill on dark sections
+ * dark      – ink fill (header CTA)
+ */
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'inverse' | 'dark';
+  arrow?: boolean;
+  type?: 'button' | 'submit';
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { href, variant = 'primary', arrow = false, type = 'button', class: extra, ...rest } = Astro.props;
+const cls = ['btn', `btn-${variant}`, extra].filter(Boolean).join(' ');
+const external = href?.startsWith('http');
+---
+{href ? (
+  <a href={href} class={cls} {...(external ? { rel: 'noopener' } : {})} {...rest}>
+    <slot />
+    {arrow && <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>}
+  </a>
+) : (
+  <button type={type} class={cls} {...rest}>
+    <slot />
+    {arrow && <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>}
+  </button>
+)}
+
+<style is:global>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: var(--radius-btn);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: none;
+  }
+  .btn-primary, .btn-primary:hover { background: var(--accent); color: #FFFFFF; }
+  .btn-secondary, .btn-secondary:hover { border-color: var(--ink); color: var(--ink); }
+  .btn-inverse, .btn-inverse:hover { background: var(--bg); color: var(--ink); }
+  .btn-dark, .btn-dark:hover { background: var(--ink); color: var(--bg); }
+  .btn-dark { min-height: 44px; padding: 0 18px; font-size: 15px; }
+  .btn:disabled { opacity: 0.6; cursor: progress; }
+</style>

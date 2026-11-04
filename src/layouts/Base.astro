@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../config/site';
+
+export interface Crumb { name: string; path: string }
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  /** JSON-LD objects for this page (each gets its own script tag). */
+  schema?: Record<string, unknown>[];
+  /** Inner-page trail after Home; emits BreadcrumbList JSON-LD. */
+  breadcrumbs?: Crumb[];
+}
+
+const {
+  title,
+  description,
+  noindex = false,
+  ogImage = site.ogImage,
+  ogType = 'website',
+  schema = [],
+  breadcrumbs,
+} = Astro.props;
+
+const withSlash = (p: string) => (p.endsWith('/') ? p : `${p}/`);
+const canonical = new URL(withSlash(Astro.url.pathname), site.url).toString();
+const ogImageUrl = new URL(ogImage, site.url).toString();
+
+const ld = [...schema];
+if (breadcrumbs?.length) {
+  ld.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ name: 'Home', path: '/' }, ...breadcrumbs].map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: new URL(c.path, site.url).toString(),
+    })),
+  });
+}
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+  {!noindex && <link rel="canonical" href={canonical} />}
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <meta name="theme-color" content="#F4F3EF" />
+
+  <meta property="og:type" content={ogType} />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+
+  <meta name="google-site-verification" content={site.gscVerification} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <Header />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

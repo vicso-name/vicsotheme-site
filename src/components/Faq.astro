@@ -1,0 +1,39 @@
+---
+interface Props {
+  items: { q: string; a: string }[];
+}
+const { items } = Astro.props;
+---
+<div class="faq">
+  {items.map((item, i) => (
+    <details class="faq-item" open={i === 0}>
+      <summary class="faq-q">
+        <span>{item.q}</span>
+        <span class="faq-sign" aria-hidden="true"></span>
+      </summary>
+      <p class="faq-a" set:html={item.a} />
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq { border-top: 1px solid var(--ink); }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    list-style: none;
+    min-height: 64px;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-sign { font-family: var(--mono); font-size: 22px; color: var(--accent); flex-shrink: 0; }
+  .faq-sign::before { content: '+'; }
+  details[open] .faq-sign::before { content: '−'; }
+  .faq-a { padding: 0 0 22px; color: var(--text-2); max-width: 40rem; }
+</style>
