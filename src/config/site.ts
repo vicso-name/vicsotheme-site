@@ -40,17 +40,17 @@ export const site = {
   heroYear: TBD,
 
   prices: {
-    mvpPrototype: TBD,
-    mvpMobile: TBD,
-    mvpAi: TBD,
-    ctoAdvisor: TBD,
-    ctoPartTime: TBD,
-    ctoHandsOn: TBD,
-    agencyRate: TBD,
-    wpMaintenance: TBD,
+    mvpPrototype: '€1,500',
+    mvpMobile: '€5,700',
+    mvpAi: '€7,500',
+    ctoAdvisor: '€750',
+    ctoPartTime: '€1,500',
+    ctoHandsOn: '€2,900',
+    agencyRate: '€30',
+    wpMaintenance: '€120',
     /** Typical MVP budget range quoted in the home FAQ. */
-    mvpRangeMin: TBD,
-    mvpRangeMax: TBD,
+    mvpRangeMin: '€5,500',
+    mvpRangeMax: '€12,000',
   },
 
   playStore: {
