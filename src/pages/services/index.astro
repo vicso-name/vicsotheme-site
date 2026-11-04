@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import Button from '../../components/Button.astro';
+import ServiceList from '../../components/ServiceList.astro';
+import { services } from '../../data/services';
+import { bookingHref } from '../../config/site';
+---
+<Base
+  title="Services — MVP Development, Fractional CTO, White-Label & WordPress | Viktor Sokoliuk"
+  description="Four ways to work with an independent EU developer: fixed-price MVP development, fractional CTO, white-label app and WordPress work for agencies, and WordPress maintenance."
+  breadcrumbs={[{ name: 'Services', path: '/services/' }]}
+>
+  <section class="wrap hero">
+    <p class="eyebrow">Services</p>
+    <h1 class="h1">Four ways to work together</h1>
+    <p class="lead hero-lead">Fixed scope or a monthly retainer. Invoices from an Estonian company, EU VAT handled.</p>
+  </section>
+
+  <section class="wrap list">
+    <ServiceList
+      items={services}
+      headingLevel="h2"
+      hrefs={{ mvp: '/mvp/', cto: '/technical-partner/', agencies: '/#agencies', wordpress: '/contact/' }}
+    />
+    <div class="btn-row">
+      <Button href={bookingHref}>Book a 20-min call</Button>
+      <Button href="/estimator/" variant="secondary">Open the estimator</Button>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-top: 80px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 28px; }
+  .hero-lead { max-width: 34rem; }
+  .list { padding-bottom: 96px; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 48px; }
+</style>

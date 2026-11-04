@@ -25,7 +25,7 @@ export const site = {
     github: TBD,
   },
 
-  /** Client testimonial on /mvp/. */
+  /** Client testimonial on /mvp/ (hidden until every field is set). */
   testimonial: {
     quote: TBD,
     name: TBD,
@@ -59,6 +59,12 @@ export const site = {
     hangul: 'https://play.google.com/store/apps/details?id=com.vicsothemes.hangulhero',
     eestiVerbid: 'https://play.google.com/store/apps/details?id=com.vicsothemes.eesti_verbid',
   },
+
+  appStore: {
+    hebrew: 'https://apps.apple.com/us/app/learn-hebrew-read-speak/id6813120842',
+  },
+
+  hebrewedu: 'https://hebrewedu.com/',
 
   formspree: 'https://formspree.io/f/mdabeqkd',
   gscVerification: 'tx8IsE5ya6PCfZBcCKREggMUHuKMPRWN4T-xp9wtq3Q',

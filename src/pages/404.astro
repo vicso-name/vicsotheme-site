@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+---
+<Base
+  title="Page not found | Viktor Sokoliuk"
+  description="This page does not exist. Go to the home page, MVP development or the cases."
+  noindex
+>
+  <section class="wrap nf">
+    <p class="eyebrow">404 · page not found</p>
+    <h1 class="h1">This page doesn't exist <span class="accent">(any more).</span></h1>
+    <p class="lead nf-lead">The site was rebuilt and some old addresses are gone. These are the pages most people look for:</p>
+    <div class="btn-row">
+      <Button href="/" arrow>Home</Button>
+      <Button href="/mvp/" variant="secondary">MVP development</Button>
+      <Button href="/technical-partner/" variant="secondary">Fractional CTO</Button>
+      <Button href="/cases/" variant="secondary">Cases</Button>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { padding-top: 96px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 28px; }
+  .nf-lead { max-width: 36rem; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+</style>
