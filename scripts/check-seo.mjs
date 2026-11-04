@@ -32,6 +32,37 @@ const fileToRoute = (file) => {
 const rel = (f) => path.relative(process.cwd(), f);
 const attr = (tag, name) => tag.match(new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, 'i'))?.[2];
 
+const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
+
+/**
+ * Same-page #anchor links whose target element contains the link (or is the
+ * link), i.e. clicking goes nowhere. Walks the tag tree with a small stack.
+ */
+function selfAnchors(html, route) {
+  const found = [];
+  const stack = [];
+  const body = html.replace(/<(script|style|svg)\b[\s\S]*?<\/\1>/gi, '').replace(/<!--[\s\S]*?-->/g, '');
+  for (const [, close, name, attrs] of body.matchAll(/<(\/?)([a-zA-Z][\w-]*)\b([^>]*)>/g)) {
+    const tag = name.toLowerCase();
+    if (close) {
+      const i = stack.map((e) => e.tag).lastIndexOf(tag);
+      if (i !== -1) stack.length = i;
+      continue;
+    }
+    const id = attr(`<x ${attrs}>`, 'id');
+    if (tag === 'a') {
+      const href = attr(`<x ${attrs}>`, 'href');
+      if (href?.includes('#')) {
+        const [p, hash] = href.split('#');
+        const samePage = p === '' || new URL(p, site).pathname === route;
+        if (hash && samePage && (id === hash || stack.some((e) => e.id === hash))) found.push(hash);
+      }
+    }
+    if (!VOID.has(tag) && !/\/\s*$/.test(attrs)) stack.push({ tag, id });
+  }
+  return found;
+}
+
 if (!fs.existsSync(root)) {
   fail('dist/ does not exist; run the production build first');
 } else {
@@ -137,6 +168,8 @@ if (!fs.existsSync(root)) {
       else if (!pathname.endsWith('/')) fail(`Internal link without trailing slash ${pathname} in ${route}`);
       else if (!fs.existsSync(routeToFile(pathname))) fail(`Broken internal link ${pathname} in ${route}`);
     }
+
+    for (const id of selfAnchors(html, route)) fail(`Link to #${id} sits inside #${id} itself (dead-end) in ${route}`);
 
     for (const [tag] of html.matchAll(/<meta\b[^>]*>/gi)) {
       const key = attr(tag, 'property') ?? attr(tag, 'name');

@@ -61,13 +61,13 @@ const featuredStats = [
 
     <div class="grid">
       {cases.map((c) => (
-        <a href={c.href ?? `/cases/#${c.id}`} id={c.id} class="case card" data-cats={c.cats.join(' ')}>
+        <a href={c.link.href} id={c.id} class="case card" data-cats={c.cats.join(' ')} {...(c.link.external ? { target: '_blank', rel: 'noopener' } : {})}>
           <div class="tags">{c.tags.map((t) => <span class="tag">{t}</span>)}</div>
           <h3 class="case-h">{c.title}</h3>
           <p class="case-p">{c.desc}</p>
           <div class="case-foot">
             <div class="case-metric"><div class="case-v">{c.metric}</div><div class="case-l">{c.metricLabel}</div></div>
-            <span class="case-cta">Case →</span>
+            <span class="case-cta">{c.link.label}{c.link.external && <span class="visually-hidden"> (opens in a new tab)</span>}</span>
           </div>
         </a>
       ))}

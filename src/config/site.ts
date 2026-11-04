@@ -77,6 +77,7 @@ export const site = {
     hebrew: 'https://play.google.com/store/apps/details?id=com.vicsothemes.hebrewforbeginners',
     hangul: 'https://play.google.com/store/apps/details?id=com.vicsothemes.hangulhero',
     eestiVerbid: 'https://play.google.com/store/apps/details?id=com.vicsothemes.eesti_verbid',
+    pokerpath: 'https://play.google.com/store/apps/details?id=com.vicsothemes.pokerpath',
   },
 
   appStore: {
