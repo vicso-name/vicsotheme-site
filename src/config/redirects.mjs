@@ -18,4 +18,7 @@ export const redirects = {
   '/services/edtech-learning-systems': '/cases/hebrew-app/',
   '/services/cms-content-architecture': '/services/',
   '/apps': '/cases/',
+
+  // v2 renames
+  '/estimator': '/app-cost-calculator/',
 };

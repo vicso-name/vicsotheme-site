@@ -53,6 +53,25 @@ export const site = {
     mvpRangeMax: '€12,000',
   },
 
+  /** App cost calculator pricing (EUR, weeks). Same per-feature prices as client quotes. */
+  estimator: {
+    base: { label: 'Core app', desc: 'One platform, up to ~12 screens, backend, store release', price: 4400, weeks: 4 },
+    /** High end of the range = total × this, rounded to €100. */
+    highMultiplier: 1.25,
+    /** Timeline range = weeks … weeks + this. */
+    extraWeeks: 2,
+    features: [
+      { id: 'both', label: 'iOS + Android (Flutter)', price: 1300, weeks: 1 },
+      { id: 'auth', label: 'Accounts & login', price: 500, weeks: 0.5 },
+      { id: 'pay', label: 'Subscriptions or payments', price: 700, weeks: 1 },
+      { id: 'ai', label: 'AI feature (LLM)', price: 1800, weeks: 1.5 },
+      { id: 'admin', label: 'Admin panel & content', price: 900, weeks: 1 },
+      { id: 'push', label: 'Push notifications & streaks', price: 300, weeks: 0.5 },
+      { id: 'offline', label: 'Offline mode', price: 500, weeks: 0.5 },
+      { id: 'design', label: 'UI design from scratch', price: 900, weeks: 1 },
+    ],
+  },
+
   playStore: {
     developer: 'https://play.google.com/store/apps/developer?id=VicsoThemes',
     hebrew: 'https://play.google.com/store/apps/details?id=com.vicsothemes.hebrewforbeginners',

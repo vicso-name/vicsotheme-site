@@ -30,9 +30,11 @@
   --on-dark-muted: #A9ACB4;
   --accent: #2449D8;
   --input-border: #8C8F97;
-  /* Two extra colours used once each in Cases.dc.html */
+  /* Extra colours that appear in the Cases / Estimator designs */
   --accent-on-dark: #8FA6FF;
   --chip-border: #B9B7B0;
+  --surface-2: #FAFAF8;
+  --bar-track: #24272E;
 
   --sans: 'Schibsted Grotesk', 'Schibsted Grotesk Fallback', system-ui, sans-serif;
   --mono: 'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, monospace;

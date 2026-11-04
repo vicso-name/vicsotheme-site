@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI app cost calculator — Viktor Sokoliuk</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+a{color:#16181D}a:hover{color:#2449D8}
+</style>
+</helmet>
+<div style="font-family: 'Schibsted Grotesk', system-ui, sans-serif; color: #16181D; background: #F4F3EF; min-height: 100vh; font-size: 17px; line-height: 1.55">
+
+<header style="border-bottom: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 10px">
+<span style="font-weight: 700; font-size: 19px; letter-spacing: -0.01em">Viktor Sokoliuk</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">product engineer · EU</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 15px">
+<a href="Mvp.dc.html" style="text-decoration: none; padding: 10px 0">MVP development</a>
+<a href="TechnicalPartner.dc.html" style="text-decoration: none; padding: 10px 0">Fractional CTO</a>
+<a href="Main.dc.html" style="text-decoration: none; padding: 10px 0">For agencies</a>
+<a href="Cases.dc.html" style="text-decoration: none; padding: 10px 0">Cases</a>
+<a href="#quote" style="text-decoration: none; padding: 11px 18px; background: #16181D; color: #F4F3EF; border-radius: 6px; font-weight: 600">Book a 20-min call</a>
+</nav>
+</div>
+</header>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #5B5E66">AI app cost calculator</p>
+<h1 style="margin: 0; max-width: 56rem; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700">Describe your app in a sentence. <span style="color: {{accent}}">See the price and the plan.</span></h1>
+<p style="margin: 0; max-width: 40rem; font-size: 19px; color: #3A3D44">AI turns your idea into a feature spec, a price range and a week-by-week timeline. Then I check it by hand and send a written fixed quote.</p>
+
+<div style="margin-top: 8px; background: #FFFFFF; border: 1px solid #16181D; border-radius: 10px; overflow: hidden">
+<label for="idea" style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 18px; border-bottom: 1px solid #E6E4DE; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66"><span>your_idea.txt</span><span>{{charCount}} chars</span></label>
+<textarea id="idea" rows="3" value="{{text}}" onInput="{{onText}}" placeholder="e.g. A language learning app for iOS and Android with daily streaks, subscriptions and an AI tutor that explains mistakes" style="box-sizing: border-box; display: block; width: 100%; border: 0; outline: none; resize: vertical; padding: 18px; font: inherit; font-size: 21px; line-height: 1.45; color: #16181D; background: #FFFFFF"></textarea>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 12px 12px 18px; border-top: 1px solid #E6E4DE; background: #FAFAF8">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">Try:</span>
+<sc-for list="{{examples}}" as="ex" hint-placeholder-count="3">
+<button type="button" onClick="{{ex.use}}" style="all: unset; box-sizing: border-box; min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; border: 1px solid #B9B7B0; border-radius: 999px; font-size: 14px; cursor: pointer">{{ex.label}}</button>
+</sc-for>
+</div>
+<button type="button" onClick="{{analyze}}" style="all: unset; box-sizing: border-box; min-height: 48px; padding: 0 24px; display: inline-flex; align-items: center; gap: 10px; background: {{accent}}; color: #FFFFFF; border-radius: 6px; font-weight: 600; cursor: pointer">Estimate my app
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 16px 24px 88px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="background: #16181D; color: #C9CBD1; border-radius: 10px; padding: 20px 22px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.8">
+<div style="color: #A9ACB4; margin-bottom: 6px">$ analyze &quot;{{shortText}}&quot;</div>
+<sc-for list="{{log}}" as="l" hint-placeholder-count="4">
+<div><span style="color: #8FA6FF">→</span> {{l}}</div>
+</sc-for>
+<div style="color: #F4F3EF">✓ spec ready · {{onCount}} features · edit below</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #D9D7D0; border-radius: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 18px 22px; border-bottom: 1px solid #E6E4DE">
+<h2 style="margin: 0; font-size: 20px; font-weight: 600">Your spec</h2>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">tap to add or remove</span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 22px; border-bottom: 1px solid #E6E4DE">
+<div><div style="font-weight: 600">Core app</div><div style="font-size: 14px; color: #5B5E66">One platform, up to ~12 screens, backend, store release</div></div>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; white-space: nowrap">€4,400</span>
+</div>
+<sc-for list="{{features}}" as="f" hint-placeholder-count="8">
+<button type="button" onClick="{{f.toggle}}" aria-pressed="{{f.on}}" style="all: unset; box-sizing: border-box; width: 100%; min-height: 64px; padding: 14px 22px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #E6E4DE; cursor: pointer">
+<span aria-hidden="true" style="{{f.boxStyle}}">{{f.mark}}</span>
+<span style="flex: 1 1 auto; min-width: 0"><span style="display: block; font-weight: 600; {{f.labelStyle}}">{{f.label}}</span><span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">{{f.reason}}</span></span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; white-space: nowrap; {{f.labelStyle}}">+{{f.priceText}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+
+<div id="quote" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="background: #16181D; color: #F4F3EF; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A9ACB4; text-transform: uppercase; letter-spacing: 0.04em">Estimated price</div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: clamp(34px, 3.6vw, 46px); letter-spacing: -0.03em; line-height: 1.1; margin-top: 6px">{{priceRange}}</div>
+<div style="font-size: 15px; color: #C9CBD1; margin-top: 6px">{{weeksText}} · fixed after a 20-min call</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 1px solid #33363E">
+<sc-for list="{{phases}}" as="p" hint-placeholder-count="4">
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; align-items: center; font-size: 13px">
+<span style="color: #C9CBD1">{{p.name}}</span>
+<span style="display: block; height: 14px; background: #24272E; border-radius: 3px"><span style="{{p.barStyle}}"></span></span>
+</div>
+</sc-for>
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A9ACB4"><span></span><span style="display: flex; justify-content: space-between"><span>wk 1</span><span>wk {{weeksMax}}</span></span></div>
+</div>
+<div style="padding-top: 18px; border-top: 1px solid #33363E; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 15px">
+<span style="color: #C9CBD1">Best fit</span>
+<a href="Mvp.dc.html" style="color: #F4F3EF; font-weight: 600">{{pkg}} package →</a>
+</div>
+</div>
+
+<form style="background: #FFFFFF; border: 1px solid #D9D7D0; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 20px; font-weight: 600">Get it as a written fixed quote</h2>
+<p style="margin: 0; font-size: 14px; color: #5B5E66">Your spec is attached. I reply within one working day.</p>
+<label for="q-email" style="font-size: 14px; font-weight: 600; margin-top: 4px">Email</label>
+<input id="q-email" type="email" autocomplete="email" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8F97; border-radius: 6px; font: inherit; background: #FFFFFF; color: #16181D">
+<button type="button" style="all: unset; box-sizing: border-box; min-height: 48px; padding: 0 24px; display: flex; align-items: center; justify-content: center; background: {{accent}}; color: #FFFFFF; border-radius: 6px; font-weight: 600; cursor: pointer">Send me the quote</button>
+<p style="margin: 0; font-size: 13px; color: #5B5E66">AI drafts the estimate. A human — me — checks every quote before it reaches you.</p>
+</form>
+</div>
+</section>
+
+<section style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px">
+<h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.1">How the number is made</h2>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid #16181D"><span style="font-weight: 600">Real prices, not a guess</span><span style="color: #3A3D44; font-size: 15px">Every feature carries the same price I quote clients. No hidden multipliers.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid #16181D"><span style="font-weight: 600">AI-assisted build</span><span style="color: #3A3D44; font-size: 15px">I use AI to write code faster, which is why these prices sit below agency rates.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid #16181D"><span style="font-weight: 600">Senior review</span><span style="color: #3A3D44; font-size: 15px">Architecture, payments and store releases are mine — tested on my own apps with paying users.</span></div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5B5E66">
+<span>© 2026 Viktor Sokoliuk</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="Main.dc.html" style="color: #5B5E66">Home</a><a href="Mvp.dc.html" style="color: #5B5E66">MVP development</a><a href="Cases.dc.html" style="color: #5B5E66">Cases</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2449D8","options":["#2449D8","#C2410C","#0F766E","#16181D"]},"$preview":{"width":1440,"height":2500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const t = 'A language learning app for iOS and Android with daily streaks, subscriptions and an AI tutor that explains mistakes';
+    this.state = { text: t, analyzed: t, overrides: {} };
+  }
+  renderVals() {
+    const F = [
+      { id: 'both', label: 'iOS + Android (Flutter)', price: 1300, weeks: 1, re: /\b(both|cross[- ]platform|flutter|ios and android|android and ios|iphone and android)\b/i },
+      { id: 'auth', label: 'Accounts & login', price: 500, weeks: 0.5, re: /\b(login|log in|sign ?in|accounts?|profiles?|users)\b/i },
+      { id: 'pay', label: 'Subscriptions or payments', price: 700, weeks: 1, re: /\b(subscriptions?|payments?|premium|paywall|checkout|paid)\b/i },
+      { id: 'ai', label: 'AI feature (LLM)', price: 1800, weeks: 1.5, re: /\b(ai|gpt|llm|chatbot|assistant|tutor|coach|generat\w*)\b/i },
+      { id: 'admin', label: 'Admin panel & content', price: 900, weeks: 1, re: /\b(admin|cms|dashboard|marketplace|content|catalog)\b/i },
+      { id: 'push', label: 'Push notifications & streaks', price: 300, weeks: 0.5, re: /\b(notifications?|reminders?|streaks?|habits?|daily)\b/i },
+      { id: 'offline', label: 'Offline mode', price: 500, weeks: 0.5, re: /\b(offline)\b/i },
+      { id: 'design', label: 'UI design from scratch', price: 900, weeks: 1, re: null }
+    ];
+    const src = this.state.analyzed || '';
+    const hasDesign = /\b(figma|designs? ready|have (a )?design)\b/i.test(src);
+    const fmt = (n) => '€' + Math.round(n).toLocaleString('en-US');
+    const log = [];
+    const feats = F.map((f) => {
+      let detected, reason;
+      if (f.id === 'design') {
+        detected = !hasDesign;
+        reason = hasDesign ? 'you mentioned ready designs' : 'no designs mentioned → included';
+      } else {
+        const m = src.match(f.re);
+        detected = !!m;
+        reason = m ? 'detected: “' + m[0] + '”' : 'not mentioned';
+      }
+      if (detected && f.id !== 'design') log.push(f.label.toLowerCase() + '  ← “' + src.match(f.re)[0] + '”');
+      const ov = this.state.overrides[f.id];
+      const on = ov === undefined ? detected : ov;
+      if (ov !== undefined) reason = on ? 'added by you' : 'removed by you';
+      return {
+        ...f, on,
+        reason,
+        priceText: fmt(f.price),
+        mark: on ? '✓' : '',
+        boxStyle: on
+          ? 'flex: none; width: 24px; height: 24px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; background: #16181D; color: #FFFFFF'
+          : 'flex: none; width: 24px; height: 24px; border-radius: 5px; box-sizing: border-box; border: 1.5px solid #8C8F97; background: #FFFFFF',
+        labelStyle: on ? 'color: #16181D' : 'color: #5B5E66',
+        toggle: () => this.setState({ overrides: { ...this.state.overrides, [f.id]: !on } })
+      };
+    });
+    if (!feats.find((f) => f.id === 'both').on) log.unshift('platform: one store (say “iOS and Android” for both)');
+    log.push('ui design: ' + (hasDesign ? 'provided by you' : 'included'));
+    const onF = feats.filter((f) => f.on);
+    const total = 4400 + onF.reduce((s, f) => s + f.price, 0);
+    const low = Math.round(total / 100) * 100;
+    const high = Math.round((total * 1.25) / 100) * 100;
+    const has = (id) => feats.find((f) => f.id === id).on;
+    const wk = Math.ceil(4 + onF.reduce((s, f) => s + f.weeks, 0));
+    const wMax = wk + 2;
+    const scopeW = has('design') ? 2 : 1;
+    const phasesRaw = [{ name: 'Scope & UI', start: 0, len: scopeW }];
+    let cursor = scopeW;
+    const coreLen = Math.max(2, wk - scopeW - 1 - (has('pay') ? 1 : 0) - (has('ai') ? 1.5 : 0));
+    phasesRaw.push({ name: 'Core build', start: cursor, len: coreLen }); cursor += coreLen;
+    if (has('ai')) { phasesRaw.push({ name: 'AI feature', start: cursor - 1, len: 2.5 }); cursor += 1.5; }
+    if (has('pay')) { phasesRaw.push({ name: 'Payments', start: cursor, len: 1 }); cursor += 1; }
+    phasesRaw.push({ name: 'Store release', start: cursor, len: 1 });
+    const span = Math.max(cursor + 1, wk);
+    const accent = this.props.accent ?? '#2449D8';
+    const phases = phasesRaw.map((p) => ({
+      name: p.name,
+      barStyle: 'display: block; height: 14px; border-radius: 3px; background: ' + (p.name === 'AI feature' ? '#8FA6FF' : '#F4F3EF') + '; margin-left: ' + (p.start / span * 100).toFixed(1) + '%; width: ' + (p.len / span * 100).toFixed(1) + '%'
+    }));
+    const ex = [
+      { label: 'Language app + AI tutor', t: 'A language learning app for iOS and Android with daily streaks, subscriptions and an AI tutor that explains mistakes' },
+      { label: 'Fitness coach', t: 'An iOS app where users log workouts and an AI coach generates weekly plans, with premium subscription' },
+      { label: 'Tutor marketplace', t: 'A marketplace app for Android and iOS where parents find local tutors, with accounts, payments and an admin panel' }
+    ];
+    const text = this.state.text;
+    return {
+      accent,
+      text,
+      charCount: text.length,
+      shortText: src.length > 48 ? src.slice(0, 48) + '…' : src,
+      onText: (e) => this.setState({ text: e.target.value }),
+      analyze: () => this.setState({ analyzed: this.state.text, overrides: {} }),
+      examples: ex.map((e) => ({ label: e.label, use: () => this.setState({ text: e.t, analyzed: e.t, overrides: {} }) })),
+      log,
+      onCount: onF.length,
+      features: feats,
+      priceRange: fmt(low) + '–' + fmt(high).replace('€', ''),
+      weeksText: wk + '–' + wMax + ' weeks',
+      weeksMax: wMax,
+      phases,
+      pkg: has('ai') ? 'AI MVP' : 'Mobile MVP'
+    };
+  }
+}
+</script>
+</body>
+</html>

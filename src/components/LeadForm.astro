@@ -2,7 +2,8 @@
 /**
  * Formspree form: posts with fetch (JSON response) and falls back to a plain
  * POST without JS. Extra hidden fields go in `hidden`; the submit label can
- * contain a live part via the `label` slot.
+ * contain a live part via the `label` slot. `fields="email"` drops name and
+ * message; `intro` / `note` slots go before the fields / after the status.
  */
 import { site } from '../config/site';
 
@@ -11,13 +12,16 @@ interface Props {
   subject: string;
   messageLabel?: string;
   hidden?: Record<string, string>;
+  fields?: 'full' | 'email';
+  compact?: boolean;
   class?: string;
 }
-const { id, subject, messageLabel = 'Message', hidden = {}, class: extra } = Astro.props;
+const { id, subject, messageLabel = 'Message', hidden = {}, fields = 'full', compact = false, class: extra } = Astro.props;
+const full = fields === 'full';
 ---
 <form
   id={id}
-  class:list={['lead-form', extra]}
+  class:list={['lead-form', { 'lead-compact': compact }, extra]}
   action={site.formspree}
   method="POST"
   data-lead-form
@@ -30,17 +34,20 @@ const { id, subject, messageLabel = 'Message', hidden = {}, class: extra } = Ast
     <input id={`${id}-hp`} type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
   </div>
 
-  <label for={`${id}-name`}>Your name</label>
-  <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+  <slot name="intro" />
 
-  <label for={`${id}-email`}>Email</label>
+  {full && <label for={`${id}-name`}>Your name</label>}
+  {full && <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />}
+
+  <label for={`${id}-email`} class="lead-email-label">Email</label>
   <input id={`${id}-email`} name="email" type="email" autocomplete="email" required />
 
-  <label for={`${id}-message`}>{messageLabel}</label>
-  <textarea id={`${id}-message`} name="message" rows="4" required></textarea>
+  {full && <label for={`${id}-message`}>{messageLabel}</label>}
+  {full && <textarea id={`${id}-message`} name="message" rows="4" required></textarea>}
 
   <button type="submit" class="btn btn-primary lead-submit"><slot name="label">Send</slot></button>
   <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+  <slot name="note" />
 </form>
 
 <style>
@@ -53,6 +60,9 @@ const { id, subject, messageLabel = 'Message', hidden = {}, class: extra } = Ast
     border: 1px solid var(--line);
     border-radius: var(--radius-card);
   }
+  .lead-compact { gap: 12px; padding: 24px; }
+  .lead-compact .lead-email-label { margin-top: 4px; }
+  .lead-compact .form-status:empty { display: none; }
   label { font-size: 14px; font-weight: 600; }
   input, textarea {
     font: inherit;
