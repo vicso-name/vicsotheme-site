@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vicsotheme.com/sitemap.xml
+Sitemap: https://vicsotheme.com/sitemap-index.xml

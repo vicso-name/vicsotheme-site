@@ -1,0 +1,703 @@
+timestamp,endpoint,params,cost_usd,note
+2026-10-27T09:51:27.209Z,/v1/serp/google,"serp ""how to build a language learning app"" us/en d10",0.0100,discovery build
+2026-10-27T09:51:39.250Z,/v1/serp/google,"serp ""build an app like duolingo"" us/en d10",0.0100,discovery build
+2026-10-27T09:51:41.723Z,/v1/serp/google,"serp ""language learning app development"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:14.659Z,/v1/serp/google,"serp ""spaced repetition app development"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:17.608Z,/v1/serp/google,"serp ""flutter language learning app"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:24.580Z,/v1/serp/google,"serp ""gamification in language learning apps"" us/en d10",0.0100,discovery build
+2026-10-27T09:52:27.704Z,/v1/serp/google,"serp ""edtech app developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:31.383Z,/v1/serp/google,"serp ""edtech app development company"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:35.406Z,/v1/serp/google,"serp ""educational app development"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:40.048Z,/v1/serp/google,"serp ""edtech mvp development"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:43.450Z,/v1/serp/google,"serp ""hire edtech developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:52:45.713Z,/v1/serp/google,"serp ""freelance edtech developer"" us/en d10",0.0100,discovery hire
+2026-10-27T09:53:29.621Z,/v1/serp/google,"serp ""indie language learning app"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:41.642Z,/v1/serp/google,"serp ""indie edtech founder"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:44.456Z,/v1/serp/google,"serp ""solo developer language app"" us/en d10",0.0100,discovery indie
+2026-10-27T09:53:47.759Z,/v1/serp/google,"serp ""learn hebrew alphabet app"" us/en d10",0.0100,discovery products
+2026-10-27T09:53:51.655Z,/v1/serp/google,"serp ""learn hangul app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:18.553Z,/v1/serp/google,"serp ""estonian verbs app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:25.117Z,/v1/serp/google,"serp ""learn estonian app"" us/en d10",0.0100,discovery products
+2026-10-27T09:56:28.527Z,/v1/serp/google,"serp ""korean alphabet learning app"" us/en d10",0.0100,discovery products
+2026-10-27T10:00:14.259Z,/v1/seo/domain/keywords,domain/keywords latvianapps.com us/en limit 150,0.0300,competitor indie
+2026-10-27T10:00:15.282Z,/v1/seo/domain/keywords,domain/keywords hangl.app us/en limit 150,0.0400,competitor indie
+2026-10-27T10:00:16.472Z,/v1/seo/domain/keywords,domain/keywords letslearnhangul.com us/en limit 150,0.0800,competitor indie
+2026-10-27T10:00:17.430Z,/v1/seo/domain/keywords,domain/keywords learnhebrewalphabet.com us/en limit 150,0.0600,competitor indie
+2026-10-27T10:00:18.335Z,/v1/seo/domain/keywords,domain/keywords lingrow.io us/en limit 150,0.0800,competitor indie
+2026-10-27T10:00:19.836Z,/v1/seo/domain/keywords,domain/keywords thesponge.app us/en limit 150,0.0400,competitor indie
+2026-10-27T10:00:20.279Z,/v1/seo/domain/keywords,domain/keywords memokat.com us/en limit 150,0.0300,competitor indie
+2026-10-27T10:00:20.959Z,/v1/seo/domain/keywords,domain/keywords mindinventory.com us/en limit 100,0.0600,competitor agency
+2026-10-27T10:00:21.607Z,/v1/seo/domain/keywords,domain/keywords citrusbug.com us/en limit 100,0.0500,competitor agency
+2026-10-27T10:00:22.212Z,/v1/seo/domain/keywords,domain/keywords geniusee.com us/en limit 100,0.0600,competitor agency
+2026-10-27T10:00:22.802Z,/v1/seo/domain/keywords,domain/keywords riseapps.co us/en limit 100,0.0400,competitor agency
+2026-10-27T10:00:23.534Z,/v1/seo/domain/keywords,domain/keywords sapient.pro us/en limit 100,0.0400,competitor agency
+2026-10-27T10:00:24.619Z,/v1/seo/domain/keywords,domain/keywords binariks.com us/en limit 100,0.0400,competitor agency
+2026-10-27T10:01:20.262Z,/v1/seo/keywords/ideas,"ideas ""learn estonian"" us/en limit 50",0.0500,ideas estonian
+2026-10-27T10:01:20.507Z,/v1/seo/keywords/ideas,"ideas ""estonian verbs"" us/en limit 50",0.0400,ideas estonian
+2026-10-27T10:01:20.786Z,/v1/seo/keywords/ideas,"ideas ""estonian grammar"" us/en limit 50",0.0400,ideas estonian
+2026-10-27T10:01:21.124Z,/v1/seo/keywords/ideas,"ideas ""estonian language"" us/en limit 50",0.0500,ideas estonian
+2026-10-27T10:01:21.343Z,/v1/seo/keywords/ideas,"ideas ""language learning app development"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:21.605Z,/v1/seo/keywords/ideas,"ideas ""educational app development"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:22.381Z,/v1/seo/keywords/ideas,"ideas ""how to make a language learning app"" us/en limit 50",0.0400,ideas build
+2026-10-27T10:01:22.992Z,/v1/seo/keywords/ideas,"ideas ""language learning app"" us/en limit 50",0.0500,ideas product
+2026-10-27T10:01:27.553Z,/v1/seo/keywords/overview,overview 700 kw us/en,0.2400,overview pool
+2026-10-27T10:01:56.433Z,/v1/seo/keywords/overview,overview 92 kw us/en,0.0400,overview pool
+2026-10-27T10:04:09.536Z,/v1/serp/google,"serp ""korean alphabet"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:12.556Z,/v1/serp/google,"serp ""hangul alphabet"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:15.239Z,/v1/serp/google,"serp ""learn hangul"" us/en d10",0.0100,validate ko/hangul-alphabet
+2026-10-27T10:04:19.203Z,/v1/serp/google,"serp ""korean alphabet chart"" us/en d10",0.0100,validate ko/korean-alphabet-chart
+2026-10-27T10:04:26.130Z,/v1/serp/google,"serp ""how to read korean"" us/en d10",0.0100,validate ko/how-to-read-korean
+2026-10-27T10:04:28.860Z,/v1/serp/google,"serp ""hangul pronunciation"" us/en d10",0.0100,validate ko/hangul-pronunciation
+2026-10-27T10:04:32.388Z,/v1/serp/google,"serp ""korean writing practice"" us/en d10",0.0100,validate ko/hangul-writing-practice
+2026-10-27T10:04:35.559Z,/v1/serp/google,"serp ""hangul quiz"" us/en d10",0.0100,validate ko/hangul-quiz-games
+2026-10-27T10:04:40.956Z,/v1/serp/google,"serp ""korean language learning games"" us/en d10",0.0100,validate ko/hangul-quiz-games
+2026-10-27T10:04:44.675Z,/v1/serp/google,"serp ""best apps to learn korean"" us/en d10",0.0100,validate ko/korean-learning-apps
+2026-10-27T10:04:57.734Z,/v1/serp/google,"serp ""learn korean"" us/en d10",0.0100,validate ko/learn-korean
+2026-10-27T10:05:00.127Z,/v1/serp/google,"serp ""topik practice test"" us/en d10",0.0100,validate ko/topik-practice-test
+2026-10-27T10:05:03.255Z,/v1/serp/google,"serp ""korean keyboard"" us/en d10",0.0100,validate ko/korean-keyboard
+2026-10-27T10:05:06.042Z,/v1/serp/google,"serp ""my name in korean"" us/en d10",0.0100,validate ko/korean-name-converter
+2026-10-27T10:05:10.664Z,/v1/serp/google,"serp ""estonian language"" us/en d10",0.0100,validate et/estonian-language
+2026-10-27T10:05:13.950Z,/v1/serp/google,"serp ""learn estonian"" us/en d10",0.0100,validate et/learn-estonian
+2026-10-27T10:05:21.188Z,/v1/serp/google,"serp ""estonian grammar"" us/en d10",0.0100,validate et/estonian-grammar
+2026-10-27T10:05:23.678Z,/v1/serp/google,"serp ""is estonian hard to learn"" us/en d10",0.0100,validate et/is-estonian-hard
+2026-10-27T10:05:26.807Z,/v1/serp/google,"serp ""education app development company"" us/en d10",0.0100,validate dev/edtech-app-development-company
+2026-10-27T10:05:30.947Z,/v1/serp/google,"serp ""how to make an educational app"" us/en d10",0.0100,validate dev/how-to-build-educational-app
+2026-10-27T10:05:34.124Z,/v1/serp/google,"serp ""education app development cost"" us/en d10",0.0100,validate dev/edtech-app-development-cost
+2026-10-27T10:05:41.573Z,/v1/serp/google,"serp ""educational app ideas"" us/en d10",0.0100,validate dev/educational-app-ideas
+2026-10-27T10:05:45.224Z,/v1/serp/google,"serp ""best language learning app"" us/en d10",0.0100,validate lang-apps/best-language-learning-app
+2026-10-27T10:05:51.116Z,/v1/serp/google,"serp ""gamification in education"" us/en d10",0.0100,validate topic/gamification-in-education
+2026-10-27T10:05:54.625Z,/v1/serp/google,"serp ""ai in language learning"" us/en d10",0.0100,validate topic/ai-in-education
+2026-10-27T10:47:40.371Z,/v1/seo/keywords/overview,overview 700 kw us/en,0.1900,hangulhero overview
+2026-10-27T10:47:41.375Z,/v1/seo/keywords/overview,overview 100 kw us/en,0.0500,hangulhero overview
+2026-10-27T19:06:56.886Z,/v1/seo/competitors/serp,competitors/serp alphabet 181 kw us/en limit 100,0.0600,R1 serp alphabet
+2026-10-27T19:06:57.720Z,/v1/seo/competitors/serp,competitors/serp learning 166 kw us/en limit 100,0.0600,R1 serp learning
+2026-10-27T19:06:58.121Z,/v1/seo/competitors/serp,competitors/serp phrases 200 kw us/en limit 100,0.0600,R1 serp phrases
+2026-10-27T19:06:58.555Z,/v1/seo/competitors/serp,competitors/serp app 53 kw us/en limit 100,0.0600,R1 serp app
+2026-10-27T19:06:59.492Z,/v1/seo/competitors/domain,competitors/domain letslearnhangul.com us/en limit 100,0.0600,R1 domain letslearnhangul.com
+2026-10-27T19:07:00.698Z,/v1/seo/competitors/domain,competitors/domain lingrow.io us/en limit 100,0.0600,R1 domain lingrow.io
+2026-10-27T19:07:04.273Z,/v1/seo/competitors/domain,competitors/domain 90daykorean.com us/en limit 100,0.0600,R1 domain 90daykorean.com
+2026-10-27T19:09:38.511Z,/v1/seo/domain/keywords,domain/keywords hangul.fun whole us/en limit 1000,0.0700,R2 keywords hangul.fun
+2026-10-27T19:09:39.785Z,/v1/seo/domain/keywords,domain/keywords zkorean.com whole us/en limit 1000,0.2200,R2 keywords zkorean.com
+2026-10-27T19:09:40.981Z,/v1/seo/domain/keywords,domain/keywords learning-korean.com whole us/en limit 1000,0.2200,R2 keywords learning-korean.com
+2026-10-27T19:09:42.340Z,/v1/seo/domain/keywords,domain/keywords mykoreanlesson.com whole us/en limit 1000,0.2800,R2 keywords mykoreanlesson.com
+2026-10-27T19:09:43.234Z,/v1/seo/domain/keywords,domain/keywords letslearnhangul.com whole us/en limit 1000,0.1500,R2 keywords letslearnhangul.com
+2026-10-27T19:09:44.074Z,/v1/seo/domain/keywords,domain/keywords learnkorean24.com whole us/en limit 1000,0.1000,R2 keywords learnkorean24.com
+2026-10-27T19:09:46.257Z,/v1/seo/domain/keywords,domain/keywords howtostudykorean.com whole us/en limit 1000,0.3300,R2 keywords howtostudykorean.com
+2026-10-27T19:09:48.503Z,/v1/seo/domain/keywords,domain/keywords 90daykorean.com whole us/en limit 1000,0.3300,R2 keywords 90daykorean.com
+2026-10-27T19:09:50.584Z,/v1/seo/domain/keywords,domain/keywords koreanclass101.com whole us/en limit 1000,0.3300,R2 keywords koreanclass101.com
+2026-10-27T19:09:51.465Z,/v1/seo/domain/keywords,domain/keywords languagebird.com korean-urls us/en limit 1000,0.1200,R2 keywords languagebird.com
+2026-10-27T19:09:53.537Z,/v1/seo/domain/keywords,domain/keywords flexiclasses.com korean-urls us/en limit 1000,0.3300,R2 keywords flexiclasses.com
+2026-10-27T19:09:55.766Z,/v1/seo/domain/keywords,domain/keywords ling-app.com korean-urls us/en limit 1000,0.3300,R2 keywords ling-app.com
+2026-10-27T19:09:57.689Z,/v1/seo/domain/keywords,domain/keywords talkpal.ai korean-urls us/en limit 1000,0.3300,R2 keywords talkpal.ai
+2026-10-27T19:09:59.981Z,/v1/seo/domain/keywords,domain/keywords blog.lingodeer.com korean-urls us/en limit 1000,0.3300,R2 keywords blog.lingodeer.com
+2026-10-27T19:10:02.342Z,/v1/seo/domain/keywords,domain/keywords migaku.com korean-urls us/en limit 1000,0.3300,R2 keywords migaku.com
+2026-10-27T19:10:02.776Z,/v1/seo/domain/pages,domain/pages letslearnhangul.com us/en limit 200,0.0400,R2 pages letslearnhangul.com
+2026-10-27T19:10:04.419Z,/v1/seo/domain/pages,domain/pages zkorean.com us/en limit 200,0.0900,R2 pages zkorean.com
+2026-10-27T19:11:05.945Z,/v1/seo/trends,trends us korean alphabet | learn korean | hangul | korean phrases | learn korean app,0.0200,R8 trends learn korean
+2026-10-27T19:11:11.203Z,/v1/seo/trends,trends us korean alphabet | hello in korean | thank you in korean | i love you in korean | oppa,0.0200,R8 trends hello in korean
+2026-10-27T19:11:20.454Z,/v1/seo/trends,trends us korean alphabet | hangul day | korean slang | kdrama | korean words,0.0200,R8 trends hangul day
+2026-10-27T19:11:40.332Z,/v1/seo/trends,trends probe korean alphabet default loc,0.0200,R8 probe
+2026-10-27T19:42:00.200Z,/v1/seo/keywords/related,"related ""hello in korean"" us/en limit 100",0.0400,R3 related hello in korean
+2026-10-27T19:42:00.699Z,/v1/seo/keywords/related,"related ""thank you in korean"" us/en limit 100",0.0400,R3 related thank you in korean
+2026-10-27T19:42:01.041Z,/v1/seo/keywords/related,"related ""i love you in korean"" us/en limit 100",0.0400,R3 related i love you in korean
+2026-10-27T19:42:01.410Z,/v1/seo/keywords/related,"related ""goodbye in korean"" us/en limit 100",0.0400,R3 related goodbye in korean
+2026-10-27T19:42:02.075Z,/v1/seo/keywords/related,"related ""happy birthday in korean"" us/en limit 100",0.0400,R3 related happy birthday in korean
+2026-10-27T19:42:02.396Z,/v1/seo/keywords/related,"related ""no in korean"" us/en limit 100",0.0400,R3 related no in korean
+2026-10-27T19:42:02.775Z,/v1/seo/keywords/related,"related ""oppa in korean"" us/en limit 100",0.0400,R3 related oppa in korean
+2026-10-27T19:42:03.173Z,/v1/seo/keywords/related,"related ""yes in korean"" us/en limit 100",0.0400,R3 related yes in korean
+2026-10-27T19:42:03.470Z,/v1/seo/keywords/related,"related ""good morning in korean"" us/en limit 100",0.0400,R3 related good morning in korean
+2026-10-27T19:42:03.707Z,/v1/seo/keywords/related,"related ""how to say how are you in korean"" us/en limit 100",0.0400,R3 related how to say how are you in korean
+2026-10-27T19:42:04.028Z,/v1/seo/keywords/related,"related ""sorry in korean"" us/en limit 100",0.0400,R3 related sorry in korean
+2026-10-27T19:42:04.348Z,/v1/seo/keywords/related,"related ""coffee in korean"" us/en limit 100",0.0400,R3 related coffee in korean
+2026-10-27T19:42:04.676Z,/v1/seo/keywords/related,"related ""noona in korean"" us/en limit 100",0.0400,R3 related noona in korean
+2026-10-27T19:42:04.888Z,/v1/seo/keywords/related,"related ""cheers in korean"" us/en limit 100",0.0400,R3 related cheers in korean
+2026-10-27T19:42:05.193Z,/v1/seo/keywords/related,"related ""cute in korean"" us/en limit 100",0.0400,R3 related cute in korean
+2026-10-27T19:42:05.509Z,/v1/seo/keywords/related,"related ""love in korean"" us/en limit 100",0.0400,R3 related love in korean
+2026-10-27T19:42:05.740Z,/v1/seo/keywords/related,"related ""delicious in korean"" us/en limit 100",0.0400,R3 related delicious in korean
+2026-10-27T19:42:05.924Z,/v1/seo/keywords/related,"related ""fighting in korean"" us/en limit 100",0.0400,R3 related fighting in korean
+2026-10-27T19:42:06.161Z,/v1/seo/keywords/related,"related ""excuse me in korean"" us/en limit 100",0.0400,R3 related excuse me in korean
+2026-10-27T19:42:06.472Z,/v1/seo/keywords/related,"related ""unnie in korean"" us/en limit 100",0.0400,R3 related unnie in korean
+2026-10-27T19:42:06.652Z,/v1/seo/keywords/related,"related ""korean phrases from kdrama"" us/en limit 100",0.0400,R3 related korean phrases from kdrama
+2026-10-27T19:42:06.899Z,/v1/seo/keywords/related,"related ""korean food words"" us/en limit 100",0.0400,R3 related korean food words
+2026-10-27T19:42:07.274Z,/v1/seo/keywords/related,"related ""korean phrases for travel"" us/en limit 100",0.0400,R3 related korean phrases for travel
+2026-10-27T19:42:07.493Z,/v1/seo/keywords/related,"related ""korean shopping phrases"" us/en limit 100",0.0400,R3 related korean shopping phrases
+2026-10-27T19:42:07.759Z,/v1/seo/keywords/related,"related ""korean expressions"" us/en limit 100",0.0400,R3 related korean expressions
+2026-10-27T19:42:08.015Z,/v1/seo/keywords/related,"related ""korean love words"" us/en limit 100",0.0400,R3 related korean love words
+2026-10-27T19:42:08.231Z,/v1/seo/keywords/related,"related ""korean emergency phrases"" us/en limit 100",0.0300,R3 related korean emergency phrases
+2026-10-27T19:42:08.414Z,/v1/seo/keywords/related,"related ""korean phrases for work"" us/en limit 100",0.0400,R3 related korean phrases for work
+2026-10-27T19:42:08.655Z,/v1/seo/keywords/ideas,"ideas ""korean slang words"" us/en limit 150",0.0400,R3 ideas korean slang words
+2026-10-27T19:42:09.024Z,/v1/seo/keywords/ideas,"ideas ""kdrama words"" us/en limit 150",0.0400,R3 ideas kdrama words
+2026-10-27T19:42:09.461Z,/v1/seo/keywords/ideas,"ideas ""korean nicknames"" us/en limit 150",0.0700,R3 ideas korean nicknames
+2026-10-27T19:42:09.808Z,/v1/seo/keywords/ideas,"ideas ""korean honorifics"" us/en limit 150",0.0500,R3 ideas korean honorifics
+2026-10-27T19:42:10.110Z,/v1/seo/keywords/ideas,"ideas ""korean swear words"" us/en limit 150",0.0400,R3 ideas korean swear words
+2026-10-27T19:42:10.588Z,/v1/seo/keywords/ideas,"ideas ""korean numbers"" us/en limit 150",0.0800,R3 ideas korean numbers
+2026-10-27T19:42:10.826Z,/v1/seo/keywords/ideas,"ideas ""days of the week in korean"" us/en limit 150",0.0400,R3 ideas days of the week in korean
+2026-10-27T19:42:11.092Z,/v1/seo/keywords/ideas,"ideas ""colors in korean"" us/en limit 150",0.0400,R3 ideas colors in korean
+2026-10-27T19:42:11.486Z,/v1/seo/keywords/ideas,"ideas ""family members in korean"" us/en limit 150",0.0400,R3 ideas family members in korean
+2026-10-27T19:42:11.808Z,/v1/seo/keywords/ideas,"ideas ""korean food names"" us/en limit 150",0.0600,R3 ideas korean food names
+2026-10-27T19:42:12.186Z,/v1/seo/keywords/ideas,"ideas ""korean alphabet letters"" us/en limit 150",0.0500,R3 ideas korean alphabet letters
+2026-10-27T19:42:12.442Z,/v1/seo/keywords/ideas,"ideas ""korean alphabet app"" us/en limit 150",0.0400,R3 ideas korean alphabet app
+2026-10-27T19:43:24.624Z,/v1/seo/keywords/overview,overview 100 kw us/en +clickstream #0,0.1200,R4 overview clickstream
+2026-10-27T19:43:25.849Z,/v1/seo/keywords/overview,overview 522 kw us/en #1,0.0800,R4 overview r3-candidates
+2026-10-27T19:43:29.055Z,/v1/seo/keywords/overview,overview 700 kw us/en #2,0.1400,R4 overview backlog
+2026-10-27T19:43:31.915Z,/v1/seo/keywords/overview,overview 700 kw us/en #3,0.1300,R4 overview backlog
+2026-10-27T19:43:34.137Z,/v1/seo/keywords/overview,overview 700 kw us/en #4,0.1200,R4 overview backlog
+2026-10-27T19:43:34.541Z,/v1/seo/keywords/overview,overview 69 kw us/en #5,0.0400,R4 overview backlog
+2026-10-27T19:43:42.392Z,/v1/seo/keywords/overview,overview 700 kw us/en #6,0.2400,R4 overview gap
+2026-10-27T19:43:46.975Z,/v1/seo/keywords/overview,overview 700 kw us/en #7,0.2400,R4 overview gap
+2026-10-27T19:43:51.745Z,/v1/seo/keywords/overview,overview 700 kw us/en #8,0.2400,R4 overview gap
+2026-10-27T19:46:42.659Z,/v1/serp/google,"serp ""korean language how to learn"" us/en d10",0.0100,R5 serp how korean language learn to
+2026-10-27T19:46:42.717Z,/v1/serp/google,"serp ""korean writing alphabet"" us/en d10",0.0100,R5 serp alphabet writing
+2026-10-27T19:46:42.983Z,/v1/serp/google,"serp ""how to learn korean"" us/en d10",0.0100,R5 serp how korean learn to
+2026-10-27T19:46:44.785Z,/v1/serp/google,"serp ""alphabet korean"" us/en d10",0.0100,R5 serp alphabet
+2026-10-27T19:46:46.396Z,/v1/serp/google,"serp ""aegyo"" us/en d10",0.0100,R5 serp aegyo
+2026-10-27T19:46:46.584Z,/v1/serp/google,"serp ""thank you in korean"" us/en d10",0.0100,R5 serp thank
+2026-10-27T19:46:47.118Z,/v1/serp/google,"serp ""hello in korean"" us/en d10",0.0100,R5 serp hello
+2026-10-27T19:46:49.846Z,/v1/serp/google,"serp ""hangul"" us/en d10",0.0100,R5 serp hangul
+2026-10-27T19:46:50.539Z,/v1/serp/google,"serp ""hangul in hangul"" us/en d10",0.0100,R5 serp hangul hangul in
+2026-10-27T19:46:53.671Z,/v1/serp/google,"serp ""korean letters hangul"" us/en d10",0.0100,R5 serp letters
+2026-10-27T19:46:54.407Z,/v1/serp/google,"serp ""hangul script"" us/en d10",0.0100,R5 serp script
+2026-10-27T19:46:54.990Z,/v1/serp/google,"serp ""korean girlfriend"" us/en d10",0.0100,R5 serp girlfriend
+2026-10-27T19:46:55.426Z,/v1/serp/google,"serp ""how to say hi in korea"" us/en d10",0.0100,R5 serp hi
+2026-10-27T19:46:57.556Z,/v1/serp/google,"serp ""korea nickname"" us/en d10",0.0100,R5 serp nickname
+2026-10-27T19:46:58.104Z,/v1/serp/google,"serp ""korean family names"" us/en d10",0.0100,R5 serp family names
+2026-10-27T19:46:59.408Z,/v1/serp/google,"serp ""korean names"" us/en d10",0.0100,R5 serp names
+2026-10-27T19:47:00.861Z,/v1/serp/google,"serp ""name korea"" us/en d10",0.0100,R5 serp name
+2026-10-27T19:47:02.714Z,/v1/serp/google,"serp ""korean nicknames"" us/en d10",0.0100,R5 serp nicknames
+2026-10-27T19:47:04.495Z,/v1/serp/google,"serp ""korean keyboard layout"" us/en d10",0.0100,R5 serp keyboard layout
+2026-10-27T19:47:04.859Z,/v1/serp/google,"serp ""i love you in korean"" us/en d10",0.0100,R5 serp i love
+2026-10-27T19:47:07.220Z,/v1/serp/google,"serp ""learn korean resources"" us/en d10",0.0100,R5 serp resources
+2026-10-27T19:47:08.717Z,/v1/serp/google,"serp ""oppa oppa meaning"" us/en d10",0.0100,R5 serp oppa oppa
+2026-10-27T19:47:09.610Z,/v1/serp/google,"serp ""oppa meaning"" us/en d10",0.0100,R5 serp oppa
+2026-10-27T19:47:12.021Z,/v1/serp/google,"serp ""oppas meaning"" us/en d10",0.0100,R5 serp oppas
+2026-10-27T19:47:12.276Z,/v1/serp/google,"serp ""saranghae"" us/en d10",0.0100,R5 serp saranghae
+2026-10-27T19:47:13.155Z,/v1/serp/google,"serp ""numbers korean"" us/en d10",0.0100,R5 serp numbers
+2026-10-27T19:47:15.061Z,/v1/serp/google,"serp ""korean words in hangul"" us/en d10",0.0100,R5 serp hangul in korean words
+2026-10-27T19:47:15.099Z,/v1/serp/google,"serp ""korean language"" us/en d10",0.0100,R5 serp korean language
+2026-10-27T19:47:16.157Z,/v1/serp/google,"serp ""korean words"" us/en d10",0.0100,R5 serp korean words
+2026-10-27T19:47:18.159Z,/v1/seo/keywords/overview,overview 200 kw gb/en,0.0800,R6 overview gb
+2026-10-27T19:47:18.323Z,/v1/serp/google,"serp ""app to learn korean language"" us/en d10",0.0100,R5 serp app
+2026-10-27T19:47:18.332Z,/v1/serp/google,"serp ""korean words in korean"" us/en d10",0.0100,R5 serp in korean korean words
+2026-10-27T19:47:18.950Z,/v1/serp/google,"serp ""alphabet korean letters"" us/en d10",0.0100,R5 serp alphabet letters
+2026-10-27T19:47:19.459Z,/v1/seo/keywords/overview,overview 200 kw ca/en,0.0700,R6 overview ca
+2026-10-27T19:47:20.467Z,/v1/serp/google,"serp ""bye in korean"" us/en d10",0.0100,R5 serp bye
+2026-10-27T19:47:20.686Z,/v1/seo/keywords/overview,overview 200 kw au/en,0.0700,R6 overview au
+2026-10-27T19:47:21.743Z,/v1/seo/keywords/overview,overview 200 kw ph/en,0.0700,R6 overview ph
+2026-10-27T19:47:22.985Z,/v1/seo/keywords/overview,overview 200 kw in/en,0.0700,R6 overview in
+2026-10-27T19:47:23.296Z,/v1/serp/google,"serp ""dog in korean"" us/en d10",0.0100,R5 serp dog
+2026-10-27T19:47:23.551Z,/v1/serp/google,"serp ""dad in korean"" us/en d10",0.0100,R5 serp dad
+2026-10-27T19:47:24.260Z,/v1/seo/keywords/overview,overview 200 kw sg/en,0.0700,R6 overview sg
+2026-10-27T19:47:25.172Z,/v1/seo/keywords/overview,overview 200 kw id/en,0.0600,R6 overview id
+2026-10-27T19:47:25.410Z,/v1/seo/keywords/ideas,"ideas ""alfabeto coreano"" 2484/es limit 50",0.0500,R6 ideas es (Mexico)
+2026-10-27T19:47:25.475Z,/v1/serp/google,"serp ""goodbye in korean"" us/en d10",0.0100,R5 serp goodbye
+2026-10-27T19:47:25.677Z,/v1/seo/keywords/ideas,"ideas ""alfabeto coreano"" 2076/pt limit 50",0.0500,R6 ideas pt (Brazil)
+2026-10-27T19:47:26.209Z,/v1/seo/keywords/ideas,"ideas ""huruf korea"" 2360/id limit 50",0.0500,R6 ideas id (Indonesia)
+2026-10-27T19:47:26.631Z,/v1/seo/keywords/ideas,"ideas ""alphabet coréen"" 2250/fr limit 50",0.0500,R6 ideas fr (France)
+2026-10-27T19:47:27.480Z,/v1/serp/google,"serp ""father in korea"" us/en d10",0.0100,R5 serp father
+2026-10-27T19:47:27.770Z,/v1/serp/google,"serp ""how to say love you in korean"" us/en d10",0.0100,R5 serp love
+2026-10-27T19:47:31.130Z,/v1/serp/google,"serp ""korean fast handwriting"" us/en d10",0.0100,R5 serp fast handwriting
+2026-10-27T19:47:31.378Z,/v1/serp/google,"serp ""happy birthday in korean"" us/en d10",0.0100,R5 serp birthday happy
+2026-10-27T19:47:32.782Z,/v1/serp/google,"serp ""korean natural handwriting"" us/en d10",0.0100,R5 serp handwriting natural
+2026-10-27T19:47:33.368Z,/v1/serp/google,"serp ""korean shibal"" us/en d10",0.0100,R5 serp shibal
+2026-10-27T19:47:34.940Z,/v1/serp/google,"serp ""shibaloma korean"" us/en d10",0.0100,R5 serp shibaloma
+2026-10-27T19:47:36.542Z,/v1/serp/google,"serp ""no in korean"" us/en d10",0.0100,R5 serp no
+2026-10-27T19:47:38.203Z,/v1/serp/google,"serp ""yes in korean"" us/en d10",0.0100,R5 serp yes
+2026-10-27T19:47:38.534Z,/v1/serp/google,"serp ""grandma korean"" us/en d10",0.0100,R5 serp grandma
+2026-10-27T19:47:40.565Z,/v1/serp/google,"serp ""grandmother korean"" us/en d10",0.0100,R5 serp grandmother
+2026-10-27T19:47:41.944Z,/v1/serp/google,"serp ""korean games"" us/en d10",0.0100,R5 serp games
+2026-10-27T19:47:44.079Z,/v1/serp/google,"serp ""learn in korean"" us/en d10",0.0100,R5 serp in korean learn
+2026-10-27T19:47:46.865Z,/v1/serp/google,"serp ""korean language learning"" us/en d10",0.0100,R5 serp korean language learning
+2026-10-27T19:47:48.789Z,/v1/serp/google,"serp ""learn korea"" us/en d10",0.0100,R5 serp korea learn
+2026-10-27T19:47:49.094Z,/v1/serp/google,"serp ""korean learning apps"" us/en d10",0.0100,R5 serp apps
+2026-10-27T19:47:49.239Z,/v1/serp/google,"serp ""learn korean language"" us/en d10",0.0100,R5 serp korean language learn
+2026-10-27T19:47:51.589Z,/v1/serp/google,"serp ""mom in korean"" us/en d10",0.0100,R5 serp mom
+2026-10-27T19:47:52.213Z,/v1/serp/google,"serp ""mother in korean"" us/en d10",0.0100,R5 serp mother
+2026-10-27T19:47:52.796Z,/v1/serp/google,"serp ""learning korean"" us/en d10",0.0100,R5 serp korean learning
+2026-10-27T19:47:52.899Z,/v1/serp/google,"serp ""mommy in korean"" us/en d10",0.0100,R5 serp mommy
+2026-10-27T19:47:56.808Z,/v1/serp/google,"serp ""bad words korean"" us/en d10",0.0100,R5 serp bad
+2026-10-27T19:47:56.977Z,/v1/serp/google,"serp ""cursing words in korean"" us/en d10",0.0100,R5 serp cursing
+2026-10-27T19:47:57.375Z,/v1/serp/google,"serp ""best korean films"" us/en d10",0.0100,R5 serp best films
+2026-10-27T19:47:58.074Z,/v1/serp/google,"serp ""curse word korean"" us/en d10",0.0100,R5 serp curse
+2026-10-27T19:47:59.708Z,/v1/serp/google,"serp ""dirty words in korean"" us/en d10",0.0100,R5 serp dirty
+2026-10-27T19:48:01.391Z,/v1/serp/google,"serp ""good morning in korean"" us/en d10",0.0100,R5 serp good morning
+2026-10-27T19:48:01.448Z,/v1/serp/google,"serp ""how do you say in korean"" us/en d10",0.0100,R5 serp do how in korean say you
+2026-10-27T19:48:03.876Z,/v1/serp/google,"serp ""how to say how are you in korean"" us/en d10",0.0100,R5 serp are
+2026-10-27T19:48:05.975Z,/v1/serp/google,"serp ""how to say you in korean"" us/en d10",0.0100,R5 serp how in korean say to you
+2026-10-27T19:48:06.099Z,/v1/serp/google,"serp ""sorry in korean"" us/en d10",0.0100,R5 serp sorry
+2026-10-27T19:48:06.799Z,/v1/serp/google,"serp ""korea you"" us/en d10",0.0100,R5 serp korea you
+2026-10-27T19:48:08.395Z,/v1/serp/google,"serp ""korean pop singer"" us/en d10",0.0100,R5 serp pop singer
+2026-10-27T19:48:08.768Z,/v1/serp/google,"serp ""korean quotes book"" us/en d10",0.0100,R5 serp book quotes
+2026-10-27T19:48:09.910Z,/v1/serp/google,"serp ""swear word korean"" us/en d10",0.0100,R5 serp swear
+2026-10-27T19:48:12.216Z,/v1/serp/google,"serp ""korean vulgar words"" us/en d10",0.0100,R5 serp vulgar
+2026-10-27T19:48:12.323Z,/v1/serp/google,"serp ""korean swearing words"" us/en d10",0.0100,R5 serp swearing
+2026-10-27T19:48:13.841Z,/v1/serp/google,"serp ""korean swear words pronunciation"" us/en d10",0.0100,R5 serp pronunciation swear
+2026-10-27T19:48:17.773Z,/v1/serp/google,"serp ""l korean"" us/en d10",0.0100,R5 serp l
+2026-10-27T19:48:18.747Z,/v1/serp/google,"serp ""offensive words in korean"" us/en d10",0.0100,R5 serp offensive
+2026-10-27T19:48:20.256Z,/v1/serp/google,"serp ""kpop stars"" us/en d10",0.0100,R5 serp kpop stars
+2026-10-27T19:48:21.016Z,/v1/serp/google,"serp ""korean writing"" us/en d10",0.0100,R5 serp writing
+2026-10-27T19:48:22.528Z,/v1/serp/google,"serp ""religions korea"" us/en d10",0.0100,R5 serp religions
+2026-10-27T19:48:23.478Z,/v1/serp/google,"serp ""religion.in korea"" us/en d10",0.0100,R5 serp religion
+2026-10-27T19:48:23.909Z,/v1/serp/google,"serp ""rude words in korean"" us/en d10",0.0100,R5 serp rude
+2026-10-27T19:48:27.111Z,/v1/serp/google,"serp ""sushi in korean"" us/en d10",0.0100,R5 serp sushi
+2026-10-27T19:48:27.477Z,/v1/serp/google,"serp ""what does oppa mean in korean"" us/en d10",0.0100,R5 serp does oppa
+2026-10-27T19:48:27.585Z,/v1/serp/google,"serp ""write korean words"" us/en d10",0.0100,R5 serp write
+2026-10-27T19:48:29.311Z,/v1/serp/google,"serp ""unnie"" us/en d10",0.0100,R5 serp unnie
+2026-10-27T19:48:30.317Z,/v1/serp/google,"serp ""written korean"" us/en d10",0.0100,R5 serp written
+2026-10-27T19:48:32.673Z,/v1/serp/google,"serp ""you in korea"" us/en d10",0.0100,R5 serp in korea you
+2026-10-27T19:48:32.674Z,/v1/serp/google,"serp ""you korean language"" us/en d10",0.0100,R5 serp korean language you
+2026-10-27T19:48:34.413Z,/v1/serp/google,"serp ""korean beauty standards"" us/en d10",0.0100,R5 serp beauty standards
+2026-10-27T19:48:35.347Z,/v1/serp/google,"serp ""you in korean"" us/en d10",0.0100,R5 serp in korean you
+2026-10-27T19:48:36.031Z,/v1/serp/google,"serp ""drinking korea"" us/en d10",0.0100,R5 serp drinking
+2026-10-27T19:48:36.810Z,/v1/serp/google,"serp ""coffee in korean"" us/en d10",0.0100,R5 serp coffee
+2026-10-27T19:48:38.153Z,/v1/serp/google,"serp ""hair style in korean"" us/en d10",0.0100,R5 serp hair style
+2026-10-27T19:48:39.153Z,/v1/serp/google,"serp ""hangul chart"" us/en d10",0.0100,R5 serp chart
+2026-10-27T19:48:40.190Z,/v1/serp/google,"serp ""hyungs"" us/en d10",0.0100,R5 serp hyungs
+2026-10-27T19:48:40.540Z,/v1/serp/google,"serp ""hyung"" us/en d10",0.0100,R5 serp hyung
+2026-10-27T19:48:42.746Z,/v1/serp/google,"serp ""korean beauty ideals"" us/en d10",0.0100,R5 serp beauty ideals
+2026-10-27T19:48:43.240Z,/v1/serp/google,"serp ""korean course"" us/en d10",0.0100,R5 serp course
+2026-10-27T19:48:44.797Z,/v1/serp/google,"serp ""korean language lessons"" us/en d10",0.0100,R5 serp lessons
+2026-10-27T19:48:45.508Z,/v1/serp/google,"serp ""korean language classes"" us/en d10",0.0100,R5 serp classes
+2026-10-27T19:48:47.060Z,/v1/serp/google,"serp ""new year korea"" us/en d10",0.0100,R5 serp new year
+2026-10-27T19:48:48.627Z,/v1/serp/google,"serp ""korean new year day"" us/en d10",0.0100,R5 serp day new year
+2026-10-27T19:48:50.336Z,/v1/serp/google,"serp ""noona in korean"" us/en d10",0.0100,R5 serp noona
+2026-10-27T19:48:50.891Z,/v1/serp/google,"serp ""korean webtoon"" us/en d10",0.0100,R5 serp webtoon
+2026-10-27T19:48:51.473Z,/v1/serp/google,"serp ""please in korean"" us/en d10",0.0100,R5 serp please
+2026-10-27T19:48:54.671Z,/v1/serp/google,"serp ""what does shibal mean"" us/en d10",0.0100,R5 serp does shibal
+2026-10-27T19:48:55.117Z,/v1/serp/google,"serp ""auntie in korean"" us/en d10",0.0100,R5 serp auntie
+2026-10-27T19:48:55.218Z,/v1/serp/google,"serp ""webtoons korea"" us/en d10",0.0100,R5 serp webtoons
+2026-10-27T19:48:58.068Z,/v1/serp/google,"serp ""aunty in korean language"" us/en d10",0.0100,R5 serp aunty
+2026-10-27T19:48:59.136Z,/v1/serp/google,"serp ""cheer in korean"" us/en d10",0.0100,R5 serp cheer
+2026-10-27T19:48:59.217Z,/v1/serp/google,"serp ""cheers in korean"" us/en d10",0.0100,R5 serp cheers
+2026-10-27T19:48:59.570Z,/v1/serp/google,"serp ""aunt korean"" us/en d10",0.0100,R5 serp aunt
+2026-10-27T19:49:03.036Z,/v1/serp/google,"serp ""cuteness in korean"" us/en d10",0.0100,R5 serp cuteness
+2026-10-27T19:49:03.091Z,/v1/serp/google,"serp ""cute in korean"" us/en d10",0.0100,R5 serp cute
+2026-10-27T19:49:04.019Z,/v1/serp/google,"serp ""facts about south korea"" us/en d10",0.0100,R5 serp about facts
+2026-10-27T19:49:05.745Z,/v1/serp/google,"serp ""korea questions"" us/en d10",0.0100,R5 serp questions
+2026-10-27T19:49:05.746Z,/v1/serp/google,"serp ""grandfather korean"" us/en d10",0.0100,R5 serp grandfather
+2026-10-27T19:49:06.756Z,/v1/serp/google,"serp ""korean grandpa"" us/en d10",0.0100,R5 serp grandpa
+2026-10-27T19:49:09.314Z,/v1/serp/google,"serp ""korean karaoke"" us/en d10",0.0100,R5 serp karaoke
+2026-10-27T19:49:10.619Z,/v1/serp/google,"serp ""korean tea"" us/en d10",0.0100,R5 serp tea
+2026-10-27T19:49:11.475Z,/v1/serp/google,"serp ""korean characters"" us/en d10",0.0100,R5 serp characters
+2026-10-27T19:49:11.542Z,/v1/serp/google,"serp ""national flower korea"" us/en d10",0.0100,R5 serp flower national
+2026-10-27T19:49:13.586Z,/v1/serp/google,"serp ""my korean notes"" us/en d10",0.0100,R5 serp my notes
+2026-10-27T19:49:14.271Z,/v1/serp/google,"serp ""oppa definition korean"" us/en d10",0.0100,R5 serp definition oppa
+2026-10-27T19:49:14.440Z,/v1/serp/google,"serp ""question about korea"" us/en d10",0.0100,R5 serp about question
+2026-10-27T19:49:15.228Z,/v1/serp/google,"serp ""questions about korea"" us/en d10",0.0100,R5 serp about questions
+2026-10-27T19:49:18.053Z,/v1/serp/google,"serp ""south korea fun facts"" us/en d10",0.0100,R5 serp facts fun
+2026-10-27T19:49:19.050Z,/v1/serp/google,"serp ""south korean female"" us/en d10",0.0100,R5 serp female
+2026-10-27T19:49:19.314Z,/v1/serp/google,"serp ""south korea interesting facts"" us/en d10",0.0100,R5 serp facts interesting
+2026-10-27T19:49:21.600Z,/v1/serp/google,"serp ""unnies meaning"" us/en d10",0.0100,R5 serp unnies
+2026-10-27T19:49:22.972Z,/v1/serp/google,"serp ""finger heart korean"" us/en d10",0.0100,R5 serp finger heart
+2026-10-27T19:49:25.105Z,/v1/serp/google,"serp ""define sunbae"" us/en d10",0.0100,R5 serp define sunbae
+2026-10-27T19:49:25.417Z,/v1/serp/google,"serp ""flower korea"" us/en d10",0.0100,R5 serp flower
+2026-10-27T19:49:25.576Z,/v1/serp/google,"serp ""flowers korean"" us/en d10",0.0100,R5 serp flowers
+2026-10-27T19:49:28.220Z,/v1/serp/google,"serp ""korean honorifics"" us/en d10",0.0100,R5 serp honorifics
+2026-10-27T19:49:28.348Z,/v1/serp/google,"serp ""honorific korean"" us/en d10",0.0100,R5 serp honorific
+2026-10-27T19:49:28.788Z,/v1/serp/google,"serp ""korean food names"" us/en d10",0.0100,R5 serp food names
+2026-10-27T19:49:29.787Z,/v1/serp/google,"serp ""how to study korean"" us/en d10",0.0100,R5 serp study
+2026-10-27T19:49:32.333Z,/v1/serp/google,"serp ""korea foods name"" us/en d10",0.0100,R5 serp foods name
+2026-10-27T19:49:32.812Z,/v1/serp/google,"serp ""korean book page"" us/en d10",0.0100,R5 serp book page
+2026-10-27T19:49:34.285Z,/v1/serp/google,"serp ""korea's new year"" us/en d10",0.0100,R5 serp new s year
+2026-10-27T19:49:34.774Z,/v1/serp/google,"serp ""korean books pages"" us/en d10",0.0100,R5 serp books pages
+2026-10-27T19:49:37.901Z,/v1/serp/google,"serp ""korean book pages"" us/en d10",0.0100,R5 serp book pages
+2026-10-27T19:49:40.851Z,/v1/serp/google,"serp ""korean female names"" us/en d10",0.0100,R5 serp female names
+2026-10-27T19:49:41.890Z,/v1/serp/google,"serp ""korean heart fingers"" us/en d10",0.0100,R5 serp fingers heart
+2026-10-27T19:49:42.551Z,/v1/serp/google,"serp ""korean expression"" us/en d10",0.0100,R5 serp expression
+2026-10-27T19:49:42.782Z,/v1/serp/google,"serp ""korean expressions"" us/en d10",0.0100,R5 serp expressions
+2026-10-27T19:49:44.510Z,/v1/serp/google,"serp ""korean in us"" us/en d10",0.0100,R5 serp us
+2026-10-27T19:49:46.240Z,/v1/serp/google,"serp ""korean moms"" us/en d10",0.0100,R5 serp moms
+2026-10-27T19:49:47.635Z,/v1/serp/google,"serp ""korean vowels"" us/en d10",0.0100,R5 serp vowels
+2026-10-27T19:49:49.024Z,/v1/serp/google,"serp ""korean phrases"" us/en d10",0.0100,R5 serp phrases
+2026-10-27T19:49:50.633Z,/v1/serp/google,"serp ""korean where"" us/en d10",0.0100,R5 serp where
+2026-10-27T19:49:51.061Z,/v1/serp/google,"serp ""korean symbol"" us/en d10",0.0100,R5 serp symbol
+2026-10-27T19:49:51.950Z,/v1/serp/google,"serp ""korean new year lunar"" us/en d10",0.0100,R5 serp lunar new year
+2026-10-27T19:49:54.878Z,/v1/serp/google,"serp ""loved in korean"" us/en d10",0.0100,R5 serp loved
+2026-10-27T19:49:55.336Z,/v1/serp/google,"serp ""loving in korean"" us/en d10",0.0100,R5 serp loving
+2026-10-27T19:49:56.348Z,/v1/serp/google,"serp ""sunbae"" us/en d10",0.0100,R5 serp sunbae
+2026-10-27T19:49:57.933Z,/v1/serp/google,"serp ""reedsy korean name generator"" us/en d10",0.0100,R5 serp generator name reedsy
+2026-10-27T19:49:58.104Z,/v1/serp/google,"serp ""religion of koreans"" us/en d10",0.0100,R5 serp koreans religion
+2026-10-27T19:49:59.794Z,/v1/serp/google,"serp ""lover in korean"" us/en d10",0.0100,R5 serp lover
+2026-10-27T19:50:01.340Z,/v1/serp/google,"serp ""traditional food in korea"" us/en d10",0.0100,R5 serp food traditional
+2026-10-27T19:50:02.236Z,/v1/serp/google,"serp ""saranghaeyo"" us/en d10",0.0100,R5 serp saranghaeyo
+2026-10-27T19:50:04.789Z,/v1/serp/google,"serp ""alcohol in korean"" us/en d10",0.0100,R5 serp alcohol
+2026-10-27T19:50:04.798Z,/v1/serp/google,"serp ""basic korean expressions"" us/en d10",0.0100,R5 serp basic expressions
+2026-10-27T19:50:08.089Z,/v1/serp/google,"serp ""korean words basic"" us/en d10",0.0100,R5 serp basic
+2026-10-27T19:50:08.168Z,/v1/serp/google,"serp ""cat in korean"" us/en d10",0.0100,R5 serp cat
+2026-10-27T19:50:10.288Z,/v1/serp/google,"serp ""basic korean phrases"" us/en d10",0.0100,R5 serp basic phrases
+2026-10-27T19:50:11.188Z,/v1/serp/google,"serp ""beautiful woman in korean"" us/en d10",0.0100,R5 serp beautiful woman
+2026-10-27T19:50:11.266Z,/v1/serp/google,"serp ""cats in korean"" us/en d10",0.0100,R5 serp cats
+2026-10-27T19:50:11.823Z,/v1/serp/google,"serp ""common korean expressions"" us/en d10",0.0100,R5 serp common expressions
+2026-10-27T19:50:14.567Z,/v1/serp/google,"serp ""korea conscription"" us/en d10",0.0100,R5 serp conscription
+2026-10-27T19:50:15.118Z,/v1/serp/google,"serp ""days of week korean"" us/en d10",0.0100,R5 serp days week
+2026-10-27T19:50:15.274Z,/v1/serp/google,"serp ""korean phrases common"" us/en d10",0.0100,R5 serp common phrases
+2026-10-27T19:50:18.232Z,/v1/serp/google,"serp ""day of the week in korean"" us/en d10",0.0100,R5 serp day week
+2026-10-27T19:50:18.951Z,/v1/serp/google,"serp ""economic in korean"" us/en d10",0.0100,R5 serp economic
+2026-10-27T19:50:19.160Z,/v1/serp/google,"serp ""english korean"" us/en d10",0.0100,R5 serp english korean
+2026-10-27T19:50:20.147Z,/v1/serp/google,"serp ""delicious in korean"" us/en d10",0.0100,R5 serp delicious
+2026-10-27T19:50:23.455Z,/v1/serp/google,"serp ""famous korean star"" us/en d10",0.0100,R5 serp famous star
+2026-10-27T19:50:23.455Z,/v1/serp/google,"serp ""fighting in korean"" us/en d10",0.0100,R5 serp fighting
+2026-10-27T19:50:25.715Z,/v1/serp/google,"serp ""ethnic koreans"" us/en d10",0.0100,R5 serp ethnic koreans
+2026-10-27T19:50:25.914Z,/v1/serp/google,"serp ""fun facts about south korea"" us/en d10",0.0100,R5 serp about facts fun
+2026-10-27T19:50:26.519Z,/v1/serp/google,"serp ""generate korean name"" us/en d10",0.0100,R5 serp generate name
+2026-10-27T19:50:29.375Z,/v1/serp/google,"serp ""name in korean generator"" us/en d10",0.0100,R5 serp generator name
+2026-10-27T19:50:29.592Z,/v1/serp/google,"serp ""korean hangul"" us/en d10",0.0100,R5 serp hangul korean
+2026-10-27T19:50:29.610Z,/v1/serp/google,"serp ""hangul korean language"" us/en d10",0.0100,R5 serp hangul korean language
+2026-10-27T19:50:33.133Z,/v1/serp/google,"serp ""happy new years korean"" us/en d10",0.0100,R5 serp happy new years
+2026-10-27T19:50:33.450Z,/v1/serp/google,"serp ""famous korean stars"" us/en d10",0.0100,R5 serp famous stars
+2026-10-27T19:50:34.747Z,/v1/serp/google,"serp ""korea happy new year"" us/en d10",0.0100,R5 serp happy new year
+2026-10-27T19:50:36.473Z,/v1/serp/google,"serp ""height in korean"" us/en d10",0.0100,R5 serp height
+2026-10-27T19:50:39.547Z,/v1/serp/google,"serp ""in korea"" us/en d10",0.0100,R5 serp in korea
+2026-10-27T19:50:41.103Z,/v1/serp/google,"serp ""korea dates"" us/en d10",0.0100,R5 serp dates
+2026-10-27T19:50:43.476Z,/v1/serp/google,"serp ""korea hangul"" us/en d10",0.0100,R5 serp hangul korea
+2026-10-27T19:50:43.745Z,/v1/serp/google,"serp ""korea day"" us/en d10",0.0100,R5 serp day
+2026-10-27T19:50:44.812Z,/v1/serp/google,"serp ""korea days"" us/en d10",0.0100,R5 serp days
+2026-10-27T19:50:47.461Z,/v1/serp/google,"serp ""interesting facts about south korea"" us/en d10",0.0100,R5 serp about facts interesting
+2026-10-27T19:50:47.676Z,/v1/serp/google,"serp ""korean basics"" us/en d10",0.0100,R5 serp basics
+2026-10-27T19:50:48.815Z,/v1/serp/google,"serp ""korean draft"" us/en d10",0.0100,R5 serp draft
+2026-10-27T19:50:48.970Z,/v1/serp/google,"serp ""korean alphabet a-z"" us/en d10",0.0100,R5 serp alphabet z
+2026-10-27T19:50:51.789Z,/v1/serp/google,"serp ""korean letters a to z"" us/en d10",0.0100,R5 serp letters z
+2026-10-27T19:50:52.183Z,/v1/serp/google,"serp ""korean ethnic"" us/en d10",0.0100,R5 serp ethnic
+2026-10-27T19:50:53.184Z,/v1/serp/google,"serp ""korean nickname generator"" us/en d10",0.0100,R5 serp generator nickname
+2026-10-27T19:50:54.790Z,/v1/serp/google,"serp ""korean nicknames generator"" us/en d10",0.0100,R5 serp generator nicknames
+2026-10-27T19:50:55.649Z,/v1/serp/google,"serp ""korean easy phrases"" us/en d10",0.0100,R5 serp easy phrases
+2026-10-27T19:50:56.491Z,/v1/serp/google,"serp ""korean schools"" us/en d10",0.0100,R5 serp schools
+2026-10-27T19:50:56.937Z,/v1/serp/google,"serp ""seollal korea"" us/en d10",0.0100,R5 serp seollal
+2026-10-27T19:50:58.955Z,/v1/serp/google,"serp ""korean uncle"" us/en d10",0.0100,R5 serp uncle
+2026-10-27T19:50:59.214Z,/v1/serp/google,"serp ""korean words simple"" us/en d10",0.0100,R5 serp simple
+2026-10-27T19:51:02.471Z,/v1/serp/google,"serp ""simple phrases in korean"" us/en d10",0.0100,R5 serp phrases simple
+2026-10-27T19:51:02.602Z,/v1/serp/google,"serp ""paiting korean"" us/en d10",0.0100,R5 serp paiting
+2026-10-27T19:51:03.539Z,/v1/serp/google,"serp ""seoul korean pronunciation"" us/en d10",0.0100,R5 serp pronunciation seoul
+2026-10-27T19:51:04.146Z,/v1/serp/google,"serp ""south korea weird facts"" us/en d10",0.0100,R5 serp facts weird
+2026-10-27T19:51:06.955Z,/v1/serp/google,"serp ""tasty in korean"" us/en d10",0.0100,R5 serp tasty
+2026-10-27T19:51:07.336Z,/v1/serp/google,"serp ""sunbaenim"" us/en d10",0.0100,R5 serp sunbaenim
+2026-10-27T19:51:09.216Z,/v1/serp/google,"serp ""weather in korean"" us/en d10",0.0100,R5 serp weather
+2026-10-27T19:51:09.692Z,/v1/serp/google,"serp ""useful korean phrases"" us/en d10",0.0100,R5 serp phrases useful
+2026-10-27T19:51:13.119Z,/v1/serp/google,"serp ""weekdays in korean"" us/en d10",0.0100,R5 serp weekdays
+2026-10-27T19:51:14.812Z,/v1/serp/google,"serp ""what does noona mean in korean"" us/en d10",0.0100,R5 serp does noona
+2026-10-27T19:51:16.105Z,/v1/serp/google,"serp ""what is a kdrama"" us/en d10",0.0100,R5 serp kdrama
+2026-10-27T19:51:18.861Z,/v1/serp/google,"serp ""weathers in korean"" us/en d10",0.0100,R5 serp weathers
+2026-10-27T19:51:20.449Z,/v1/serp/google,"serp ""what in korean"" us/en d10",0.0100,R5 serp in korean what
+2026-10-27T19:51:21.381Z,/v1/serp/google,"serp ""yummy in korean language"" us/en d10",0.0100,R5 serp yummy
+2026-10-27T19:51:24.867Z,/v1/serp/google,"serp ""1-10 in korean"" us/en d10",0.0100,R5 serp 1 10
+2026-10-27T19:51:25.561Z,/v1/serp/google,"serp ""korean numbers 1 10"" us/en d10",0.0100,R5 serp 1 10 numbers
+2026-10-27T19:51:26.343Z,/v1/serp/google,"serp ""best app to learn korean"" us/en d10",0.0100,R5 serp app best
+2026-10-27T19:51:27.091Z,/v1/serp/google,"serp ""67 in korean"" us/en d10",0.0100,R5 serp 67
+2026-10-27T19:51:28.986Z,/v1/serp/google,"serp ""catholic in korean"" us/en d10",0.0100,R5 serp catholic
+2026-10-27T19:51:29.345Z,/v1/serp/google,"serp ""best apps to learn korean language"" us/en d10",0.0100,R5 serp apps best
+2026-10-27T19:51:30.346Z,/v1/serp/google,"serp ""big kpop group"" us/en d10",0.0100,R5 serp big group kpop
+2026-10-27T19:51:31.972Z,/v1/serp/google,"serp ""count korea"" us/en d10",0.0100,R5 serp count
+2026-10-27T19:51:32.741Z,/v1/serp/google,"serp ""counting in korean"" us/en d10",0.0100,R5 serp counting
+2026-10-27T19:51:36.202Z,/v1/serp/google,"serp ""excuse me in korean"" us/en d10",0.0100,R5 serp excuse me
+2026-10-27T19:51:39.370Z,/v1/serp/google,"serp ""good apps to learn korean"" us/en d10",0.0100,R5 serp apps good
+2026-10-27T19:51:41.427Z,/v1/serp/google,"serp ""goodnight korean"" us/en d10",0.0100,R5 serp goodnight
+2026-10-27T19:51:41.428Z,/v1/serp/google,"serp ""does korean have cursive"" us/en d10",0.0100,R5 serp cursive does have
+2026-10-27T19:51:43.914Z,/v1/serp/google,"serp ""how do i say sorry in korean"" us/en d10",0.0100,R5 serp i sorry
+2026-10-27T19:51:44.855Z,/v1/serp/google,"serp ""how to write sorry in korean"" us/en d10",0.0100,R5 serp sorry write
+2026-10-27T19:51:45.093Z,/v1/serp/google,"serp ""independence day korea"" us/en d10",0.0100,R5 serp day independence
+2026-10-27T19:51:46.002Z,/v1/serp/google,"serp ""good night korean"" us/en d10",0.0100,R5 serp good night
+2026-10-27T19:51:47.610Z,/v1/serp/google,"serp ""korea in english"" us/en d10",0.0100,R5 serp english in korea
+2026-10-27T19:51:49.295Z,/v1/serp/google,"serp ""korea liberation day"" us/en d10",0.0100,R5 serp day liberation
+2026-10-27T19:51:49.496Z,/v1/serp/google,"serp ""korean consonants"" us/en d10",0.0100,R5 serp consonants
+2026-10-27T19:51:49.623Z,/v1/serp/google,"serp ""korea ok"" us/en d10",0.0100,R5 serp ok
+2026-10-27T19:51:52.234Z,/v1/serp/google,"serp ""korean in korean"" us/en d10",0.0100,R5 serp in korean korean
+2026-10-27T19:51:54.526Z,/v1/serp/google,"serp ""korean in korean language"" us/en d10",0.0100,R5 serp in korean korean language
+2026-10-27T19:51:54.822Z,/v1/serp/google,"serp ""korean handwriting tips"" us/en d10",0.0100,R5 serp handwriting tips
+2026-10-27T19:51:56.075Z,/v1/serp/google,"serp ""type korean words"" us/en d10",0.0100,R5 serp type
+2026-10-27T19:51:59.834Z,/v1/serp/google,"serp ""korean legend"" us/en d10",0.0100,R5 serp legend
+2026-10-27T19:51:59.910Z,/v1/serp/google,"serp ""korean you're welcome"" us/en d10",0.0100,R5 serp re welcome
+2026-10-27T19:52:00.626Z,/v1/serp/google,"serp ""korean typing"" us/en d10",0.0100,R5 serp typing
+2026-10-27T19:52:01.283Z,/v1/serp/google,"serp ""korean types"" us/en d10",0.0100,R5 serp types
+2026-10-27T19:52:02.371Z,/v1/serp/google,"serp ""korean little sister"" us/en d10",0.0100,R5 serp little sister
+2026-10-27T19:52:04.035Z,/v1/serp/google,"serp ""korean legends"" us/en d10",0.0100,R5 serp legends
+2026-10-27T19:52:04.234Z,/v1/serp/google,"serp ""korean men's outfit"" us/en d10",0.0100,R5 serp men outfit s
+2026-10-27T19:52:08.445Z,/v1/serp/google,"serp ""korean myth"" us/en d10",0.0100,R5 serp myth
+2026-10-27T19:52:10.611Z,/v1/serp/google,"serp ""korean myths"" us/en d10",0.0100,R5 serp myths
+2026-10-27T19:52:11.448Z,/v1/serp/google,"serp ""korean numbers native"" us/en d10",0.0100,R5 serp native numbers
+2026-10-27T19:52:11.705Z,/v1/serp/google,"serp ""korean mythology"" us/en d10",0.0100,R5 serp mythology
+2026-10-27T19:52:14.422Z,/v1/serp/google,"serp ""korean male style"" us/en d10",0.0100,R5 serp male style
+2026-10-27T19:52:14.634Z,/v1/serp/google,"serp ""korean text"" us/en d10",0.0100,R5 serp text
+2026-10-27T19:52:15.593Z,/v1/serp/google,"serp ""korean younger sister"" us/en d10",0.0100,R5 serp sister younger
+2026-10-27T19:52:15.680Z,/v1/serp/google,"serp ""name the kpop group"" us/en d10",0.0100,R5 serp group kpop name
+2026-10-27T19:52:19.304Z,/v1/serp/google,"serp ""teach in korean"" us/en d10",0.0100,R5 serp teach
+2026-10-27T19:52:19.616Z,/v1/serp/google,"serp ""national liberation day of korea"" us/en d10",0.0100,R5 serp day liberation national
+2026-10-27T19:52:19.619Z,/v1/serp/google,"serp ""okay korean"" us/en d10",0.0100,R5 serp okay
+2026-10-27T19:52:21.722Z,/v1/serp/google,"serp ""teacher in korean"" us/en d10",0.0100,R5 serp teacher
+2026-10-27T19:52:23.374Z,/v1/serp/google,"serp ""what does kpop stand for"" us/en d10",0.0100,R5 serp does kpop stand
+2026-10-27T19:52:23.668Z,/v1/serp/google,"serp ""traditional korean gown"" us/en d10",0.0100,R5 serp gown traditional
+2026-10-27T19:52:26.210Z,/v1/serp/google,"serp ""temple in korean"" us/en d10",0.0100,R5 serp temple
+2026-10-27T19:52:26.479Z,/v1/serp/google,"serp ""6 7 in korean"" us/en d10",0.0100,R5 serp 6 7
+2026-10-27T19:52:28.681Z,/v1/serp/google,"serp ""korea age"" us/en d10",0.0100,R5 serp age
+2026-10-27T19:52:29.033Z,/v1/serp/google,"serp ""korean ages"" us/en d10",0.0100,R5 serp ages
+2026-10-27T19:52:29.540Z,/v1/serp/google,"serp ""korea age system"" us/en d10",0.0100,R5 serp age system
+2026-10-27T19:52:30.016Z,/v1/serp/google,"serp ""aegukga south korea"" us/en d10",0.0100,R5 serp aegukga
+2026-10-27T19:52:32.779Z,/v1/serp/google,"serp ""korea cell phone number"" us/en d10",0.0100,R5 serp cell number phone
+2026-10-27T19:52:33.087Z,/v1/serp/google,"serp ""are koreans asian"" us/en d10",0.0100,R5 serp are asian koreans
+2026-10-27T19:52:33.188Z,/v1/serp/google,"serp ""korean animals"" us/en d10",0.0100,R5 serp animals
+2026-10-27T19:52:33.738Z,/v1/serp/google,"serp ""korean animal"" us/en d10",0.0100,R5 serp animal
+2026-10-27T19:52:36.208Z,/v1/serp/google,"serp ""korean count to ten"" us/en d10",0.0100,R5 serp count ten
+2026-10-27T19:52:37.310Z,/v1/serp/google,"serp ""common korean names"" us/en d10",0.0100,R5 serp common names
+2026-10-27T19:52:38.540Z,/v1/serp/google,"serp ""count to 10 in korean"" us/en d10",0.0100,R5 serp 10 count
+2026-10-27T19:52:39.293Z,/v1/serp/google,"serp ""do koreans celebrate lunar new year"" us/en d10",0.0100,R5 serp celebrate koreans lunar new year
+2026-10-27T19:52:40.831Z,/v1/serp/google,"serp ""drama in korean"" us/en d10",0.0100,R5 serp drama
+2026-10-27T19:52:44.933Z,/v1/serp/google,"serp ""friend in korean"" us/en d10",0.0100,R5 serp friend
+2026-10-27T19:52:47.051Z,/v1/serp/google,"serp ""do korean celebrate lunar new year"" us/en d10",0.0100,R5 serp celebrate lunar new year
+2026-10-27T19:52:48.421Z,/v1/serp/google,"serp ""f you in korean"" us/en d10",0.0100,R5 serp f
+2026-10-27T19:52:50.138Z,/v1/serp/google,"serp ""friends korean"" us/en d10",0.0100,R5 serp friends
+2026-10-27T19:52:50.932Z,/v1/serp/google,"serp ""famous food in korean"" us/en d10",0.0100,R5 serp famous food
+2026-10-27T19:52:51.826Z,/v1/serp/google,"serp ""friendship korean"" us/en d10",0.0100,R5 serp friendship
+2026-10-27T19:52:53.193Z,/v1/serp/google,"serp ""future korean"" us/en d10",0.0100,R5 serp future
+2026-10-27T19:52:53.622Z,/v1/serp/google,"serp ""greeting korean words"" us/en d10",0.0100,R5 serp greeting
+2026-10-27T19:52:54.759Z,/v1/serp/google,"serp ""korea handwriting"" us/en d10",0.0100,R5 serp handwriting
+2026-10-27T19:52:55.746Z,/v1/serp/google,"serp ""handwritten korean"" us/en d10",0.0100,R5 serp handwritten
+2026-10-27T19:52:56.302Z,/v1/serp/google,"serp ""korean alphabet pronunciation"" us/en d10",0.0100,R5 serp alphabet pronunciation
+2026-10-27T19:52:56.800Z,/v1/serp/google,"serp ""handwrite korean"" us/en d10",0.0100,R5 serp handwrite
+2026-10-27T19:52:59.534Z,/v1/serp/google,"serp ""happy birthday songs in korean"" us/en d10",0.0100,R5 serp birthday happy songs
+2026-10-27T19:53:00.260Z,/v1/serp/google,"serp ""korea happy birthday song"" us/en d10",0.0100,R5 serp birthday happy song
+2026-10-27T19:53:03.369Z,/v1/serp/google,"serp ""hangul in korean"" us/en d10",0.0100,R5 serp hangul in korean
+2026-10-27T19:53:04.153Z,/v1/serp/google,"serp ""happy christmas in korean"" us/en d10",0.0100,R5 serp christmas happy
+2026-10-27T19:53:04.553Z,/v1/serp/google,"serp ""heart symbol korean"" us/en d10",0.0100,R5 serp heart symbol
+2026-10-27T19:53:08.315Z,/v1/serp/google,"serp ""shut up korean"" us/en d10",0.0100,R5 serp shut up
+2026-10-27T19:53:09.136Z,/v1/serp/google,"serp ""speak in korean"" us/en d10",0.0100,R5 serp speak
+2026-10-27T19:53:09.343Z,/v1/serp/google,"serp ""i miss you in korean"" us/en d10",0.0100,R5 serp i miss
+2026-10-27T19:53:10.856Z,/v1/serp/google,"serp ""korean heart sign"" us/en d10",0.0100,R5 serp heart sign
+2026-10-27T19:53:11.983Z,/v1/serp/google,"serp ""instrument from korea"" us/en d10",0.0100,R5 serp from instrument
+2026-10-27T19:53:12.304Z,/v1/serp/google,"serp ""i missed you in korean"" us/en d10",0.0100,R5 serp i missed
+2026-10-27T19:53:15.114Z,/v1/serp/google,"serp ""instrument korea"" us/en d10",0.0100,R5 serp instrument
+2026-10-27T19:53:15.233Z,/v1/serp/google,"serp ""k oppa"" us/en d10",0.0100,R5 serp k oppa
+2026-10-27T19:53:15.434Z,/v1/serp/google,"serp ""i miss u in korean"" us/en d10",0.0100,R5 serp i miss u
+2026-10-27T19:53:17.653Z,/v1/serp/google,"serp ""instruments of korea"" us/en d10",0.0100,R5 serp instruments
+2026-10-27T19:53:18.092Z,/v1/serp/google,"serp ""korea in korean"" us/en d10",0.0100,R5 serp in korea korean
+2026-10-27T19:53:18.835Z,/v1/serp/google,"serp ""korea national song"" us/en d10",0.0100,R5 serp national song
+2026-10-27T19:53:21.009Z,/v1/serp/google,"serp ""k-pop means"" us/en d10",0.0100,R5 serp k pop
+2026-10-27T19:53:21.323Z,/v1/serp/google,"serp ""korea official name"" us/en d10",0.0100,R5 serp name official
+2026-10-27T19:53:21.705Z,/v1/serp/google,"serp ""korea phone number"" us/en d10",0.0100,R5 serp number phone
+2026-10-27T19:53:22.588Z,/v1/serp/google,"serp ""korean aging"" us/en d10",0.0100,R5 serp aging
+2026-10-27T19:53:25.001Z,/v1/serp/google,"serp ""merry christmas korea"" us/en d10",0.0100,R5 serp christmas merry
+2026-10-27T19:53:27.799Z,/v1/serp/google,"serp ""older sister korean"" us/en d10",0.0100,R5 serp older sister
+2026-10-27T19:53:27.904Z,/v1/serp/google,"serp ""korean pretty"" us/en d10",0.0100,R5 serp pretty
+2026-10-27T19:53:28.147Z,/v1/serp/google,"serp ""korean calligraphy paper"" us/en d10",0.0100,R5 serp calligraphy paper
+2026-10-27T19:53:28.816Z,/v1/serp/google,"serp ""korean folklore creatures"" us/en d10",0.0100,R5 serp creatures folklore
+2026-10-27T19:53:30.572Z,/v1/serp/google,"serp ""korean handwriting practice"" us/en d10",0.0100,R5 serp handwriting practice
+2026-10-27T19:53:30.713Z,/v1/serp/google,"serp ""korean instruments traditional"" us/en d10",0.0100,R5 serp instruments traditional
+2026-10-27T19:53:31.521Z,/v1/serp/google,"serp ""korean sentences"" us/en d10",0.0100,R5 serp sentences
+2026-10-27T19:53:32.849Z,/v1/serp/google,"serp ""korean words greetings"" us/en d10",0.0100,R5 serp greetings
+2026-10-27T19:53:33.301Z,/v1/serp/google,"serp ""speaking korean words"" us/en d10",0.0100,R5 serp speaking
+2026-10-27T19:53:34.832Z,/v1/serp/google,"serp ""korean language sign"" us/en d10",0.0100,R5 serp sign
+2026-10-27T19:53:34.956Z,/v1/serp/google,"serp ""korean legendary creatures"" us/en d10",0.0100,R5 serp creatures legendary
+2026-10-27T19:53:36.099Z,/v1/serp/google,"serp ""korean letter pronunciation"" us/en d10",0.0100,R5 serp letter pronunciation
+2026-10-27T19:53:36.548Z,/v1/serp/google,"serp ""korean letters pronunciation"" us/en d10",0.0100,R5 serp letters pronunciation
+2026-10-27T19:53:39.213Z,/v1/serp/google,"serp ""musical instrument korea"" us/en d10",0.0100,R5 serp instrument musical
+2026-10-27T19:53:39.730Z,/v1/serp/google,"serp ""korean numbers phone"" us/en d10",0.0100,R5 serp numbers phone
+2026-10-27T19:53:40.271Z,/v1/serp/google,"serp ""korean mythological creatures"" us/en d10",0.0100,R5 serp creatures mythological
+2026-10-27T19:53:42.202Z,/v1/serp/google,"serp ""korean sino numbers"" us/en d10",0.0100,R5 serp numbers sino
+2026-10-27T19:53:43.032Z,/v1/serp/google,"serp ""korean music"" us/en d10",0.0100,R5 serp music
+2026-10-27T19:53:43.336Z,/v1/serp/google,"serp ""korean penmanship"" us/en d10",0.0100,R5 serp penmanship
+2026-10-27T19:53:44.156Z,/v1/serp/google,"serp ""korean pop wiki"" us/en d10",0.0100,R5 serp pop wiki
+2026-10-27T19:53:46.572Z,/v1/serp/google,"serp ""korean really"" us/en d10",0.0100,R5 serp really
+2026-10-27T19:53:46.786Z,/v1/serp/google,"serp ""korean princess"" us/en d10",0.0100,R5 serp princess
+2026-10-27T19:53:47.009Z,/v1/serp/google,"serp ""korean singing"" us/en d10",0.0100,R5 serp singing
+2026-10-27T19:53:49.933Z,/v1/serp/google,"serp ""korean princesses"" us/en d10",0.0100,R5 serp princesses
+2026-10-27T19:53:51.936Z,/v1/serp/google,"serp ""korean telephone numbers"" us/en d10",0.0100,R5 serp numbers telephone
+2026-10-27T19:53:52.048Z,/v1/serp/google,"serp ""korean traditional music instruments"" us/en d10",0.0100,R5 serp instruments music traditional
+2026-10-27T19:53:52.856Z,/v1/serp/google,"serp ""kpop wiki"" us/en d10",0.0100,R5 serp kpop wiki
+2026-10-27T19:53:54.081Z,/v1/serp/google,"serp ""korean traditional instrument"" us/en d10",0.0100,R5 serp instrument traditional
+2026-10-27T19:53:54.636Z,/v1/serp/google,"serp ""major religion of korea"" us/en d10",0.0100,R5 serp major religion
+2026-10-27T19:53:55.738Z,/v1/serp/google,"serp ""main religion in korea"" us/en d10",0.0100,R5 serp main religion
+2026-10-27T19:53:56.034Z,/v1/serp/google,"serp ""music instrument in korea"" us/en d10",0.0100,R5 serp instrument music
+2026-10-27T19:53:58.675Z,/v1/serp/google,"serp ""popular korean names"" us/en d10",0.0100,R5 serp names popular
+2026-10-27T19:53:59.832Z,/v1/serp/google,"serp ""music instruments in korea"" us/en d10",0.0100,R5 serp instruments music
+2026-10-27T19:53:59.957Z,/v1/serp/google,"serp ""musical instruments in korea"" us/en d10",0.0100,R5 serp instruments musical
+2026-10-27T19:54:03.918Z,/v1/serp/google,"serp ""mythical korean creatures"" us/en d10",0.0100,R5 serp creatures mythical
+2026-10-27T19:54:04.437Z,/v1/serp/google,"serp ""songs of korea"" us/en d10",0.0100,R5 serp songs
+2026-10-27T19:54:05.462Z,/v1/serp/google,"serp ""south korea in korean"" us/en d10",0.0100,R5 serp in korea korean south
+2026-10-27T19:54:07.335Z,/v1/serp/google,"serp ""south korea languages"" us/en d10",0.0100,R5 serp languages
+2026-10-27T19:54:08.953Z,/v1/serp/google,"serp ""thank you in korean informal"" us/en d10",0.0100,R5 serp informal thank
+2026-10-27T19:54:09.136Z,/v1/serp/google,"serp ""telephone number korea"" us/en d10",0.0100,R5 serp number telephone
+2026-10-27T19:54:10.679Z,/v1/serp/google,"serp ""traditional korean musical instruments"" us/en d10",0.0100,R5 serp instruments musical traditional
+2026-10-27T19:54:12.631Z,/v1/serp/google,"serp ""very in korean language"" us/en d10",0.0100,R5 serp very
+2026-10-27T19:54:13.315Z,/v1/serp/google,"serp ""water in korean"" us/en d10",0.0100,R5 serp water
+2026-10-27T19:54:14.506Z,/v1/serp/google,"serp ""south korea major religions"" us/en d10",0.0100,R5 serp major religions
+2026-10-27T19:54:14.753Z,/v1/serp/google,"serp ""what does unnie mean in korean"" us/en d10",0.0100,R5 serp does unnie
+2026-10-27T19:54:17.111Z,/v1/serp/google,"serp ""what languages do they speak in south korea"" us/en d10",0.0100,R5 serp languages speak they
+2026-10-27T19:54:17.870Z,/v1/serp/google,"serp ""what language is spoken in korea"" us/en d10",0.0100,R5 serp spoken
+2026-10-27T19:54:18.368Z,/v1/serp/google,"serp ""what language do they speak in korean"" us/en d10",0.0100,R5 serp speak they
+2026-10-27T19:54:20.110Z,/v1/serp/google,"serp ""what languages are spoken in korea"" us/en d10",0.0100,R5 serp are languages spoken
+2026-10-27T19:54:21.778Z,/v1/serp/google,"serp ""why in hangul"" us/en d10",0.0100,R5 serp why
+2026-10-27T19:54:22.774Z,/v1/serp/google,"serp ""all about k-pop"" us/en d10",0.0100,R5 serp about all k pop
+2026-10-27T19:54:23.643Z,/v1/serp/google,"serp ""aigoo"" us/en d10",0.0100,R5 serp aigoo
+2026-10-27T19:54:25.605Z,/v1/serp/google,"serp ""all about kpop"" us/en d10",0.0100,R5 serp about all kpop
+2026-10-27T19:54:26.701Z,/v1/serp/google,"serp ""bank in korean"" us/en d10",0.0100,R5 serp bank
+2026-10-27T19:54:28.152Z,/v1/serp/google,"serp ""and in korean"" us/en d10",0.0100,R5 serp and in korean
+2026-10-27T19:54:31.697Z,/v1/serp/google,"serp ""brother in korean"" us/en d10",0.0100,R5 serp brother
+2026-10-27T19:54:31.796Z,/v1/serp/google,"serp ""korean of beautiful"" us/en d10",0.0100,R5 serp beautiful
+2026-10-27T19:54:34.046Z,/v1/serp/google,"serp ""brothers in korean"" us/en d10",0.0100,R5 serp brothers
+2026-10-27T19:54:36.073Z,/v1/serp/google,"serp ""cartoon in korean"" us/en d10",0.0100,R5 serp cartoon
+2026-10-27T19:54:36.867Z,/v1/serp/google,"serp ""appa korean"" us/en d10",0.0100,R5 serp appa
+2026-10-27T19:54:37.586Z,/v1/serp/google,"serp ""cherry blossoms in korean"" us/en d10",0.0100,R5 serp blossoms cherry
+2026-10-27T19:54:38.288Z,/v1/serp/google,"serp ""korea christmas"" us/en d10",0.0100,R5 serp christmas
+2026-10-27T19:54:39.090Z,/v1/serp/google,"serp ""cursive korean"" us/en d10",0.0100,R5 serp cursive
+2026-10-27T19:54:41.500Z,/v1/serp/google,"serp ""korea email"" us/en d10",0.0100,R5 serp email
+2026-10-27T19:54:41.612Z,/v1/serp/google,"serp ""cost of living in korea"" us/en d10",0.0100,R5 serp cost living
+2026-10-27T19:54:42.295Z,/v1/serp/google,"serp ""korean family life"" us/en d10",0.0100,R5 serp family life
+2026-10-27T19:54:42.304Z,/v1/serp/google,"serp ""korean family"" us/en d10",0.0100,R5 serp family
+2026-10-27T19:54:46.015Z,/v1/serp/google,"serp ""goods in korean"" us/en d10",0.0100,R5 serp goods
+2026-10-27T19:54:46.946Z,/v1/serp/google,"serp ""good in korean"" us/en d10",0.0100,R5 serp good
+2026-10-27T19:54:47.334Z,/v1/serp/google,"serp ""goodness in korean language"" us/en d10",0.0100,R5 serp goodness
+2026-10-27T19:54:48.651Z,/v1/serp/google,"serp ""handsome man in korean"" us/en d10",0.0100,R5 serp handsome man
+2026-10-27T19:54:50.635Z,/v1/serp/google,"serp ""hangul calligraphy"" us/en d10",0.0100,R5 serp calligraphy
+2026-10-27T19:54:52.420Z,/v1/serp/google,"serp ""hangul proclamation day"" us/en d10",0.0100,R5 serp day proclamation
+2026-10-27T19:54:54.881Z,/v1/serp/google,"serp ""hangul learning"" us/en d10",0.0100,R5 serp hangul learning
+2026-10-27T19:54:54.986Z,/v1/serp/google,"serp ""hallyu korean"" us/en d10",0.0100,R5 serp hallyu
+2026-10-27T19:54:57.942Z,/v1/serp/google,"serp ""how big is korea"" us/en d10",0.0100,R5 serp big
+2026-10-27T19:55:00.059Z,/v1/serp/google,"serp ""how do you say and in korean"" us/en d10",0.0100,R5 serp and do how in korean say you
+2026-10-27T19:55:00.288Z,/v1/serp/google,"serp ""how do you say is in korean"" us/en d10",0.0100,R5 serp do how in is korean say you
+2026-10-27T19:55:02.059Z,/v1/serp/google,"serp ""how to say a in korean"" us/en d10",0.0100,R5 serp a how in korean say to
+2026-10-27T19:55:02.600Z,/v1/serp/google,"serp ""high korean"" us/en d10",0.0100,R5 serp high
+2026-10-27T19:55:03.817Z,/v1/serp/google,"serp ""how to say and in korean"" us/en d10",0.0100,R5 serp and how in korean say to
+2026-10-27T19:55:04.842Z,/v1/serp/google,"serp ""how to say from in korean"" us/en d10",0.0100,R5 serp from
+2026-10-27T19:55:05.575Z,/v1/serp/google,"serp ""how to say the in korean"" us/en d10",0.0100,R5 serp how in korean say the to
+2026-10-27T19:55:06.593Z,/v1/serp/google,"serp ""how to say in korean"" us/en d10",0.0100,R5 serp how in korean say to
+2026-10-27T19:55:08.513Z,/v1/serp/google,"serp ""hwaiting"" us/en d10",0.0100,R5 serp hwaiting
+2026-10-27T19:55:08.744Z,/v1/serp/google,"serp ""i in hangul"" us/en d10",0.0100,R5 serp i
+2026-10-27T19:55:09.221Z,/v1/serp/google,"serp ""hyung definition korean"" us/en d10",0.0100,R5 serp definition hyung
+2026-10-27T19:55:12.538Z,/v1/serp/google,"serp ""is korea easy to learn"" us/en d10",0.0100,R5 serp easy
+2026-10-27T19:55:12.615Z,/v1/serp/google,"serp ""jagiya in korean"" us/en d10",0.0100,R5 serp jagiya
+2026-10-27T19:55:14.686Z,/v1/serp/google,"serp ""k-pop group list"" us/en d10",0.0100,R5 serp group k list pop
+2026-10-27T19:55:14.996Z,/v1/serp/google,"serp ""jewellery in korean"" us/en d10",0.0100,R5 serp jewellery
+2026-10-27T19:55:15.868Z,/v1/serp/google,"serp ""korea province"" us/en d10",0.0100,R5 serp province
+2026-10-27T19:55:17.880Z,/v1/serp/google,"serp ""korean and"" us/en d10",0.0100,R5 serp and korean
+2026-10-27T19:55:18.698Z,/v1/serp/google,"serp ""korean coins"" us/en d10",0.0100,R5 serp coins
+2026-10-27T19:55:19.669Z,/v1/serp/google,"serp ""korean china"" us/en d10",0.0100,R5 serp china
+2026-10-27T19:55:19.935Z,/v1/serp/google,"serp ""korea xmas"" us/en d10",0.0100,R5 serp xmas
+2026-10-27T19:55:22.570Z,/v1/serp/google,"serp ""korean emails"" us/en d10",0.0100,R5 serp emails
+2026-10-27T19:55:23.109Z,/v1/serp/google,"serp ""korean faith"" us/en d10",0.0100,R5 serp faith
+2026-10-27T19:55:23.699Z,/v1/serp/google,"serp ""korean han"" us/en d10",0.0100,R5 serp han
+2026-10-27T19:55:24.050Z,/v1/serp/google,"serp ""korean new year 2026"" us/en d10",0.0100,R5 serp 2026 new year
+2026-10-27T19:55:25.890Z,/v1/serp/google,"serp ""korean nicknames for guys"" us/en d10",0.0100,R5 serp guys nicknames
+2026-10-27T19:55:26.784Z,/v1/serp/google,"serp ""korean phone code"" us/en d10",0.0100,R5 serp code phone
+2026-10-27T19:55:28.312Z,/v1/serp/google,"serp ""korean of sister"" us/en d10",0.0100,R5 serp sister
+2026-10-27T19:55:29.424Z,/v1/serp/google,"serp ""korean traditions and beliefs"" us/en d10",0.0100,R5 serp beliefs traditions
+2026-10-27T19:55:29.743Z,/v1/serp/google,"serp ""korean sentence structure"" us/en d10",0.0100,R5 serp sentence structure
+2026-10-27T19:55:30.620Z,/v1/serp/google,"serp ""korean traditional beliefs"" us/en d10",0.0100,R5 serp beliefs traditional
+2026-10-27T19:55:34.177Z,/v1/serp/google,"serp ""korean younger brother"" us/en d10",0.0100,R5 serp brother younger
+2026-10-27T19:55:37.015Z,/v1/serp/google,"serp ""korean tv series"" us/en d10",0.0100,R5 serp series tv
+2026-10-27T19:55:37.578Z,/v1/serp/google,"serp ""korean vertical writing"" us/en d10",0.0100,R5 serp vertical writing
+2026-10-27T19:55:37.903Z,/v1/serp/google,"serp ""stop in korean"" us/en d10",0.0100,R5 serp stop
+2026-10-27T19:55:40.906Z,/v1/serp/google,"serp ""kpop artists"" us/en d10",0.0100,R5 serp artists kpop
+2026-10-27T19:55:41.673Z,/v1/serp/google,"serp ""language in south korea"" us/en d10",0.0100,R5 serp in korea language south
+2026-10-27T19:55:42.452Z,/v1/serp/google,"serp ""nega korean"" us/en d10",0.0100,R5 serp nega
+2026-10-27T19:55:44.992Z,/v1/serp/google,"serp ""language of korea south"" us/en d10",0.0100,R5 serp korea language of south
+2026-10-27T19:55:45.421Z,/v1/serp/google,"serp ""kpop star"" us/en d10",0.0100,R5 serp kpop star
+2026-10-27T19:55:46.989Z,/v1/serp/google,"serp ""learn korean hangul"" us/en d10",0.0100,R5 serp hangul korean learn
+2026-10-27T19:55:50.021Z,/v1/serp/google,"serp ""list of korean food"" us/en d10",0.0100,R5 serp food list
+2026-10-27T19:55:50.153Z,/v1/serp/google,"serp ""list of korean foods"" us/en d10",0.0100,R5 serp foods list
+2026-10-27T19:55:50.824Z,/v1/serp/google,"serp ""list kpop group"" us/en d10",0.0100,R5 serp group kpop list
+2026-10-27T19:55:50.977Z,/v1/serp/google,"serp ""learn korean abc"" us/en d10",0.0100,R5 serp abc
+2026-10-27T19:55:53.861Z,/v1/serp/google,"serp ""list of kpop groups"" us/en d10",0.0100,R5 serp groups kpop list
+2026-10-27T19:55:53.932Z,/v1/serp/google,"serp ""little brother korean"" us/en d10",0.0100,R5 serp brother little
+2026-10-27T19:55:54.380Z,/v1/serp/google,"serp ""nice to meet you in korean"" us/en d10",0.0100,R5 serp meet nice
+2026-10-27T19:55:54.436Z,/v1/serp/google,"serp ""living expenses in south korea"" us/en d10",0.0100,R5 serp expenses living
+2026-10-27T19:55:57.639Z,/v1/serp/google,"serp ""shibal saekkiya meaning in english"" us/en d10",0.0100,R5 serp saekkiya shibal
+2026-10-27T19:55:57.898Z,/v1/serp/google,"serp ""price of living in south korea"" us/en d10",0.0100,R5 serp living price
+2026-10-27T19:55:57.943Z,/v1/serp/google,"serp ""places in korean"" us/en d10",0.0100,R5 serp places
+2026-10-27T19:56:01.880Z,/v1/serp/google,"serp ""sis in korea"" us/en d10",0.0100,R5 serp sis
+2026-10-27T19:56:02.309Z,/v1/serp/google,"serp ""south korea wild animals"" us/en d10",0.0100,R5 serp animals wild
+2026-10-27T19:56:02.827Z,/v1/serp/google,"serp ""sisters in korean"" us/en d10",0.0100,R5 serp sisters
+2026-10-27T19:56:05.471Z,/v1/serp/google,"serp ""south korea's languages"" us/en d10",0.0100,R5 serp languages s
+2026-10-27T19:56:06.085Z,/v1/serp/google,"serp ""south korea wildlife"" us/en d10",0.0100,R5 serp wildlife
+2026-10-27T19:56:07.292Z,/v1/serp/google,"serp ""pronounce korean"" us/en d10",0.0100,R5 serp pronounce
+2026-10-27T19:56:07.945Z,/v1/serp/google,"serp ""south korean language"" us/en d10",0.0100,R5 serp korean language south
+2026-10-27T19:56:10.895Z,/v1/serp/google,"serp ""stop it in korean"" us/en d10",0.0100,R5 serp it stop
+2026-10-27T19:56:11.374Z,/v1/serp/google,"serp ""south korean provinces"" us/en d10",0.0100,R5 serp provinces
+2026-10-27T19:56:12.325Z,/v1/serp/google,"serp ""success korean"" us/en d10",0.0100,R5 serp success
+2026-10-27T19:56:12.685Z,/v1/serp/google,"serp ""test in korean"" us/en d10",0.0100,R5 serp test
+2026-10-27T19:56:13.742Z,/v1/serp/google,"serp ""traditions and customs of korea"" us/en d10",0.0100,R5 serp customs traditions
+2026-10-27T19:56:15.192Z,/v1/serp/google,"serp ""welcome in korean"" us/en d10",0.0100,R5 serp welcome
+2026-10-27T19:56:17.252Z,/v1/serp/google,"serp ""what does hyung mean in korean"" us/en d10",0.0100,R5 serp does hyung
+2026-10-27T19:56:17.448Z,/v1/serp/google,"serp ""what language do koreans speak"" us/en d10",0.0100,R5 serp koreans speak
+2026-10-27T19:56:18.071Z,/v1/serp/google,"serp ""what language do korean people speak"" us/en d10",0.0100,R5 serp people speak
+2026-10-27T19:56:20.373Z,/v1/serp/google,"serp ""your welcome in korean"" us/en d10",0.0100,R5 serp welcome your
+2026-10-27T19:56:20.671Z,/v1/serp/google,"serp ""what languages do korean speak"" us/en d10",0.0100,R5 serp languages speak
+2026-10-27T19:56:21.437Z,/v1/serp/google,"serp ""korea a b c"" us/en d10",0.0100,R5 serp b c
+2026-10-27T19:56:22.373Z,/v1/serp/google,"serp ""what language does korea speak"" us/en d10",0.0100,R5 serp does speak
+2026-10-27T19:56:25.496Z,/v1/serp/google,"serp ""aegyo pronunciation"" us/en d10",0.0100,R5 serp aegyo pronunciation
+2026-10-27T19:56:25.929Z,/v1/serp/google,"serp ""abcs in korean"" us/en d10",0.0100,R5 serp abcs
+2026-10-27T19:56:27.627Z,/v1/serp/google,"serp ""abc's in korean"" us/en d10",0.0100,R5 serp abc s
+2026-10-27T19:56:28.217Z,/v1/serp/google,"serp ""average salary in seoul korea"" us/en d10",0.0100,R5 serp average salary seoul
+2026-10-27T19:56:29.193Z,/v1/serp/google,"serp ""architecture in korean"" us/en d10",0.0100,R5 serp architecture
+2026-10-27T19:56:29.774Z,/v1/serp/google,"serp ""best way to learn korean"" us/en d10",0.0100,R5 serp best way
+2026-10-27T19:56:31.629Z,/v1/serp/google,"serp ""birthday korea"" us/en d10",0.0100,R5 serp birthday
+2026-10-27T19:56:32.540Z,/v1/serp/google,"serp ""book in korean"" us/en d10",0.0100,R5 serp book
+2026-10-27T19:56:33.638Z,/v1/serp/google,"serp ""korean birthdays"" us/en d10",0.0100,R5 serp birthdays
+2026-10-27T19:56:33.747Z,/v1/serp/google,"serp ""christian korean"" us/en d10",0.0100,R5 serp christian
+2026-10-27T19:56:35.166Z,/v1/serp/google,"serp ""korea color"" us/en d10",0.0100,R5 serp color
+2026-10-27T19:56:35.660Z,/v1/serp/google,"serp ""korea colors"" us/en d10",0.0100,R5 serp colors
+2026-10-27T19:56:37.630Z,/v1/serp/google,"serp ""cute korean names for guys"" us/en d10",0.0100,R5 serp cute guys names
+2026-10-27T19:56:37.638Z,/v1/serp/google,"serp ""colours korean"" us/en d10",0.0100,R5 serp colours
+2026-10-27T19:56:38.750Z,/v1/serp/google,"serp ""daebak meaning"" us/en d10",0.0100,R5 serp daebak
+2026-10-27T19:56:39.586Z,/v1/serp/google,"serp ""dance korea"" us/en d10",0.0100,R5 serp dance
+2026-10-27T19:56:40.895Z,/v1/serp/google,"serp ""face in korean"" us/en d10",0.0100,R5 serp face
+2026-10-27T19:56:41.532Z,/v1/serp/google,"serp ""female korean names and meanings"" us/en d10",0.0100,R5 serp female meanings names
+2026-10-27T19:56:43.154Z,/v1/serp/google,"serp ""fruits from korea"" us/en d10",0.0100,R5 serp from fruits
+2026-10-27T19:56:45.164Z,/v1/serp/google,"serp ""fun fact korea"" us/en d10",0.0100,R5 serp fact fun
+2026-10-27T19:56:45.252Z,/v1/serp/google,"serp ""fruits korean"" us/en d10",0.0100,R5 serp fruits
+2026-10-27T19:56:46.144Z,/v1/serp/google,"serp ""fun fact about korea"" us/en d10",0.0100,R5 serp about fact fun
+2026-10-27T19:56:46.791Z,/v1/serp/google,"serp ""funny facts about korea"" us/en d10",0.0100,R5 serp about facts funny
+2026-10-27T19:56:48.666Z,/v1/serp/google,"serp ""how to pronounce seoul in korean"" us/en d10",0.0100,R5 serp pronounce seoul
+2026-10-27T19:56:49.999Z,/v1/serp/google,"serp ""honey in korean"" us/en d10",0.0100,R5 serp honey
+2026-10-27T19:56:51.696Z,/v1/serp/google,"serp ""homework korean"" us/en d10",0.0100,R5 serp homework
+2026-10-27T19:56:52.758Z,/v1/serp/google,"serp ""how to say hello how are you in korean"" us/en d10",0.0100,R5 serp are hello
+2026-10-27T19:56:54.506Z,/v1/serp/google,"serp ""how to say hi how are you in korean"" us/en d10",0.0100,R5 serp are hi
+2026-10-27T19:56:56.777Z,/v1/serp/google,"serp ""i like u in korean"" us/en d10",0.0100,R5 serp i like u
+2026-10-27T19:56:56.888Z,/v1/serp/google,"serp ""how to write cursive korean"" us/en d10",0.0100,R5 serp cursive write
+2026-10-27T19:56:57.797Z,/v1/serp/google,"serp ""i like you in korean"" us/en d10",0.0100,R5 serp i like
+2026-10-27T19:56:59.451Z,/v1/serp/google,"serp ""i'm sorry in korea"" us/en d10",0.0100,R5 serp i m sorry
+2026-10-27T19:57:00.738Z,/v1/serp/google,"serp ""korean alphabet day"" us/en d10",0.0100,R5 serp alphabet day
+2026-10-27T19:57:02.582Z,/v1/serp/google,"serp ""korean demon"" us/en d10",0.0100,R5 serp demon
+2026-10-27T19:57:04.028Z,/v1/serp/google,"serp ""korean vowels consonants"" us/en d10",0.0100,R5 serp consonants vowels
+2026-10-27T19:57:04.158Z,/v1/serp/google,"serp ""korean journal entry"" us/en d10",0.0100,R5 serp entry journal
+2026-10-27T19:57:04.168Z,/v1/serp/google,"serp ""korean fruit"" us/en d10",0.0100,R5 serp fruit
+2026-10-27T19:57:06.734Z,/v1/serp/google,"serp ""korean laugh"" us/en d10",0.0100,R5 serp laugh
+2026-10-27T19:57:07.023Z,/v1/serp/google,"serp ""korean slang"" us/en d10",0.0100,R5 serp slang
+2026-10-27T19:57:08.757Z,/v1/serp/google,"serp ""korean numbers handwriting"" us/en d10",0.0100,R5 serp handwriting numbers
+2026-10-27T19:57:09.673Z,/v1/serp/google,"serp ""korean laughing"" us/en d10",0.0100,R5 serp laughing
+2026-10-27T19:57:11.228Z,/v1/serp/google,"serp ""koreans birthday"" us/en d10",0.0100,R5 serp birthday koreans
+2026-10-27T19:57:11.297Z,/v1/serp/google,"serp ""korean text messages"" us/en d10",0.0100,R5 serp messages text
+2026-10-27T19:57:15.609Z,/v1/serp/google,"serp ""laughter in korean"" us/en d10",0.0100,R5 serp laughter
+2026-10-27T19:57:15.624Z,/v1/serp/google,"serp ""learn korean free"" us/en d10",0.0100,R5 serp free
+2026-10-27T19:57:18.375Z,/v1/serp/google,"serp ""nuna korean meaning"" us/en d10",0.0100,R5 serp nuna
+2026-10-27T19:57:18.881Z,/v1/serp/google,"serp ""learn korean online free"" us/en d10",0.0100,R5 serp free online
+2026-10-27T19:57:19.673Z,/v1/serp/google,"serp ""online korean language course"" us/en d10",0.0100,R5 serp course online
+2026-10-27T19:57:20.121Z,/v1/serp/google,"serp ""most common surname in korea"" us/en d10",0.0100,R5 serp common most surname
+2026-10-27T19:57:23.195Z,/v1/serp/google,"serp ""seafood in korean"" us/en d10",0.0100,R5 serp seafood
+2026-10-27T19:57:23.509Z,/v1/serp/google,"serp ""poetry in korean"" us/en d10",0.0100,R5 serp poetry
+2026-10-27T19:57:24.330Z,/v1/serp/google,"serp ""texting korean"" us/en d10",0.0100,R5 serp texting
+2026-10-27T19:57:24.969Z,/v1/serp/google,"serp ""study korean free"" us/en d10",0.0100,R5 serp free study
+2026-10-27T19:57:27.554Z,/v1/serp/google,"serp ""what religion are korean people"" us/en d10",0.0100,R5 serp are people religion
+2026-10-27T19:57:29.249Z,/v1/serp/google,"serp ""thanks in korean"" us/en d10",0.0100,R5 serp thanks
+2026-10-27T19:57:30.046Z,/v1/serp/google,"serp ""what religion are koreans"" us/en d10",0.0100,R5 serp are koreans religion
+2026-10-27T19:57:30.513Z,/v1/serp/google,"serp ""bangtan hangul"" us/en d10",0.0100,R5 serp bangtan
+2026-10-27T19:57:33.639Z,/v1/serp/google,"serp ""carrot in korean"" us/en d10",0.0100,R5 serp carrot
+2026-10-27T19:57:33.958Z,/v1/serp/google,"serp ""carrots in korean"" us/en d10",0.0100,R5 serp carrots
+2026-10-27T19:57:34.424Z,/v1/serp/google,"serp ""bangtan sonyeondan in hangul"" us/en d10",0.0100,R5 serp bangtan sonyeondan
+2026-10-27T19:57:36.953Z,/v1/serp/google,"serp ""chick in korean"" us/en d10",0.0100,R5 serp chick
+2026-10-27T19:57:37.273Z,/v1/serp/google,"serp ""chicken in korean"" us/en d10",0.0100,R5 serp chicken
+2026-10-27T19:57:37.553Z,/v1/serp/google,"serp ""congrats in korean"" us/en d10",0.0100,R5 serp congrats
+2026-10-27T19:57:38.173Z,/v1/serp/google,"serp ""congratulation in korean"" us/en d10",0.0100,R5 serp congratulation
+2026-10-27T19:57:40.550Z,/v1/serp/google,"serp ""dental in korean"" us/en d10",0.0100,R5 serp dental
+2026-10-27T19:57:40.739Z,/v1/serp/google,"serp ""cute nickname in korean"" us/en d10",0.0100,R5 serp cute nickname
+2026-10-27T19:57:40.827Z,/v1/serp/google,"serp ""korean congratulations"" us/en d10",0.0100,R5 serp congratulations
+2026-10-27T19:57:42.541Z,/v1/serp/google,"serp ""dentist in korean"" us/en d10",0.0100,R5 serp dentist
+2026-10-27T19:57:43.075Z,/v1/serp/google,"serp ""korean words of endearment"" us/en d10",0.0100,R5 serp endearment
+2026-10-27T19:57:44.290Z,/v1/serp/google,"serp ""first name korean"" us/en d10",0.0100,R5 serp first name
+2026-10-27T19:57:46.354Z,/v1/serp/google,"serp ""korean good luck"" us/en d10",0.0100,R5 serp good luck
+2026-10-27T19:57:47.479Z,/v1/serp/google,"serp ""korean hello formal"" us/en d10",0.0100,R5 serp formal hello
+2026-10-27T19:57:47.494Z,/v1/serp/google,"serp ""halmoni korean"" us/en d10",0.0100,R5 serp halmoni
+2026-10-27T19:57:48.527Z,/v1/serp/google,"serp ""fan death korea"" us/en d10",0.0100,R5 serp death fan
+2026-10-27T19:57:51.027Z,/v1/serp/google,"serp ""hangul on keyboard"" us/en d10",0.0100,R5 serp keyboard on
+2026-10-27T19:57:52.624Z,/v1/serp/google,"serp ""how do korean names work"" us/en d10",0.0100,R5 serp names work
+2026-10-27T19:57:52.764Z,/v1/serp/google,"serp ""hangul vocabulary"" us/en d10",0.0100,R5 serp vocabulary
+2026-10-27T19:57:56.277Z,/v1/serp/google,"serp ""how to spell korean"" us/en d10",0.0100,R5 serp spell
+2026-10-27T19:57:57.971Z,/v1/serp/google,"serp ""how do you say what in korean"" us/en d10",0.0100,R5 serp do how in korean say what you
+2026-10-27T19:57:59.557Z,/v1/serp/google,"serp ""hot kpop band"" us/en d10",0.0100,R5 serp band hot kpop
+2026-10-28T07:20:02.217Z,/v1/seo/keywords/overview,overview 60 kw us/en,0.0500,R10 aso-ios overview

@@ -1,1177 +1,283 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProductScopeEstimator from '../components/ProductScopeEstimator.astro';
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import MetricGrid from '../components/MetricGrid.astro';
+import Faq from '../components/Faq.astro';
+import ServiceList from '../components/ServiceList.astro';
+import { services } from '../data/services';
+import { person, professionalService } from '../lib/schema';
+import { site, bookingHref, billing } from '../config/site';
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Viktor Sokoliuk",
-  "url": "https://vicsotheme.com/",
-  "jobTitle": "Full Stack Developer",
-  "description": "Senior Full Stack Developer in Tallinn specializing in Flutter, Django, Next.js, and AI-powered development.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Pärnu",
-    "addressCountry": "EE"
-  },
-  "sameAs": [
-    "https://play.google.com/store/apps/developer?id=VicsoThemes"
-  ]
-};
+const { prices } = site;
+
+const metrics = [
+  { value: '3,200', label: 'active Android users, Hebrew learning app' },
+  { value: '7.41%', label: 'day-7 download-to-paid on iOS' },
+  { value: '4×', label: 'subscription revenue growth in 12 months', accent: true },
+  { value: 'Kotlin → Swift', label: 'native SwiftUI port, shipped to the App Store' },
+];
+
+const stack = [
+  'Kotlin · Jetpack Compose',
+  'Swift · SwiftUI',
+  'Flutter',
+  'WordPress · Astro',
+  'RevenueCat · Firebase',
+  'AI features in production',
+];
+
+const reasons = [
+  { t: 'CET+1 time zone', d: 'Overlap with all of Europe and the US East Coast mornings.' },
+  { t: billing.euTitle, d: billing.euText },
+  { t: 'You own everything', d: 'Code, accounts and store listings sit in your name from day one.' },
+  { t: 'AI-assisted, senior-reviewed', d: 'I use AI tools to build faster, so you pay less. Every line is reviewed and shipped by me.' },
+];
+
+const steps = [
+  { t: '20-minute call', d: 'Your idea, users and deadline. Honest answer on fit.' },
+  { t: 'Written scope &amp; fixed quote', d: 'Features, milestones and price on one page.' },
+  { t: 'Weekly builds', d: 'A test build on your phone every week, not a demo at the end.' },
+  { t: 'Launch &amp; handover', d: 'Store release, analytics, docs. Support plan if you want it.' },
+];
+
+const faqs = [
+  { q: 'How much does an app cost?', a: `Most MVPs I build land between ${prices.mvpRangeMin} and ${prices.mvpRangeMax}. After a 20-minute call you get a fixed quote in writing, so the number does not move during the build.` },
+  { q: 'Native or Flutter?', a: 'Flutter when you need both stores fast on one budget. Native Kotlin and Swift when performance, platform features or long-term polish matter more. I build both and will tell you which fits.' },
+  { q: 'Who owns the code?', a: 'You do. The repository, developer accounts and store listings are in your name from the first day.' },
+  { q: 'Can you work under our agency brand?', a: 'Yes. White-label work with an NDA, your tools and your process. Your client never needs to know I exist.' },
+  { q: 'What happens after launch?', a: 'You can take the code to your own team with full docs, or keep me on a monthly support plan for updates, fixes and new features.' },
+];
 ---
-
-
-<Layout title="Full Stack Developer for Hire | Flutter, Django, Next.js">
-
-  <style>
-
-    /* ── Fix white SVG icons in light mode ── */
-    :root .tech-icon[src$="django.svg"],
-    :root .tech-icon[src$="nextjs.svg"],
-    :root .tech-icon[src$="astro.svg"],
-    :root .tech-icon[src$="openai.svg"] {
-      filter: invert(0.85);
-    }
-    
-    /* ── Hero ── */
-    .hero {
-      padding: 120px 0 96px;
-      text-align: center;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--mono);
-      font-size: 12px;
-      line-height: 1.8;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 6px 14px;
-      margin-bottom: 32px;
-    }
-
-
-    h1 {
-      font-size: clamp(40px, 7vw, 72px);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--heading);
-      margin-bottom: 20px;
-    }
-    h1 em {
-      font-style: normal;
-      color: var(--accent-b)
-    }
-
-    .hero-sub {
-      font-size: 17px;
-      line-height: 1.65;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto 48px;
-      font-weight: 300;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-
-    .stat { text-align: center; }
-    .stat-num {
-      font-family: var(--mono);
-      font-size: 28px;
-      font-weight: 500;
-      color: var(--heading);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-label {
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-
-    /* ── App cards ── */
-    .app-card {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-      margin-bottom: 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 400px;
-    }
-    .app-card:hover {
-      border-color: var(--border-hi);
-      transform: translateY(-2px);
-    }
-    .app-card--hebrew { --card-accent: var(--accent-h); }
-    .app-card--hangul { --card-accent: var(--accent-k); }
-    .app-card--estonian { --card-accent: var(--accent-e); }
-
-    .app-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--card-accent), transparent);
-      opacity: 0.6;
-    }
-
-    .card-content {
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .btn-play {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--bg-hover);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 20px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: background 0.2s, border-color 0.2s;
-      width: fit-content;
-    }
-    .btn-play:hover {
-      background: var(--bg-card);
-      border-color: var(--border-hi);
-    }
-    .btn-play svg { width: 18px; height: 18px; opacity: 0.7; }
-
-    .card-visual {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .card-visual-bg { position: absolute; inset: 0; opacity: 0.06; }
-    .app-card--hebrew .card-visual-bg { background: radial-gradient(ellipse at center, var(--accent-h), transparent 70%); }
-    .app-card--hangul .card-visual-bg  { background: radial-gradient(ellipse at center, var(--accent-k), transparent 70%); }
-    .app-card--estonian .card-visual-bg { background: radial-gradient(ellipse at center, var(--accent-e), transparent 70%); }
-
-    .card-emoji {
-      font-size: 96px;
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 0 40px rgba(0,0,0,0.12));
-      animation: float 4s ease-in-out infinite;
-    }
-    .app-card:nth-child(2) .card-emoji { animation-delay: -2s; }
-    .app-card:nth-child(3) .card-emoji { animation-delay: -1s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-12px); }
-    }
-
-    /* ── Dashboard ── */
-    .dashboard-card {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .dashboard-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
-    .dashboard-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-d), transparent);
-      opacity: 0.7;
-    }
-    .dashboard-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      min-height: 380px;
-    }
-    .dashboard-info {
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-right: 1px solid var(--border);
-    }
-    .dashboard-preview {
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-hover);
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 20px;
-    }
-    .fake-sidebar {
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 150px;
-      background: var(--bg-card);
-      border-right: 1px solid var(--border);
-      padding: 16px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .fake-sidebar-title { font-size: 10px; color: var(--heading); font-weight: 500; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); font-family: var(--mono); }
-    .fake-nav-item { padding: 6px 8px; border-radius: 5px; color: var(--muted); font-size: 10px; cursor: default; font-family: var(--mono); }
-    .fake-nav-item.active { background: rgba(167,139,250,0.15); color: var(--accent-d); }
-    .fake-nav-section { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; padding-left: 8px; font-family: var(--mono); }
-    .fake-main { margin-left: 155px; padding: 16px; font-family: var(--mono); }
-    .fake-main-title { font-size: 14px; color: var(--heading); font-weight: 500; margin-bottom: 4px; }
-    .fake-main-sub { font-size: 10px; color: var(--muted); margin-bottom: 14px; }
-    .fake-stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
-    .fake-stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
-    .fake-stat-box .label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-    .fake-stat-box .value { font-size: 16px; color: var(--heading); font-weight: 500; }
-    .fake-stat-box.green .value { color: var(--accent-h); }
-    .fake-stat-box.blue  .value { color: var(--accent-k); }
-    .fake-stat-box.amber .value { color: var(--accent-w); }
-    .fake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-    .fake-lesson-card { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 6px; padding: 8px; }
-    .fake-lesson-card .lc-badges { display: flex; gap: 4px; margin-bottom: 6px; }
-    .fake-badge { font-size: 8px; padding: 2px 5px; border-radius: 3px; font-family: var(--mono); }
-    .fake-badge.green { background: rgba(74,222,128,0.15); color: var(--accent-h); }
-    .fake-badge.blue  { background: rgba(96,165,250,0.15); color: var(--accent-k); }
-    .fake-lesson-card .lc-name { font-size: 10px; color: var(--heading); margin-bottom: 3px; }
-    .fake-lesson-card .lc-desc { font-size: 9px; color: var(--muted); line-height: 1.4; }
-    .fake-lesson-card .lc-actions { display: flex; gap: 4px; margin-top: 6px; }
-    .fake-btn { font-size: 8px; padding: 3px 6px; border-radius: 3px; border: 1px solid var(--border); color: var(--muted); background: var(--bg-card); }
-    .fake-btn.blue { border-color: rgba(96,165,250,0.3); color: var(--accent-k); }
-    .fake-btn.red  { border-color: rgba(248,113,113,0.3); color: #f87171; }
-    .dashboard-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(167,139,250,0.05) 100%); pointer-events: none; }
-
-    /* ── Web App ── */
-    .webapp-card {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .webapp-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
-    .webapp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-w), transparent); opacity: 0.7; }
-    .webapp-inner { display: grid; grid-template-columns: 1fr 1.6fr; min-height: 340px; }
-    .webapp-info { padding: 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
-    .webapp-preview { position: relative; overflow: hidden; background: var(--bg-hover); display: flex; align-items: center; justify-content: center; padding: 24px; }
-    .fake-webapp { width: 100%; max-width: 560px; }
-    .fake-webapp-header { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px 10px 0 0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: none; }
-    .fake-url-bar { flex: 1; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; color: var(--muted); }
-    .fake-webapp-body { background: var(--bg-card); border: 1px solid var(--border); border-radius: 0 0 10px 10px; padding: 16px; }
-    .fw-title { font-size: 13px; font-weight: 500; color: var(--heading); margin-bottom: 12px; text-align: center; }
-    .fw-search { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--mono); width: 100%; display: block; }
-    .fw-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-    .fw-word-card { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; }
-    .fw-est { font-size: 13px; color: var(--heading); font-weight: 500; margin-bottom: 2px; }
-    .fw-ru  { font-size: 10px; color: var(--muted); }
-    .fw-tag { display: inline-block; font-family: var(--mono); font-size: 8px; padding: 2px 5px; border-radius: 3px; background: rgba(251,191,36,0.12); color: var(--accent-w); margin-top: 4px; }
-    .webapp-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(251,191,36,0.04) 100%); pointer-events: none; }
-
-    /* ── Tech Stack ── */
-    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
-    .tech-item { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); padding: 14px 16px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background 0.2s; cursor: default; }
-    .tech-item:hover { border-color: var(--border-hi); background: var(--bg-hover); }
-    .tech-icon { width: 62px; height: 62px; flex-shrink: 0; object-fit: contain; }
-    .tech-name { font-size: 13px; color: var(--text); font-weight: 400; }
-    .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
-
-    /* ── Tech Stack ── */
-    .tech-group { margin-bottom: 28px; }
-    .tech-group-label { font-family: var(--mono); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-left: 2px; display: block; }
-    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
-    .tech-item { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); padding: 12px 14px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background 0.2s; cursor: default; }
-    .tech-item:hover { border-color: var(--border-hi); background: var(--bg-hover); }
-    .tech-icon { width: 62px; height: 62px; flex-shrink: 0; object-fit: contain; }
-    .tech-name { font-size: 13px; color: var(--text); font-weight: 400; }
-    .tech-sub { font-size: 10px; color: var(--muted); font-family: var(--mono); }
-
-    /* ── Services ── */
-    .services-intro {
-      max-width: 680px;
-      margin-bottom: 32px;
-    }
-
-    .services-heading {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 300;
-      color: var(--heading);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .services-lead {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--muted);
-      font-weight: 300;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 260px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--bg-card);
-      text-decoration: none;
-      overflow: hidden;
-      transition: border-color 0.25s, background 0.25s, transform 0.25s;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 2px;
-      background: var(--s-accent, var(--accent-h));
-      opacity: 0.35;
-    }
-
-    .service-card:hover {
-      border-color: var(--border-hi);
-      background: var(--bg-hover);
-      transform: translateY(-2px);
-    }
-
-    .service-card-top {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .service-icon {
-      width: 34px;
-      height: 34px;
-      flex-shrink: 0;
-      object-fit: contain;
-    }
-
-    .service-title {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--heading);
-      line-height: 1.3;
-    }
-
-    .service-desc {
-      font-size: 13px;
-      line-height: 1.65;
-      color: var(--muted);
-      font-weight: 300;
-    }
-
-    .service-badge {
-      margin-top: auto;
-      width: fit-content;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 5px 10px;
-      border-radius: 100px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: var(--bg-hover);
-    }
-
-    .services-more {
-      display: flex;
-      justify-content: center;
-      padding-top: 28px;
-    }
-
-    @media (max-width: 900px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: auto;
-      }
-    }
-    /* ── CTA ── */
-    .cta-block { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-glow { position: absolute; inset: 0; pointer-events: none; }
-    .cta-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
-    .cta-title { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--heading); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
-    .cta-title em { font-style: normal; color:  var(--accent-b); }
-    .cta-sub { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 36px; line-height: 1.6; font-weight: 300; }
-    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: var(--bg); border: none; border-radius: 10px; padding: 13px 24px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
-    .btn-primary:hover { opacity: 0.88; }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 10px; padding: 13px 24px; font-size: 14px; color: var(--text); text-decoration: none; font-weight: 400; transition: background 0.2s, border-color 0.2s; }
-    .btn-secondary:hover { background: var(--bg-card); border-color: var(--border-hi); }
-
-    /* ── Why Me? ── */
-    .why-section { padding: 0 0 96px; }
- 
-    .why-hero {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      padding: 64px 56px;
-      margin-bottom: 24px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .why-hero-glow {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-    .why-kicker {
-      font-family: var(--mono);
-      font-size: 14px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--heading);
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-    .why-headline {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 300;
-      color: var(--heading);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    .why-headline strong {
-      font-weight: 500;
-      color: var(--accent-b);
-    }
-    .why-lead {
-      font-size: 17px;
-      color: var(--muted);
-      max-width: 560px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-      font-weight: 300;
-    }
-    .why-numbers {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-    .why-num { text-align: center; }
-    .why-num-val {
-      font-family: var(--mono);
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--heading);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .why-num-val span { color: var(--heading); }
-    .why-num-label { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
- 
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 44px;
-    }
- 
-    .comparison-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--bg-card);
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-    }
-
- 
-    .comp-badge {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 100px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .comp-badge.agency { border: 1px solid var(--border); color: var(--muted); }
-    .comp-badge.me { border: 1px solid rgba(74,222,128,0.3); color: var(--accent-h); }
- 
-    .comp-title { font-size: 18px; font-weight: 500; color: var(--heading); margin-bottom: 20px; }
- 
-    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .comp-list li {
-      font-size: 14px;
-      color: var(--muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
-    .comp-list li .icon { flex-shrink: 0; margin-top: 1px; }
-    .comp-list li .icon.bad { color: #f87171; }
-    .comp-list li .icon.good { color: var(--accent-h); }
-    .comp-list.is-me li { color: var(--muted-hi); }
- 
-    .reasons-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
- 
-    .reason-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--bg-card);
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .reason-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
-    .reason-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--r-accent, var(--accent-h)), transparent);
-      opacity: 0.5;
-    }
-    .reason-card:nth-child(1) { --r-accent: var(--accent-h); }
-    .reason-card:nth-child(2) { --r-accent: var(--accent-k); }
-    .reason-card:nth-child(3) { --r-accent: var(--accent-e); }
-    .reason-card:nth-child(4) { --r-accent: var(--accent-w); }
-    .reason-card:nth-child(5) { --r-accent: var(--accent-d); }
-    .reason-card:nth-child(6) { --r-accent: #fb923c; }
- 
-    .reason-num {
-      font-family: var(--mono);
-      font-size: 14px;
-      color: var(--r-accent, var(--accent-h));
-      letter-spacing: 0.06em;
-      margin-bottom: 12px;
-    }
-    .reason-title { font-size: 15px; font-weight: 500; color: var(--heading); margin-bottom: 8px; line-height: 1.3; }
-    .reason-desc { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; }
- 
-    @media (max-width: 768px) {
-      .comparison-grid { grid-template-columns: 1fr; }
-      .reasons-grid { grid-template-columns: 1fr 1fr; }
-      .why-hero { padding: 40px 24px; }
-      .why-numbers { gap: 28px; flex-direction: column;}
-    }
-    @media (max-width: 480px) {
-      .reasons-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ── Animations ── */
-    .fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.7s ease forwards; }
-    .fade-up:nth-child(1) { animation-delay: 0.1s; }
-    .fade-up:nth-child(2) { animation-delay: 0.2s; }
-    .fade-up:nth-child(3) { animation-delay: 0.3s; }
-    .fade-up:nth-child(4) { animation-delay: 0.4s; }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-    /* ── Responsive ── */
-    @media (max-width: 700px) {
-      .app-card, .dashboard-inner, .webapp-inner { grid-template-columns: 1fr; }
-      .card-visual { height: 200px; }
-      .card-content, .dashboard-info, .webapp-info { padding: 32px 24px; }
-      .hero { padding: 80px 0 64px; }
-      .hero-stats { gap: 32px; justify-content: space-between;}
-      .card-emoji { font-size: 72px; }
-      .fake-sidebar { display: none; }
-      .fake-main { margin-left: 0; }
-      .dashboard-preview, .webapp-preview { min-height: 220px; }
-      .cta-block { padding: 40px 24px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .tech-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="fade-up">
-        <div class="hero-badge">AI-Augmented Product Engineer · Estonia</div>
+<Base
+  title="Viktor Sokoliuk — Mobile App & MVP Developer in the EU"
+  schema={[person(), professionalService()]}
+  description={`Independent developer in ${site.city}, ${site.country}. Android, iOS and Flutter apps for founders, white-label WordPress for agencies, fixed-price MVPs in 6–8 weeks.`}
+>
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Independent developer · {site.city}, {site.country}</p>
+      <h1 class="h1">I build and sell my own apps. I'll build yours <span class="accent">the same way.</span></h1>
+      <p class="lead hero-lead">Android, iOS and Flutter apps for founders, plus WordPress for agencies. One senior developer from scope to store release — with paying users of my own to prove the process works.</p>
+      <div class="btn-row">
+        <Button href="/app-cost-calculator/" arrow>Estimate your project</Button>
+        <Button href="#call" variant="secondary">Book a call</Button>
       </div>
+    </div>
+    <MetricGrid items={metrics} head={{ left: 'my_products.log', right: 'updated Nov 2026' }} />
+  </section>
 
-      <h1 class="fade-up">
-        Building AI-powered products<br />
-        with <em>senior full-stack execution</em>
-      </h1>
+  <section class="band band-alt stack-strip" aria-label="Stack">
+    <ul class="wrap stack-list">
+      {stack.map((s) => <li>{s}</li>)}
+    </ul>
+  </section>
 
-      <p class="hero-sub fade-up">
-        I help startups and businesses design, build, and optimize SaaS platforms,
-        mobile apps, CMS systems, and AI-driven workflows with a product-first
-        engineering approach.
-      </p>
+  <section id="services" class="wrap services">
+    <SectionHeading title="Four ways to work together">
+      Fixed scope or a monthly retainer. {billing.intro}
+    </SectionHeading>
+    <ServiceList
+      items={services}
+      hrefs={{ mvp: '/mvp/', cto: '/technical-partner/', agencies: '#call', wordpress: '#call' }}
+      ids={{ agencies: 'agencies' }}
+    />
+  </section>
 
-      <div class="hero-actions fade-up">
-        <a href="/contact/" class="btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          Discuss your product
-        </a>
+  <section id="cases" class="wrap cases">
+    <h2 class="h2 cases-title">Proof, not promises</h2>
+    <div class="case-grid">
+      <article class="case case-dark on-dark">
+        <span class="case-tag">Own product · EdTech</span>
+        <h3 class="case-h">Hebrew learning app: from side project to a subscription business</h3>
+        <p class="case-p">Designed, built and marketed solo. Paywall experiments, onboarding and ASO, then a native iOS version.</p>
+        <div class="case-stats">
+          <div><div class="case-num">3,200</div><div class="case-cap">active users</div></div>
+          <div><div class="case-num">4×</div><div class="case-cap">ARR in a year</div></div>
+        </div>
+        <a href="/cases/hebrew-app/" class="link-strong case-link">Read the case →</a>
+      </article>
+      <article class="case card">
+        <span class="case-tag">Platform port</span>
+        <h3 class="case-h">Android to native iOS in SwiftUI</h3>
+        <p class="case-p">Compose app rebuilt natively for iOS with shared product logic and StoreKit subscriptions.</p>
+        <div class="case-stats"><div><div class="case-num">7.41%</div><div class="case-cap">day-7 download-to-paid</div></div></div>
+        <a href="/cases/hebrew-app/" class="link-strong">Read the case →</a>
+      </article>
+      <article class="case card">
+        <span class="case-tag">Own product · Android + iOS</span>
+        <h3 class="case-h">Korean Alphabet: Hangul</h3>
+        <p class="case-p">Hangul course with Phrase X-Ray breakdowns and stroke-order practice, ported natively to iOS.</p>
+        <div class="case-stats"><div><div class="case-num">10K+</div><div class="case-cap">downloads on Google Play</div></div></div>
+        <a href="/cases/" class="link-strong">All cases →</a>
+      </article>
+    </div>
+  </section>
 
-        <a href="/services/" class="btn-secondary">Explore capabilities ↓</a>
+  <section class="band">
+    <div class="wrap why">
+      <div>
+        <h2 class="h2 why-title">An EU developer, not an outsourcing chain</h2>
+        <p class="text-2 why-lead">You talk to the person who writes the code. Overlaps with Berlin, Helsinki and Amsterdam working hours.</p>
+      </div>
+      <ul class="why-list">
+        {reasons.map((r) => (
+          <li><span class="why-t">{r.t}</span><span class="why-d">{r.d}</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section id="estimate" class="band-dark on-dark">
+    <div class="wrap process">
+      <h2 class="h2 process-title">How a project runs</h2>
+      <ol class="steps">
+        {steps.map((s, i) => (
+          <li>
+            <span class="step-n">{String(i + 1).padStart(2, '0')}</span>
+            <span class="step-t" set:html={s.t} />
+            <span class="step-d">{s.d}</span>
+          </li>
+        ))}
+      </ol>
+      <div class="estimator-cta">
+        <div>
+          <div class="estimator-cta-t">Not sure about budget yet?</div>
+          <div class="estimator-cta-d">Describe your app in one sentence and see a price range and timeline in 30 seconds.</div>
+        </div>
+        <Button href="/app-cost-calculator/" variant="inverse">Open the estimator</Button>
       </div>
     </div>
   </section>
 
-  <section class="services section" id="services">
-    <div class="wrap">
-      <div class="section-label">Core Expertise</div>
+  <section class="wrap faq-section">
+    <h2 class="h2">Questions clients ask first</h2>
+    <Faq items={faqs} />
+  </section>
 
-      <div class="services-intro reveal">
-        <h2 class="services-heading">
-          Product engineering capabilities for AI-era digital products.
-        </h2>
-        <p class="services-lead">
-          Focused engineering directions instead of a noisy list of isolated services.
-          I help design, build, optimize, and launch scalable products across web, mobile,
-          AI, CMS, and EdTech systems.
-        </p>
-      </div>
-
-      <div class="services-grid services-grid--pillars">
-        <a href="/services/ai-product-engineering/" class="service-card reveal" style="--s-accent: var(--accent-d);">
-          <div class="service-card-top">
-            <span class="service-title">AI Product Engineering</span>
-          </div>
-          <p class="service-desc">
-            AI MVPs, LLM integrations, workflow automation, AI SaaS, internal tools, and product-focused AI systems.
-          </p>
-          <span class="service-badge">OpenAI · Claude · Next.js · Python</span>
-        </a>
-
-        <a href="/services/saas-platform-engineering/" class="service-card reveal" style="--s-accent: var(--accent-k);">
-          <div class="service-card-top">
-            <span class="service-title">SaaS Platform Engineering</span>
-          </div>
-          <p class="service-desc">
-            Scalable web platforms, dashboards, admin systems, product infrastructure, and full-stack SaaS architecture.
-          </p>
-          <span class="service-badge">Next.js · Django · PostgreSQL</span>
-        </a>
-
-        <a href="/services/mobile-product-engineering/" class="service-card reveal" style="--s-accent: var(--accent-h);">
-          <div class="service-card-top">
-            <span class="service-title">Mobile Product Engineering</span>
-          </div>
-          <p class="service-desc">
-            Flutter apps, PWAs, subscription systems, cross-platform products, mobile UX, and app launch support.
-          </p>
-          <span class="service-badge">Flutter · RevenueCat · Firebase</span>
-        </a>
-
-        <a href="/services/cms-content-architecture/" class="service-card reveal" style="--s-accent: var(--accent-e);">
-          <div class="service-card-top">
-            <span class="service-title">CMS & Content Architecture</span>
-          </div>
-          <p class="service-desc">
-            Strapi, headless CMS, WordPress architecture, editorial workflows, structured content, and SEO-ready systems.
-          </p>
-          <span class="service-badge">Strapi · WordPress · SEO</span>
-        </a>
-
-        <a href="/services/edtech-learning-systems/" class="service-card reveal" style="--s-accent: var(--accent-w);">
-          <div class="service-card-top">
-            <span class="service-title">EdTech & Learning Systems</span>
-          </div>
-          <p class="service-desc">
-            Language-learning products, spaced repetition systems, gamification, learning UX, and retention mechanics.
-          </p>
-          <span class="service-badge">SRS · Gamification · Retention</span>
-        </a>
-
-        <a href="/services/technical-strategy-optimization/" class="service-card reveal" style="--s-accent: var(--accent-b);">
-          <div class="service-card-top">
-            <span class="service-title">Technical Strategy & Optimization</span>
-          </div>
-          <p class="service-desc">
-            Architecture audits, performance optimization, UX review, SEO improvements, monetization, and product strategy.
-          </p>
-          <span class="service-badge">Performance · UX · Architecture</span>
-        </a>
-      </div>
-
-      <div class="services-more reveal">
-        <a href="/services/" class="btn-secondary">
-          Explore all capabilities
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
-        </a>
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <h2 class="h-cta call-title">Tell me what you want to build. You'll get a straight answer within one working day.</h2>
+      <div class="btn-row">
+        <Button href={bookingHref}>Book a 20-min call</Button>
+        <Button href={`mailto:${site.email}`} variant="secondary">{site.email}</Button>
       </div>
     </div>
   </section>
+</Base>
 
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-  <ProductScopeEstimator />
+  .hero {
+    padding-top: 88px;
+    padding-bottom: 72px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: 56px;
+    align-items: end;
+  }
+  .hero-copy { display: flex; flex-direction: column; gap: 28px; }
+  .hero-lead { max-width: 34rem; }
 
-  <!-- Tech Stack & Services -->
-  <section class="section" id="stack">
-    <div class="wrap">
-      <div class="section-label">Tech Stack</div>
+  .stack-strip { border-bottom: 1px solid var(--line); }
+  .stack-list {
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-2);
+  }
 
-      <!-- Mobile -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Mobile</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/flutter.svg" alt="Flutter" /><div><div class="tech-name">Flutter</div><div class="tech-sub">cross-platform</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/kotlin.svg" alt="Kotlin" /><div><div class="tech-name">Kotlin</div><div class="tech-sub">android</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/jetpackcompose.svg" alt="Jetpack Compose" /><div><div class="tech-name">Jetpack Compose</div><div class="tech-sub">android UI</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/revenuecat.svg" alt="RevenueCat" /><div><div class="tech-name">RevenueCat</div><div class="tech-sub">subscriptions</div></div></div>
-        </div>
-      </div>
+  .services { padding-top: 96px; padding-bottom: 40px; }
 
-      <!-- Backend -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Backend</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/python.svg" alt="Python" /><div><div class="tech-name">Python</div><div class="tech-sub">backend</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/django.svg" alt="Django" /><div><div class="tech-name">Django</div><div class="tech-sub">API · admin</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/php.svg" alt="PHP" /><div><div class="tech-name">PHP</div><div class="tech-sub">backend</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/postgresql.svg" alt="PostgreSQL" /><div><div class="tech-name">PostgreSQL</div><div class="tech-sub">database</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/redis.svg" alt="Redis" /><div><div class="tech-name">Redis</div><div class="tech-sub">cache</div></div></div>
-        </div>
-      </div>
+  .cases { padding-top: 80px; padding-bottom: 80px; }
+  .cases-title { margin-bottom: 40px; }
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 24px;
+  }
+  .case { padding: 32px; display: flex; flex-direction: column; gap: 18px; }
+  .case-dark { background: var(--ink); color: var(--bg); border-radius: var(--radius-card); }
+  .case-tag { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .case-h { font-size: 26px; letter-spacing: -0.02em; line-height: 1.2; }
+  .case-p { color: var(--text-2); font-size: 16px; }
+  .case-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+  }
+  .case-num { font-size: 24px; }
+  .case-cap { font-size: 12px; color: var(--muted); }
+  .case-dark .case-tag, .case-dark .case-cap { color: var(--on-dark-muted); }
+  .case-dark .case-p { color: var(--on-dark-2); }
+  .case-dark .case-stats { border-top-color: var(--dark-line); }
+  .case-dark .case-link { color: var(--bg); }
 
-      <!-- Web & CMS -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Web & CMS</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/nextjs.svg" alt="Next.js" /><div><div class="tech-name">Next.js</div><div class="tech-sub">web</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/astro.svg" alt="Astro" /><div><div class="tech-name">Astro</div><div class="tech-sub">static sites</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/wordpress.svg" alt="WordPress" /><div><div class="tech-name">WordPress</div><div class="tech-sub">CMS · ACF</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/strapi.svg" alt="Strapi" /><div><div class="tech-name">Strapi</div><div class="tech-sub">headless CMS</div></div></div>
-        </div>
-      </div>
+  .why {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 48px;
+  }
+  .why-title { margin-bottom: 16px; }
+  .why-lead { max-width: 30rem; }
+  .why-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 32px;
+  }
+  .why-list li { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--ink); }
+  .why-t { font-weight: 600; }
+  .why-d { color: var(--text-2); font-size: 15px; }
 
-      <!-- DevOps & Tools -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">DevOps & Tools</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/docker.svg" alt="Docker" /><div><div class="tech-name">Docker</div><div class="tech-sub">containers</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/nginx.svg" alt="Nginx" /><div><div class="tech-name">Nginx</div><div class="tech-sub">web server</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/git.svg" alt="Git" /><div><div class="tech-name">Git</div><div class="tech-sub">version control</div></div></div>
-        </div>
-      </div>
+  .process { padding-top: 88px; padding-bottom: 88px; }
+  .process-title { margin-bottom: 48px; }
+  .steps {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 32px;
+  }
+  .steps li { display: flex; flex-direction: column; gap: 10px; }
+  .step-n { font-family: var(--mono); font-size: 13px; color: var(--on-dark-muted); }
+  .step-t { font-size: 20px; font-weight: 600; }
+  .step-d { color: var(--on-dark-2); font-size: 15px; }
+  .estimator-cta {
+    margin-top: 56px;
+    padding: 28px;
+    border: 1px solid var(--dark-line);
+    border-radius: var(--radius-card);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .estimator-cta-t { font-size: 20px; font-weight: 600; }
+  .estimator-cta-d { color: var(--on-dark-2); font-size: 15px; }
 
-      <!-- AI & Cloud -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">AI & Cloud</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/openai.svg" alt="OpenAI" /><div><div class="tech-name">OpenAI API</div><div class="tech-sub">LLM tooling</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/claude.svg" alt="Claude" /><div><div class="tech-name">Claude</div><div class="tech-sub">LLM tooling</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/google-tts.svg" alt="Google TTS" /><div><div class="tech-name">Google TTS</div><div class="tech-sub">audio gen</div></div></div>
-          <div class="tech-item"><img class="tech-icon" src="/icons/firebase.svg" alt="Firebase" /><div><div class="tech-name">Firebase</div><div class="tech-sub">analytics · auth</div></div></div>
-        </div>
-      </div>
+  .faq-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+    gap: 48px;
+  }
 
-      <!-- Design -->
-      <div class="tech-group reveal">
-        <span class="tech-group-label">Design</span>
-        <div class="tech-grid">
-          <div class="tech-item"><img class="tech-icon" src="/icons/figma.svg" alt="Figma" /><div><div class="tech-name">Figma</div><div class="tech-sub">design</div></div></div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- Why Me? -->
-
-  <section class="why-section" id="why">
-    <div class="wrap">
-
-      <div class="why-hero reveal">
-        <div class="why-hero-glow"></div>
-
-        <div class="why-kicker">Why work with an independent product engineer</div>
-
-        <h2 class="why-headline">
-          Senior execution.<br />
-          <strong>Direct technical ownership.</strong>
-        </h2>
-
-        <p class="why-lead">
-          I work as a technical product partner — combining full-stack engineering,
-          AI-assisted workflows, UX thinking, and product architecture to help you
-          move from idea to a real, maintainable product without unnecessary process overhead.
-        </p>
-
-        <div class="why-numbers">
-          <div class="why-num">
-            <div class="why-num-val">1</div>
-            <div class="why-num-label">Technical owner</div>
-          </div>
-
-          <div class="why-num">
-            <div class="why-num-val">6</div>
-            <div class="why-num-label">Core product pillars</div>
-          </div>
-
-          <div class="why-num">
-            <div class="why-num-val">AI</div>
-            <div class="why-num-label">Assisted workflow</div>
-          </div>
-
-          <div class="why-num">
-            <div class="why-num-val">0</div>
-            <div class="why-num-label">Middlemen</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reasons-grid reveal">
-
-        <div class="reason-card">
-          <div class="reason-num">01</div>
-          <div class="reason-title">Product-first engineering</div>
-          <p class="reason-desc">
-            I do not start with technology for its own sake. I start with the product goal,
-            user flow, business constraint, and then choose the simplest technical path that can scale.
-          </p>
-        </div>
-
-        <div class="reason-card">
-          <div class="reason-num">02</div>
-          <div class="reason-title">AI-assisted execution</div>
-          <p class="reason-desc">
-            I use modern AI tools to speed up research, prototyping, implementation, refactoring,
-            and content workflows — while keeping architecture and product judgment human-led.
-          </p>
-        </div>
-
-        <div class="reason-card">
-          <div class="reason-num">03</div>
-          <div class="reason-title">Full-stack ownership</div>
-          <p class="reason-desc">
-            Next.js, Astro, Django, Python, Strapi, WordPress, Flutter, Firebase, Docker,
-            PostgreSQL, and deployment workflows can be handled as one connected product system.
-          </p>
-        </div>
-
-        <div class="reason-card">
-          <div class="reason-num">04</div>
-          <div class="reason-title">Real shipped products</div>
-          <p class="reason-desc">
-            I build and maintain real products, including mobile learning apps, subscription flows,
-            content systems, dashboards, and production websites — not just portfolio demos.
-          </p>
-        </div>
-
-        <div class="reason-card">
-          <div class="reason-num">05</div>
-          <div class="reason-title">EdTech and retention expertise</div>
-          <p class="reason-desc">
-            Spaced repetition, language-learning flows, gamification, content architecture,
-            paywalls, and retention systems are part of my practical product experience.
-          </p>
-        </div>
-
-        <div class="reason-card">
-          <div class="reason-num">06</div>
-          <div class="reason-title">Clear technical direction</div>
-          <p class="reason-desc">
-            I help simplify scope, explain tradeoffs, avoid overengineering, and build systems
-            that are easier to launch, maintain, and improve after release.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-   <!-- CTA -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="cta-block reveal">
-        <div class="cta-glow"></div>
-        <div class="cta-label">Work with me</div>
-        <h2 class="cta-title">Have a project in mind?<br /><em>Let's build it.</em></h2>
-        <p class="cta-sub">Open to freelance projects — mobile apps, web tools, EdTech products. Based in Tallinn, working remotely worldwide.</p>
-        <div class="cta-actions">
-          <a href="mailto:vic.sokoliuk@gmail.com" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            Send email
-          </a>
-          <a href="/apps/" class="btn-secondary">View all apps ↓</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Android Apps -->
-  <section class="section" id="apps">
-    <div class="wrap">
-      <div class="section-label">Android Apps</div>
-
-      <div class="app-card app-card--hebrew reveal">
-        <div class="card-content">
-          <div class="card-tag">Language Learning · Hebrew</div>
-          <h2 class="card-title">Learn Hebrew —<br />Read & Speak</h2>
-          <p class="card-desc">Master the Hebrew alphabet with structured lessons, AI word explanations, and spaced repetition.</p>
-          <ul class="card-features">
-            <li>Full alphabet with nikud (vowel marks)</li>
-            <li>AI Tutor — tap any word for instant breakdown</li>
-            <li>Reading practice with real stories</li>
-            <li>Spaced repetition vocabulary system</li>
-          </ul>
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hebrewforbeginners" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
-            Google Play
-          </a>
-        </div>
-        <div class="card-visual">
-          <div class="card-emoji">🇮🇱</div>
-        </div>
-      </div>
-
-      <div class="app-card app-card--hangul reveal">
-        <div class="card-visual">
-          <div class="card-emoji">🇰🇷</div>
-        </div>
-        <div class="card-content">
-          <div class="card-tag">Language Learning · Korean</div>
-          <h2 class="card-title">Learn Korean<br />Alphabet: Hangul</h2>
-          <p class="card-desc">Learn to read Hangul in days. Consonants, vowels, reading rules, and quiz-based practice.</p>
-          <ul class="card-features">
-            <li>All consonants and vowels with audio</li>
-            <li>Reading rules and complex combinations</li>
-            <li>Spaced repetition drill sessions</li>
-            <li>Badges and progress tracking</li>
-          </ul>
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.hangulhero" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
-            Google Play
-          </a>
-        </div>
-      </div>
-
-      <div class="app-card app-card--estonian reveal">
-        <div class="card-content">
-          <div class="card-tag">Language Learning · Estonian</div>
-          <h2 class="card-title">Estonian Verbs —<br />Learn Estonian</h2>
-          <p class="card-desc">A conjugation trainer built on real phrases, not isolated words. 50 A1–B1 verbs with five exercise types and adaptive spaced repetition.</p>
-          <ul class="card-features">
-            <li>5 exercise types: choose, build, translate, switch person, fix the error</li>
-            <li>7 progressive blocks per verb — from warm-up to dialogues</li>
-            <li>Spaced repetition adapts to your level automatically</li>
-            <li>Interface in English and Russian · works offline</li>
-          </ul>
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.vicsothemes.eesti_verbid" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.13 1-.13l13 8.5-13 8.5s-1 .76-1-.87z"/></svg>
-            Google Play
-          </a>
-        </div>
-        <div class="card-visual">
-          <div class="card-emoji">🇪🇪</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- App Dashboard -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-label">App Dashboard</div>
-      <div class="dashboard-card reveal">
-        <div class="dashboard-inner">
-          <div class="dashboard-info">
-            <div class="card-tag" style="color: var(--accent-d);">Internal Tool · Hebrew Learning</div>
-            <h2 class="card-title">Hebrew Learning<br />Admin</h2>
-            <p class="card-desc">Custom Django admin panel built to manage lessons, study materials, and exercises for the Hebrew learning app. Full CRUD with content structuring and API tooling for the mobile client.</p>
-            <ul class="card-features" style="--card-accent: var(--accent-d);">
-              <li>Lesson management with materials & exercises</li>
-              <li>Stories & Dictionary management</li>
-              <li>REST API with test connection tools</li>
-              <li>Built with Django · Python</li>
-            </ul>
-          </div>
-          <div class="dashboard-preview">
-            <div class="fake-sidebar">
-              <div class="fake-sidebar-title">Hebrew Learning Admin</div>
-              <div class="fake-nav-section">Stories</div>
-              <div class="fake-nav-item">All Stories</div>
-              <div class="fake-nav-item">+ Add Story</div>
-              <div class="fake-nav-section">Dictionary</div>
-              <div class="fake-nav-item">All Words</div>
-              <div class="fake-nav-item">+ Add Word</div>
-              <div class="fake-nav-item">Categories</div>
-              <div class="fake-nav-section">Lessons</div>
-              <div class="fake-nav-item active">All Lessons</div>
-              <div class="fake-nav-item">+ Add Lesson</div>
-              <div class="fake-nav-section">API & Tools</div>
-              <div class="fake-nav-item">Stories API</div>
-              <div class="fake-nav-item">Words API</div>
-            </div>
-            <div class="fake-main">
-              <div class="fake-main-title">Lessons Management</div>
-              <div class="fake-main-sub">Manage your Hebrew learning lessons</div>
-              <div class="fake-stats-row">
-                <div class="fake-stat-box green"><div class="label">Total Lessons</div><div class="value">22</div></div>
-                <div class="fake-stat-box blue"><div class="label">Study Materials</div><div class="value">362</div></div>
-                <div class="fake-stat-box amber"><div class="label">Exercises</div><div class="value">319</div></div>
-              </div>
-              <div class="fake-grid">
-                <div class="fake-lesson-card">
-                  <div class="lc-badges"><span class="fake-badge green">11 materials</span><span class="fake-badge blue">14 exercises</span></div>
-                  <div class="lc-name">Lesson 1</div>
-                  <div class="lc-desc">Exploring Aleph: The Foundation of the Hebrew Alphabet</div>
-                  <div class="lc-actions"><span class="fake-btn blue">Edit</span><span class="fake-btn blue">Exercises</span><span class="fake-btn red">Delete</span></div>
-                </div>
-                <div class="fake-lesson-card">
-                  <div class="lc-badges"><span class="fake-badge green">20 materials</span><span class="fake-badge blue">13 exercises</span></div>
-                  <div class="lc-name">Lesson 2</div>
-                  <div class="lc-desc">Exploring Bet: The Foundation of the Hebrew Alphabet</div>
-                  <div class="lc-actions"><span class="fake-btn blue">Edit</span><span class="fake-btn blue">Exercises</span><span class="fake-btn red">Delete</span></div>
-                </div>
-                <div class="fake-lesson-card">
-                  <div class="lc-badges"><span class="fake-badge green">9 materials</span><span class="fake-badge blue">12 exercises</span></div>
-                  <div class="lc-name">Lesson 3</div>
-                  <div class="lc-desc">Exploring Gimel: The Foundation of the Hebrew Alphabet</div>
-                  <div class="lc-actions"><span class="fake-btn blue">Edit</span><span class="fake-btn blue">Exercises</span><span class="fake-btn red">Delete</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Web App -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-label">Web App</div>
-      <div class="webapp-card reveal">
-        <div class="webapp-inner">
-          <div class="webapp-info">
-            <div class="card-tag" style="color: var(--accent-w);">Web · Estonian Vocabulary</div>
-            <h2 class="card-title">Eesti Sõned —<br />Estonian Words</h2>
-            <p class="card-desc">A progressive web app for building Estonian vocabulary. Frequency-based word lists, spaced repetition drills, and an in-app dictionary — accessible from any device, no install needed.</p>
-            <ul class="card-features" style="--card-accent: var(--accent-w);">
-              <li>Frequency-first vocabulary — most essential words first</li>
-              <li>Spaced repetition with SM-2 algorithm</li>
-              <li>Works offline as a PWA</li>
-              <li>Built with vanilla JS · GitHub Pages</li>
-            </ul>
-            <a class="btn-play" href="https://eestisoned.com/" target="_blank" rel="noopener" style="border-color: rgba(251,191,36,0.25); color: var(--accent-w);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-              Open eestisoned.com
-            </a>
-          </div>
-          <div class="webapp-preview">
-            <div class="fake-webapp">
-              <div class="fake-webapp-header">
-                <div class="fake-url-bar">eestisoned.com</div>
-              </div>
-              <div class="fake-webapp-body">
-                <div class="fw-title">🇪🇪 Eesti Sõned</div>
-                <div class="fw-search">🔍  otsi sõna... / search...</div>
-                <div class="fw-cards">
-                  <div class="fw-word-card"><div class="fw-est">olema</div><div class="fw-ru">быть, являться</div><div class="fw-tag">verb · A1</div></div>
-                  <div class="fw-word-card"><div class="fw-est">maja</div><div class="fw-ru">дом, здание</div><div class="fw-tag">noun · A1</div></div>
-                  <div class="fw-word-card"><div class="fw-est">tegema</div><div class="fw-ru">делать</div><div class="fw-tag">verb · A1</div></div>
-                  <div class="fw-word-card"><div class="fw-est">suur</div><div class="fw-ru">большой</div><div class="fw-tag">adj · A1</div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="cta-block reveal">
-        <div class="cta-glow"></div>
-        <div class="cta-label">Work with me</div>
-        <h2 class="cta-title">Have a project in mind?<br /><em>Let's build it.</em></h2>
-        <p class="cta-sub">Open to freelance projects — mobile apps, web tools, EdTech products. Based in Tallinn, working remotely worldwide.</p>
-        <div class="cta-actions">
-          <a href="mailto:vic.sokoliuk@gmail.com" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            Send email
-          </a>
-          <a href="/apps/" class="btn-secondary">View all apps ↓</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(personSchema)}
-  />
-
-</Layout>
+  .call { padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .call-title { max-width: 52rem; }
+</style>

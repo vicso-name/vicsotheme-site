@@ -1,0 +1,251 @@
+---
+import Base from '../../layouts/Base.astro';
+import Button from '../../components/Button.astro';
+import { site, bookingHref, isSet } from '../../config/site';
+import { abs, personId } from '../../lib/schema';
+
+const title = 'Learn Hebrew: one developer, two platforms, a subscription business';
+const description = 'How one developer took a Hebrew learning app from an Android side project to 10K+ downloads, a native SwiftUI iOS port and 4× subscription revenue in 12 months.';
+const published = '2026-11-04';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: published,
+    dateModified: published,
+    image: abs(site.ogImage),
+    mainEntityOfPage: abs('/cases/hebrew-app/'),
+    author: { '@type': 'Person', '@id': personId, name: site.name, url: abs('/') },
+    publisher: { '@type': 'Person', '@id': personId, name: site.name },
+    about: { '@id': abs('/cases/hebrew-app/#app') },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    '@id': abs('/cases/hebrew-app/#app'),
+    name: 'Learn Hebrew – Read & Speak',
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Android, iOS',
+    description: 'Hebrew alphabet, reading and verb trainer with native audio, AI word explanations and spaced repetition.',
+    url: site.hebrewedu,
+    sameAs: [site.playStore.hebrew, site.appStore.hebrew],
+    author: { '@type': 'Person', '@id': personId, name: site.name },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free with daily limits; Premium $4.99/month or $29.99/year.' },
+  },
+];
+
+const stats = [
+  { v: '10K+', l: 'downloads on Google Play' },
+  { v: '4.2★', l: 'from 109 reviews' },
+  { v: '3,200', l: 'active Android users' },
+  { v: '4×', l: 'ARR growth in 12 months', accent: true },
+  { v: '7.41%', l: 'iOS day-7 download-to-paid' },
+];
+
+const facts = [
+  { t: 'My role', d: 'Everything: product, UX, Android, iOS, backend, content pipeline, ASO, analytics.' },
+  { t: 'Platforms', d: `Android${isSet(site.heroYear) ? ` (since ${site.heroYear})` : ''}, iPhone (2026), web: hebrewedu.com in English and French.` },
+  { t: 'Stack', d: 'Kotlin, Jetpack Compose, Swift, SwiftUI, Django, RevenueCat, Firebase, Astro.' },
+  { t: 'Business model', d: 'Freemium with daily limits. Premium $4.99/month or $29.99/year.' },
+];
+
+const built = [
+  { t: 'Alphabet course', d: '22 letters, final forms and niqqud, with native audio and letter tracing.' },
+  { t: 'Reading trainer', d: 'Beginner stories with audio, toggleable translation and comprehension quizzes.' },
+  { t: 'Verb engine', d: 'Hundreds of verbs with roots, binyanim and full conjugation tables, offline.' },
+  { t: 'AI word explanations', d: 'Tap any word for letters, vowels, pronunciation and meaning, served by my own API.' },
+  { t: 'Spaced repetition', d: 'Dictionary and flashcards that bring back the words you keep missing.' },
+  { t: 'Habit loop', d: 'Daily drills, streaks, achievements and a well-timed review prompt.' },
+];
+
+const pieces = [
+  { k: 'Search traffic', t: 'hebrewedu.com', d: 'Astro · lessons, games, EN/FR' },
+  { k: 'Android', t: 'Kotlin + Compose', d: 'Google Play Billing' },
+  { k: 'iOS', t: 'Swift + SwiftUI', d: 'StoreKit · iPhone' },
+  { k: 'Shared', t: 'api.hebrewedu.com', d: 'Django · RevenueCat · Firebase', dark: true },
+];
+
+const decisions = [
+  { t: 'Subscriptions over ads', d: 'Removed interstitial ads entirely. Fewer interruptions, better reviews, and premium became the obvious upgrade.' },
+  { t: 'Native iOS, not a rewrite in a framework', d: 'Ported the app to SwiftUI with a 106-task plan in five phases, checking each step against the Kotlin source. iOS users convert at 7.41% by day 7.' },
+  { t: 'Own backend for AI', d: 'Moved AI word explanations from Cloud Functions to my Django server: predictable cost, no cold starts, one API for both apps.' },
+  { t: 'A content site as the funnel', d: 'hebrewedu.com answers what beginners search for, with free browser games, then points them to the apps. Built from a keyword-clustered semantic core.' },
+  { t: 'Localize where demand is', d: 'Store listings in Russian, French and German; the French site mirrors English page for page instead of a thin translation.' },
+];
+
+const storeLinks = [
+  { href: site.playStore.hebrew, label: 'Google Play ↗' },
+  { href: site.appStore.hebrew, label: 'App Store ↗' },
+  { href: site.hebrewedu, label: 'hebrewedu.com ↗' },
+];
+---
+<Base
+  title="Case: Learn Hebrew App — Solo-Built Subscription Business | Viktor Sokoliuk"
+  description={description}
+  ogType="article"
+  schema={schema}
+  breadcrumbs={[{ name: 'Cases', path: '/cases/' }, { name: 'Learn Hebrew app', path: '/cases/hebrew-app/' }]}
+  footerLinks={[{ href: '/', label: 'Home' }, { href: '/cases/', label: 'Cases' }]}
+>
+  <section class="wrap hero">
+    <a href="/cases/" class="back">← All cases</a>
+    <p class="eyebrow">Case · own product · EdTech</p>
+    <h1 class="hero-h1">Learn Hebrew: one developer, two platforms, <span class="accent">a subscription business.</span></h1>
+    <p class="lead hero-lead">How I took a Hebrew alphabet app from an Android side project to 10K+ downloads, a native iOS version and growing subscription revenue — without an ad budget or a team.</p>
+    <div class="btn-row">
+      {storeLinks.map((l) => <a href={l.href} class="store" rel="noopener">{l.label}</a>)}
+    </div>
+  </section>
+
+  <section class="stats-band">
+    <dl class="wrap stats">
+      {stats.map((s) => <div><dt class:list={['stat-v', { accent: s.accent }]}>{s.v}</dt><dd>{s.l}</dd></div>)}
+    </dl>
+  </section>
+
+  <section class="wrap facts">
+    {facts.map((f) => <div class="fact"><div class="fact-t">{f.t}</div>{f.d}</div>)}
+  </section>
+
+  <section class="band">
+    <div class="wrap pad-80 two-col">
+      <h2 class="h2">The challenge</h2>
+      <div class="prose">
+        <p>Hebrew is hard for beginners for one reason first: a new alphabet, written right to left, mostly without vowels. Most apps jump to vocabulary and lose people at the letters.</p>
+        <p>The constraint was mine too: one developer, no investor money and no ad budget. Every feature had to earn its place by retention or revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt">
+    <div class="wrap pad-80">
+      <h2 class="h2 mb-40">What I built</h2>
+      <div class="built">
+        {built.map((b) => <div class="built-item"><span class="built-t">{b.t}</span><span class="built-d">{b.d}</span></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap pad-80">
+      <h2 class="h2 mb-16">How the pieces fit</h2>
+      <p class="text-2 pieces-lead">Two native apps and a website share one backend and one subscription system, so content and purchases stay in sync.</p>
+      <div class="pieces">
+        {pieces.map((p) => (
+          <div class:list={['piece', { 'piece-dark': p.dark }]}>
+            <div class="piece-k">{p.k}</div>
+            <div class="piece-t">{p.t}</div>
+            <div class="piece-d">{p.d}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band-dark on-dark">
+    <div class="wrap pad-88">
+      <h2 class="h2 mb-40">Five decisions that moved the numbers</h2>
+      <ol class="decisions">
+        {decisions.map((d, i) => (
+          <li>
+            <span class="decision-t"><span class="decision-n">{String(i + 1).padStart(2, '0')}</span>{d.t}</span>
+            <span class="decision-d">{d.d}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap pad-88 lessons">
+    <div class="lesson card">
+      <span class="lesson-k">What didn't work (yet)</span>
+      <h2 class="lesson-h">App Store search is harder than Google Play</h2>
+      <p class="text-2">On iOS a weaker competitor still outranks the app for "Learn Hebrew". Organic ASO alone is slow there; the next step is a measured Apple Search Ads test with a fixed budget.</p>
+    </div>
+    <div class="lesson card">
+      <span class="lesson-k">What this means for your project</span>
+      <h2 class="lesson-h">You get the playbook, not just the code</h2>
+      <p class="text-2">Paywall placement, onboarding, store listings, analytics events and a plan for the first 1,000 users — the parts agencies leave to you.</p>
+      <a href="/mvp/#packages" class="link-strong">See MVP packages →</a>
+    </div>
+  </section>
+
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <h2 class="call-h">Building a learning or subscription app? Let's talk.</h2>
+      <div class="btn-row">
+        <Button href={bookingHref}>Book a 20-min call</Button>
+        <Button href="/cases/#hangul" variant="secondary">Next case: Hangul →</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .pad-80 { padding-top: 80px; padding-bottom: 80px; }
+  .pad-88 { padding-top: 88px; padding-bottom: 88px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-40 { margin-bottom: 40px; }
+
+  .hero { padding-top: 56px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 28px; }
+  .back { font-size: 15px; text-decoration: none; color: var(--text-2); display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; }
+  .hero-h1 { max-width: 60rem; font-size: clamp(38px, 5vw, 68px); line-height: 1.03; letter-spacing: -0.035em; font-weight: 700; }
+  .hero-lead { max-width: 42rem; }
+  .store, .store:hover {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  .stats-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+  .stats { margin-top: 0; margin-bottom: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+  .stats > div { padding: 28px 20px 28px 0; }
+  .stats dd { margin: 0; font-size: 14px; color: var(--muted); }
+  .stat-v { font-family: var(--mono); font-size: 32px; letter-spacing: -0.02em; }
+
+  .facts { padding-top: 72px; padding-bottom: 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; font-size: 15px; }
+  .fact { padding-top: 14px; border-top: 1px solid var(--ink); }
+  .fact-t { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 48px; }
+  .prose { display: flex; flex-direction: column; gap: 16px; color: var(--text-2); max-width: 40rem; }
+
+  .built { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; }
+  .built-item { display: flex; flex-direction: column; gap: 8px; }
+  .built-t { font-weight: 600; font-size: 19px; }
+  .built-d { color: var(--text-2); font-size: 15px; }
+
+  .pieces-lead { margin-bottom: 40px; max-width: 40rem; }
+  .pieces { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; align-items: stretch; }
+  .piece { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+  .piece-k { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .piece-t { font-weight: 600; margin-top: 4px; }
+  .piece-d { font-size: 14px; color: var(--text-2); }
+  .piece-dark { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .piece-dark .piece-k { color: var(--on-dark-muted); }
+  .piece-dark .piece-d { color: var(--on-dark-2); }
+
+  .decisions { list-style: none; padding: 0; border-top: 1px solid var(--dark-line); }
+  .decisions li { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 8px 40px; padding: 28px 0; border-bottom: 1px solid var(--dark-line); }
+  .decision-t { font-size: 21px; font-weight: 600; }
+  .decision-n { font-family: var(--mono); color: var(--on-dark-muted); margin-right: 14px; }
+  .decision-d { color: var(--on-dark-2); }
+
+  .lessons { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px; }
+  .lesson { padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+  .lesson-k { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .lesson-h { font-size: 24px; letter-spacing: -0.02em; }
+
+  .call { padding-top: 88px; padding-bottom: 88px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 32px; }
+  .call-h { font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.035em; line-height: 1.05; max-width: 44rem; }
+</style>

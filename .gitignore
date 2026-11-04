@@ -24,3 +24,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# paid SEO API response cache (may carry account identifiers)
+docs/seo/research/responses/
+# Raw SERP / overview dumps (12–17 MB) — rebuilt for free from responses/ by scripts/seo/13, 15
+docs/seo/research/hangulhero/13-measured.json
+docs/seo/research/hangulhero/15-serp.json

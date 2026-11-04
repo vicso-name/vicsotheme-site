@@ -1,0 +1,308 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Faq from '../components/Faq.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site, isSet, billing } from '../config/site';
+import { service, faqPage } from '../lib/schema';
+
+const { prices, testimonial } = site;
+const DEFAULT = 1;
+const hasTestimonial = Object.values(testimonial).every(isSet);
+
+const facts = [
+  { v: '6–8 wks', l: 'idea to store release' },
+  { v: '1 price', l: 'agreed before the build starts' },
+  { v: 'Weekly', l: 'test builds on your phone' },
+  { v: '100%', l: 'code and accounts in your name' },
+];
+
+const packages = [
+  { name: 'Prototype', weeks: '2 weeks', price: `from ${prices.mvpPrototype}`, desc: 'Test the idea with investors or first users before building.', items: ['Clickable Figma prototype', 'User flow and scope document', 'Tech plan and fixed MVP quote', 'Landing page copy'] },
+  { name: 'Mobile MVP', weeks: '6–8 weeks', price: `from ${prices.mvpMobile}`, desc: 'A real app in both stores, ready for paying users.', items: ['Flutter or native iOS + Android', 'Auth, backend, admin', 'Subscriptions via RevenueCat', 'Analytics and store release'], popular: true },
+  { name: 'AI MVP', weeks: '6–8 weeks', price: `from ${prices.mvpAi}`, desc: 'An app built around an LLM feature that has to work reliably.', items: ['Everything in Mobile MVP', 'LLM integration with cost limits', 'Prompt and output evaluation', 'Fallbacks when the model fails'] },
+];
+
+const weeks = [
+  { w: 'Week 1', t: 'Scope &amp; clickable flow', d: 'User journeys, screens in Figma, the one metric the MVP must move.' },
+  { w: 'Weeks 2–5', t: 'Core build', d: 'Main features, backend, auth. A new test build every Friday.' },
+  { w: 'Weeks 6–7', t: 'Payments &amp; analytics', d: 'Subscriptions or checkout, onboarding, events you can read.' },
+  { w: 'Week 8', t: 'Store release', d: 'App Store and Google Play review, listings, handover docs.' },
+];
+
+const compare = {
+  cols: ['Marketplace freelancer', 'Agency', 'Viktor'],
+  rows: [
+    ['Who writes the code', 'Unknown until hired', 'Rotating juniors', 'The person on the call'],
+    ['Price', 'Hourly, open-ended', 'Fixed, with overhead', 'Fixed, no overhead'],
+    ['Has shipped paid apps', 'Rarely', 'For clients', 'Own products, own revenue'],
+    ['Contract &amp; invoices', 'Via platform', 'Varies', billing.compareCell],
+  ],
+};
+
+const faqs = [
+  { q: 'How much does an MVP cost?', a: `My packages start at ${prices.mvpPrototype}. The exact figure depends on screens, integrations and AI features, and is fixed in writing before work starts.` },
+  { q: 'I am not technical. Is that a problem?', a: 'No. Most of my clients are not. You decide what the product does; I explain technical trade-offs in plain language and make the calls you do not want to make.' },
+  { q: 'Do you use AI to write code?', a: "Yes, for speed. Architecture, review, store releases and payments are done by me. That's why it costs less than an agency and doesn't break like a weekend prototype." },
+  { q: 'Flutter or native?', a: 'Flutter for speed and one codebase across both stores. Native Kotlin and Swift when you need platform features or top performance. I recommend one after the call.' },
+  { q: 'What if the scope changes mid-build?', a: 'Small changes swap in for features of the same size. Bigger ones get a separate written quote, so the original price never silently grows.' },
+  { q: 'What happens after launch?', a: 'You get the code, accounts and docs. Keep me on a monthly plan, or hand it to your own team. I can help you hire.' },
+];
+
+const check = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>';
+---
+<Base
+  title="MVP Development for Founders — Fixed Price, 6–8 Weeks | Viktor Sokoliuk"
+  description="Mobile and AI-powered MVP development for non-technical founders: App Store and Google Play release in 6–8 weeks, fixed price agreed upfront, code and accounts in your name."
+  breadcrumbs={[{ name: 'MVP development', path: '/mvp/' }]}
+  schema={[
+    service({
+      name: 'MVP development',
+      serviceType: 'Mobile and AI MVP development',
+      description: 'Fixed-price mobile and AI-powered MVPs for non-technical founders, released to the App Store and Google Play in 6–8 weeks.',
+      path: '/mvp/',
+      offers: packages.map((p) => ({ name: p.name, description: `${p.weeks}. ${p.desc}` })),
+    }),
+    faqPage(faqs),
+  ]}
+  footerLinks={[{ href: '/', label: 'Home' }, { href: '/technical-partner/', label: 'Fractional CTO' }]}
+>
+  <section class="wrap hero">
+    <p class="eyebrow">MVP development for non-technical founders</p>
+    <h1 class="h1 hero-h1">Your MVP in the App Store in 6–8 weeks. <span class="accent">Fixed price.</span> Code you own.</h1>
+    <p class="lead hero-lead">Mobile and AI-powered MVPs built by one senior developer who has launched and monetised his own apps. You get a product real users can pay for, not a demo. AI-assisted development keeps the price low; senior review keeps it production-ready.</p>
+    <div class="btn-row">
+      <Button href="#call" arrow>Get a fixed quote</Button>
+      <Button href="#packages" variant="secondary">See packages</Button>
+    </div>
+    <dl class="facts">
+      {facts.map((f) => (
+        <div><dt class="fact-v">{f.v}</dt><dd>{f.l}</dd></div>
+      ))}
+    </dl>
+  </section>
+
+  <section id="packages" class="band">
+    <div class="wrap section-pad">
+      <SectionHeading title="Three packages, one fixed price each" class="pkg-heading">
+        Pick a starting point. The final scope is written down after our call.
+      </SectionHeading>
+      <div class="pkg-grid" data-packages>
+        {packages.map((p, i) => (
+          <div class:list={['pkg', { 'is-selected': i === DEFAULT }]}>
+            <div class="pkg-top">
+              <span class="pkg-weeks pkg-muted">{p.weeks}</span>
+              {p.popular && <span class="pkg-badge">Most chosen</span>}
+            </div>
+            <h3 class="pkg-name">{p.name}</h3>
+            <p class="pkg-desc pkg-muted">{p.desc}</p>
+            <div class="pkg-price">{p.price}</div>
+            <ul class="pkg-items">
+              {p.items.map((it) => <li><Fragment set:html={check} /><span>{it}</span></li>)}
+            </ul>
+            <button type="button" class="pkg-btn" data-pkg={p.name} aria-pressed={i === DEFAULT ? 'true' : 'false'}>
+              {i === DEFAULT ? 'Selected' : `Choose ${p.name}`}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band-dark on-dark">
+    <div class="wrap section-pad">
+      <h2 class="h2 mb-48">Eight weeks, week by week</h2>
+      <ol class="weeks">
+        {weeks.map((w) => (
+          <li><span class="week-n">{w.w}</span><span class="week-t" set:html={w.t} /><span class="week-d">{w.d}</span></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap section-pad">
+    <h2 class="h2 mb-40">Why founders pick a solo senior over an agency</h2>
+    <div class="table-wrap" role="region" aria-label="Comparison: freelancer, agency, Viktor" tabindex="0">
+      <table class="compare">
+        <thead>
+          <tr>
+            <td></td>
+            {compare.cols.map((c, i) => <th scope="col" class:list={{ me: i === 2 }}>{c}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {compare.rows.map(([label, ...cells]) => (
+            <tr>
+              <th scope="row" set:html={label} />
+              {cells.map((c, i) => <td class:list={{ me: i === 2 }}>{c}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class:list={['wrap', 'section-pad', 'proof', { 'proof-solo': !hasTestimonial }]}>
+      <div class="proof-copy">
+        <span class="case-tag">Built this way · my own app</span>
+        <h2 class="proof-h">The same process took my Hebrew learning app to 3,200 active users and a working subscription.</h2>
+        <a href="/cases/hebrew-app/" class="link-strong">Read the case →</a>
+      </div>
+      {hasTestimonial && (
+        <blockquote class="quote card">
+          <p class="quote-text">“{testimonial.quote}”</p>
+          <footer class="quote-by">{testimonial.name}, {testimonial.role}, {testimonial.company}</footer>
+        </blockquote>
+      )}
+    </div>
+  </section>
+
+  <section class="wrap section-pad faq-section">
+    <div class="faq-side">
+      <h2 class="h2">MVP questions</h2>
+      {isSet(site.mvpCostGuideUrl) && <a href={site.mvpCostGuideUrl} class="link-strong">Full guide: how much an MVP costs in 2026 →</a>}
+    </div>
+    <Faq items={faqs} />
+  </section>
+
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <div class="call-copy">
+        <h2 class="call-h">Get a fixed quote for your MVP</h2>
+        <p class="text-2 call-lead">Two lines about your idea are enough. I reply within one working day with questions or a call slot.</p>
+      </div>
+      <LeadForm
+        id="mvp-form"
+        subject="MVP quote request"
+        messageLabel="What do you want to build?"
+        hidden={{ package: packages[DEFAULT].name }}
+      >
+        <Fragment slot="label">Send — <span data-pkg-label>{packages[DEFAULT].name}</span> package</Fragment>
+      </LeadForm>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .section-pad { padding-top: 88px; padding-bottom: 88px; }
+  .mb-40 { margin-bottom: 40px; }
+  .mb-48 { margin-bottom: 48px; }
+
+  .hero { padding-top: 80px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px; }
+  .hero-h1 { max-width: 58rem; }
+  .hero-lead { max-width: 40rem; }
+  .facts {
+    margin: 24px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 24px;
+    font-size: 15px;
+    color: var(--text-2);
+  }
+  .facts dd { margin: 0; }
+  .fact-v { font-family: var(--mono); font-size: 26px; color: var(--ink); }
+
+  .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+  .pkg {
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .pkg-muted { color: var(--muted); }
+  .pkg.is-selected { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .pkg.is-selected .pkg-muted { color: var(--on-dark-2); }
+  .pkg.is-selected :focus-visible { outline-color: var(--bg); }
+  .pkg-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .pkg-weeks { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pkg-badge { font-family: var(--mono); font-size: 12px; padding: 4px 8px; border-radius: 4px; background: var(--accent); color: #FFFFFF; }
+  .pkg-name { font-size: 28px; letter-spacing: -0.02em; }
+  .pkg-desc { font-size: 15px; }
+  .pkg-price { font-family: var(--mono); font-size: 30px; letter-spacing: -0.02em; }
+  .pkg-items { padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+  .pkg-items li { display: flex; gap: 10px; align-items: flex-start; }
+  .pkg-items :global(svg) { flex: none; margin-top: 3px; }
+  .pkg-btn {
+    margin-top: auto;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-btn);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+  }
+  .pkg-btn[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: #FFFFFF; }
+
+  .weeks {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    border-top: 1px solid var(--dark-line);
+  }
+  .weeks li { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--dark-line); display: flex; flex-direction: column; gap: 8px; }
+  .week-n { font-family: var(--mono); font-size: 13px; color: var(--on-dark-muted); }
+  .week-t { font-size: 20px; font-weight: 600; }
+  .week-d { color: var(--on-dark-2); font-size: 15px; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface); }
+  .compare { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px; }
+  .compare th, .compare td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line-soft); }
+  .compare thead th, .compare thead td { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 500; border-bottom-color: var(--line); }
+  .compare thead th.me { color: var(--ink); }
+  .compare tbody th { font-weight: 600; }
+  .compare tbody td { color: var(--text-2); }
+  .compare tbody td.me { color: var(--ink); font-weight: 600; }
+  .compare tbody tr:last-child > * { border-bottom: 0; }
+
+  .proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start; }
+  .proof-solo { grid-template-columns: minmax(0, 1fr); }
+  .proof-copy { display: flex; flex-direction: column; gap: 16px; }
+  .case-tag { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .proof-h { font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.1; }
+  .quote { margin: 0; padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+  .quote-text { font-size: 21px; line-height: 1.45; }
+  .quote-by { font-size: 15px; color: var(--muted); }
+
+  .faq-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 48px; }
+  .faq-side { display: flex; flex-direction: column; gap: 16px; }
+
+  .call { padding-top: 96px; padding-bottom: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start; }
+  .call-copy { display: flex; flex-direction: column; gap: 16px; }
+  .call-h { font-size: clamp(36px, 4.4vw, 60px); letter-spacing: -0.035em; line-height: 1.02; }
+  .call-lead { max-width: 28rem; }
+</style>
+
+<script>
+  const grid = document.querySelector<HTMLElement>('[data-packages]');
+  const hidden = document.querySelector<HTMLInputElement>('#mvp-form input[name="package"]');
+  const label = document.querySelector<HTMLElement>('[data-pkg-label]');
+
+  grid?.addEventListener('click', (event) => {
+    const btn = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-pkg]');
+    if (!btn) return;
+    grid.querySelectorAll<HTMLButtonElement>('button[data-pkg]').forEach((b) => {
+      const on = b === btn;
+      b.setAttribute('aria-pressed', String(on));
+      b.textContent = on ? 'Selected' : `Choose ${b.dataset.pkg}`;
+      b.closest('.pkg')?.classList.toggle('is-selected', on);
+    });
+    const name = btn.dataset.pkg ?? '';
+    if (hidden) hidden.value = name;
+    if (label) label.textContent = name;
+  });
+</script>

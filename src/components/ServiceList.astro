@@ -1,0 +1,39 @@
+---
+import type { ServiceItem } from '../data/services';
+
+interface Props {
+  items: ServiceItem[];
+  hrefs: Record<ServiceItem['key'], string>;
+  ids?: Partial<Record<ServiceItem['key'], string>>;
+  headingLevel?: 'span' | 'h2' | 'h3';
+}
+const { items, hrefs, ids = {}, headingLevel: Title = 'span' } = Astro.props;
+---
+<div class="service-list">
+  {items.map((s) => (
+    <a href={hrefs[s.key]} id={ids[s.key]} class="service-row">
+      <span class="service-n">{s.n}</span>
+      <Title class="service-title">{s.title}</Title>
+      <span class="service-desc">{s.desc}</span>
+      <span class="service-price">{s.price} →</span>
+    </a>
+  ))}
+</div>
+
+<style>
+  .service-list { border-top: 1px solid var(--ink); }
+  .service-row {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 12px 32px;
+    align-items: baseline;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 24px;
+  }
+  .service-n { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+  .service-title { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.55; }
+  .service-desc { color: var(--text-2); font-size: 16px; }
+  .service-price { font-family: var(--mono); font-size: 14px; justify-self: start; }
+</style>

@@ -1,365 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site, isSet, billing } from '../config/site';
+
+const details = [
+  { t: 'Reply time', d: 'Within one working day, Monday to Friday.' },
+  { t: 'Location', d: `${site.city}, ${site.country}. CET+1, overlaps with all of Europe.` },
+  { t: 'Contracts', d: billing.contact },
+];
 ---
-
-<Layout title="Contact — VicsoTheme" description="Get in touch with Viktor — indie developer based in Tallinn. Open to freelance projects in mobile, web, and EdTech.">
-  <style>
-    .orb { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; opacity: 0.12; }
-    .orb-1 { width: 500px; height: 500px; background: #22c55e; top: -100px; left: -100px; }
-    .orb-2 { width: 400px; height: 400px; background: #3b82f6; bottom: -100px; right: -100px; }
-
-    .page-header { padding: 80px 0 64px; }
-
-    .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; margin-bottom: 32px; transition: color 0.2s; }
-    .back-link:hover { color: var(--text); }
-
-    .page-title { font-size: clamp(32px, 5vw, 52px); font-weight: 300; letter-spacing: -0.03em; color: var(--heading); line-height: 1.1; margin-bottom: 14px; }
-    .page-title em { font-style: normal; color: var(--accent-b); }
-    .page-sub { font-size: 16px; color: var(--muted); font-weight: 300; line-height: 1.6; max-width: 440px; }
-
-    /* ── Layout ── */
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 48px;
-      padding-bottom: 120px;
-      align-items: start;
-    }
-
-    /* ── Info side ── */
-    .contact-info { display: flex; flex-direction: column; gap: 32px; }
-
-    .info-block {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--bg-card);
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-  
-
-    .info-label {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .info-value {
-      font-size: 15px;
-      color: var(--text);
-      font-weight: 400;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: color 0.2s;
-    }
-    a.info-value:hover { color: #4ade80; }
-
-    .info-value svg { opacity: 0.5; flex-shrink: 0; }
-
-    .availability-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 8px #4ade80;
-      flex-shrink: 0;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .info-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-top: 8px;
-      font-weight: 300;
-    }
-
-    /* ── Form side ── */
-    .form-card {
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .form-title {
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--heading);
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-    .form-sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 28px;
-      font-weight: 300;
-      line-height: 1.6;
-    }
-
-    .form-group { margin-bottom: 18px; }
-
-    .form-label {
-      display: block;
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      width: 100%;
-      background: var(--bg-hover);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 16px;
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 14px;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-      appearance: none;
-    }
-
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-      border-color: rgba(74,222,128,0.4);
-      background: var(--bg-card);
-    }
-
-    .form-input::placeholder,
-    .form-textarea::placeholder { color: var(--muted); }
-
-    .form-select { cursor: pointer; }
-    .form-select option { background: var(--bg-card); color: var(--text); }
-
-    .form-textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    .btn-submit {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--text);
-      color: var(--bg);
-      border: none;
-      border-radius: 10px;
-      padding: 14px 24px;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: var(--sans);
-      cursor: pointer;
-      transition: opacity 0.2s;
-      margin-top: 8px;
-    }
-    .btn-submit:hover { opacity: 0.88; }
-    .btn-submit svg { width: 16px; height: 16px; }
-    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
-    .btn-spinner { display: none; width: 16px; height: 16px; border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--bg); border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
-    .btn-submit.is-loading .btn-icon { display: none; }
-    .btn-submit.is-loading .btn-spinner { display: block; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* Success state */
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .form-success.visible { display: block; }
-    .success-icon { font-size: 40px; margin-bottom: 16px; }
-    .success-title { font-size: 20px; font-weight: 500; color: var(--heading); margin-bottom: 8px; }
-    .success-sub { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .contact-wrap { grid-template-columns: 1fr; gap: 32px; }
-      .form-row { grid-template-columns: 1fr; }
-      .form-card { padding: 28px 24px; }
-      .page-header { padding: 56px 0 40px; }
-    }
-  </style>
-
-
-  <div class="page-header">
-    <div class="wrap">
-      <a href="/" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to home
-      </a>
-      <h1 class="page-title">Get in <em>Touch</em></h1>
-      <p class="page-sub">Open to freelance projects — mobile apps, web tools, EdTech products. Based in Tallinn, working remotely worldwide.</p>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="contact-wrap">
-
-      <!-- Info -->
-      <div class="contact-info reveal">
-
-        <div class="info-block" style="--accent: #4ade80;">
-          <div class="info-label">Availability</div>
-          <div class="info-value">
-            <span class="availability-dot"></span>
-            Available for projects
-          </div>
-          <p class="info-desc">Currently open to new freelance work. Typical response time — within 24 hours.</p>
-        </div>
-
-        <div class="info-block" style="--accent: #60a5fa;">
-          <div class="info-label">Email</div>
-          <a href="mailto:vic.sokoliuk@gmail.com" class="info-value">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            vic.sokoliuk@gmail.com
-          </a>
-        </div>
-
-        <div class="info-block" style="--accent: #2dd4bf;">
-          <div class="info-label">Location</div>
-          <div class="info-value">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            Pärnu, Estonia
-          </div>
-          <p class="info-desc">Working remotely with clients worldwide across EU, US, and other time zones.</p>
-        </div>
-
-        <div class="info-block" style="--accent: #fbbf24;">
-          <div class="info-label">Services</div>
-          <div class="info-desc" style="margin-top: 0;">
-            AI Product Engineering · SaaS Platform Engineering · Mobile Product Engineering · CMS & Content Architecture · EdTech & Learning Systems · Technical Strategy & Optimization
-          </div>
-        </div>
-
+<Base
+  title="Contact Viktor Sokoliuk — Mobile App Developer, EU"
+  description={`Contact Viktor Sokoliuk, independent app developer in ${site.city}. Describe your MVP, fractional CTO or agency project and get a reply within one working day.`}
+  breadcrumbs={[{ name: 'Contact', path: '/contact/' }]}
+>
+  <section class="wrap contact">
+    <div class="contact-copy">
+      <p class="eyebrow">Contact</p>
+      <h1 class="h1 contact-h1">Tell me what you want to build.</h1>
+      <p class="lead contact-lead">Two lines about your product, users and deadline are enough. You talk to the person who writes the code.</p>
+      <div class="btn-row">
+        <Button href={`mailto:${site.email}`} variant="secondary">{site.email}</Button>
+        {isSet(site.bookingUrl) && <Button href={site.bookingUrl}>Book a 20-min call</Button>}
       </div>
-
-      <!-- Form -->
-      <div class="form-card reveal">
-        <div id="formContent">
-          <div class="form-title">Send a message</div>
-          <p class="form-sub">Tell me about your project — I'll get back to you within a day.</p>
-
-          <form id="contactForm" action="https://formspree.io/f/mdabeqkd" method="POST">
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="name">Name</label>
-                <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="email">Email</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="service">Service</label>
-              <select class="form-select" id="service" name="service">
-                <option value="">Select a service...</option>
-                <option value="mobile">Mobile App Development</option>
-                <option value="web">Web & PWA</option>
-                <option value="edtech">EdTech & Learning App</option>
-                <option value="backend">Backend & Admin Tool</option>
-                <option value="wordpress">WordPress</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="message">Message</label>
-              <textarea class="form-textarea" id="message" name="message" placeholder="Describe your project — what you're building, timeline, and any specific requirements..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit" id="submitBtn">
-              <span class="btn-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                  <line x1="22" y1="2" x2="11" y2="13"/>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                </svg>
-              </span>
-              <div class="btn-spinner"></div>
-              <span id="submitLabel">Send message</span>
-            </button>
-
-          </form>
-        </div>
-
-        <div class="form-success" id="formSuccess">
-          <div class="success-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#4ade80"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
-          </div>
-          <div class="success-title">Message sent!</div>
-          <p class="success-sub">Thanks for reaching out. I'll get back to you within 24 hours.</p>
-        </div>
-      </div>
-
+      <ul class="details">
+        {details.map((x) => <li><span class="details-t">{x.t}</span><span class="details-d">{x.d}</span></li>)}
+      </ul>
     </div>
-  </div>
+    <LeadForm id="contact-form" subject="New enquiry from vicsotheme.com">
+      <Fragment slot="label">Send message</Fragment>
+    </LeadForm>
+  </section>
+</Base>
 
-  <script>
-    const form = document.getElementById('contactForm') as HTMLFormElement;
-    const success = document.getElementById('formSuccess');
-    const formContent = document.getElementById('formContent');
-
-    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
-    const submitLabel = document.getElementById('submitLabel')!;
-
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Loading state
-      submitBtn.classList.add('is-loading');
-      submitBtn.disabled = true;
-      submitLabel.textContent = 'Sending';
-
-      try {
-        const data = new FormData(form);
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (res.ok) {
-          formContent!.style.display = 'none';
-          success!.classList.add('visible');
-        } else {
-          // Error state
-          submitBtn.classList.remove('is-loading');
-          submitBtn.disabled = false;
-          submitLabel.textContent = 'Try again';
-        }
-      } catch {
-        submitBtn.classList.remove('is-loading');
-        submitBtn.disabled = false;
-        submitLabel.textContent = 'Try again';
-      }
-    });
-  </script>
-</Layout>
+<style>
+  .contact {
+    padding-top: 80px;
+    padding-bottom: 96px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 56px;
+    align-items: start;
+  }
+  .contact-copy { display: flex; flex-direction: column; gap: 28px; }
+  .contact-h1 { font-size: clamp(40px, 5vw, 64px); }
+  .contact-lead { max-width: 34rem; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .details { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 24px; }
+  .details li { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--ink); }
+  .details-t { font-weight: 600; }
+  .details-d { color: var(--text-2); font-size: 15px; }
+</style>

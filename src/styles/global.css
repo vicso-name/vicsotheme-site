@@ -1,0 +1,159 @@
+/* Metric-adjusted fallbacks so the swap to web fonts does not shift layout. */
+@font-face {
+  font-family: 'Schibsted Grotesk Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Helvetica');
+  size-adjust: 98%;
+  ascent-override: 100%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Courier New'), local('Menlo');
+  size-adjust: 100%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
+:root {
+  --bg: #F4F3EF;
+  --bg-alt: #ECEAE4;
+  --surface: #FFFFFF;
+  --ink: #16181D;
+  --text-2: #3A3D44;
+  --muted: #5B5E66;
+  --line: #D9D7D0;
+  --line-soft: #E6E4DE;
+  --dark-line: #33363E;
+  --on-dark-2: #C9CBD1;
+  --on-dark-muted: #A9ACB4;
+  --accent: #2449D8;
+  --input-border: #8C8F97;
+  /* Extra colours that appear in the Cases / Estimator designs */
+  --accent-on-dark: #8FA6FF;
+  --chip-border: #B9B7B0;
+  --surface-2: #FAFAF8;
+  --bar-track: #24272E;
+
+  --sans: 'Schibsted Grotesk', 'Schibsted Grotesk Fallback', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, monospace;
+
+  --container: 1240px;
+  --gutter: 24px;
+  --radius-btn: 6px;
+  --radius-card: 10px;
+
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+/* Zero-specificity hover so any component colour wins, like the design's inline styles. */
+a { color: var(--ink); }
+a:where(:hover) { color: var(--accent); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.on-dark :focus-visible { outline-color: var(--bg); }
+
+h1, h2, h3, p, ul, ol { margin: 0; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 16px; top: -100px; z-index: 10;
+  padding: 12px 16px; background: var(--ink); color: var(--bg);
+  border-radius: var(--radius-btn); font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: 12px; color: var(--bg); }
+
+/* ── Layout ── */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.band { border-top: 1px solid var(--line); }
+.band-alt { background: var(--bg-alt); }
+.band-dark { background: var(--ink); color: var(--bg); }
+
+/* ── Type ── */
+.mono { font-family: var(--mono); }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.h1 {
+  font-size: clamp(40px, 5.6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+.h1 em, .accent { font-style: normal; color: var(--accent); }
+
+.h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.h-cta {
+  font-size: clamp(36px, 4.6vw, 64px);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+.lead { font-size: 19px; color: var(--text-2); }
+.text-2 { color: var(--text-2); }
+.muted { color: var(--muted); }
+
+/* ── Cards ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+/* ── Links with arrows inside cards ── */
+.link-strong {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ── Forms ── */
+.form-status { font-size: 15px; min-height: 1.55em; margin: 0; }
+.form-status[data-state="success"] { color: #1F7A3A; }
+.form-status[data-state="error"] { color: #B42318; }

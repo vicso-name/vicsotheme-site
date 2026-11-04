@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MVP development — Viktor Sokoliuk</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+a{color:#16181D}a:hover{color:#2449D8}
+</style>
+</helmet>
+<div style="font-family: 'Schibsted Grotesk', system-ui, sans-serif; color: #16181D; background: #F4F3EF; min-height: 100vh; font-size: 17px; line-height: 1.55">
+
+<header style="border-bottom: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 10px">
+<span style="font-weight: 700; font-size: 19px; letter-spacing: -0.01em">Viktor Sokoliuk</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">product engineer · EU</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 15px">
+<a href="Mvp.dc.html" aria-current="page" style="text-decoration: underline; text-underline-offset: 6px; padding: 10px 0">MVP development</a>
+<a href="TechnicalPartner.dc.html" style="text-decoration: none; padding: 10px 0">Fractional CTO</a>
+<a href="Main.dc.html" style="text-decoration: none; padding: 10px 0">For agencies</a>
+<a href="Main.dc.html" style="text-decoration: none; padding: 10px 0">Cases</a>
+<a href="#call" style="text-decoration: none; padding: 11px 18px; background: #16181D; color: #F4F3EF; border-radius: 6px; font-weight: 600">Book a 20-min call</a>
+</nav>
+</div>
+</header>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 80px 24px 64px; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #5B5E66">MVP development for non-technical founders</p>
+<h1 style="margin: 0; max-width: 58rem; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700">Your MVP in the App Store in 6–8 weeks. <span style="color: {{accent}}">Fixed price.</span> Code you own.</h1>
+<p style="margin: 0; max-width: 40rem; font-size: 19px; color: #3A3D44">Mobile and AI-powered MVPs built by one senior developer who has launched and monetised his own apps. You get a product real users can pay for, not a demo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#call" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; background: {{accent}}; color: #FFFFFF; border-radius: 6px; font-weight: 600">Get a fixed quote
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#packages" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #16181D; border-radius: 6px; font-weight: 600">See packages</a>
+</div>
+<div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #D9D7D0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 24px; font-size: 15px; color: #3A3D44">
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #16181D">6–8 wks</div>idea to store release</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #16181D">1 price</div>agreed before the build starts</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #16181D">Weekly</div>test builds on your phone</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #16181D">100%</div>code and accounts in your name</div>
+</div>
+</section>
+
+<section id="packages" style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -0.03em; line-height: 1.08">Three packages, one fixed price each</h2>
+<p style="margin: 0; max-width: 24rem; color: #3A3D44">Pick a starting point. The final scope is written down after our call.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px">
+<sc-for list="{{packages}}" as="p" hint-placeholder-count="3">
+<div style="{{p.boxStyle}}">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; {{p.mutedStyle}}">{{p.weeks}}</span>
+<sc-if value="{{p.popular}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 4px 8px; border-radius: 4px; background: {{accent}}; color: #FFFFFF">Most chosen</span></sc-if>
+</div>
+<h3 style="margin: 0; font-size: 28px; letter-spacing: -0.02em">{{p.name}}</h3>
+<p style="margin: 0; font-size: 15px; {{p.mutedStyle}}">{{p.desc}}</p>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 30px; letter-spacing: -0.02em">{{p.price}}</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<sc-for list="{{p.items}}" as="it" hint-placeholder-count="4">
+<li style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5 9-10"></path></svg><span>{{it}}</span></li>
+</sc-for>
+</ul>
+<button type="button" onClick="{{p.pick}}" aria-pressed="{{p.selected}}" style="{{p.btnStyle}}">{{p.btnLabel}}</button>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section style="background: #16181D; color: #F4F3EF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px">
+<h2 style="margin: 0 0 48px; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -0.03em; line-height: 1.08">Eight weeks, week by week</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0; border-top: 1px solid #33363E">
+<li style="padding: 24px 24px 24px 0; border-bottom: 1px solid #33363E; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A9ACB4">Week 1</span><span style="font-size: 20px; font-weight: 600">Scope &amp; clickable flow</span><span style="color: #C9CBD1; font-size: 15px">User journeys, screens in Figma, the one metric the MVP must move.</span></li>
+<li style="padding: 24px 24px 24px 0; border-bottom: 1px solid #33363E; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A9ACB4">Weeks 2–5</span><span style="font-size: 20px; font-weight: 600">Core build</span><span style="color: #C9CBD1; font-size: 15px">Main features, backend, auth. A new test build every Friday.</span></li>
+<li style="padding: 24px 24px 24px 0; border-bottom: 1px solid #33363E; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A9ACB4">Weeks 6–7</span><span style="font-size: 20px; font-weight: 600">Payments &amp; analytics</span><span style="color: #C9CBD1; font-size: 15px">Subscriptions or checkout, onboarding, events you can read.</span></li>
+<li style="padding: 24px 24px 24px 0; border-bottom: 1px solid #33363E; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A9ACB4">Week 8</span><span style="font-size: 20px; font-weight: 600">Store release</span><span style="color: #C9CBD1; font-size: 15px">App Store and Google Play review, listings, handover docs.</span></li>
+</ol>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 88px 24px">
+<h2 style="margin: 0 0 40px; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -0.03em; line-height: 1.08">Why founders pick a solo senior over an agency</h2>
+<div style="overflow-x: auto; border: 1px solid #D9D7D0; border-radius: 10px; background: #FFFFFF">
+<table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px">
+<thead>
+<tr style="text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B5E66">
+<th scope="col" style="padding: 16px 20px; border-bottom: 1px solid #D9D7D0; font-weight: 500"></th>
+<th scope="col" style="padding: 16px 20px; border-bottom: 1px solid #D9D7D0; font-weight: 500">Marketplace freelancer</th>
+<th scope="col" style="padding: 16px 20px; border-bottom: 1px solid #D9D7D0; font-weight: 500">Agency</th>
+<th scope="col" style="padding: 16px 20px; border-bottom: 1px solid #D9D7D0; font-weight: 500; color: #16181D">Viktor</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row" style="text-align: left; padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">Who writes the code</th><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">Unknown until hired</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">Rotating juniors</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">The person on the call</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">Price</th><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">Hourly, open-ended</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">Fixed, with overhead</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">Fixed, no overhead</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">Has shipped paid apps</th><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">Rarely</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; color: #3A3D44">For clients</td><td style="padding: 16px 20px; border-bottom: 1px solid #E6E4DE; font-weight: 600">Own products, own revenue</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 16px 20px; font-weight: 600">Contract &amp; invoices</th><td style="padding: 16px 20px; color: #3A3D44">Via platform</td><td style="padding: 16px 20px; color: #3A3D44">Varies</td><td style="padding: 16px 20px; font-weight: 600">EU company, VAT invoice</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66; text-transform: uppercase; letter-spacing: 0.04em">Built this way · my own app</span>
+<h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.1">The same process took my Hebrew learning app to 3,200 active users and a working subscription.</h2>
+<a href="Main.dc.html" style="font-weight: 600">Read the case →</a>
+</div>
+<blockquote style="margin: 0; padding: 32px; background: #FFFFFF; border: 1px solid #D9D7D0; border-radius: 10px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 21px; line-height: 1.45">“[CLIENT QUOTE — one or two sentences about working with Viktor.]”</p>
+<footer style="font-size: 15px; color: #5B5E66">[Name], [Role], [Company]</footer>
+</blockquote>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -0.03em; line-height: 1.08">MVP questions</h2>
+<a href="#call" style="font-weight: 600">Full guide: how much an MVP costs in 2026 →</a>
+</div>
+<div style="border-top: 1px solid #16181D">
+<sc-for list="{{faqs}}" as="item" hint-placeholder-count="5">
+<div style="border-bottom: 1px solid #D9D7D0">
+<button type="button" onClick="{{item.toggle}}" aria-expanded="{{item.open}}" style="all: unset; box-sizing: border-box; width: 100%; min-height: 64px; padding: 18px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; font-size: 19px; font-weight: 600">
+<span>{{item.q}}</span><span aria-hidden="true" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: {{accent}}">{{item.sign}}</span>
+</button>
+<sc-if value="{{item.open}}" hint-placeholder-val="{{false}}">
+<p style="margin: 0; padding: 0 0 22px; color: #3A3D44; max-width: 40rem">{{item.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="call" style="border-top: 1px solid #D9D7D0; background: #ECEAE4">
+<div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: clamp(36px, 4.4vw, 60px); letter-spacing: -0.035em; line-height: 1.02">Get a fixed quote for your MVP</h2>
+<p style="margin: 0; color: #3A3D44; max-width: 28rem">Two lines about your idea are enough. I reply within one working day with questions or a call slot.</p>
+</div>
+<form style="display: flex; flex-direction: column; gap: 16px; padding: 28px; background: #FFFFFF; border: 1px solid #D9D7D0; border-radius: 10px">
+<label for="m-name" style="font-size: 14px; font-weight: 600">Your name</label>
+<input id="m-name" type="text" autocomplete="name" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8F97; border-radius: 6px; font: inherit; background: #FFFFFF; color: #16181D">
+<label for="m-email" style="font-size: 14px; font-weight: 600">Email</label>
+<input id="m-email" type="email" autocomplete="email" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8F97; border-radius: 6px; font: inherit; background: #FFFFFF; color: #16181D">
+<label for="m-idea" style="font-size: 14px; font-weight: 600">What do you want to build?</label>
+<textarea id="m-idea" rows="4" style="padding: 12px 14px; border: 1px solid #8C8F97; border-radius: 6px; font: inherit; resize: vertical; background: #FFFFFF; color: #16181D"></textarea>
+<button type="button" style="all: unset; box-sizing: border-box; min-height: 48px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; background: {{accent}}; color: #FFFFFF; border-radius: 6px; font-weight: 600; cursor: pointer">Send — {{selectedName}} package</button>
+</form>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5B5E66">
+<span>© 2026 Viktor Sokoliuk · [COMPANY NAME] OÜ, Tallinn</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="Main.dc.html" style="color: #5B5E66">Home</a><a href="TechnicalPartner.dc.html" style="color: #5B5E66">Fractional CTO</a><a href="#call" style="color: #5B5E66">На русском</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2449D8","options":["#2449D8","#C2410C","#0F766E","#16181D"]},"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: 0, pkg: 1 };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2449D8';
+    const pkgs = [
+      { name: 'Prototype', weeks: '2 weeks', price: 'from [PRICE]', desc: 'Test the idea with investors or first users before building.', items: ['Clickable Figma prototype', 'User flow and scope document', 'Tech plan and fixed MVP quote', 'Landing page copy'] },
+      { name: 'Mobile MVP', weeks: '6–8 weeks', price: 'from [PRICE]', desc: 'A real app in both stores, ready for paying users.', items: ['Flutter or native iOS + Android', 'Auth, backend, admin', 'Subscriptions via RevenueCat', 'Analytics and store release'], popular: true },
+      { name: 'AI MVP', weeks: '6–8 weeks', price: 'from [PRICE]', desc: 'An app built around an LLM feature that has to work reliably.', items: ['Everything in Mobile MVP', 'LLM integration with cost limits', 'Prompt and output evaluation', 'Fallbacks when the model fails'] }
+    ];
+    const sel = this.state.pkg;
+    const open = this.state.open;
+    const list = [
+      { q: 'How much does an MVP cost?', a: 'My packages start at [PRICE]. The exact figure depends on screens, integrations and AI features, and is fixed in writing before work starts.' },
+      { q: 'I am not technical. Is that a problem?', a: 'No. Most of my clients are not. You decide what the product does; I explain technical trade-offs in plain language and make the calls you do not want to make.' },
+      { q: 'Flutter or native?', a: 'Flutter for speed and one codebase across both stores. Native Kotlin and Swift when you need platform features or top performance. I recommend one after the call.' },
+      { q: 'What if the scope changes mid-build?', a: 'Small changes swap in for features of the same size. Bigger ones get a separate written quote, so the original price never silently grows.' },
+      { q: 'What happens after launch?', a: 'You get the code, accounts and docs. Keep me on a monthly plan, or hand it to your own team. I can help you hire.' }
+    ];
+    return {
+      accent,
+      selectedName: pkgs[sel].name,
+      packages: pkgs.map((p, i) => {
+        const on = sel === i;
+        return {
+          ...p,
+          popular: !!p.popular,
+          selected: on,
+          boxStyle: on
+            ? 'background: #16181D; color: #F4F3EF; border: 1px solid #16181D; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 18px'
+            : 'background: #FFFFFF; color: #16181D; border: 1px solid #D9D7D0; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 18px',
+          mutedStyle: on ? 'color: #C9CBD1' : 'color: #5B5E66',
+          btnStyle: on
+            ? 'all: unset; box-sizing: border-box; margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 600; cursor: pointer; background: ' + accent + '; color: #FFFFFF'
+            : 'all: unset; box-sizing: border-box; margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 600; cursor: pointer; border: 1px solid #16181D; color: #16181D',
+          btnLabel: on ? 'Selected' : 'Choose ' + p.name,
+          pick: () => this.setState({ pkg: i })
+        };
+      }),
+      faqs: list.map((f, i) => ({
+        ...f,
+        open: open === i,
+        sign: open === i ? '−' : '+',
+        toggle: () => this.setState({ open: open === i ? -1 : i })
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+---
+import Button from './Button.astro';
+import { site, bookingHref } from '../config/site';
+
+const links = [
+  { href: '/mvp/', label: 'MVP development' },
+  { href: '/technical-partner/', label: 'Fractional CTO' },
+  { href: '/#agencies', label: 'For agencies' },
+  { href: '/cases/', label: 'Cases' },
+];
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="wrap site-header-inner">
+    <a href="/" class="brand">
+      <span class="brand-name">{site.name}</span>
+      <span class="brand-tag">{site.tagline}</span>
+    </a>
+    <nav aria-label="Main" class="site-nav">
+      {links.map((l) => (
+        <a href={l.href} class="nav-link" aria-current={path.startsWith(l.href) && !l.href.includes('#') ? 'page' : undefined}>{l.label}</a>
+      ))}
+      <Button href={bookingHref} variant="dark">Book a 20-min call</Button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header { border-bottom: 1px solid var(--line); }
+  .site-header-inner {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { text-decoration: none; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .brand-name { font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+  .brand-tag { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 15px; }
+  .nav-link { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+  .nav-link[aria-current='page'] { color: var(--accent); }
+</style>

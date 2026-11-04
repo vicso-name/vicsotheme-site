@@ -1,0 +1,5732 @@
+{
+ "serp": {
+  "alphabet": {
+   "keywords": 181,
+   "competitors": [
+    {
+     "avgPosition": 10.028846153846152,
+     "domain": "www.youtube.com",
+     "etv": 8698.567000000003,
+     "keywordsCount": 104,
+     "medianPosition": 9,
+     "rating": 9357,
+     "visibility": 35.349999999999994
+    },
+    {
+     "avgPosition": 3.174418604651162,
+     "domain": "en.wikipedia.org",
+     "etv": 79991.98299999996,
+     "keywordsCount": 86,
+     "medianPosition": 1,
+     "rating": 8327,
+     "visibility": 71.95000000000002
+    },
+    {
+     "avgPosition": 10.793478260869565,
+     "domain": "www.90daykorean.com",
+     "etv": 12115.69,
+     "keywordsCount": 92,
+     "medianPosition": 7,
+     "rating": 8207,
+     "visibility": 37.99999999999999
+    },
+    {
+     "avgPosition": 6.45679012345679,
+     "domain": "www.koreanclass101.com",
+     "etv": 23410.670999999988,
+     "keywordsCount": 81,
+     "medianPosition": 5,
+     "rating": 7577,
+     "visibility": 44.79999999999999
+    },
+    {
+     "avgPosition": 9.87837837837838,
+     "domain": "www.pinterest.com",
+     "etv": 7803.891,
+     "keywordsCount": 74,
+     "medianPosition": 7,
+     "rating": 6669,
+     "visibility": 28.700000000000003
+    },
+    {
+     "avgPosition": 22.93421052631579,
+     "domain": "blog.lingodeer.com",
+     "etv": 1459.7970000000007,
+     "keywordsCount": 76,
+     "medianPosition": 26,
+     "rating": 5857,
+     "visibility": 9.399999999999997
+    },
+    {
+     "avgPosition": 26.08974358974359,
+     "domain": "www.busuu.com",
+     "etv": 803.3380000000003,
+     "keywordsCount": 78,
+     "medianPosition": 25,
+     "rating": 5765,
+     "visibility": 2.2499999999999996
+    },
+    {
+     "avgPosition": 7.129032258064516,
+     "domain": "letslearnhangul.com",
+     "etv": 64032.028000000006,
+     "keywordsCount": 62,
+     "medianPosition": 5,
+     "rating": 5758,
+     "visibility": 33.79999999999998
+    },
+    {
+     "avgPosition": 10.874999999999996,
+     "domain": "www.howtostudykorean.com",
+     "etv": 6921.824999999999,
+     "keywordsCount": 64,
+     "medianPosition": 8,
+     "rating": 5704,
+     "visibility": 25.8
+    },
+    {
+     "avgPosition": 18.173913043478265,
+     "domain": "www.britannica.com",
+     "etv": 3519.263,
+     "keywordsCount": 69,
+     "medianPosition": 18,
+     "rating": 5646,
+     "visibility": 6.499999999999999
+    },
+    {
+     "avgPosition": 8.459016393442619,
+     "domain": "www.reddit.com",
+     "etv": 11560.208000000004,
+     "keywordsCount": 61,
+     "medianPosition": 5,
+     "rating": 5584,
+     "visibility": 31.250000000000004
+    },
+    {
+     "avgPosition": 12.796875,
+     "domain": "preply.com",
+     "etv": 7364.625999999997,
+     "keywordsCount": 64,
+     "medianPosition": 11,
+     "rating": 5581,
+     "visibility": 16.6
+    },
+    {
+     "avgPosition": 11.57142857142857,
+     "domain": "zkorean.com",
+     "etv": 6587.436999999997,
+     "keywordsCount": 63,
+     "medianPosition": 10,
+     "rating": 5571,
+     "visibility": 13.400000000000004
+    },
+    {
+     "avgPosition": 14.576271186440678,
+     "domain": "www.lexilogos.com",
+     "etv": 7120.249999999999,
+     "keywordsCount": 59,
+     "medianPosition": 11,
+     "rating": 5040,
+     "visibility": 15.75
+    },
+    {
+     "avgPosition": 19.56451612903226,
+     "domain": "www.facebook.com",
+     "etv": 312.49,
+     "keywordsCount": 62,
+     "medianPosition": 20,
+     "rating": 4987,
+     "visibility": 3.799999999999999
+    },
+    {
+     "avgPosition": 15.728813559322036,
+     "domain": "www.languagetrainers.ca",
+     "etv": 1925.018,
+     "keywordsCount": 59,
+     "medianPosition": 14,
+     "rating": 4972,
+     "visibility": 6.799999999999998
+    },
+    {
+     "avgPosition": 27.397058823529413,
+     "domain": "learning-korean.com",
+     "etv": 8231.918999999996,
+     "keywordsCount": 68,
+     "medianPosition": 29,
+     "rating": 4937,
+     "visibility": 9.3
+    },
+    {
+     "avgPosition": 20.28333333333334,
+     "domain": "www.mondly.com",
+     "etv": 993.9439999999996,
+     "keywordsCount": 60,
+     "medianPosition": 20,
+     "rating": 4783,
+     "visibility": 2.1999999999999997
+    },
+    {
+     "avgPosition": 16.857142857142865,
+     "domain": "ai.glossika.com",
+     "etv": 2268.687999999999,
+     "keywordsCount": 56,
+     "medianPosition": 17,
+     "rating": 4656,
+     "visibility": 6.349999999999995
+    },
+    {
+     "avgPosition": 12.20408163265306,
+     "domain": "www.koreasociety.org",
+     "etv": 8715.202000000003,
+     "keywordsCount": 49,
+     "medianPosition": 9,
+     "rating": 4302,
+     "visibility": 12.150000000000004
+    },
+    {
+     "avgPosition": 18.51020408163265,
+     "domain": "www.quora.com",
+     "etv": 872.9540000000002,
+     "keywordsCount": 49,
+     "medianPosition": 20,
+     "rating": 3993,
+     "visibility": 3.849999999999998
+    },
+    {
+     "avgPosition": 21.98,
+     "domain": "beelinguapp.com",
+     "etv": 844.0260000000003,
+     "keywordsCount": 50,
+     "medianPosition": 22,
+     "rating": 3901,
+     "visibility": 3.599999999999999
+    },
+    {
+     "avgPosition": 21.816326530612244,
+     "domain": "www.remitly.com",
+     "etv": 1258.7620000000004,
+     "keywordsCount": 49,
+     "medianPosition": 24,
+     "rating": 3831,
+     "visibility": 2.999999999999999
+    },
+    {
+     "avgPosition": 23.624999999999996,
+     "domain": "www.instagram.com",
+     "etv": 457.3130000000001,
+     "keywordsCount": 48,
+     "medianPosition": 24,
+     "rating": 3666,
+     "visibility": 4.749999999999998
+    },
+    {
+     "avgPosition": 34.52727272727272,
+     "domain": "www.mykoreanlesson.com",
+     "etv": 639.0620000000004,
+     "keywordsCount": 55,
+     "medianPosition": 38,
+     "rating": 3601,
+     "visibility": 1.6
+    },
+    {
+     "avgPosition": 29.96078431372549,
+     "domain": "migaku.com",
+     "etv": 686.5090000000004,
+     "keywordsCount": 51,
+     "medianPosition": 32,
+     "rating": 3572,
+     "visibility": 2.05
+    },
+    {
+     "avgPosition": 10.25,
+     "domain": "www.languagebird.com",
+     "etv": 7214.080000000001,
+     "keywordsCount": 36,
+     "medianPosition": 8,
+     "rating": 3231,
+     "visibility": 8.949999999999998
+    },
+    {
+     "avgPosition": 25.692307692307693,
+     "domain": "flexiclasses.com",
+     "etv": 632.6010000000001,
+     "keywordsCount": 39,
+     "medianPosition": 27,
+     "rating": 2898,
+     "visibility": 0.49999999999999994
+    },
+    {
+     "avgPosition": 22.47222222222222,
+     "domain": "tandem.net",
+     "etv": 676.2120000000002,
+     "keywordsCount": 36,
+     "medianPosition": 22,
+     "rating": 2791,
+     "visibility": 0.7000000000000001
+    },
+    {
+     "avgPosition": 13.65625,
+     "domain": "www.superprof.ca",
+     "etv": 1209.6139999999998,
+     "keywordsCount": 32,
+     "medianPosition": 14,
+     "rating": 2763,
+     "visibility": 3.099999999999999
+    },
+    {
+     "avgPosition": 17.774193548387096,
+     "domain": "www.taekwondopreschool.com",
+     "etv": 1442.0969999999998,
+     "keywordsCount": 31,
+     "medianPosition": 19,
+     "rating": 2549,
+     "visibility": 6.799999999999999
+    },
+    {
+     "avgPosition": 36.68571428571427,
+     "domain": "storylearning.com",
+     "etv": 209.82199999999995,
+     "keywordsCount": 35,
+     "medianPosition": 38,
+     "rating": 2216,
+     "visibility": 0.35
+    },
+    {
+     "avgPosition": 24.551724137931036,
+     "domain": "www.omniglot.com",
+     "etv": 533.9170000000003,
+     "keywordsCount": 29,
+     "medianPosition": 24,
+     "rating": 2188,
+     "visibility": 2.9
+    },
+    {
+     "avgPosition": 20.14814814814815,
+     "domain": "www.lingq.com",
+     "etv": 106.06200000000004,
+     "keywordsCount": 27,
+     "medianPosition": 14,
+     "rating": 2156,
+     "visibility": 2.8499999999999988
+    },
+    {
+     "avgPosition": 20.25925925925926,
+     "domain": "www.scribd.com",
+     "etv": 231.172,
+     "keywordsCount": 27,
+     "medianPosition": 17,
+     "rating": 2153,
+     "visibility": 3.95
+    },
+    {
+     "avgPosition": 18.384615384615383,
+     "domain": "hangul.fun",
+     "etv": 1742.9480000000003,
+     "keywordsCount": 26,
+     "medianPosition": 16,
+     "rating": 2122,
+     "visibility": 1.5000000000000004
+    },
+    {
+     "avgPosition": 46.820512820512825,
+     "domain": "lingopie.com",
+     "etv": 607.1310000000002,
+     "keywordsCount": 39,
+     "medianPosition": 46,
+     "rating": 2074,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 28.77777777777778,
+     "domain": "www.korean.go.kr",
+     "etv": 110.76200000000004,
+     "keywordsCount": 27,
+     "medianPosition": 26,
+     "rating": 1923,
+     "visibility": 1.2000000000000004
+    },
+    {
+     "avgPosition": 33.758620689655174,
+     "domain": "seoulkorean.sg",
+     "etv": 315.50199999999995,
+     "keywordsCount": 29,
+     "medianPosition": 34,
+     "rating": 1921,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 26.666666666666668,
+     "domain": "koreangradedreaders.com",
+     "etv": 151.53699999999998,
+     "keywordsCount": 21,
+     "medianPosition": 25,
+     "rating": 1540,
+     "visibility": 0.35
+    },
+    {
+     "avgPosition": 22.42105263157895,
+     "domain": "www.koreanfluent.com",
+     "etv": 105.888,
+     "keywordsCount": 19,
+     "medianPosition": 22,
+     "rating": 1474,
+     "visibility": 2.0500000000000003
+    },
+    {
+     "avgPosition": 39.65217391304348,
+     "domain": "talkpal.ai",
+     "etv": 308.661,
+     "keywordsCount": 23,
+     "medianPosition": 36,
+     "rating": 1388,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 39.285714285714285,
+     "domain": "promova.com",
+     "etv": 59.577,
+     "keywordsCount": 21,
+     "medianPosition": 42,
+     "rating": 1275,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 33.166666666666664,
+     "domain": "ling-app.com",
+     "etv": 25.584999999999997,
+     "keywordsCount": 18,
+     "medianPosition": 31,
+     "rating": 1203,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 19.866666666666667,
+     "domain": "www.tiktok.com",
+     "etv": 101.462,
+     "keywordsCount": 15,
+     "medianPosition": 19,
+     "rating": 1202,
+     "visibility": 2.599999999999999
+    },
+    {
+     "avgPosition": 48.52173913043478,
+     "domain": "maybekorean.com",
+     "etv": 31.61999999999999,
+     "keywordsCount": 23,
+     "medianPosition": 52,
+     "rating": 1184,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 48.52173913043478,
+     "domain": "hangulhouse.com",
+     "etv": 54.444,
+     "keywordsCount": 23,
+     "medianPosition": 54,
+     "rating": 1184,
+     "visibility": 0.4
+    },
+    {
+     "avgPosition": 24.866666666666667,
+     "domain": "www.linguajunkie.com",
+     "etv": 69.18499999999999,
+     "keywordsCount": 15,
+     "medianPosition": 24,
+     "rating": 1127,
+     "visibility": 0.6000000000000001
+    },
+    {
+     "avgPosition": 31.5,
+     "domain": "www.linguanaut.com",
+     "etv": 13.692999999999998,
+     "keywordsCount": 16,
+     "medianPosition": 35,
+     "rating": 1096,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 51.27272727272727,
+     "domain": "verbacard.com",
+     "etv": 44.49899999999998,
+     "keywordsCount": 22,
+     "medianPosition": 51,
+     "rating": 1072,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 28.933333333333337,
+     "domain": "koreantalk.tistory.com",
+     "etv": 94.121,
+     "keywordsCount": 15,
+     "medianPosition": 28,
+     "rating": 1066,
+     "visibility": 0.6000000000000001
+    },
+    {
+     "avgPosition": 30.866666666666667,
+     "domain": "www.koreanwikiproject.com",
+     "etv": 261.1629999999999,
+     "keywordsCount": 15,
+     "medianPosition": 30,
+     "rating": 1037,
+     "visibility": 0.6
+    },
+    {
+     "avgPosition": 51.42857142857143,
+     "domain": "www.koreantopik.com",
+     "etv": 41.09699999999999,
+     "keywordsCount": 21,
+     "medianPosition": 52,
+     "rating": 1020,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 43.44444444444444,
+     "domain": "blog.lokia-app.com",
+     "etv": 478.835,
+     "keywordsCount": 18,
+     "medianPosition": 44,
+     "rating": 1018,
+     "visibility": 0.4
+    },
+    {
+     "avgPosition": 16.25,
+     "domain": "www.etsy.com",
+     "etv": 163.178,
+     "keywordsCount": 12,
+     "medianPosition": 11,
+     "rating": 1005,
+     "visibility": 0.8
+    },
+    {
+     "avgPosition": 28.214285714285715,
+     "domain": "proceedings.jacow.org",
+     "etv": 492.254,
+     "keywordsCount": 14,
+     "medianPosition": 27,
+     "rating": 1005,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 18.499999999999996,
+     "domain": "lingrow.io",
+     "etv": 84.18600000000002,
+     "keywordsCount": 12,
+     "medianPosition": 15,
+     "rating": 978,
+     "visibility": 0.95
+    },
+    {
+     "avgPosition": 12.363636363636363,
+     "domain": "batchim.com",
+     "etv": 423.544,
+     "keywordsCount": 11,
+     "medianPosition": 5,
+     "rating": 964,
+     "visibility": 5.75
+    },
+    {
+     "avgPosition": 20.583333333333332,
+     "domain": "ling-app.medium.com",
+     "etv": 330.166,
+     "keywordsCount": 12,
+     "medianPosition": 20,
+     "rating": 953,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 21.916666666666668,
+     "domain": "hinative.com",
+     "etv": 91.172,
+     "keywordsCount": 12,
+     "medianPosition": 11,
+     "rating": 937,
+     "visibility": 3.15
+    },
+    {
+     "avgPosition": 23.916666666666668,
+     "domain": "www.bbc.co.uk",
+     "etv": 114.65699999999998,
+     "keywordsCount": 12,
+     "medianPosition": 21,
+     "rating": 913,
+     "visibility": 0.8
+    },
+    {
+     "avgPosition": 29.846153846153847,
+     "domain": "www.amazon.com",
+     "etv": 60.245999999999995,
+     "keywordsCount": 13,
+     "medianPosition": 23,
+     "rating": 912,
+     "visibility": 1.15
+    },
+    {
+     "avgPosition": 17.181818181818183,
+     "domain": "quizlet.com",
+     "etv": 438.539,
+     "keywordsCount": 11,
+     "medianPosition": 12,
+     "rating": 911,
+     "visibility": 3.3
+    },
+    {
+     "avgPosition": 41.53333333333333,
+     "domain": "www.asianlanguageschool.com",
+     "etv": 298.34700000000004,
+     "keywordsCount": 15,
+     "medianPosition": 43,
+     "rating": 877,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 15.6,
+     "domain": "study.com",
+     "etv": 180.56999999999996,
+     "keywordsCount": 10,
+     "medianPosition": 13,
+     "rating": 844,
+     "visibility": 1.25
+    },
+    {
+     "avgPosition": 17.5,
+     "domain": "www.fluentu.com",
+     "etv": 31.695000000000004,
+     "keywordsCount": 10,
+     "medianPosition": 16,
+     "rating": 825,
+     "visibility": 0.55
+    },
+    {
+     "avgPosition": 8.88888888888889,
+     "domain": "play.google.com",
+     "etv": 215.711,
+     "keywordsCount": 9,
+     "medianPosition": 5,
+     "rating": 820,
+     "visibility": 4.8999999999999995
+    },
+    {
+     "avgPosition": 48.9375,
+     "domain": "www.alphabetsymbol.com",
+     "etv": 13.989999999999998,
+     "keywordsCount": 16,
+     "medianPosition": 49,
+     "rating": 817,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 37.23076923076924,
+     "domain": "www.korean-arts.com",
+     "etv": 37.44299999999999,
+     "keywordsCount": 13,
+     "medianPosition": 37,
+     "rating": 816,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 46.2,
+     "domain": "akapinn.com",
+     "etv": 43.428,
+     "keywordsCount": 15,
+     "medianPosition": 45,
+     "rating": 807,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 15.22222222222222,
+     "domain": "www.uslanguageservices.com",
+     "etv": 377.174,
+     "keywordsCount": 9,
+     "medianPosition": 15,
+     "rating": 763,
+     "visibility": 0.6500000000000001
+    },
+    {
+     "avgPosition": 26.5,
+     "domain": "education.nsw.gov.au",
+     "etv": 150.804,
+     "keywordsCount": 10,
+     "medianPosition": 28,
+     "rating": 735,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 39.083333333333336,
+     "domain": "www.hilokal.com",
+     "etv": 291.06,
+     "keywordsCount": 12,
+     "medianPosition": 36,
+     "rating": 731,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 53.6,
+     "domain": "gachistudio.com",
+     "etv": 18.018000000000004,
+     "keywordsCount": 15,
+     "medianPosition": 55,
+     "rating": 696,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 16.875,
+     "domain": "www.korea.net",
+     "etv": 141.42600000000002,
+     "keywordsCount": 8,
+     "medianPosition": 13,
+     "rating": 665,
+     "visibility": 0.7000000000000001
+    },
+    {
+     "avgPosition": 53,
+     "domain": "seoulkoreaasia.com",
+     "etv": 295.248,
+     "keywordsCount": 14,
+     "medianPosition": 57,
+     "rating": 658,
+     "visibility": 0.9
+    },
+    {
+     "avgPosition": 54,
+     "domain": "linguapsych.com",
+     "etv": 30.197999999999993,
+     "keywordsCount": 14,
+     "medianPosition": 54,
+     "rating": 644,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 13.428571428571429,
+     "domain": "www.kajacoree.com",
+     "etv": 130.8,
+     "keywordsCount": 7,
+     "medianPosition": 13,
+     "rating": 606,
+     "visibility": 1.2000000000000002
+    },
+    {
+     "avgPosition": 45.18181818181818,
+     "domain": "lingomae.com",
+     "etv": 83.90100000000001,
+     "keywordsCount": 11,
+     "medianPosition": 51,
+     "rating": 603,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 14.714285714285714,
+     "domain": "en.wiktionary.org",
+     "etv": 25.616999999999997,
+     "keywordsCount": 7,
+     "medianPosition": 12,
+     "rating": 597,
+     "visibility": 1.4500000000000002
+    },
+    {
+     "avgPosition": 46.09090909090909,
+     "domain": "ktalk.live",
+     "etv": 141.198,
+     "keywordsCount": 11,
+     "medianPosition": 50,
+     "rating": 593,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 16.857142857142858,
+     "domain": "www.wordhippo.com",
+     "etv": 72.695,
+     "keywordsCount": 7,
+     "medianPosition": 5,
+     "rating": 582,
+     "visibility": 3.2
+    },
+    {
+     "avgPosition": 47.90909090909091,
+     "domain": "skapetokorea.com",
+     "etv": 11.172000000000002,
+     "keywordsCount": 11,
+     "medianPosition": 46,
+     "rating": 573,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 28.625,
+     "domain": "commons.wikimedia.org",
+     "etv": 17.744000000000003,
+     "keywordsCount": 8,
+     "medianPosition": 30,
+     "rating": 571,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 31,
+     "domain": "elon.io",
+     "etv": 78.99799999999999,
+     "keywordsCount": 8,
+     "medianPosition": 20,
+     "rating": 552,
+     "visibility": 0.35000000000000003
+    },
+    {
+     "avgPosition": 45.7,
+     "domain": "www.languagetrainers.com.au",
+     "etv": 14.91,
+     "keywordsCount": 10,
+     "medianPosition": 49,
+     "rating": 543,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 53.18181818181818,
+     "domain": "www.busanpedia.com",
+     "etv": 22.511999999999997,
+     "keywordsCount": 11,
+     "medianPosition": 51,
+     "rating": 515,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 17.166666666666668,
+     "domain": "www.branah.com",
+     "etv": 229.589,
+     "keywordsCount": 6,
+     "medianPosition": 2,
+     "rating": 497,
+     "visibility": 2.9499999999999997
+    },
+    {
+     "avgPosition": 51.7,
+     "domain": "symbl.cc",
+     "etv": 210.273,
+     "keywordsCount": 10,
+     "medianPosition": 54,
+     "rating": 483,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 5.8,
+     "domain": "www.shestudieslanguages.com",
+     "etv": 71.982,
+     "keywordsCount": 5,
+     "medianPosition": 6,
+     "rating": 471,
+     "visibility": 2.5999999999999996
+    },
+    {
+     "avgPosition": 21.666666666666668,
+     "domain": "medium.com",
+     "etv": 45.53399999999999,
+     "keywordsCount": 6,
+     "medianPosition": 6,
+     "rating": 470,
+     "visibility": 1.9
+    },
+    {
+     "avgPosition": 22,
+     "domain": "www.kylian.ai",
+     "etv": 19.219,
+     "keywordsCount": 6,
+     "medianPosition": 19,
+     "rating": 468,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 6.8,
+     "domain": "mytopik.ai",
+     "etv": 47.42,
+     "keywordsCount": 5,
+     "medianPosition": 7,
+     "rating": 466,
+     "visibility": 2.1
+    },
+    {
+     "avgPosition": 7.4,
+     "domain": "ielp.ehe.osu.edu",
+     "etv": 20.212,
+     "keywordsCount": 5,
+     "medianPosition": 7,
+     "rating": 463,
+     "visibility": 2.1500000000000004
+    },
+    {
+     "avgPosition": 8,
+     "domain": "gurulango.com",
+     "etv": 40.161,
+     "keywordsCount": 5,
+     "medianPosition": 5,
+     "rating": 460,
+     "visibility": 2
+    },
+    {
+     "avgPosition": 58.45454545454545,
+     "domain": "kbeumtales.com",
+     "etv": 87.318,
+     "keywordsCount": 11,
+     "medianPosition": 60,
+     "rating": 457,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 26.666666666666668,
+     "domain": "www.languagecafe.world",
+     "etv": 135.17800000000005,
+     "keywordsCount": 6,
+     "medianPosition": 26,
+     "rating": 440,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 27,
+     "domain": "www.fluentin3months.com",
+     "etv": 11.63,
+     "keywordsCount": 6,
+     "medianPosition": 31,
+     "rating": 438,
+     "visibility": 0.55
+    },
+    {
+     "avgPosition": 37.857142857142854,
+     "domain": "thaonco.com",
+     "etv": 25.370999999999995,
+     "keywordsCount": 7,
+     "medianPosition": 42,
+     "rating": 435,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 14,
+     "domain": "koreanling.com",
+     "etv": 8.831999999999997,
+     "keywordsCount": 5,
+     "medianPosition": 12,
+     "rating": 430,
+     "visibility": 0.35000000000000003
+    }
+   ]
+  },
+  "learning": {
+   "keywords": 166,
+   "competitors": [
+    {
+     "avgPosition": 9.50485436893204,
+     "domain": "www.youtube.com",
+     "etv": 1638.487,
+     "keywordsCount": 103,
+     "medianPosition": 7,
+     "rating": 9321,
+     "visibility": 39.20000000000001
+    },
+    {
+     "avgPosition": 5.076086956521738,
+     "domain": "www.reddit.com",
+     "etv": 4998.163999999998,
+     "keywordsCount": 92,
+     "medianPosition": 3,
+     "rating": 8733,
+     "visibility": 60.249999999999964
+    },
+    {
+     "avgPosition": 18.77419354838709,
+     "domain": "www.90daykorean.com",
+     "etv": 1060.0400000000009,
+     "keywordsCount": 93,
+     "medianPosition": 14,
+     "rating": 7554,
+     "visibility": 16.60000000000001
+    },
+    {
+     "avgPosition": 10.611111111111112,
+     "domain": "www.koreanclass101.com",
+     "etv": 1419.83,
+     "keywordsCount": 72,
+     "medianPosition": 7,
+     "rating": 6436,
+     "visibility": 24.75000000000001
+    },
+    {
+     "avgPosition": 6.6716417910447765,
+     "domain": "letslearnhangul.com",
+     "etv": 5919.836,
+     "keywordsCount": 67,
+     "medianPosition": 4,
+     "rating": 6253,
+     "visibility": 38.45
+    },
+    {
+     "avgPosition": 10.846153846153848,
+     "domain": "www.howtostudykorean.com",
+     "etv": 3113.331,
+     "keywordsCount": 52,
+     "medianPosition": 4,
+     "rating": 4636,
+     "visibility": 25.799999999999997
+    },
+    {
+     "avgPosition": 9.52941176470588,
+     "domain": "en.wikipedia.org",
+     "etv": 2444.8389999999995,
+     "keywordsCount": 51,
+     "medianPosition": 5,
+     "rating": 4614,
+     "visibility": 28.60000000000001
+    },
+    {
+     "avgPosition": 8.020833333333334,
+     "domain": "play.google.com",
+     "etv": 1620.3210000000004,
+     "keywordsCount": 48,
+     "medianPosition": 6,
+     "rating": 4415,
+     "visibility": 22.2
+    },
+    {
+     "avgPosition": 25.057692307692307,
+     "domain": "www.facebook.com",
+     "etv": 75.51199999999997,
+     "keywordsCount": 52,
+     "medianPosition": 23,
+     "rating": 3897,
+     "visibility": 3.5999999999999983
+    },
+    {
+     "avgPosition": 11.951219512195122,
+     "domain": "www.pinterest.com",
+     "etv": 690.058,
+     "keywordsCount": 41,
+     "medianPosition": 11,
+     "rating": 3610,
+     "visibility": 11.999999999999998
+    },
+    {
+     "avgPosition": 23.456521739130434,
+     "domain": "www.busuu.com",
+     "etv": 269.0259999999999,
+     "keywordsCount": 46,
+     "medianPosition": 21,
+     "rating": 3521,
+     "visibility": 3.849999999999999
+    },
+    {
+     "avgPosition": 19.333333333333332,
+     "domain": "blog.lingodeer.com",
+     "etv": 665.0580000000001,
+     "keywordsCount": 42,
+     "medianPosition": 16,
+     "rating": 3388,
+     "visibility": 7.049999999999999
+    },
+    {
+     "avgPosition": 17.365853658536587,
+     "domain": "flexiclasses.com",
+     "etv": 140.72,
+     "keywordsCount": 41,
+     "medianPosition": 17,
+     "rating": 3388,
+     "visibility": 5.249999999999998
+    },
+    {
+     "avgPosition": 15.95,
+     "domain": "ai.glossika.com",
+     "etv": 2155.5519999999997,
+     "keywordsCount": 40,
+     "medianPosition": 17,
+     "rating": 3362,
+     "visibility": 10.349999999999998
+    },
+    {
+     "avgPosition": 20.71794871794872,
+     "domain": "preply.com",
+     "etv": 271.0940000000001,
+     "keywordsCount": 39,
+     "medianPosition": 20,
+     "rating": 3092,
+     "visibility": 5.399999999999999
+    },
+    {
+     "avgPosition": 31.75555555555554,
+     "domain": "www.mykoreanlesson.com",
+     "etv": 498.71300000000014,
+     "keywordsCount": 45,
+     "medianPosition": 37,
+     "rating": 3071,
+     "visibility": 5.499999999999999
+    },
+    {
+     "avgPosition": 20.416666666666668,
+     "domain": "www.quora.com",
+     "etv": 81.418,
+     "keywordsCount": 36,
+     "medianPosition": 20,
+     "rating": 2865,
+     "visibility": 2.5000000000000004
+    },
+    {
+     "avgPosition": 29.65,
+     "domain": "www.instagram.com",
+     "etv": 53.087,
+     "keywordsCount": 40,
+     "medianPosition": 28,
+     "rating": 2814,
+     "visibility": 1.1500000000000004
+    },
+    {
+     "avgPosition": 23.142857142857142,
+     "domain": "www.britannica.com",
+     "etv": 194.20299999999995,
+     "keywordsCount": 35,
+     "medianPosition": 20,
+     "rating": 2690,
+     "visibility": 3.849999999999999
+    },
+    {
+     "avgPosition": 23.176470588235293,
+     "domain": "migaku.com",
+     "etv": 131.99599999999998,
+     "keywordsCount": 34,
+     "medianPosition": 20,
+     "rating": 2612,
+     "visibility": 1.8000000000000007
+    },
+    {
+     "avgPosition": 14.466666666666669,
+     "domain": "www.lexilogos.com",
+     "etv": 864.9929999999999,
+     "keywordsCount": 30,
+     "medianPosition": 8,
+     "rating": 2566,
+     "visibility": 11.8
+    },
+    {
+     "avgPosition": 20.59375,
+     "domain": "www.mondly.com",
+     "etv": 96.124,
+     "keywordsCount": 32,
+     "medianPosition": 19,
+     "rating": 2541,
+     "visibility": 0.9000000000000002
+    },
+    {
+     "avgPosition": 19.892857142857135,
+     "domain": "www.scribd.com",
+     "etv": 285.748,
+     "keywordsCount": 28,
+     "medianPosition": 15,
+     "rating": 2243,
+     "visibility": 5.149999999999999
+    },
+    {
+     "avgPosition": 18.148148148148152,
+     "domain": "easykorean.edsoftapps.com",
+     "etv": 319.711,
+     "keywordsCount": 27,
+     "medianPosition": 11,
+     "rating": 2210,
+     "visibility": 9
+    },
+    {
+     "avgPosition": 22.035714285714285,
+     "domain": "www.amazon.com",
+     "etv": 395.7310000000001,
+     "keywordsCount": 28,
+     "medianPosition": 23,
+     "rating": 2183,
+     "visibility": 4.8
+    },
+    {
+     "avgPosition": 37.714285714285715,
+     "domain": "talkpal.ai",
+     "etv": 44.212999999999994,
+     "keywordsCount": 35,
+     "medianPosition": 41,
+     "rating": 2180,
+     "visibility": 0.9000000000000001
+    },
+    {
+     "avgPosition": 12.708333333333334,
+     "domain": "www.sporcle.com",
+     "etv": 712.3879999999999,
+     "keywordsCount": 24,
+     "medianPosition": 5,
+     "rating": 2095,
+     "visibility": 12.5
+    },
+    {
+     "avgPosition": 18.083333333333332,
+     "domain": "drawingnotepad.com",
+     "etv": 385.201,
+     "keywordsCount": 24,
+     "medianPosition": 12,
+     "rating": 1966,
+     "visibility": 3.75
+    },
+    {
+     "avgPosition": 35.166666666666664,
+     "domain": "storylearning.com",
+     "etv": 44.50999999999999,
+     "keywordsCount": 30,
+     "medianPosition": 34,
+     "rating": 1945,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 18.695652173913043,
+     "domain": "www.koreasociety.org",
+     "etv": 166.401,
+     "keywordsCount": 23,
+     "medianPosition": 15,
+     "rating": 1870,
+     "visibility": 3.0500000000000003
+    },
+    {
+     "avgPosition": 18.7391304347826,
+     "domain": "hangul.fun",
+     "etv": 407.623,
+     "keywordsCount": 23,
+     "medianPosition": 20,
+     "rating": 1869,
+     "visibility": 5.5
+    },
+    {
+     "avgPosition": 25.416666666666668,
+     "domain": "koreangradedreaders.com",
+     "etv": 54.89999999999999,
+     "keywordsCount": 24,
+     "medianPosition": 23,
+     "rating": 1790,
+     "visibility": 1.5000000000000002
+    },
+    {
+     "avgPosition": 10.421052631578949,
+     "domain": "www.languagebird.com",
+     "etv": 210.249,
+     "keywordsCount": 19,
+     "medianPosition": 9,
+     "rating": 1702,
+     "visibility": 4.999999999999999
+    },
+    {
+     "avgPosition": 19.714285714285715,
+     "domain": "www.languagetrainers.ca",
+     "etv": 61.72299999999999,
+     "keywordsCount": 21,
+     "medianPosition": 20,
+     "rating": 1686,
+     "visibility": 1.3000000000000005
+    },
+    {
+     "avgPosition": 38.48148148148148,
+     "domain": "lingopie.com",
+     "etv": 53.90699999999999,
+     "keywordsCount": 27,
+     "medianPosition": 36,
+     "rating": 1661,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 21.285714285714285,
+     "domain": "zkorean.com",
+     "etv": 1189.2279999999998,
+     "keywordsCount": 21,
+     "medianPosition": 19,
+     "rating": 1653,
+     "visibility": 7.800000000000001
+    },
+    {
+     "avgPosition": 15.157894736842104,
+     "domain": "characterpractice.com",
+     "etv": 303.228,
+     "keywordsCount": 19,
+     "medianPosition": 12,
+     "rating": 1612,
+     "visibility": 5.9
+    },
+    {
+     "avgPosition": 29.136363636363637,
+     "domain": "learning-korean.com",
+     "etv": 53.392,
+     "keywordsCount": 22,
+     "medianPosition": 29,
+     "rating": 1559,
+     "visibility": 0.8500000000000001
+    },
+    {
+     "avgPosition": 16.555555555555557,
+     "domain": "www.etsy.com",
+     "etv": 108.78,
+     "keywordsCount": 18,
+     "medianPosition": 13,
+     "rating": 1502,
+     "visibility": 2.9499999999999997
+    },
+    {
+     "avgPosition": 33.13636363636363,
+     "domain": "koreanexplorer.com.sg",
+     "etv": 37.240999999999985,
+     "keywordsCount": 22,
+     "medianPosition": 34,
+     "rating": 1471,
+     "visibility": 1.1
+    },
+    {
+     "avgPosition": 18.444444444444443,
+     "domain": "quizlet.com",
+     "etv": 312.959,
+     "keywordsCount": 18,
+     "medianPosition": 18,
+     "rating": 1468,
+     "visibility": 3.5
+    },
+    {
+     "avgPosition": 23.42105263157895,
+     "domain": "www.linguajunkie.com",
+     "etv": 48.858,
+     "keywordsCount": 19,
+     "medianPosition": 22,
+     "rating": 1455,
+     "visibility": 1.1
+    },
+    {
+     "avgPosition": 19.444444444444443,
+     "domain": "www.korean.go.kr",
+     "etv": 295.22700000000003,
+     "keywordsCount": 18,
+     "medianPosition": 13,
+     "rating": 1450,
+     "visibility": 5.05
+    },
+    {
+     "avgPosition": 14.5625,
+     "domain": "www.lingq.com",
+     "etv": 55.639,
+     "keywordsCount": 16,
+     "medianPosition": 11,
+     "rating": 1367,
+     "visibility": 2.25
+    },
+    {
+     "avgPosition": 10.533333333333331,
+     "domain": "apps.apple.com",
+     "etv": 179.249,
+     "keywordsCount": 15,
+     "medianPosition": 7,
+     "rating": 1342,
+     "visibility": 6.15
+    },
+    {
+     "avgPosition": 44.458333333333336,
+     "domain": "learnkorean24.com",
+     "etv": 34.328999999999986,
+     "keywordsCount": 24,
+     "medianPosition": 44,
+     "rating": 1333,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 11.666666666666666,
+     "domain": "cdn.innovativelanguage.com",
+     "etv": 618.875,
+     "keywordsCount": 15,
+     "medianPosition": 7,
+     "rating": 1325,
+     "visibility": 7.1000000000000005
+    },
+    {
+     "avgPosition": 26.72222222222222,
+     "domain": "www.asianlanguageschool.com",
+     "etv": 51.12699999999999,
+     "keywordsCount": 18,
+     "medianPosition": 25,
+     "rating": 1319,
+     "visibility": 0.6000000000000001
+    },
+    {
+     "avgPosition": 12.933333333333334,
+     "domain": "talktomeinkorean.com",
+     "etv": 97.711,
+     "keywordsCount": 15,
+     "medianPosition": 10,
+     "rating": 1306,
+     "visibility": 2.3500000000000005
+    },
+    {
+     "avgPosition": 14.266666666666667,
+     "domain": "www.koreanstudyjunkie.com",
+     "etv": 60.599,
+     "keywordsCount": 15,
+     "medianPosition": 12,
+     "rating": 1286,
+     "visibility": 2.3000000000000003
+    },
+    {
+     "avgPosition": 8.642857142857142,
+     "domain": "www.jetpunk.com",
+     "etv": 346.35699999999997,
+     "keywordsCount": 14,
+     "medianPosition": 5,
+     "rating": 1279,
+     "visibility": 7.299999999999999
+    },
+    {
+     "avgPosition": 11.307692307692308,
+     "domain": "www.koreanwikiproject.com",
+     "etv": 92.715,
+     "keywordsCount": 13,
+     "medianPosition": 10,
+     "rating": 1153,
+     "visibility": 2.7
+    },
+    {
+     "avgPosition": 19.142857142857142,
+     "domain": "www.optilingo.com",
+     "etv": 97.798,
+     "keywordsCount": 14,
+     "medianPosition": 17,
+     "rating": 1132,
+     "visibility": 1.5000000000000002
+    },
+    {
+     "avgPosition": 31,
+     "domain": "www.lucalampariello.com",
+     "etv": 48.091,
+     "keywordsCount": 16,
+     "medianPosition": 33,
+     "rating": 1104,
+     "visibility": 0.95
+    },
+    {
+     "avgPosition": 22.214285714285715,
+     "domain": "www.drawkorean.com",
+     "etv": 37.898999999999994,
+     "keywordsCount": 14,
+     "medianPosition": 14,
+     "rating": 1089,
+     "visibility": 0.9000000000000001
+    },
+    {
+     "avgPosition": 29.133333333333333,
+     "domain": "speechling.com",
+     "etv": 162.529,
+     "keywordsCount": 15,
+     "medianPosition": 24,
+     "rating": 1063,
+     "visibility": 2.1999999999999997
+    },
+    {
+     "avgPosition": 19.153846153846153,
+     "domain": "lingrow.io",
+     "etv": 27.994999999999997,
+     "keywordsCount": 13,
+     "medianPosition": 16,
+     "rating": 1051,
+     "visibility": 1.05
+    },
+    {
+     "avgPosition": 32.800000000000004,
+     "domain": "wordwall.net",
+     "etv": 33.499,
+     "keywordsCount": 15,
+     "medianPosition": 39,
+     "rating": 1008,
+     "visibility": 1.4500000000000002
+    },
+    {
+     "avgPosition": 17.416666666666668,
+     "domain": "www.sayjack.com",
+     "etv": 42.894,
+     "keywordsCount": 12,
+     "medianPosition": 15,
+     "rating": 991,
+     "visibility": 2.4000000000000004
+    },
+    {
+     "avgPosition": 34.53333333333333,
+     "domain": "www.missellykorean.com",
+     "etv": 11.94,
+     "keywordsCount": 15,
+     "medianPosition": 31,
+     "rating": 982,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 45.888888888888886,
+     "domain": "www.koreantopik.com",
+     "etv": 30.975,
+     "keywordsCount": 18,
+     "medianPosition": 45,
+     "rating": 974,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 36.266666666666666,
+     "domain": "seoulkorean.sg",
+     "etv": 30.886999999999993,
+     "keywordsCount": 15,
+     "medianPosition": 38,
+     "rating": 956,
+     "visibility": 1.05
+    },
+    {
+     "avgPosition": 15.727272727272728,
+     "domain": "www.quotev.com",
+     "etv": 37.289,
+     "keywordsCount": 11,
+     "medianPosition": 11,
+     "rating": 927,
+     "visibility": 2.05
+    },
+    {
+     "avgPosition": 16.454545454545453,
+     "domain": "www.teacherspayteachers.com",
+     "etv": 39.273999999999994,
+     "keywordsCount": 11,
+     "medianPosition": 13,
+     "rating": 919,
+     "visibility": 0.9500000000000002
+    },
+    {
+     "avgPosition": 16.636363636363637,
+     "domain": "beelinguapp.com",
+     "etv": 52.80900000000001,
+     "keywordsCount": 11,
+     "medianPosition": 14,
+     "rating": 917,
+     "visibility": 0.7000000000000001
+    },
+    {
+     "avgPosition": 10.2,
+     "domain": "www.digitaldialects.com",
+     "etv": 189.222,
+     "keywordsCount": 10,
+     "medianPosition": 4,
+     "rating": 898,
+     "visibility": 4.3999999999999995
+    },
+    {
+     "avgPosition": 11,
+     "domain": "courses.talktomeinkorean.com",
+     "etv": 143.507,
+     "keywordsCount": 10,
+     "medianPosition": 5,
+     "rating": 890,
+     "visibility": 4.55
+    },
+    {
+     "avgPosition": 13.3,
+     "domain": "www.proprofs.com",
+     "etv": 55.40099999999999,
+     "keywordsCount": 10,
+     "medianPosition": 7,
+     "rating": 867,
+     "visibility": 2.65
+    },
+    {
+     "avgPosition": 33.92307692307692,
+     "domain": "asobibox.com",
+     "etv": 43.184999999999995,
+     "keywordsCount": 13,
+     "medianPosition": 30,
+     "rating": 859,
+     "visibility": 1.55
+    },
+    {
+     "avgPosition": 33.92307692307692,
+     "domain": "promova.com",
+     "etv": 15.034999999999998,
+     "keywordsCount": 13,
+     "medianPosition": 38,
+     "rating": 859,
+     "visibility": 0.5
+    },
+    {
+     "avgPosition": 14.5,
+     "domain": "www.mauvecloud.net",
+     "etv": 169.166,
+     "keywordsCount": 10,
+     "medianPosition": 9,
+     "rating": 855,
+     "visibility": 3.4499999999999993
+    },
+    {
+     "avgPosition": 28.916666666666668,
+     "domain": "hinative.com",
+     "etv": 11.672,
+     "keywordsCount": 12,
+     "medianPosition": 23,
+     "rating": 853,
+     "visibility": 1.35
+    },
+    {
+     "avgPosition": 5.777777777777778,
+     "domain": "deliciouskorean.com",
+     "etv": 158.32099999999997,
+     "keywordsCount": 9,
+     "medianPosition": 4,
+     "rating": 848,
+     "visibility": 5.45
+    },
+    {
+     "avgPosition": 35.15384615384616,
+     "domain": "ubitto.com",
+     "etv": 7.349999999999999,
+     "keywordsCount": 13,
+     "medianPosition": 34,
+     "rating": 843,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 25.181818181818183,
+     "domain": "quizlingua.com",
+     "etv": 8.456,
+     "keywordsCount": 11,
+     "medianPosition": 22,
+     "rating": 823,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 10.11111111111111,
+     "domain": "www.fun4thebrain.com",
+     "etv": 92.62399999999998,
+     "keywordsCount": 9,
+     "medianPosition": 6,
+     "rating": 809,
+     "visibility": 3.0500000000000003
+    },
+    {
+     "avgPosition": 21.4,
+     "domain": "wayground.com",
+     "etv": 11.097,
+     "keywordsCount": 10,
+     "medianPosition": 23,
+     "rating": 786,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 21.9,
+     "domain": "www.lingoclass.co.uk",
+     "etv": 7.9289999999999985,
+     "keywordsCount": 10,
+     "medianPosition": 19,
+     "rating": 781,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 22.5,
+     "domain": "www.genkienglish.net",
+     "etv": 11.326,
+     "keywordsCount": 10,
+     "medianPosition": 22,
+     "rating": 775,
+     "visibility": 0.8500000000000001
+    },
+    {
+     "avgPosition": 14.666666666666666,
+     "domain": "www.ebay.com",
+     "etv": 37.48,
+     "keywordsCount": 9,
+     "medianPosition": 12,
+     "rating": 768,
+     "visibility": 1.65
+    },
+    {
+     "avgPosition": 14.88888888888889,
+     "domain": "store.steampowered.com",
+     "etv": 45.138000000000005,
+     "keywordsCount": 9,
+     "medianPosition": 13,
+     "rating": 766,
+     "visibility": 1.1
+    },
+    {
+     "avgPosition": 23.4,
+     "domain": "www.omniglot.com",
+     "etv": 44.967,
+     "keywordsCount": 10,
+     "medianPosition": 23,
+     "rating": 766,
+     "visibility": 0.6
+    },
+    {
+     "avgPosition": 4.375,
+     "domain": "korean-game.modlangs.gatech.edu",
+     "etv": 530.8879999999999,
+     "keywordsCount": 8,
+     "medianPosition": 2,
+     "rating": 765,
+     "visibility": 5.35
+    },
+    {
+     "avgPosition": 30.636363636363637,
+     "domain": "akapinn.com",
+     "etv": 12.583000000000002,
+     "keywordsCount": 11,
+     "medianPosition": 27,
+     "rating": 763,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 16,
+     "domain": "www.purposegames.com",
+     "etv": 13.976999999999997,
+     "keywordsCount": 9,
+     "medianPosition": 15,
+     "rating": 756,
+     "visibility": 0.4
+    },
+    {
+     "avgPosition": 5.5,
+     "domain": "www.topikguide.com",
+     "etv": 141.592,
+     "keywordsCount": 8,
+     "medianPosition": 2,
+     "rating": 756,
+     "visibility": 5.1499999999999995
+    },
+    {
+     "avgPosition": 16.666666666666668,
+     "domain": "koreanling.com",
+     "etv": 10.159,
+     "keywordsCount": 9,
+     "medianPosition": 14,
+     "rating": 750,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 17.555555555555557,
+     "domain": "observablehq.com",
+     "etv": 57.922,
+     "keywordsCount": 9,
+     "medianPosition": 10,
+     "rating": 742,
+     "visibility": 2
+    },
+    {
+     "avgPosition": 27.6,
+     "domain": "www.fluentin3months.com",
+     "etv": 11.954,
+     "keywordsCount": 10,
+     "medianPosition": 25,
+     "rating": 724,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 10,
+     "domain": "www.rocketlanguages.com",
+     "etv": 56.192,
+     "keywordsCount": 8,
+     "medianPosition": 7,
+     "rating": 720,
+     "visibility": 2.8
+    },
+    {
+     "avgPosition": 20.333333333333332,
+     "domain": "dearasia.co.uk",
+     "etv": 20.857000000000003,
+     "keywordsCount": 9,
+     "medianPosition": 20,
+     "rating": 717,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 41.166666666666664,
+     "domain": "crushonkorean.com",
+     "etv": 10.836,
+     "keywordsCount": 12,
+     "medianPosition": 37,
+     "rating": 706,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 12.5,
+     "domain": "www.codywatts.com",
+     "etv": 571.925,
+     "keywordsCount": 8,
+     "medianPosition": 4,
+     "rating": 700,
+     "visibility": 4.5
+    },
+    {
+     "avgPosition": 23.77777777777778,
+     "domain": "noun.town",
+     "etv": 11.232,
+     "keywordsCount": 9,
+     "medianPosition": 22,
+     "rating": 686,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 43.083333333333336,
+     "domain": "verbacard.com",
+     "etv": 21.904,
+     "keywordsCount": 12,
+     "medianPosition": 44,
+     "rating": 683,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 32.3,
+     "domain": "thelunartreehouse.com",
+     "etv": 11.031,
+     "keywordsCount": 10,
+     "medianPosition": 28,
+     "rating": 677,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 34.4,
+     "domain": "blog.lokia-app.com",
+     "etv": 17.033,
+     "keywordsCount": 10,
+     "medianPosition": 40,
+     "rating": 656,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 7,
+     "domain": "forvo.com",
+     "etv": 120.253,
+     "keywordsCount": 7,
+     "medianPosition": 5,
+     "rating": 651,
+     "visibility": 4
+    },
+    {
+     "avgPosition": 40.90909090909091,
+     "domain": "www.learnkoreantools.com",
+     "etv": 34.626,
+     "keywordsCount": 11,
+     "medianPosition": 45,
+     "rating": 650,
+     "visibility": 0.7
+    },
+    {
+     "avgPosition": 28.33333333333333,
+     "domain": "languagedrops.com",
+     "etv": 30.781999999999996,
+     "keywordsCount": 9,
+     "medianPosition": 18,
+     "rating": 645,
+     "visibility": 0.65
+    }
+   ]
+  },
+  "phrases": {
+   "keywords": 200,
+   "competitors": [
+    {
+     "avgPosition": 5.593333333333334,
+     "domain": "www.youtube.com",
+     "etv": 46866.039,
+     "keywordsCount": 150,
+     "medianPosition": 3,
+     "rating": 14161,
+     "visibility": 95.40000000000003
+    },
+    {
+     "avgPosition": 3.6013986013986,
+     "domain": "www.reddit.com",
+     "etv": 90247.74300000005,
+     "keywordsCount": 143,
+     "medianPosition": 1,
+     "rating": 13785,
+     "visibility": 117.85000000000004
+    },
+    {
+     "avgPosition": 7.878571428571429,
+     "domain": "www.90daykorean.com",
+     "etv": 9257.311999999996,
+     "keywordsCount": 140,
+     "medianPosition": 5,
+     "rating": 12897,
+     "visibility": 71.89999999999995
+    },
+    {
+     "avgPosition": 16.855072463768117,
+     "domain": "www.facebook.com",
+     "etv": 3654.261,
+     "keywordsCount": 138,
+     "medianPosition": 14,
+     "rating": 11474,
+     "visibility": 21.45000000000003
+    },
+    {
+     "avgPosition": 14.917910447761193,
+     "domain": "www.instagram.com",
+     "etv": 21054.556000000004,
+     "keywordsCount": 134,
+     "medianPosition": 10,
+     "rating": 11401,
+     "visibility": 35.2
+    },
+    {
+     "avgPosition": 11.452991452991451,
+     "domain": "www.quora.com",
+     "etv": 5012.245000000001,
+     "keywordsCount": 117,
+     "medianPosition": 9,
+     "rating": 10360,
+     "visibility": 34.099999999999994
+    },
+    {
+     "avgPosition": 9.6875,
+     "domain": "www.tiktok.com",
+     "etv": 11074.347999999994,
+     "keywordsCount": 112,
+     "medianPosition": 6,
+     "rating": 10115,
+     "visibility": 47.750000000000014
+    },
+    {
+     "avgPosition": 12.904255319148936,
+     "domain": "www.koreanclass101.com",
+     "etv": 4277.018999999998,
+     "keywordsCount": 94,
+     "medianPosition": 10,
+     "rating": 8187,
+     "visibility": 24.050000000000026
+    },
+    {
+     "avgPosition": 21.288461538461544,
+     "domain": "hinative.com",
+     "etv": 1116.4459999999997,
+     "keywordsCount": 104,
+     "medianPosition": 18,
+     "rating": 8186,
+     "visibility": 8.4
+    },
+    {
+     "avgPosition": 17.56976744186046,
+     "domain": "languagedrops.com",
+     "etv": 9472.674999999996,
+     "keywordsCount": 86,
+     "medianPosition": 16,
+     "rating": 7089,
+     "visibility": 14.400000000000006
+    },
+    {
+     "avgPosition": 19.666666666666675,
+     "domain": "www.wordhippo.com",
+     "etv": 1041.2799999999995,
+     "keywordsCount": 84,
+     "medianPosition": 17,
+     "rating": 6748,
+     "visibility": 6.899999999999996
+    },
+    {
+     "avgPosition": 8.196721311475411,
+     "domain": "preply.com",
+     "etv": 9232.605,
+     "keywordsCount": 61,
+     "medianPosition": 7,
+     "rating": 5600,
+     "visibility": 24.95000000000002
+    },
+    {
+     "avgPosition": 25.17808219178082,
+     "domain": "www.pinterest.com",
+     "etv": 671.444,
+     "keywordsCount": 73,
+     "medianPosition": 25,
+     "rating": 5462,
+     "visibility": 8.45
+    },
+    {
+     "avgPosition": 30.43589743589743,
+     "domain": "talkpal.ai",
+     "etv": 869.5589999999997,
+     "keywordsCount": 78,
+     "medianPosition": 27,
+     "rating": 5426,
+     "visibility": 2.4
+    },
+    {
+     "avgPosition": 20.878787878787875,
+     "domain": "www.italki.com",
+     "etv": 1078.1140000000005,
+     "keywordsCount": 66,
+     "medianPosition": 18,
+     "rating": 5222,
+     "visibility": 5.949999999999997
+    },
+    {
+     "avgPosition": 12.473684210526317,
+     "domain": "migaku.com",
+     "etv": 5946.781,
+     "keywordsCount": 57,
+     "medianPosition": 8,
+     "rating": 4989,
+     "visibility": 19.350000000000005
+    },
+    {
+     "avgPosition": 23.482758620689665,
+     "domain": "speechling.com",
+     "etv": 766.9899999999999,
+     "keywordsCount": 58,
+     "medianPosition": 23,
+     "rating": 4438,
+     "visibility": 2.7499999999999987
+    },
+    {
+     "avgPosition": 16.28301886792453,
+     "domain": "www.memrise.com",
+     "etv": 941.661,
+     "keywordsCount": 53,
+     "medianPosition": 14,
+     "rating": 4437,
+     "visibility": 5.499999999999996
+    },
+    {
+     "avgPosition": 17.509433962264154,
+     "domain": "www.beelinelanguage.com",
+     "etv": 2266.4689999999996,
+     "keywordsCount": 53,
+     "medianPosition": 14,
+     "rating": 4372,
+     "visibility": 10.300000000000002
+    },
+    {
+     "avgPosition": 11.270833333333334,
+     "domain": "www.busuu.com",
+     "etv": 9118.778,
+     "keywordsCount": 48,
+     "medianPosition": 9,
+     "rating": 4259,
+     "visibility": 13.750000000000002
+    },
+    {
+     "avgPosition": 22.320754716981128,
+     "domain": "www.fluentu.com",
+     "etv": 982.4019999999998,
+     "keywordsCount": 53,
+     "medianPosition": 20,
+     "rating": 4117,
+     "visibility": 6.249999999999999
+    },
+    {
+     "avgPosition": 33.37931034482759,
+     "domain": "ling-app.com",
+     "etv": 310.726,
+     "keywordsCount": 58,
+     "medianPosition": 29,
+     "rating": 3864,
+     "visibility": 2.45
+    },
+    {
+     "avgPosition": 27.826923076923077,
+     "domain": "dictionary.cambridge.org",
+     "etv": 1006.488,
+     "keywordsCount": 52,
+     "medianPosition": 28,
+     "rating": 3753,
+     "visibility": 2.850000000000001
+    },
+    {
+     "avgPosition": 30.192307692307693,
+     "domain": "www.collinsdictionary.com",
+     "etv": 425.728,
+     "keywordsCount": 52,
+     "medianPosition": 30,
+     "rating": 3630,
+     "visibility": 1.9
+    },
+    {
+     "avgPosition": 8.13888888888889,
+     "domain": "tandem.net",
+     "etv": 5065.812,
+     "keywordsCount": 36,
+     "medianPosition": 3,
+     "rating": 3307,
+     "visibility": 21.850000000000005
+    },
+    {
+     "avgPosition": 52.608695652173914,
+     "domain": "learnkorean24.com",
+     "etv": 692.595,
+     "keywordsCount": 69,
+     "medianPosition": 51,
+     "rating": 3270,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 27.977777777777774,
+     "domain": "promova.com",
+     "etv": 416.21600000000007,
+     "keywordsCount": 45,
+     "medianPosition": 29,
+     "rating": 3241,
+     "visibility": 1.3000000000000005
+    },
+    {
+     "avgPosition": 23.25641025641026,
+     "domain": "www.linguajunkie.com",
+     "etv": 1028.049,
+     "keywordsCount": 39,
+     "medianPosition": 27,
+     "rating": 2993,
+     "visibility": 9.05
+    },
+    {
+     "avgPosition": 20.714285714285715,
+     "domain": "www.wikihow.com",
+     "etv": 1089.8259999999998,
+     "keywordsCount": 35,
+     "medianPosition": 18,
+     "rating": 2775,
+     "visibility": 4.399999999999999
+    },
+    {
+     "avgPosition": 15.749999999999998,
+     "domain": "www.fluentin3months.com",
+     "etv": 1129.23,
+     "keywordsCount": 32,
+     "medianPosition": 15,
+     "rating": 2696,
+     "visibility": 5.249999999999998
+    },
+    {
+     "avgPosition": 13.806451612903226,
+     "domain": "noun.town",
+     "etv": 277.45900000000006,
+     "keywordsCount": 31,
+     "medianPosition": 14,
+     "rating": 2672,
+     "visibility": 8.3
+    },
+    {
+     "avgPosition": 19.484848484848484,
+     "domain": "www.scribd.com",
+     "etv": 96.17199999999998,
+     "keywordsCount": 33,
+     "medianPosition": 18,
+     "rating": 2657,
+     "visibility": 4.099999999999999
+    },
+    {
+     "avgPosition": 24.428571428571427,
+     "domain": "koreabridge.net",
+     "etv": 361.867,
+     "keywordsCount": 35,
+     "medianPosition": 25,
+     "rating": 2645,
+     "visibility": 2.1999999999999993
+    },
+    {
+     "avgPosition": 15.096774193548388,
+     "domain": "flexiclasses.com",
+     "etv": 1573.9699999999998,
+     "keywordsCount": 31,
+     "medianPosition": 14,
+     "rating": 2632,
+     "visibility": 4.249999999999999
+    },
+    {
+     "avgPosition": 25.03125,
+     "domain": "lingopie.com",
+     "etv": 347.07300000000004,
+     "keywordsCount": 32,
+     "medianPosition": 22,
+     "rating": 2399,
+     "visibility": 1.6500000000000004
+    },
+    {
+     "avgPosition": 24.7,
+     "domain": "www.seonsaengnim.com",
+     "etv": 307.09800000000007,
+     "keywordsCount": 30,
+     "medianPosition": 17,
+     "rating": 2259,
+     "visibility": 4.049999999999999
+    },
+    {
+     "avgPosition": 21.814814814814813,
+     "domain": "www.topikguide.com",
+     "etv": 236.26,
+     "keywordsCount": 27,
+     "medianPosition": 19,
+     "rating": 2111,
+     "visibility": 3.0499999999999994
+    },
+    {
+     "avgPosition": 28.107142857142858,
+     "domain": "blog.lingodeer.com",
+     "etv": 1255.312,
+     "keywordsCount": 28,
+     "medianPosition": 26,
+     "rating": 2013,
+     "visibility": 2.3500000000000005
+    },
+    {
+     "avgPosition": 35.967741935483865,
+     "domain": "koreanpractice.com",
+     "etv": 480.668,
+     "keywordsCount": 31,
+     "medianPosition": 37,
+     "rating": 1985,
+     "visibility": 0.7000000000000002
+    },
+    {
+     "avgPosition": 40.69696969696969,
+     "domain": "en.bab.la",
+     "etv": 219.023,
+     "keywordsCount": 33,
+     "medianPosition": 41,
+     "rating": 1957,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 41.06060606060606,
+     "domain": "context.reverso.net",
+     "etv": 112.959,
+     "keywordsCount": 33,
+     "medianPosition": 39,
+     "rating": 1945,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 53.87179487179487,
+     "domain": "www.wordreference.com",
+     "etv": 108.597,
+     "keywordsCount": 39,
+     "medianPosition": 54,
+     "rating": 1799,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 50.5,
+     "domain": "glosbe.com",
+     "etv": 259.005,
+     "keywordsCount": 36,
+     "medianPosition": 49,
+     "rating": 1782,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 17.476190476190474,
+     "domain": "en.wikipedia.org",
+     "etv": 1238.0109999999995,
+     "keywordsCount": 21,
+     "medianPosition": 9,
+     "rating": 1733,
+     "visibility": 7.6
+    },
+    {
+     "avgPosition": 24.91304347826087,
+     "domain": "koreanexplorer.com.sg",
+     "etv": 807.65,
+     "keywordsCount": 23,
+     "medianPosition": 23,
+     "rating": 1727,
+     "visibility": 0.6500000000000001
+    },
+    {
+     "avgPosition": 34.15384615384615,
+     "domain": "blogs.transparent.com",
+     "etv": 574.1659999999999,
+     "keywordsCount": 26,
+     "medianPosition": 31,
+     "rating": 1712,
+     "visibility": 1.2000000000000002
+    },
+    {
+     "avgPosition": 54.5945945945946,
+     "domain": "www.ldoceonline.com",
+     "etv": 230.685,
+     "keywordsCount": 37,
+     "medianPosition": 52,
+     "rating": 1680,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 16.15,
+     "domain": "nowkoreanclass.com",
+     "etv": 501.782,
+     "keywordsCount": 20,
+     "medianPosition": 15,
+     "rating": 1677,
+     "visibility": 2.1500000000000004
+    },
+    {
+     "avgPosition": 12.000000000000002,
+     "domain": "www.transparent.com",
+     "etv": 1840.351,
+     "keywordsCount": 19,
+     "medianPosition": 6,
+     "rating": 1672,
+     "visibility": 8.1
+    },
+    {
+     "avgPosition": 38.333333333333336,
+     "domain": "bunpo.app",
+     "etv": 640.426,
+     "keywordsCount": 27,
+     "medianPosition": 38,
+     "rating": 1665,
+     "visibility": 0.9000000000000001
+    },
+    {
+     "avgPosition": 27.782608695652176,
+     "domain": "medium.com",
+     "etv": 290.517,
+     "keywordsCount": 23,
+     "medianPosition": 20,
+     "rating": 1661,
+     "visibility": 1.9
+    },
+    {
+     "avgPosition": 21.19047619047619,
+     "domain": "www.optilingo.com",
+     "etv": 172.826,
+     "keywordsCount": 21,
+     "medianPosition": 19,
+     "rating": 1655,
+     "visibility": 3.649999999999999
+    },
+    {
+     "avgPosition": 29.47826086956522,
+     "domain": "koreanjun.com",
+     "etv": 398.393,
+     "keywordsCount": 23,
+     "medianPosition": 27,
+     "rating": 1622,
+     "visibility": 0.45
+    },
+    {
+     "avgPosition": 20.5,
+     "domain": "gogohanguk.com",
+     "etv": 1047.248,
+     "keywordsCount": 20,
+     "medianPosition": 17,
+     "rating": 1590,
+     "visibility": 1.1000000000000003
+    },
+    {
+     "avgPosition": 27.954545454545453,
+     "domain": "en.wiktionary.org",
+     "etv": 100.652,
+     "keywordsCount": 22,
+     "medianPosition": 25,
+     "rating": 1585,
+     "visibility": 0.55
+    },
+    {
+     "avgPosition": 7.823529411764706,
+     "domain": "www.rocketlanguages.com",
+     "etv": 11125.106999999998,
+     "keywordsCount": 17,
+     "medianPosition": 8,
+     "rating": 1567,
+     "visibility": 6.600000000000001
+    },
+    {
+     "avgPosition": 30.045454545454547,
+     "domain": "trykaiwa.com",
+     "etv": 657.2130000000001,
+     "keywordsCount": 22,
+     "medianPosition": 31,
+     "rating": 1539,
+     "visibility": 1.25
+    },
+    {
+     "avgPosition": 23.85,
+     "domain": "ling-app.medium.com",
+     "etv": 194.178,
+     "keywordsCount": 20,
+     "medianPosition": 20,
+     "rating": 1523,
+     "visibility": 0.5499999999999999
+    },
+    {
+     "avgPosition": 23.73684210526316,
+     "domain": "beelinguapp.com",
+     "etv": 170.576,
+     "keywordsCount": 19,
+     "medianPosition": 21,
+     "rating": 1449,
+     "visibility": 4.05
+    },
+    {
+     "avgPosition": 21.055555555555557,
+     "domain": "howcast.com",
+     "etv": 272.48800000000006,
+     "keywordsCount": 18,
+     "medianPosition": 16,
+     "rating": 1421,
+     "visibility": 1.3000000000000005
+    },
+    {
+     "avgPosition": 37.90909090909091,
+     "domain": "academichelp.net",
+     "etv": 360.872,
+     "keywordsCount": 22,
+     "medianPosition": 38,
+     "rating": 1366,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 36,
+     "domain": "www.polytranslator.com",
+     "etv": 371.0499999999999,
+     "keywordsCount": 20,
+     "medianPosition": 37,
+     "rating": 1280,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 43.90909090909091,
+     "domain": "dictionary.reverso.net",
+     "etv": 77.27999999999999,
+     "keywordsCount": 22,
+     "medianPosition": 43,
+     "rating": 1234,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 12.428571428571429,
+     "domain": "www.howtostudykorean.com",
+     "etv": 447.47599999999994,
+     "keywordsCount": 14,
+     "medianPosition": 9,
+     "rating": 1226,
+     "visibility": 4.1
+    },
+    {
+     "avgPosition": 24.6875,
+     "domain": "quizlet.com",
+     "etv": 58.107,
+     "keywordsCount": 16,
+     "medianPosition": 20,
+     "rating": 1205,
+     "visibility": 0.9500000000000002
+    },
+    {
+     "avgPosition": 36.78947368421053,
+     "domain": "www.learnwitholiver.com",
+     "etv": 26.314,
+     "keywordsCount": 19,
+     "medianPosition": 39,
+     "rating": 1201,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 37.10526315789474,
+     "domain": "www.hilokal.com",
+     "etv": 1953.221,
+     "keywordsCount": 19,
+     "medianPosition": 38,
+     "rating": 1195,
+     "visibility": 1.1
+    },
+    {
+     "avgPosition": 52.2,
+     "domain": "hangulhouse.com",
+     "etv": 268.3589999999999,
+     "keywordsCount": 25,
+     "medianPosition": 51,
+     "rating": 1195,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 26.75,
+     "domain": "www.koreanstudyjunkie.com",
+     "etv": 44.044,
+     "keywordsCount": 16,
+     "medianPosition": 26,
+     "rating": 1172,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 5.833333333333333,
+     "domain": "www.ethniccommunities.govt.nz",
+     "etv": 13539.988,
+     "keywordsCount": 12,
+     "medianPosition": 4,
+     "rating": 1130,
+     "visibility": 6.9
+    },
+    {
+     "avgPosition": 37.77777777777778,
+     "domain": "krdict.korean.go.kr",
+     "etv": 465.897,
+     "keywordsCount": 18,
+     "medianPosition": 46,
+     "rating": 1120,
+     "visibility": 2.3000000000000003
+    },
+    {
+     "avgPosition": 30.062499999999993,
+     "domain": "www.kylian.ai",
+     "etv": 406.8709999999999,
+     "keywordsCount": 16,
+     "medianPosition": 26,
+     "rating": 1119,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 39.05555555555556,
+     "domain": "www.threads.com",
+     "etv": 76.356,
+     "keywordsCount": 18,
+     "medianPosition": 39,
+     "rating": 1097,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 39.111111111111114,
+     "domain": "www.tumblr.com",
+     "etv": 29.211,
+     "keywordsCount": 18,
+     "medianPosition": 39,
+     "rating": 1096,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 10.833333333333334,
+     "domain": "forum.flexiclasses.com",
+     "etv": 15873.445,
+     "keywordsCount": 12,
+     "medianPosition": 5,
+     "rating": 1070,
+     "visibility": 5.6499999999999995
+    },
+    {
+     "avgPosition": 29.928571428571427,
+     "domain": "storylearning.com",
+     "etv": 47.751999999999995,
+     "keywordsCount": 14,
+     "medianPosition": 28,
+     "rating": 981,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 11.5,
+     "domain": "talktomeinkorean.com",
+     "etv": 15135.696,
+     "keywordsCount": 10,
+     "medianPosition": 9,
+     "rating": 885,
+     "visibility": 2.5999999999999996
+    },
+    {
+     "avgPosition": 14.9,
+     "domain": "itranslate.com",
+     "etv": 3857.778,
+     "keywordsCount": 10,
+     "medianPosition": 7,
+     "rating": 851,
+     "visibility": 2.9499999999999997
+    },
+    {
+     "avgPosition": 6.111111111111111,
+     "domain": "www.ciee.org",
+     "etv": 506.84,
+     "keywordsCount": 9,
+     "medianPosition": 4,
+     "rating": 845,
+     "visibility": 5.1
+    },
+    {
+     "avgPosition": 35.53846153846154,
+     "domain": "open.spotify.com",
+     "etv": 180.888,
+     "keywordsCount": 13,
+     "medianPosition": 33,
+     "rating": 838,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 43.285714285714285,
+     "domain": "fluentinkorean.com",
+     "etv": 21.301,
+     "keywordsCount": 14,
+     "medianPosition": 43,
+     "rating": 794,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 24,
+     "domain": "nemoapps.com",
+     "etv": 28.795,
+     "keywordsCount": 10,
+     "medianPosition": 20,
+     "rating": 760,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 24.5,
+     "domain": "www.tripzilla.com",
+     "etv": 190.45,
+     "keywordsCount": 10,
+     "medianPosition": 23,
+     "rating": 755,
+     "visibility": 0.95
+    },
+    {
+     "avgPosition": 43.07692307692308,
+     "domain": "thekoreanlearner.com",
+     "etv": 140.352,
+     "keywordsCount": 13,
+     "medianPosition": 36,
+     "rating": 740,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 28,
+     "domain": "crushonkorean.com",
+     "etv": 65.586,
+     "keywordsCount": 10,
+     "medianPosition": 28,
+     "rating": 720,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 36.18181818181818,
+     "domain": "linguasia.com",
+     "etv": 80.434,
+     "keywordsCount": 11,
+     "medianPosition": 40,
+     "rating": 702,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 37.18181818181818,
+     "domain": "www.toboapp.com",
+     "etv": 14.826,
+     "keywordsCount": 11,
+     "medianPosition": 38,
+     "rating": 691,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 14.125,
+     "domain": "learning-korean.com",
+     "etv": 181.046,
+     "keywordsCount": 8,
+     "medianPosition": 11,
+     "rating": 687,
+     "visibility": 1.5500000000000005
+    },
+    {
+     "avgPosition": 31.4,
+     "domain": "lovingkorean.com",
+     "etv": 57.914,
+     "keywordsCount": 10,
+     "medianPosition": 22,
+     "rating": 686,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 31.6,
+     "domain": "www.lingq.com",
+     "etv": 198.233,
+     "keywordsCount": 10,
+     "medianPosition": 37,
+     "rating": 684,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 48,
+     "domain": "skapetokorea.com",
+     "etv": 135.753,
+     "keywordsCount": 13,
+     "medianPosition": 43,
+     "rating": 676,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 16.125,
+     "domain": "play.google.com",
+     "etv": 663.732,
+     "keywordsCount": 8,
+     "medianPosition": 4,
+     "rating": 671,
+     "visibility": 3.45
+    },
+    {
+     "avgPosition": 4.714285714285714,
+     "domain": "www.bunniktours.com.au",
+     "etv": 477.011,
+     "keywordsCount": 7,
+     "medianPosition": 5,
+     "rating": 667,
+     "visibility": 4.4
+    },
+    {
+     "avgPosition": 33.7,
+     "domain": "getchingu.com",
+     "etv": 373.984,
+     "keywordsCount": 10,
+     "medianPosition": 37,
+     "rating": 663,
+     "visibility": 1.15
+    },
+    {
+     "avgPosition": 34.2,
+     "domain": "x.com",
+     "etv": 36.893,
+     "keywordsCount": 10,
+     "medianPosition": 22,
+     "rating": 658,
+     "visibility": 0.55
+    },
+    {
+     "avgPosition": 63.77777777777778,
+     "domain": "learnkoreanforfree.com",
+     "etv": 37.107,
+     "keywordsCount": 18,
+     "medianPosition": 63,
+     "rating": 652,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 19.875,
+     "domain": "www.koreanfluent.com",
+     "etv": 38.879999999999995,
+     "keywordsCount": 8,
+     "medianPosition": 17,
+     "rating": 641,
+     "visibility": 1.1
+    },
+    {
+     "avgPosition": 29,
+     "domain": "apps.apple.com",
+     "etv": 107.184,
+     "keywordsCount": 9,
+     "medianPosition": 27,
+     "rating": 639,
+     "visibility": 2.55
+    },
+    {
+     "avgPosition": 22.625,
+     "domain": "keytokorean.com",
+     "etv": 35.741,
+     "keywordsCount": 8,
+     "medianPosition": 21,
+     "rating": 619,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 23,
+     "domain": "www.mondly.com",
+     "etv": 21.205,
+     "keywordsCount": 8,
+     "medianPosition": 20,
+     "rating": 616,
+     "visibility": 0.2
+    }
+   ]
+  },
+  "app": {
+   "keywords": 53,
+   "competitors": [
+    {
+     "avgPosition": 1.7727272727272727,
+     "domain": "www.reddit.com",
+     "etv": 10616.863000000005,
+     "keywordsCount": 22,
+     "medianPosition": 1,
+     "rating": 2161,
+     "visibility": 20.45
+    },
+    {
+     "avgPosition": 2.9545454545454546,
+     "domain": "play.google.com",
+     "etv": 3180.611,
+     "keywordsCount": 22,
+     "medianPosition": 3,
+     "rating": 2135,
+     "visibility": 17.700000000000006
+    },
+    {
+     "avgPosition": 14.227272727272728,
+     "domain": "www.youtube.com",
+     "etv": 549.1190000000001,
+     "keywordsCount": 22,
+     "medianPosition": 13,
+     "rating": 1887,
+     "visibility": 3.399999999999999
+    },
+    {
+     "avgPosition": 2.315789473684211,
+     "domain": "apps.apple.com",
+     "etv": 4861.126000000001,
+     "keywordsCount": 19,
+     "medianPosition": 2,
+     "rating": 1856,
+     "visibility": 16.500000000000004
+    },
+    {
+     "avgPosition": 9,
+     "domain": "www.alllanguageresources.com",
+     "etv": 1742.2720000000002,
+     "keywordsCount": 19,
+     "medianPosition": 11,
+     "rating": 1729,
+     "visibility": 7.4
+    },
+    {
+     "avgPosition": 9.105263157894736,
+     "domain": "migaku.com",
+     "etv": 1385.3539999999998,
+     "keywordsCount": 19,
+     "medianPosition": 8,
+     "rating": 1727,
+     "visibility": 6.499999999999999
+    },
+    {
+     "avgPosition": 14.26315789473684,
+     "domain": "www.instagram.com",
+     "etv": 909.766,
+     "keywordsCount": 19,
+     "medianPosition": 9,
+     "rating": 1629,
+     "visibility": 5.050000000000001
+    },
+    {
+     "avgPosition": 23.285714285714285,
+     "domain": "www.tiktok.com",
+     "etv": 128.461,
+     "keywordsCount": 21,
+     "medianPosition": 16,
+     "rating": 1611,
+     "visibility": 0.8500000000000001
+    },
+    {
+     "avgPosition": 13.88888888888889,
+     "domain": "10mag.com",
+     "etv": 365.12699999999984,
+     "keywordsCount": 18,
+     "medianPosition": 13,
+     "rating": 1550,
+     "visibility": 2.4999999999999996
+    },
+    {
+     "avgPosition": 6.571428571428571,
+     "domain": "www.taalhammer.com",
+     "etv": 1380.5309999999995,
+     "keywordsCount": 14,
+     "medianPosition": 6,
+     "rating": 1308,
+     "visibility": 6.3
+    },
+    {
+     "avgPosition": 13.866666666666667,
+     "domain": "www.mezzoguild.com",
+     "etv": 400.316,
+     "keywordsCount": 15,
+     "medianPosition": 11,
+     "rating": 1292,
+     "visibility": 2.05
+    },
+    {
+     "avgPosition": 15.466666666666669,
+     "domain": "www.koreanclass101.com",
+     "etv": 433.92200000000014,
+     "keywordsCount": 15,
+     "medianPosition": 12,
+     "rating": 1268,
+     "visibility": 2.1499999999999995
+    },
+    {
+     "avgPosition": 16.642857142857146,
+     "domain": "lingrow.io",
+     "etv": 94.21299999999998,
+     "keywordsCount": 14,
+     "medianPosition": 13,
+     "rating": 1167,
+     "visibility": 1.5500000000000005
+    },
+    {
+     "avgPosition": 10.76923076923077,
+     "domain": "www.duolingo.com",
+     "etv": 566.6300000000002,
+     "keywordsCount": 13,
+     "medianPosition": 7,
+     "rating": 1160,
+     "visibility": 3.7
+    },
+    {
+     "avgPosition": 8.25,
+     "domain": "medium.com",
+     "etv": 1028.018,
+     "keywordsCount": 12,
+     "medianPosition": 8,
+     "rating": 1101,
+     "visibility": 4.35
+    },
+    {
+     "avgPosition": 37.76470588235294,
+     "domain": "talkpal.ai",
+     "etv": 70.141,
+     "keywordsCount": 17,
+     "medianPosition": 43,
+     "rating": 1058,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 27.142857142857142,
+     "domain": "flexiclasses.com",
+     "etv": 82.707,
+     "keywordsCount": 14,
+     "medianPosition": 27,
+     "rating": 1020,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 22.46153846153846,
+     "domain": "storylearning.com",
+     "etv": 85.90399999999998,
+     "keywordsCount": 13,
+     "medianPosition": 23,
+     "rating": 1008,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 41,
+     "domain": "www.90daykorean.com",
+     "etv": 73.52099999999999,
+     "keywordsCount": 16,
+     "medianPosition": 39,
+     "rating": 944,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 21.727272727272727,
+     "domain": "www.quora.com",
+     "etv": 79.33799999999998,
+     "keywordsCount": 11,
+     "medianPosition": 18,
+     "rating": 861,
+     "visibility": 1.15
+    },
+    {
+     "avgPosition": 22.818181818181817,
+     "domain": "noun.town",
+     "etv": 97.497,
+     "keywordsCount": 11,
+     "medianPosition": 20,
+     "rating": 849,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 29.416666666666668,
+     "domain": "insidejeju.com",
+     "etv": 74.81699999999998,
+     "keywordsCount": 12,
+     "medianPosition": 26,
+     "rating": 847,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 30.75,
+     "domain": "www.fluentu.com",
+     "etv": 67.03599999999999,
+     "keywordsCount": 12,
+     "medianPosition": 28,
+     "rating": 831,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 27.727272727272727,
+     "domain": "preply.com",
+     "etv": 74.607,
+     "keywordsCount": 11,
+     "medianPosition": 24,
+     "rating": 795,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 39.84615384615385,
+     "domain": "www.lemon8-app.com",
+     "etv": 78.56599999999999,
+     "keywordsCount": 13,
+     "medianPosition": 46,
+     "rating": 782,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 35.75,
+     "domain": "www.facebook.com",
+     "etv": 28.241999999999997,
+     "keywordsCount": 12,
+     "medianPosition": 28,
+     "rating": 771,
+     "visibility": 0.45
+    },
+    {
+     "avgPosition": 22.77777777777778,
+     "domain": "blog.lingodeer.com",
+     "etv": 90.171,
+     "keywordsCount": 9,
+     "medianPosition": 21,
+     "rating": 695,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 13.5,
+     "domain": "languagedrops.com",
+     "etv": 219.662,
+     "keywordsCount": 8,
+     "medianPosition": 12,
+     "rating": 692,
+     "visibility": 0.8
+    },
+    {
+     "avgPosition": 18.5,
+     "domain": "www.perapera.org",
+     "etv": 95.59199999999998,
+     "keywordsCount": 8,
+     "medianPosition": 15,
+     "rating": 652,
+     "visibility": 0.3
+    },
+    {
+     "avgPosition": 44.09090909090909,
+     "domain": "www.optilingo.com",
+     "etv": 70.74899999999998,
+     "keywordsCount": 11,
+     "medianPosition": 46,
+     "rating": 615,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 34.22222222222222,
+     "domain": "livefluent.com",
+     "etv": 52.730999999999995,
+     "keywordsCount": 9,
+     "medianPosition": 35,
+     "rating": 592,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 27.875,
+     "domain": "www.classcentral.com",
+     "etv": 39.656,
+     "keywordsCount": 8,
+     "medianPosition": 24,
+     "rating": 577,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 7,
+     "domain": "letslearnhangul.com",
+     "etv": 14.143999999999998,
+     "keywordsCount": 6,
+     "medianPosition": 6,
+     "rating": 558,
+     "visibility": 2.65
+    },
+    {
+     "avgPosition": 21.857142857142858,
+     "domain": "www.pinterest.com",
+     "etv": 86.318,
+     "keywordsCount": 7,
+     "medianPosition": 20,
+     "rating": 547,
+     "visibility": 0.95
+    },
+    {
+     "avgPosition": 11.5,
+     "domain": "bieups.wordpress.com",
+     "etv": 5.273,
+     "keywordsCount": 6,
+     "medianPosition": 10,
+     "rating": 531,
+     "visibility": 0.9500000000000002
+    },
+    {
+     "avgPosition": 47.5,
+     "domain": "www.linguajunkie.com",
+     "etv": 70.45499999999998,
+     "keywordsCount": 10,
+     "medianPosition": 46,
+     "rating": 525,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 43.111111111111114,
+     "domain": "www.langoly.com",
+     "etv": 65.41499999999999,
+     "keywordsCount": 9,
+     "medianPosition": 42,
+     "rating": 512,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 49.9,
+     "domain": "www.asianlanguageschool.com",
+     "etv": 70.45499999999998,
+     "keywordsCount": 10,
+     "medianPosition": 52,
+     "rating": 501,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 51.1,
+     "domain": "joyofkorean.com",
+     "etv": 31.940999999999992,
+     "keywordsCount": 10,
+     "medianPosition": 52,
+     "rating": 489,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 47.333333333333336,
+     "domain": "gurmentor.com",
+     "etv": 52.605,
+     "keywordsCount": 9,
+     "medianPosition": 45,
+     "rating": 474,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 32.714285714285715,
+     "domain": "www.kylian.ai",
+     "etv": 50.829,
+     "keywordsCount": 7,
+     "medianPosition": 31,
+     "rating": 471,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 43,
+     "domain": "bullishlang.com",
+     "etv": 51.645,
+     "keywordsCount": 8,
+     "medianPosition": 42,
+     "rating": 456,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 59.45454545454545,
+     "domain": "hanguljo.com",
+     "etv": 50.568,
+     "keywordsCount": 11,
+     "medianPosition": 62,
+     "rating": 446,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 26.5,
+     "domain": "keytokorean.com",
+     "etv": 1.127,
+     "keywordsCount": 6,
+     "medianPosition": 23,
+     "rating": 441,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 18.6,
+     "domain": "www.lingq.com",
+     "etv": 592.437,
+     "keywordsCount": 5,
+     "medianPosition": 13,
+     "rating": 407,
+     "visibility": 0.95
+    },
+    {
+     "avgPosition": 32.166666666666664,
+     "domain": "batchim.com",
+     "etv": 47.229,
+     "keywordsCount": 6,
+     "medianPosition": 31,
+     "rating": 407,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 43.714285714285715,
+     "domain": "languavibe.com",
+     "etv": 33.873,
+     "keywordsCount": 7,
+     "medianPosition": 41,
+     "rating": 394,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 45.285714285714285,
+     "domain": "koreatravelpost.com",
+     "etv": 27.21599999999999,
+     "keywordsCount": 7,
+     "medianPosition": 44,
+     "rating": 383,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 46.285714285714285,
+     "domain": "www.zegocloud.com",
+     "etv": 19.424999999999997,
+     "keywordsCount": 7,
+     "medianPosition": 47,
+     "rating": 376,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 29.6,
+     "domain": "www.superprof.co.za",
+     "etv": 28.580999999999996,
+     "keywordsCount": 5,
+     "medianPosition": 31,
+     "rating": 352,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 12.5,
+     "domain": "testprepinsight.com",
+     "etv": 53.267,
+     "keywordsCount": 4,
+     "medianPosition": 10,
+     "rating": 350,
+     "visibility": 0.4
+    },
+    {
+     "avgPosition": 13.5,
+     "domain": "studytrip.com",
+     "etv": 2.156,
+     "keywordsCount": 4,
+     "medianPosition": 12,
+     "rating": 346,
+     "visibility": 0.2
+    },
+    {
+     "avgPosition": 61.77777777777778,
+     "domain": "joyofandroid.com",
+     "etv": 61.383,
+     "keywordsCount": 9,
+     "medianPosition": 63,
+     "rating": 344,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 51.714285714285715,
+     "domain": "podokorean.com",
+     "etv": 42.525000000000006,
+     "keywordsCount": 7,
+     "medianPosition": 55,
+     "rating": 338,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 33,
+     "domain": "en.uptodown.com",
+     "etv": 22.448999999999995,
+     "keywordsCount": 5,
+     "medianPosition": 34,
+     "rating": 335,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 33,
+     "domain": "speakaus.com",
+     "etv": 36.57299999999999,
+     "keywordsCount": 5,
+     "medianPosition": 34,
+     "rating": 335,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 25.5,
+     "domain": "languagechoicelab.com",
+     "etv": 2.85,
+     "keywordsCount": 4,
+     "medianPosition": 23,
+     "rating": 298,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 74.36363636363636,
+     "domain": "learnkoreanforfree.com",
+     "etv": 71.463,
+     "keywordsCount": 11,
+     "medianPosition": 75,
+     "rating": 282,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 47.2,
+     "domain": "lingoodie.com",
+     "etv": 29.94599999999999,
+     "keywordsCount": 5,
+     "medianPosition": 43,
+     "rating": 264,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 47.2,
+     "domain": "www.educationalappstore.com",
+     "etv": 41.076,
+     "keywordsCount": 5,
+     "medianPosition": 48,
+     "rating": 264,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 56.5,
+     "domain": "lingopie.com",
+     "etv": 41.517,
+     "keywordsCount": 6,
+     "medianPosition": 54,
+     "rating": 261,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 35.25,
+     "domain": "www.superprof.ca",
+     "etv": 20.159999999999997,
+     "keywordsCount": 4,
+     "medianPosition": 31,
+     "rating": 259,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 17,
+     "domain": "hanguly.com",
+     "etv": 0.882,
+     "keywordsCount": 3,
+     "medianPosition": 19,
+     "rating": 249,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 18.666666666666668,
+     "domain": "hangl.app",
+     "etv": 0.8049999999999999,
+     "keywordsCount": 3,
+     "medianPosition": 20,
+     "rating": 244,
+     "visibility": 0.15000000000000002
+    },
+    {
+     "avgPosition": 21,
+     "domain": "gachistudio.com",
+     "etv": 0.707,
+     "keywordsCount": 3,
+     "medianPosition": 23,
+     "rating": 237,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 22.333333333333332,
+     "domain": "koreanexplorer.com.sg",
+     "etv": 8.168,
+     "keywordsCount": 3,
+     "medianPosition": 28,
+     "rating": 233,
+     "visibility": 0.4
+    },
+    {
+     "avgPosition": 46.75,
+     "domain": "langio.com",
+     "etv": 28.937999999999995,
+     "keywordsCount": 4,
+     "medianPosition": 49,
+     "rating": 213,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 31.666666666666668,
+     "domain": "www.koreaetour.com",
+     "etv": 6.489,
+     "keywordsCount": 3,
+     "medianPosition": 29,
+     "rating": 205,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 49,
+     "domain": "lingden.app",
+     "etv": 23.498999999999995,
+     "keywordsCount": 4,
+     "medianPosition": 42,
+     "rating": 204,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 66,
+     "domain": "devtechnosys.com",
+     "etv": 41.517,
+     "keywordsCount": 6,
+     "medianPosition": 64,
+     "rating": 204,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 59.4,
+     "domain": "creatrip.com",
+     "etv": 41.076,
+     "keywordsCount": 5,
+     "medianPosition": 61,
+     "rating": 203,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 35.666666666666664,
+     "domain": "hyperpolyglot.app",
+     "etv": 18.458999999999996,
+     "keywordsCount": 3,
+     "medianPosition": 37,
+     "rating": 193,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 38.333333333333336,
+     "domain": "ling-app.com",
+     "etv": 19.865999999999996,
+     "keywordsCount": 3,
+     "medianPosition": 41,
+     "rating": 185,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 80.11111111111111,
+     "domain": "edumoo.com",
+     "etv": 64.701,
+     "keywordsCount": 9,
+     "medianPosition": 81,
+     "rating": 179,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 10.5,
+     "domain": "gobillykorean.com",
+     "etv": 10.8,
+     "keywordsCount": 2,
+     "medianPosition": 9,
+     "rating": 179,
+     "visibility": 0.25
+    },
+    {
+     "avgPosition": 70.83333333333333,
+     "domain": "lingomee.com",
+     "etv": 42.357,
+     "keywordsCount": 6,
+     "medianPosition": 70,
+     "rating": 175,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 42.333333333333336,
+     "domain": "dinolingo.com",
+     "etv": 11.088,
+     "keywordsCount": 3,
+     "medianPosition": 33,
+     "rating": 173,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 45,
+     "domain": "www.amazon.com",
+     "etv": 34.12499999999999,
+     "keywordsCount": 3,
+     "medianPosition": 44,
+     "rating": 165,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 22,
+     "domain": "actualfluency.com",
+     "etv": 22.433999999999997,
+     "keywordsCount": 2,
+     "medianPosition": 10,
+     "rating": 156,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 22,
+     "domain": "korean-alphabet-writing.en.softonic.com",
+     "etv": 0.41999999999999993,
+     "keywordsCount": 2,
+     "medianPosition": 20,
+     "rating": 156,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 23,
+     "domain": "themiddlespaces.blogspot.com",
+     "etv": 8.928,
+     "keywordsCount": 2,
+     "medianPosition": 18,
+     "rating": 154,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 24.5,
+     "domain": "hinative.com",
+     "etv": 1.223,
+     "keywordsCount": 2,
+     "medianPosition": 17,
+     "rating": 151,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 25.5,
+     "domain": "www.threads.com",
+     "etv": 0.294,
+     "keywordsCount": 2,
+     "medianPosition": 24,
+     "rating": 149,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 29.5,
+     "domain": "ati-studios-korean.en.uptodown.com",
+     "etv": 3.696,
+     "keywordsCount": 2,
+     "medianPosition": 14,
+     "rating": 141,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 29.5,
+     "domain": "m-apps.qoo-app.com",
+     "etv": 2.929,
+     "keywordsCount": 2,
+     "medianPosition": 10,
+     "rating": 141,
+     "visibility": 0.1
+    },
+    {
+     "avgPosition": 32,
+     "domain": "apkpure.com",
+     "etv": 0.105,
+     "keywordsCount": 2,
+     "medianPosition": 16,
+     "rating": 136,
+     "visibility": 0.05
+    },
+    {
+     "avgPosition": 56,
+     "domain": "ubitto.com",
+     "etv": 3.024,
+     "keywordsCount": 3,
+     "medianPosition": 66,
+     "rating": 132,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 56.666666666666664,
+     "domain": "korean-language-learning-app.en.softonic.com",
+     "etv": 35.02799999999999,
+     "keywordsCount": 3,
+     "medianPosition": 56,
+     "rating": 130,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 58,
+     "domain": "learnlanguagesfromhome.com",
+     "etv": 35.867999999999995,
+     "keywordsCount": 3,
+     "medianPosition": 60,
+     "rating": 126,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 37.5,
+     "domain": "jihyekorean.com",
+     "etv": 0.294,
+     "keywordsCount": 2,
+     "medianPosition": 34,
+     "rating": 125,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 40.5,
+     "domain": "www.thenomadinkorea.com",
+     "etv": 2.016,
+     "keywordsCount": 2,
+     "medianPosition": 28,
+     "rating": 119,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 44.5,
+     "domain": "learn-korean.en.uptodown.com",
+     "etv": 6.048,
+     "keywordsCount": 2,
+     "medianPosition": 39,
+     "rating": 111,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 47.5,
+     "domain": "www.mobileappdaily.com",
+     "etv": 18.857999999999997,
+     "keywordsCount": 2,
+     "medianPosition": 44,
+     "rating": 105,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 47.5,
+     "domain": "linguasia.com",
+     "etv": 1.4489999999999998,
+     "keywordsCount": 2,
+     "medianPosition": 25,
+     "rating": 105,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 74,
+     "domain": "boltq.com",
+     "etv": 28.937999999999995,
+     "keywordsCount": 4,
+     "medianPosition": 75,
+     "rating": 104,
+     "visibility": 0
+    },
+    {
+     "avgPosition": 3,
+     "domain": "www.topikguide.com",
+     "etv": 4.865,
+     "keywordsCount": 1,
+     "medianPosition": 3,
+     "rating": 97,
+     "visibility": 0.8
+    },
+    {
+     "avgPosition": 3,
+     "domain": "girigo.app",
+     "etv": 0,
+     "keywordsCount": 1,
+     "medianPosition": 3,
+     "rating": 97,
+     "visibility": 0.8
+    },
+    {
+     "avgPosition": 4,
+     "domain": "www.lingodeer.com",
+     "etv": 31.632,
+     "keywordsCount": 1,
+     "medianPosition": 4,
+     "rating": 96,
+     "visibility": 0.7
+    },
+    {
+     "avgPosition": 5,
+     "domain": "appfigures.com",
+     "etv": 7.973,
+     "keywordsCount": 1,
+     "medianPosition": 5,
+     "rating": 95,
+     "visibility": 0.6
+    },
+    {
+     "avgPosition": 5,
+     "domain": "kwonsiwon.en.aptoide.com",
+     "etv": 0,
+     "keywordsCount": 1,
+     "medianPosition": 5,
+     "rating": 95,
+     "visibility": 0.6
+    }
+   ]
+  }
+ },
+ "domain": {
+  "letslearnhangul.com": [
+   {
+    "avgPosition": 11.418013856812934,
+    "domain": "youtube.com",
+    "intersections": 433,
+    "organicCount": 433,
+    "organicEtv": 93390.52853160352
+   },
+   {
+    "avgPosition": 11.274826789838338,
+    "domain": "letslearnhangul.com",
+    "intersections": 433,
+    "organicCount": 433,
+    "organicEtv": 93390.52853160352
+   },
+   {
+    "avgPosition": 17.93193717277487,
+    "domain": "90daykorean.com",
+    "intersections": 382,
+    "organicCount": 382,
+    "organicEtv": 93087.53153385222
+   },
+   {
+    "avgPosition": 9.267806267806268,
+    "domain": "koreanclass101.com",
+    "intersections": 351,
+    "organicCount": 351,
+    "organicEtv": 92641.66851975024
+   },
+   {
+    "avgPosition": 6.572727272727272,
+    "domain": "reddit.com",
+    "intersections": 330,
+    "organicCount": 330,
+    "organicEtv": 62283.52627300471
+   },
+   {
+    "avgPosition": 11.621262458471762,
+    "domain": "howtostudykorean.com",
+    "intersections": 301,
+    "organicCount": 301,
+    "organicEtv": 91982.2815511152
+   },
+   {
+    "avgPosition": 12.226148409893993,
+    "domain": "pinterest.com",
+    "intersections": 283,
+    "organicCount": 283,
+    "organicEtv": 81242.55124843866
+   },
+   {
+    "avgPosition": 4.775735294117647,
+    "domain": "wikipedia.org",
+    "intersections": 272,
+    "organicCount": 272,
+    "organicEtv": 90909.73453954609
+   },
+   {
+    "avgPosition": 25.80811808118081,
+    "domain": "busuu.com",
+    "intersections": 271,
+    "organicCount": 271,
+    "organicEtv": 91562.74850198628
+   },
+   {
+    "avgPosition": 26.151515151515152,
+    "domain": "lingodeer.com",
+    "intersections": 264,
+    "organicCount": 264,
+    "organicEtv": 92250.09053628892
+   },
+   {
+    "avgPosition": 23.212927756653993,
+    "domain": "facebook.com",
+    "intersections": 263,
+    "organicCount": 263,
+    "organicEtv": 5434.963012829423
+   },
+   {
+    "avgPosition": 22.358870967741936,
+    "domain": "britannica.com",
+    "intersections": 248,
+    "organicCount": 248,
+    "organicEtv": 90191.0515422225
+   },
+   {
+    "avgPosition": 18.285714285714285,
+    "domain": "preply.com",
+    "intersections": 238,
+    "organicCount": 238,
+    "organicEtv": 85899.87036278844
+   },
+   {
+    "avgPosition": 21.411016949152543,
+    "domain": "mondly.com",
+    "intersections": 236,
+    "organicCount": 236,
+    "organicEtv": 90369.8785142228
+   },
+   {
+    "avgPosition": 15.652173913043478,
+    "domain": "lexilogos.com",
+    "intersections": 230,
+    "organicCount": 230,
+    "organicEtv": 86715.08150683343
+   },
+   {
+    "avgPosition": 18.176470588235293,
+    "domain": "glossika.com",
+    "intersections": 221,
+    "organicCount": 221,
+    "organicEtv": 90822.88353618234
+   },
+   {
+    "avgPosition": 17.93658536585366,
+    "domain": "quora.com",
+    "intersections": 205,
+    "organicCount": 205,
+    "organicEtv": 58679.58925251663
+   },
+   {
+    "avgPosition": 34.86387434554974,
+    "domain": "mykoreanlesson.com",
+    "intersections": 191,
+    "organicCount": 191,
+    "organicEtv": 84338.97130087018
+   },
+   {
+    "avgPosition": 16.06382978723404,
+    "domain": "languagetrainers.ca",
+    "intersections": 188,
+    "organicCount": 188,
+    "organicEtv": 88965.55854133517
+   },
+   {
+    "avgPosition": 19.684491978609625,
+    "domain": "google.com",
+    "intersections": 187,
+    "organicCount": 187,
+    "organicEtv": 11902.862285017967
+   },
+   {
+    "avgPosition": 28.56451612903226,
+    "domain": "migaku.com",
+    "intersections": 186,
+    "organicCount": 186,
+    "organicEtv": 89708.75053787231
+   },
+   {
+    "avgPosition": 26.98857142857143,
+    "domain": "instagram.com",
+    "intersections": 175,
+    "organicCount": 175,
+    "organicEtv": 3240.4649922400713
+   },
+   {
+    "avgPosition": 12.710982658959535,
+    "domain": "languagebird.com",
+    "intersections": 173,
+    "organicCount": 173,
+    "organicEtv": 87887.69153225422
+   },
+   {
+    "avgPosition": 44.15151515151515,
+    "domain": "lingopie.com",
+    "intersections": 165,
+    "organicCount": 165,
+    "organicEtv": 80406.46254291385
+   },
+   {
+    "avgPosition": 35.06211180124224,
+    "domain": "learning-korean.com",
+    "intersections": 161,
+    "organicCount": 161,
+    "organicEtv": 78019.333494775
+   },
+   {
+    "avgPosition": 17.263513513513512,
+    "domain": "lingq.com",
+    "intersections": 148,
+    "organicCount": 148,
+    "organicEtv": 16188.914075829089
+   },
+   {
+    "avgPosition": 15.616438356164384,
+    "domain": "koreasociety.org",
+    "intersections": 146,
+    "organicCount": 146,
+    "organicEtv": 79141.68822669983
+   },
+   {
+    "avgPosition": 15.145833333333334,
+    "domain": "zkorean.com",
+    "intersections": 144,
+    "organicCount": 144,
+    "organicEtv": 75748.6514646262
+   },
+   {
+    "avgPosition": 22.72463768115942,
+    "domain": "flexiclasses.com",
+    "intersections": 138,
+    "organicCount": 138,
+    "organicEtv": 82887.94429980218
+   },
+   {
+    "avgPosition": 23.643410852713178,
+    "domain": "beelinguapp.com",
+    "intersections": 129,
+    "organicCount": 129,
+    "organicEtv": 79075.31928193569
+   },
+   {
+    "avgPosition": 43.125984251968504,
+    "domain": "talkpal.ai",
+    "intersections": 127,
+    "organicCount": 127,
+    "organicEtv": 36212.55743648112
+   },
+   {
+    "avgPosition": 29.943548387096776,
+    "domain": "korean.go.kr",
+    "intersections": 124,
+    "organicCount": 124,
+    "organicEtv": 16587.45720180124
+   },
+   {
+    "avgPosition": 23.45378151260504,
+    "domain": "remitly.com",
+    "intersections": 119,
+    "organicCount": 119,
+    "organicEtv": 83715.64950221777
+   },
+   {
+    "avgPosition": 14.275862068965518,
+    "domain": "superprof.ca",
+    "intersections": 116,
+    "organicCount": 116,
+    "organicEtv": 77464.48526295274
+   },
+   {
+    "avgPosition": 35.981651376146786,
+    "domain": "storylearning.com",
+    "intersections": 109,
+    "organicCount": 109,
+    "organicEtv": 25511.248089507226
+   },
+   {
+    "avgPosition": 28.028301886792452,
+    "domain": "omniglot.com",
+    "intersections": 106,
+    "organicCount": 106,
+    "organicEtv": 48044.27124503255
+   },
+   {
+    "avgPosition": 23.90566037735849,
+    "domain": "tandem.net",
+    "intersections": 106,
+    "organicCount": 106,
+    "organicEtv": 84225.44946923107
+   },
+   {
+    "avgPosition": 25.81443298969072,
+    "domain": "amazon.com",
+    "intersections": 97,
+    "organicCount": 97,
+    "organicEtv": 2815.976996205747
+   },
+   {
+    "avgPosition": 50.822916666666664,
+    "domain": "koreantopik.com",
+    "intersections": 96,
+    "organicCount": 96,
+    "organicEtv": 15968.992097996175
+   },
+   {
+    "avgPosition": 24,
+    "domain": "koreangradedreaders.com",
+    "intersections": 96,
+    "organicCount": 96,
+    "organicEtv": 13275.132326632738
+   },
+   {
+    "avgPosition": 34,
+    "domain": "seoulkorean.sg",
+    "intersections": 94,
+    "organicCount": 94,
+    "organicEtv": 54677.576068907976
+   },
+   {
+    "avgPosition": 24.011904761904763,
+    "domain": "scribd.com",
+    "intersections": 84,
+    "organicCount": 84,
+    "organicEtv": 928.6869860813022
+   },
+   {
+    "avgPosition": 40.65060240963855,
+    "domain": "promova.com",
+    "intersections": 83,
+    "organicCount": 83,
+    "organicEtv": 2680.559035845101
+   },
+   {
+    "avgPosition": 31.975,
+    "domain": "wordpress.com",
+    "intersections": 80,
+    "organicCount": 80,
+    "organicEtv": 1384.808016203344
+   },
+   {
+    "avgPosition": 18.423076923076923,
+    "domain": "apple.com",
+    "intersections": 78,
+    "organicCount": 78,
+    "organicEtv": 463.05900736898184
+   },
+   {
+    "avgPosition": 20.525641025641026,
+    "domain": "hangul.fun",
+    "intersections": 78,
+    "organicCount": 78,
+    "organicEtv": 76349.6175057441
+   },
+   {
+    "avgPosition": 35.324675324675326,
+    "domain": "asianlanguageschool.com",
+    "intersections": 77,
+    "organicCount": 77,
+    "organicEtv": 37233.310478545725
+   },
+   {
+    "avgPosition": 19.342105263157897,
+    "domain": "gobillykorean.com",
+    "intersections": 76,
+    "organicCount": 76,
+    "organicEtv": 570.0469958931208
+   },
+   {
+    "avgPosition": 23.973684210526315,
+    "domain": "medium.com",
+    "intersections": 76,
+    "organicCount": 76,
+    "organicEtv": 31537.576024584472
+   },
+   {
+    "avgPosition": 15.833333333333334,
+    "domain": "talktomeinkorean.com",
+    "intersections": 72,
+    "organicCount": 72,
+    "organicEtv": 3265.37799898535
+   },
+   {
+    "avgPosition": 16.805555555555557,
+    "domain": "taekwondopreschool.com",
+    "intersections": 72,
+    "organicCount": 72,
+    "organicEtv": 46804.59822962433
+   },
+   {
+    "avgPosition": 22.845070422535212,
+    "domain": "edsoftapps.com",
+    "intersections": 71,
+    "organicCount": 71,
+    "organicEtv": 13542.352409295738
+   },
+   {
+    "avgPosition": 50.1,
+    "domain": "verbacard.com",
+    "intersections": 70,
+    "organicCount": 70,
+    "organicEtv": 17258.350121617317
+   },
+   {
+    "avgPosition": 20.149253731343283,
+    "domain": "drawingnotepad.com",
+    "intersections": 67,
+    "organicCount": 67,
+    "organicEtv": 2355.7920163348317
+   },
+   {
+    "avgPosition": 50.45454545454545,
+    "domain": "learnkorean24.com",
+    "intersections": 66,
+    "organicCount": 66,
+    "organicEtv": 31663.614032946527
+   },
+   {
+    "avgPosition": 41.53968253968254,
+    "domain": "akapinn.com",
+    "intersections": 63,
+    "organicCount": 63,
+    "organicEtv": 1760.801000624895
+   },
+   {
+    "avgPosition": 13.661290322580646,
+    "domain": "duolingo.com",
+    "intersections": 62,
+    "organicCount": 62,
+    "organicEtv": 6670.719204984605
+   },
+   {
+    "avgPosition": 35.08196721311475,
+    "domain": "ling-app.com",
+    "intersections": 61,
+    "organicCount": 61,
+    "organicEtv": 22535.90506067872
+   },
+   {
+    "avgPosition": 35.516666666666666,
+    "domain": "linguanaut.com",
+    "intersections": 60,
+    "organicCount": 60,
+    "organicEtv": 12240.746055856349
+   },
+   {
+    "avgPosition": 16.655172413793103,
+    "domain": "drawkorean.com",
+    "intersections": 58,
+    "organicCount": 58,
+    "organicEtv": 1080.9500010684133
+   },
+   {
+    "avgPosition": 35.82692307692308,
+    "domain": "koreanexplorer.com.sg",
+    "intersections": 52,
+    "organicCount": 52,
+    "organicEtv": 2214.0820070803165
+   },
+   {
+    "avgPosition": 26.596153846153847,
+    "domain": "fluentin3months.com",
+    "intersections": 52,
+    "organicCount": 52,
+    "organicEtv": 1786.762020304799
+   },
+   {
+    "avgPosition": 19.884615384615383,
+    "domain": "korea.net",
+    "intersections": 52,
+    "organicCount": 52,
+    "organicEtv": 7856.777239196003
+   },
+   {
+    "avgPosition": 18.705882352941178,
+    "domain": "study.com",
+    "intersections": 51,
+    "organicCount": 51,
+    "organicEtv": 8478.427266702056
+   },
+   {
+    "avgPosition": 16.235294117647058,
+    "domain": "koreanwikiproject.com",
+    "intersections": 51,
+    "organicCount": 51,
+    "organicEtv": 28857.98822133988
+   },
+   {
+    "avgPosition": 58.450980392156865,
+    "domain": "seoulkoreaasia.com",
+    "intersections": 51,
+    "organicCount": 51,
+    "organicEtv": 35516.061426736414
+   },
+   {
+    "avgPosition": 17.74,
+    "domain": "innovativelanguage.com",
+    "intersections": 50,
+    "organicCount": 50,
+    "organicEtv": 19904.013991571963
+   },
+   {
+    "avgPosition": 44.63265306122449,
+    "domain": "lokia-app.com",
+    "intersections": 49,
+    "organicCount": 49,
+    "organicEtv": 57863.94524667412
+   },
+   {
+    "avgPosition": 24.612244897959183,
+    "domain": "languagedrops.com",
+    "intersections": 49,
+    "organicCount": 49,
+    "organicEtv": 1360.1200023144484
+   },
+   {
+    "avgPosition": 19.9375,
+    "domain": "etsy.com",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 1469.7339845076203
+   },
+   {
+    "avgPosition": 34.395833333333336,
+    "domain": "lucalampariello.com",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 11983.49001520872
+   },
+   {
+    "avgPosition": 35.395833333333336,
+    "domain": "hinative.com",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 321.23000422120094
+   },
+   {
+    "avgPosition": 16.291666666666668,
+    "domain": "sporcle.com",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 582.9669985920191
+   },
+   {
+    "avgPosition": 21.166666666666668,
+    "domain": "lingrow.io",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 583.6280004829168
+   },
+   {
+    "avgPosition": 43.375,
+    "domain": "gogohanguk.com",
+    "intersections": 48,
+    "organicCount": 48,
+    "organicEtv": 6757.123213149607
+   },
+   {
+    "avgPosition": 53.234042553191486,
+    "domain": "maybekorean.com",
+    "intersections": 47,
+    "organicCount": 47,
+    "organicEtv": 11054.599994286897
+   },
+   {
+    "avgPosition": 54.702127659574465,
+    "domain": "gachistudio.com",
+    "intersections": 47,
+    "organicCount": 47,
+    "organicEtv": 3032.501071318984
+   },
+   {
+    "avgPosition": 62.37777777777778,
+    "domain": "hangulhouse.com",
+    "intersections": 45,
+    "organicCount": 45,
+    "organicEtv": 21561.69502464682
+   },
+   {
+    "avgPosition": 37.84444444444444,
+    "domain": "missellykorean.com",
+    "intersections": 45,
+    "organicCount": 45,
+    "organicEtv": 10932.629993230104
+   },
+   {
+    "avgPosition": 23.08888888888889,
+    "domain": "tiktok.com",
+    "intersections": 45,
+    "organicCount": 45,
+    "organicEtv": 702.4000138565898
+   },
+   {
+    "avgPosition": 11.318181818181818,
+    "domain": "uslanguageservices.com",
+    "intersections": 44,
+    "organicCount": 44,
+    "organicEtv": 8692.781252875924
+   },
+   {
+    "avgPosition": 16.261904761904763,
+    "domain": "digitaldialects.com",
+    "intersections": 42,
+    "organicCount": 42,
+    "organicEtv": 445.37200202047825
+   },
+   {
+    "avgPosition": 18.857142857142858,
+    "domain": "koreanstudyjunkie.com",
+    "intersections": 42,
+    "organicCount": 42,
+    "organicEtv": 821.4110134541988
+   },
+   {
+    "avgPosition": 11.642857142857142,
+    "domain": "branah.com",
+    "intersections": 42,
+    "organicCount": 42,
+    "organicEtv": 781.3620002269745
+   },
+   {
+    "avgPosition": 23.902439024390244,
+    "domain": "linguajunkie.com",
+    "intersections": 41,
+    "organicCount": 41,
+    "organicEtv": 1030.7559895068407
+   },
+   {
+    "avgPosition": 49.19512195121951,
+    "domain": "weebly.com",
+    "intersections": 41,
+    "organicCount": 41,
+    "organicEtv": 8377.809252396226
+   },
+   {
+    "avgPosition": 19.24390243902439,
+    "domain": "lingohut.com",
+    "intersections": 41,
+    "organicCount": 41,
+    "organicEtv": 414.9549962431192
+   },
+   {
+    "avgPosition": 28.625,
+    "domain": "coursera.org",
+    "intersections": 40,
+    "organicCount": 40,
+    "organicEtv": 407.92799742519855
+   },
+   {
+    "avgPosition": 51.525,
+    "domain": "alphabetsymbol.com",
+    "intersections": 40,
+    "organicCount": 40,
+    "organicEtv": 10766.801005885003
+   },
+   {
+    "avgPosition": 68.7,
+    "domain": "learnkoreanforfree.com",
+    "intersections": 40,
+    "organicCount": 40,
+    "organicEtv": 4286.39005535841
+   },
+   {
+    "avgPosition": 56,
+    "domain": "tistory.com",
+    "intersections": 39,
+    "organicCount": 39,
+    "organicEtv": 7049.100209079683
+   },
+   {
+    "avgPosition": 39.94871794871795,
+    "domain": "polytranslator.com",
+    "intersections": 39,
+    "organicCount": 39,
+    "organicEtv": 2039.0360518619416
+   },
+   {
+    "avgPosition": 48.58974358974359,
+    "domain": "ktalk.live",
+    "intersections": 39,
+    "organicCount": 39,
+    "organicEtv": 10155.084254264832
+   },
+   {
+    "avgPosition": 12.974358974358974,
+    "domain": "quizlet.com",
+    "intersections": 39,
+    "organicCount": 39,
+    "organicEtv": 540.0759908556938
+   },
+   {
+    "avgPosition": 25.18421052631579,
+    "domain": "goodjobkorean.com",
+    "intersections": 38,
+    "organicCount": 38,
+    "organicEtv": 684.9019943028688
+   },
+   {
+    "avgPosition": 20.054054054054053,
+    "domain": "dearasia.co.uk",
+    "intersections": 37,
+    "organicCount": 37,
+    "organicEtv": 2477.1610082238913
+   },
+   {
+    "avgPosition": 55.25,
+    "domain": "lingomae.com",
+    "intersections": 36,
+    "organicCount": 36,
+    "organicEtv": 6613.72021523118
+   },
+   {
+    "avgPosition": 29.88571428571429,
+    "domain": "fluentu.com",
+    "intersections": 35,
+    "organicCount": 35,
+    "organicEtv": 1106.9310076236725
+   },
+   {
+    "avgPosition": 43.705882352941174,
+    "domain": "languages.work",
+    "intersections": 34,
+    "organicCount": 34,
+    "organicEtv": 6785.8112167418
+   },
+   {
+    "avgPosition": 24.794117647058822,
+    "domain": "bbc.co.uk",
+    "intersections": 34,
+    "organicCount": 34,
+    "organicEtv": 2541.9330420717597
+   }
+  ],
+  "lingrow.io": [
+   {
+    "avgPosition": 26.475839475839475,
+    "domain": "lingrow.io",
+    "intersections": 1221,
+    "organicCount": 1221,
+    "organicEtv": 5569.440006721765
+   },
+   {
+    "avgPosition": 10.933938893476466,
+    "domain": "youtube.com",
+    "intersections": 1211,
+    "organicCount": 1211,
+    "organicEtv": 5543.128007024527
+   },
+   {
+    "avgPosition": 5.4646464646464645,
+    "domain": "reddit.com",
+    "intersections": 1089,
+    "organicCount": 1089,
+    "organicEtv": 5015.255007905886
+   },
+   {
+    "avgPosition": 19.203969128996693,
+    "domain": "facebook.com",
+    "intersections": 907,
+    "organicCount": 907,
+    "organicEtv": 3717.107024628669
+   },
+   {
+    "avgPosition": 24.136662286465175,
+    "domain": "90daykorean.com",
+    "intersections": 761,
+    "organicCount": 761,
+    "organicEtv": 4756.001000415534
+   },
+   {
+    "avgPosition": 18.49724517906336,
+    "domain": "instagram.com",
+    "intersections": 726,
+    "organicCount": 726,
+    "organicEtv": 2609.074026450515
+   },
+   {
+    "avgPosition": 12.639760837070254,
+    "domain": "quora.com",
+    "intersections": 669,
+    "organicCount": 669,
+    "organicEtv": 3798.2160020433366
+   },
+   {
+    "avgPosition": 11.396135265700485,
+    "domain": "google.com",
+    "intersections": 621,
+    "organicCount": 621,
+    "organicEtv": 4083.6399857942015
+   },
+   {
+    "avgPosition": 15.030995106035888,
+    "domain": "wikipedia.org",
+    "intersections": 613,
+    "organicCount": 613,
+    "organicEtv": 3392.5830096639693
+   },
+   {
+    "avgPosition": 18.52054794520548,
+    "domain": "tiktok.com",
+    "intersections": 584,
+    "organicCount": 584,
+    "organicEtv": 2599.4170066360384
+   },
+   {
+    "avgPosition": 17.532258064516128,
+    "domain": "koreanclass101.com",
+    "intersections": 558,
+    "organicCount": 558,
+    "organicEtv": 3433.699005989358
+   },
+   {
+    "avgPosition": 20.389312977099237,
+    "domain": "hinative.com",
+    "intersections": 524,
+    "organicCount": 524,
+    "organicEtv": 1396.206016048789
+   },
+   {
+    "avgPosition": 21.284536082474222,
+    "domain": "pinterest.com",
+    "intersections": 485,
+    "organicCount": 485,
+    "organicEtv": 3226.9210030436516
+   },
+   {
+    "avgPosition": 29.55909090909091,
+    "domain": "reverso.net",
+    "intersections": 440,
+    "organicCount": 440,
+    "organicEtv": 1225.0619980227202
+   },
+   {
+    "avgPosition": 21.591478696741856,
+    "domain": "collinsdictionary.com",
+    "intersections": 399,
+    "organicCount": 399,
+    "organicEtv": 1059.4949963334948
+   },
+   {
+    "avgPosition": 16.966921119592875,
+    "domain": "wordhippo.com",
+    "intersections": 393,
+    "organicCount": 393,
+    "organicEtv": 560.5020059440285
+   },
+   {
+    "avgPosition": 38.769647696476966,
+    "domain": "glosbe.com",
+    "intersections": 369,
+    "organicCount": 369,
+    "organicEtv": 695.6850084234029
+   },
+   {
+    "avgPosition": 38.518840579710144,
+    "domain": "korean.go.kr",
+    "intersections": 345,
+    "organicCount": 345,
+    "organicEtv": 781.4520028252155
+   },
+   {
+    "avgPosition": 51.531976744186046,
+    "domain": "namu.wiki",
+    "intersections": 344,
+    "organicCount": 344,
+    "organicEtv": 778.4150076173246
+   },
+   {
+    "avgPosition": 12.43859649122807,
+    "domain": "lexilogos.com",
+    "intersections": 342,
+    "organicCount": 342,
+    "organicEtv": 2734.4389790613204
+   },
+   {
+    "avgPosition": 20.547400611620795,
+    "domain": "wiktionary.org",
+    "intersections": 327,
+    "organicCount": 327,
+    "organicEtv": 576.567007785663
+   },
+   {
+    "avgPosition": 13.487654320987655,
+    "domain": "branah.com",
+    "intersections": 324,
+    "organicCount": 324,
+    "organicEtv": 2801.2609977312386
+   },
+   {
+    "avgPosition": 42.25666666666667,
+    "domain": "naver.com",
+    "intersections": 300,
+    "organicCount": 300,
+    "organicEtv": 934.4439925793558
+   },
+   {
+    "avgPosition": 37.827118644067795,
+    "domain": "wordreference.com",
+    "intersections": 295,
+    "organicCount": 295,
+    "organicEtv": 425.5200053360313
+   },
+   {
+    "avgPosition": 33.08362369337979,
+    "domain": "wordpress.com",
+    "intersections": 287,
+    "organicCount": 287,
+    "organicEtv": 1553.12500115484
+   },
+   {
+    "avgPosition": 30.68840579710145,
+    "domain": "learnwitholiver.com",
+    "intersections": 276,
+    "organicCount": 276,
+    "organicEtv": 452.934006569907
+   },
+   {
+    "avgPosition": 31.85496183206107,
+    "domain": "bab.la",
+    "intersections": 262,
+    "organicCount": 262,
+    "organicEtv": 821.0600116066635
+   },
+   {
+    "avgPosition": 28.766283524904217,
+    "domain": "fluentu.com",
+    "intersections": 261,
+    "organicCount": 261,
+    "organicEtv": 1121.9290062747896
+   },
+   {
+    "avgPosition": 38.02298850574713,
+    "domain": "talkpal.ai",
+    "intersections": 261,
+    "organicCount": 261,
+    "organicEtv": 946.992006972432
+   },
+   {
+    "avgPosition": 21.405405405405407,
+    "domain": "cambridge.org",
+    "intersections": 259,
+    "organicCount": 259,
+    "organicEtv": 788.0539937540889
+   },
+   {
+    "avgPosition": 8.238683127572017,
+    "domain": "gate2home.com",
+    "intersections": 243,
+    "organicCount": 243,
+    "organicEtv": 2226.940991492942
+   },
+   {
+    "avgPosition": 30.2125,
+    "domain": "ldoceonline.com",
+    "intersections": 240,
+    "organicCount": 240,
+    "organicEtv": 402.7290056236088
+   },
+   {
+    "avgPosition": 21.0126582278481,
+    "domain": "translate.com",
+    "intersections": 237,
+    "organicCount": 237,
+    "organicEtv": 1271.0779997017237
+   },
+   {
+    "avgPosition": 35.361702127659576,
+    "domain": "anykeyboard.io",
+    "intersections": 235,
+    "organicCount": 235,
+    "organicEtv": 2705.741996139288
+   },
+   {
+    "avgPosition": 13.838427947598252,
+    "domain": "talktomeinkorean.com",
+    "intersections": 229,
+    "organicCount": 229,
+    "organicEtv": 1492.7190151009709
+   },
+   {
+    "avgPosition": 22.52054794520548,
+    "domain": "flexiclasses.com",
+    "intersections": 219,
+    "organicCount": 219,
+    "organicEtv": 2053.6899933330715
+   },
+   {
+    "avgPosition": 25.408256880733944,
+    "domain": "lingodeer.com",
+    "intersections": 218,
+    "organicCount": 218,
+    "organicEtv": 2108.5229926891625
+   },
+   {
+    "avgPosition": 70.73732718894009,
+    "domain": "kpedia.jp",
+    "intersections": 217,
+    "organicCount": 217,
+    "organicEtv": 423.1130063477904
+   },
+   {
+    "avgPosition": 43.77619047619048,
+    "domain": "tistory.com",
+    "intersections": 210,
+    "organicCount": 210,
+    "organicEtv": 1540.6619913000611
+   },
+   {
+    "avgPosition": 12.507177033492823,
+    "domain": "koreannamegenerator.org",
+    "intersections": 209,
+    "organicCount": 209,
+    "organicEtv": 1553.3220188897103
+   },
+   {
+    "avgPosition": 36.45410628019324,
+    "domain": "seonsaengnim.com",
+    "intersections": 207,
+    "organicCount": 207,
+    "organicEtv": 496.091003600508
+   },
+   {
+    "avgPosition": 23.2,
+    "domain": "italki.com",
+    "intersections": 200,
+    "organicCount": 200,
+    "organicEtv": 683.5980098210275
+   },
+   {
+    "avgPosition": 10.51776649746193,
+    "domain": "apple.com",
+    "intersections": 197,
+    "organicCount": 197,
+    "organicEtv": 593.6750006750226
+   },
+   {
+    "avgPosition": 33.28191489361702,
+    "domain": "lingopie.com",
+    "intersections": 188,
+    "organicCount": 188,
+    "organicEtv": 924.6710081193596
+   },
+   {
+    "avgPosition": 21.933701657458563,
+    "domain": "preply.com",
+    "intersections": 181,
+    "organicCount": 181,
+    "organicEtv": 452.53199776634574
+   },
+   {
+    "avgPosition": 21.668508287292816,
+    "domain": "medium.com",
+    "intersections": 181,
+    "organicCount": 181,
+    "organicEtv": 377.0009997859597
+   },
+   {
+    "avgPosition": 18.033519553072622,
+    "domain": "migaku.com",
+    "intersections": 179,
+    "organicCount": 179,
+    "organicEtv": 726.2710032835603
+   },
+   {
+    "avgPosition": 35.19428571428571,
+    "domain": "scribd.com",
+    "intersections": 175,
+    "organicCount": 175,
+    "organicEtv": 1888.7639925014228
+   },
+   {
+    "avgPosition": 18.385964912280706,
+    "domain": "languagedrops.com",
+    "intersections": 171,
+    "organicCount": 171,
+    "organicEtv": 334.9760037790984
+   },
+   {
+    "avgPosition": 29.88198757763975,
+    "domain": "storylearning.com",
+    "intersections": 161,
+    "organicCount": 161,
+    "organicEtv": 333.2899983357638
+   },
+   {
+    "avgPosition": 14.198717948717947,
+    "domain": "koreanfluent.com",
+    "intersections": 156,
+    "organicCount": 156,
+    "organicEtv": 1587.0119933262467
+   },
+   {
+    "avgPosition": 18.474358974358974,
+    "domain": "lingobright.com",
+    "intersections": 156,
+    "organicCount": 156,
+    "organicEtv": 1378.9420149866492
+   },
+   {
+    "avgPosition": 16.806451612903224,
+    "domain": "noun.town",
+    "intersections": 155,
+    "organicCount": 155,
+    "organicEtv": 214.00799957476556
+   },
+   {
+    "avgPosition": 29.571428571428573,
+    "domain": "easyhindityping.com",
+    "intersections": 154,
+    "organicCount": 154,
+    "organicEtv": 1276.837996983901
+   },
+   {
+    "avgPosition": 31.73684210526316,
+    "domain": "lingobrights.com",
+    "intersections": 152,
+    "organicCount": 152,
+    "organicEtv": 1234.7900159899143
+   },
+   {
+    "avgPosition": 15.291666666666666,
+    "domain": "memrise.com",
+    "intersections": 144,
+    "organicCount": 144,
+    "organicEtv": 248.62600481696427
+   },
+   {
+    "avgPosition": 35.175182481751825,
+    "domain": "translated.net",
+    "intersections": 137,
+    "organicCount": 137,
+    "organicEtv": 1077.415997069329
+   },
+   {
+    "avgPosition": 24.2,
+    "domain": "amazon.com",
+    "intersections": 135,
+    "organicCount": 135,
+    "organicEtv": 1782.6979910768569
+   },
+   {
+    "avgPosition": 33.97744360902256,
+    "domain": "polytranslator.com",
+    "intersections": 133,
+    "organicCount": 133,
+    "organicEtv": 1503.37698267214
+   },
+   {
+    "avgPosition": 23.215384615384615,
+    "domain": "drawkorean.com",
+    "intersections": 130,
+    "organicCount": 130,
+    "organicEtv": 1970.342988235876
+   },
+   {
+    "avgPosition": 72.74615384615385,
+    "domain": "translatormind.com",
+    "intersections": 130,
+    "organicCount": 130,
+    "organicEtv": 991.9099966492504
+   },
+   {
+    "avgPosition": 53.689922480620154,
+    "domain": "learnkoreantools.com",
+    "intersections": 129,
+    "organicCount": 129,
+    "organicEtv": 1203.1949938237667
+   },
+   {
+    "avgPosition": 20.251968503937007,
+    "domain": "howtostudykorean.com",
+    "intersections": 127,
+    "organicCount": 127,
+    "organicEtv": 555.6560033131391
+   },
+   {
+    "avgPosition": 65.23809523809524,
+    "domain": "anythingtranslate.com",
+    "intersections": 126,
+    "organicCount": 126,
+    "organicEtv": 791.9489936996251
+   },
+   {
+    "avgPosition": 28.01652892561983,
+    "domain": "sayjack.com",
+    "intersections": 121,
+    "organicCount": 121,
+    "organicEtv": 1882.2459885925057
+   },
+   {
+    "avgPosition": 19.840336134453786,
+    "domain": "google.co.kr",
+    "intersections": 119,
+    "organicCount": 119,
+    "organicEtv": 825.8939932156354
+   },
+   {
+    "avgPosition": 35.27350427350427,
+    "domain": "toboapp.com",
+    "intersections": 117,
+    "organicCount": 117,
+    "organicEtv": 79.45399999059737
+   },
+   {
+    "avgPosition": 44.02564102564103,
+    "domain": "almaany.com",
+    "intersections": 117,
+    "organicCount": 117,
+    "organicEtv": 309.5700033735484
+   },
+   {
+    "avgPosition": 30.25862068965517,
+    "domain": "sweetandtastytv.com",
+    "intersections": 116,
+    "organicCount": 116,
+    "organicEtv": 672.0250048786402
+   },
+   {
+    "avgPosition": 6.28695652173913,
+    "domain": "languatalk.com",
+    "intersections": 115,
+    "organicCount": 115,
+    "organicEtv": 289.8020023740828
+   },
+   {
+    "avgPosition": 26.20175438596491,
+    "domain": "mauvecloud.net",
+    "intersections": 114,
+    "organicCount": 114,
+    "organicEtv": 515.7390003502369
+   },
+   {
+    "avgPosition": 16.530973451327434,
+    "domain": "quillbot.com",
+    "intersections": 113,
+    "organicCount": 113,
+    "organicEtv": 802.2339927237481
+   },
+   {
+    "avgPosition": 73.22321428571429,
+    "domain": "koreatoolkit.com",
+    "intersections": 112,
+    "organicCount": 112,
+    "organicEtv": 1011.3679971545936
+   },
+   {
+    "avgPosition": 35.848214285714285,
+    "domain": "busuu.com",
+    "intersections": 112,
+    "organicCount": 112,
+    "organicEtv": 431.5310003962368
+   },
+   {
+    "avgPosition": 40.0990990990991,
+    "domain": "ling-app.com",
+    "intersections": 111,
+    "organicCount": 111,
+    "organicEtv": 483.7729987408966
+   },
+   {
+    "avgPosition": 22.45045045045045,
+    "domain": "lingolifto.com",
+    "intersections": 111,
+    "organicCount": 111,
+    "organicEtv": 70.61700053140521
+   },
+   {
+    "avgPosition": 69.17272727272727,
+    "domain": "yahoo.co.jp",
+    "intersections": 110,
+    "organicCount": 110,
+    "organicEtv": 244.50600357539952
+   },
+   {
+    "avgPosition": 22.073394495412845,
+    "domain": "koreanstudyjunkie.com",
+    "intersections": 109,
+    "organicCount": 109,
+    "organicEtv": 651.1350064892322
+   },
+   {
+    "avgPosition": 19.27777777777778,
+    "domain": "ltl-korea.com",
+    "intersections": 108,
+    "organicCount": 108,
+    "organicEtv": 695.9450070932508
+   },
+   {
+    "avgPosition": 23.22222222222222,
+    "domain": "koreannametranslator.com",
+    "intersections": 108,
+    "organicCount": 108,
+    "organicEtv": 889.6630104072392
+   },
+   {
+    "avgPosition": 19.97196261682243,
+    "domain": "behindthename.com",
+    "intersections": 107,
+    "organicCount": 107,
+    "organicEtv": 737.2940088957548
+   },
+   {
+    "avgPosition": 21.192307692307693,
+    "domain": "explorekorean.net",
+    "intersections": 104,
+    "organicCount": 104,
+    "organicEtv": 1224.2299902774394
+   },
+   {
+    "avgPosition": 40.90384615384615,
+    "domain": "mykeyboard.org",
+    "intersections": 104,
+    "organicCount": 104,
+    "organicEtv": 1986.421976942569
+   },
+   {
+    "avgPosition": 42.320388349514566,
+    "domain": "koreanwikiproject.com",
+    "intersections": 103,
+    "organicCount": 103,
+    "organicEtv": 556.4200066290796
+   },
+   {
+    "avgPosition": 26.42156862745098,
+    "domain": "fandom.com",
+    "intersections": 102,
+    "organicCount": 102,
+    "organicEtv": 267.9350014477968
+   },
+   {
+    "avgPosition": 25.980198019801986,
+    "domain": "ktalk.live",
+    "intersections": 101,
+    "organicCount": 101,
+    "organicEtv": 415.3530024290085
+   },
+   {
+    "avgPosition": 13.41,
+    "domain": "emma-learn.com",
+    "intersections": 100,
+    "organicCount": 100,
+    "organicEtv": 786.6250071264803
+   },
+   {
+    "avgPosition": 28.03,
+    "domain": "rumandmonkey.com",
+    "intersections": 100,
+    "organicCount": 100,
+    "organicEtv": 686.2840095646679
+   },
+   {
+    "avgPosition": 12.91,
+    "domain": "deliciouskorean.com",
+    "intersections": 100,
+    "organicCount": 100,
+    "organicEtv": 707.4670080430806
+   },
+   {
+    "avgPosition": 19.01010101010101,
+    "domain": "learning-korean.com",
+    "intersections": 99,
+    "organicCount": 99,
+    "organicEtv": 1041.4999947883189
+   },
+   {
+    "avgPosition": 49.707070707070706,
+    "domain": "engoo.co.kr",
+    "intersections": 99,
+    "organicCount": 99,
+    "organicEtv": 45.80200009047985
+   },
+   {
+    "avgPosition": 30.22222222222222,
+    "domain": "softonic.com",
+    "intersections": 99,
+    "organicCount": 99,
+    "organicEtv": 380.16299921646714
+   },
+   {
+    "avgPosition": 47.244897959183675,
+    "domain": "crushonkorean.com",
+    "intersections": 98,
+    "organicCount": 98,
+    "organicEtv": 379.7220052704215
+   },
+   {
+    "avgPosition": 48.857142857142854,
+    "domain": "learnkorean24.com",
+    "intersections": 98,
+    "organicCount": 98,
+    "organicEtv": 448.6680060774088
+   },
+   {
+    "avgPosition": 17.46875,
+    "domain": "mezzoguild.com",
+    "intersections": 96,
+    "organicCount": 96,
+    "organicEtv": 231.9559992402792
+   },
+   {
+    "avgPosition": 55.083333333333336,
+    "domain": "name2kr.com",
+    "intersections": 96,
+    "organicCount": 96,
+    "organicEtv": 1028.573012309149
+   },
+   {
+    "avgPosition": 21.094736842105263,
+    "domain": "vkboard.com",
+    "intersections": 95,
+    "organicCount": 95,
+    "organicEtv": 1738.8749890960753
+   },
+   {
+    "avgPosition": 41.37234042553192,
+    "domain": "threads.com",
+    "intersections": 94,
+    "organicCount": 94,
+    "organicEtv": 172.13700091838837
+   },
+   {
+    "avgPosition": 12.702127659574469,
+    "domain": "sam.today",
+    "intersections": 94,
+    "organicCount": 94,
+    "organicEtv": 1661.5039898902178
+   },
+   {
+    "avgPosition": 27.180851063829788,
+    "domain": "tumblr.com",
+    "intersections": 94,
+    "organicCount": 94,
+    "organicEtv": 108.3530009854585
+   }
+  ],
+  "90daykorean.com": [
+   {
+    "avgPosition": 23.439726502502104,
+    "domain": "90daykorean.com",
+    "intersections": 20183,
+    "organicCount": 20183,
+    "organicEtv": 519363.2429917976
+   },
+   {
+    "avgPosition": 11.693125655234386,
+    "domain": "youtube.com",
+    "intersections": 20031,
+    "organicCount": 20031,
+    "organicEtv": 518581.8979958072
+   },
+   {
+    "avgPosition": 5.708951033243486,
+    "domain": "reddit.com",
+    "intersections": 17808,
+    "organicCount": 17808,
+    "organicEtv": 459603.2841659598
+   },
+   {
+    "avgPosition": 15.377420660153764,
+    "domain": "facebook.com",
+    "intersections": 17299,
+    "organicCount": 17299,
+    "organicEtv": 464827.4623795543
+   },
+   {
+    "avgPosition": 18.91105692100366,
+    "domain": "instagram.com",
+    "intersections": 15583,
+    "organicCount": 15583,
+    "organicEtv": 455389.6182428431
+   },
+   {
+    "avgPosition": 11.738632135149215,
+    "domain": "quora.com",
+    "intersections": 13437,
+    "organicCount": 13437,
+    "organicEtv": 293952.3980675433
+   },
+   {
+    "avgPosition": 8.115320820602356,
+    "domain": "wikipedia.org",
+    "intersections": 11455,
+    "organicCount": 11455,
+    "organicEtv": 326767.9996214416
+   },
+   {
+    "avgPosition": 18.03612634764517,
+    "domain": "tiktok.com",
+    "intersections": 10574,
+    "organicCount": 10574,
+    "organicEtv": 356013.4571990147
+   },
+   {
+    "avgPosition": 23.57675392670157,
+    "domain": "pinterest.com",
+    "intersections": 9550,
+    "organicCount": 9550,
+    "organicEtv": 308577.03524625115
+   },
+   {
+    "avgPosition": 19.625637910085057,
+    "domain": "hinative.com",
+    "intersections": 8230,
+    "organicCount": 8230,
+    "organicEtv": 323349.7232315205
+   },
+   {
+    "avgPosition": 16.127486568897922,
+    "domain": "koreanclass101.com",
+    "intersections": 6887,
+    "organicCount": 6887,
+    "organicEtv": 270158.68178927153
+   },
+   {
+    "avgPosition": 18.88533681291796,
+    "domain": "wordhippo.com",
+    "intersections": 6131,
+    "organicCount": 6131,
+    "organicEtv": 205455.6494540125
+   },
+   {
+    "avgPosition": 31.504942965779467,
+    "domain": "wordpress.com",
+    "intersections": 5260,
+    "organicCount": 5260,
+    "organicEtv": 206150.8790374007
+   },
+   {
+    "avgPosition": 32.93643707482993,
+    "domain": "reverso.net",
+    "intersections": 4704,
+    "organicCount": 4704,
+    "organicEtv": 170755.93459739164
+   },
+   {
+    "avgPosition": 23.640655313645183,
+    "domain": "medium.com",
+    "intersections": 4639,
+    "organicCount": 4639,
+    "organicEtv": 103200.79914384148
+   },
+   {
+    "avgPosition": 23.05466455839169,
+    "domain": "collinsdictionary.com",
+    "intersections": 4427,
+    "organicCount": 4427,
+    "organicEtv": 168818.51664200425
+   },
+   {
+    "avgPosition": 23.968028004667445,
+    "domain": "cambridge.org",
+    "intersections": 4285,
+    "organicCount": 4285,
+    "organicEtv": 151704.15155863948
+   },
+   {
+    "avgPosition": 41.387705118785206,
+    "domain": "glosbe.com",
+    "intersections": 4083,
+    "organicCount": 4083,
+    "organicEtv": 171423.98052977212
+   },
+   {
+    "avgPosition": 11.8964824120603,
+    "domain": "preply.com",
+    "intersections": 3980,
+    "organicCount": 3980,
+    "organicEtv": 143404.70122901164
+   },
+   {
+    "avgPosition": 44.44197341513292,
+    "domain": "namu.wiki",
+    "intersections": 3912,
+    "organicCount": 3912,
+    "organicEtv": 75694.00380303152
+   },
+   {
+    "avgPosition": 19.75437636761488,
+    "domain": "languagedrops.com",
+    "intersections": 3656,
+    "organicCount": 3656,
+    "organicEtv": 179881.22030324116
+   },
+   {
+    "avgPosition": 45.60862019091698,
+    "domain": "naver.com",
+    "intersections": 3457,
+    "organicCount": 3457,
+    "organicEtv": 68323.47475872375
+   },
+   {
+    "avgPosition": 24.556877539175854,
+    "domain": "scribd.com",
+    "intersections": 3446,
+    "organicCount": 3446,
+    "organicEtv": 161492.9475330282
+   },
+   {
+    "avgPosition": 21.43563766388558,
+    "domain": "italki.com",
+    "intersections": 3356,
+    "organicCount": 3356,
+    "organicEtv": 109887.5976760108
+   },
+   {
+    "avgPosition": 33.38142470694319,
+    "domain": "talkpal.ai",
+    "intersections": 3327,
+    "organicCount": 3327,
+    "organicEtv": 99594.6497908365
+   },
+   {
+    "avgPosition": 41.37560679611651,
+    "domain": "wordreference.com",
+    "intersections": 3296,
+    "organicCount": 3296,
+    "organicEtv": 124693.98648617788
+   },
+   {
+    "avgPosition": 16.034324241495558,
+    "domain": "memrise.com",
+    "intersections": 3263,
+    "organicCount": 3263,
+    "organicEtv": 191058.70096454956
+   },
+   {
+    "avgPosition": 46.76380466007022,
+    "domain": "tistory.com",
+    "intersections": 3133,
+    "organicCount": 3133,
+    "organicEtv": 71992.27514055185
+   },
+   {
+    "avgPosition": 16.97088,
+    "domain": "migaku.com",
+    "intersections": 3125,
+    "organicCount": 3125,
+    "organicEtv": 160031.81979867816
+   },
+   {
+    "avgPosition": 35.714010900929786,
+    "domain": "ling-app.com",
+    "intersections": 3119,
+    "organicCount": 3119,
+    "organicEtv": 71632.47569746338
+   },
+   {
+    "avgPosition": 18.605193951347797,
+    "domain": "busuu.com",
+    "intersections": 3042,
+    "organicCount": 3042,
+    "organicEtv": 171353.6994148288
+   },
+   {
+    "avgPosition": 38.591638795986626,
+    "domain": "korean.go.kr",
+    "intersections": 2990,
+    "organicCount": 2990,
+    "organicEtv": 143081.3759968765
+   },
+   {
+    "avgPosition": 38.127680965147455,
+    "domain": "ldoceonline.com",
+    "intersections": 2984,
+    "organicCount": 2984,
+    "organicEtv": 118908.44261910953
+   },
+   {
+    "avgPosition": 33.131001371742116,
+    "domain": "bab.la",
+    "intersections": 2916,
+    "organicCount": 2916,
+    "organicEtv": 119728.81398320755
+   },
+   {
+    "avgPosition": 25.908747855917667,
+    "domain": "fandom.com",
+    "intersections": 2915,
+    "organicCount": 2915,
+    "organicEtv": 40679.624708391726
+   },
+   {
+    "avgPosition": 25.91931540342298,
+    "domain": "wiktionary.org",
+    "intersections": 2863,
+    "organicCount": 2863,
+    "organicEtv": 80395.5228516031
+   },
+   {
+    "avgPosition": 22.035382416011437,
+    "domain": "flexiclasses.com",
+    "intersections": 2798,
+    "organicCount": 2798,
+    "organicEtv": 146728.04257879965
+   },
+   {
+    "avgPosition": 18.607402031930334,
+    "domain": "britannica.com",
+    "intersections": 2756,
+    "organicCount": 2756,
+    "organicEtv": 99681.76988840105
+   },
+   {
+    "avgPosition": 52.13320158102767,
+    "domain": "learnkorean24.com",
+    "intersections": 2530,
+    "organicCount": 2530,
+    "organicEtv": 141283.3011470493
+   },
+   {
+    "avgPosition": 20.273709483793517,
+    "domain": "wikihow.com",
+    "intersections": 2499,
+    "organicCount": 2499,
+    "organicEtv": 68215.98074074276
+   },
+   {
+    "avgPosition": 24.717544587308172,
+    "domain": "lingodeer.com",
+    "intersections": 2411,
+    "organicCount": 2411,
+    "organicEtv": 58060.13960575685
+   },
+   {
+    "avgPosition": 19.01664585934249,
+    "domain": "google.com",
+    "intersections": 2403,
+    "organicCount": 2403,
+    "organicEtv": 21125.238972472027
+   },
+   {
+    "avgPosition": 25.221479314667786,
+    "domain": "fluentu.com",
+    "intersections": 2393,
+    "organicCount": 2393,
+    "organicEtv": 141260.8098495081
+   },
+   {
+    "avgPosition": 32.333030027297546,
+    "domain": "lingopie.com",
+    "intersections": 2198,
+    "organicCount": 2198,
+    "organicEtv": 165124.59783547
+   },
+   {
+    "avgPosition": 29.765849143914853,
+    "domain": "transparent.com",
+    "intersections": 2161,
+    "organicCount": 2161,
+    "organicEtv": 94245.45146473312
+   },
+   {
+    "avgPosition": 23.196152041295168,
+    "domain": "amazon.com",
+    "intersections": 2131,
+    "organicCount": 2131,
+    "organicEtv": 22809.819889478385
+   },
+   {
+    "avgPosition": 22.05392620624409,
+    "domain": "speechling.com",
+    "intersections": 2114,
+    "organicCount": 2114,
+    "organicEtv": 75358.3469323609
+   },
+   {
+    "avgPosition": 27.539373814041745,
+    "domain": "koreabridge.net",
+    "intersections": 2108,
+    "organicCount": 2108,
+    "organicEtv": 104479.87255330013
+   },
+   {
+    "avgPosition": 14.165085388994308,
+    "domain": "howtostudykorean.com",
+    "intersections": 2108,
+    "organicCount": 2108,
+    "organicEtv": 52851.47976392135
+   },
+   {
+    "avgPosition": 30.053093034583537,
+    "domain": "tumblr.com",
+    "intersections": 2053,
+    "organicCount": 2053,
+    "organicEtv": 44166.84892445244
+   },
+   {
+    "avgPosition": 26.586750788643535,
+    "domain": "gogohanguk.com",
+    "intersections": 1902,
+    "organicCount": 1902,
+    "organicEtv": 52170.885542847216
+   },
+   {
+    "avgPosition": 30.781002638522427,
+    "domain": "learnwitholiver.com",
+    "intersections": 1895,
+    "organicCount": 1895,
+    "organicEtv": 66619.53993117064
+   },
+   {
+    "avgPosition": 18.91489361702128,
+    "domain": "fluentin3months.com",
+    "intersections": 1833,
+    "organicCount": 1833,
+    "organicEtv": 122438.14487730898
+   },
+   {
+    "avgPosition": 8.836980306345733,
+    "domain": "imdb.com",
+    "intersections": 1828,
+    "organicCount": 1828,
+    "organicEtv": 22220.18983240612
+   },
+   {
+    "avgPosition": 22.92991169977925,
+    "domain": "korea.net",
+    "intersections": 1812,
+    "organicCount": 1812,
+    "organicEtv": 62360.16355054639
+   },
+   {
+    "avgPosition": 18.961363636363636,
+    "domain": "beelinelanguage.com",
+    "intersections": 1760,
+    "organicCount": 1760,
+    "organicEtv": 161196.25228182226
+   },
+   {
+    "avgPosition": 23.287597363690832,
+    "domain": "koreanstudyjunkie.com",
+    "intersections": 1669,
+    "organicCount": 1669,
+    "organicEtv": 35343.621053919196
+   },
+   {
+    "avgPosition": 13.585913782635094,
+    "domain": "noun.town",
+    "intersections": 1647,
+    "organicCount": 1647,
+    "organicEtv": 53033.863821072504
+   },
+   {
+    "avgPosition": 26.178593652769138,
+    "domain": "storylearning.com",
+    "intersections": 1607,
+    "organicCount": 1607,
+    "organicEtv": 22836.84092926979
+   },
+   {
+    "avgPosition": 20.33050293925539,
+    "domain": "visitkorea.or.kr",
+    "intersections": 1531,
+    "organicCount": 1531,
+    "organicEtv": 43159.916403329
+   },
+   {
+    "avgPosition": 24.329333333333334,
+    "domain": "creatrip.com",
+    "intersections": 1500,
+    "organicCount": 1500,
+    "organicEtv": 93877.82302969694
+   },
+   {
+    "avgPosition": 29.79107505070994,
+    "domain": "promova.com",
+    "intersections": 1479,
+    "organicCount": 1479,
+    "organicEtv": 61830.632642297074
+   },
+   {
+    "avgPosition": 24.815771583956497,
+    "domain": "thesoulofseoul.net",
+    "intersections": 1471,
+    "organicCount": 1471,
+    "organicEtv": 15307.806071870027
+   },
+   {
+    "avgPosition": 20.875425459496256,
+    "domain": "shutterstock.com",
+    "intersections": 1469,
+    "organicCount": 1469,
+    "organicEtv": 21985.98893470131
+   },
+   {
+    "avgPosition": 49.508344923504865,
+    "domain": "weebly.com",
+    "intersections": 1438,
+    "organicCount": 1438,
+    "organicEtv": 31873.403447456654
+   },
+   {
+    "avgPosition": 31.41951219512195,
+    "domain": "seonsaengnim.com",
+    "intersections": 1435,
+    "organicCount": 1435,
+    "organicEtv": 64740.33170449361
+   },
+   {
+    "avgPosition": 36.046676096181045,
+    "domain": "x.com",
+    "intersections": 1414,
+    "organicCount": 1414,
+    "organicEtv": 30571.774948660284
+   },
+   {
+    "avgPosition": 25.966300366300366,
+    "domain": "koreaherald.com",
+    "intersections": 1365,
+    "organicCount": 1365,
+    "organicEtv": 13080.275936869904
+   },
+   {
+    "avgPosition": 34.50957290132548,
+    "domain": "bunpo.app",
+    "intersections": 1358,
+    "organicCount": 1358,
+    "organicEtv": 60200.76824725419
+   },
+   {
+    "avgPosition": 37.736998514115896,
+    "domain": "threads.com",
+    "intersections": 1346,
+    "organicCount": 1346,
+    "organicEtv": 33884.42894436605
+   },
+   {
+    "avgPosition": 14.312453392990308,
+    "domain": "rocketlanguages.com",
+    "intersections": 1341,
+    "organicCount": 1341,
+    "organicEtv": 64855.99972525239
+   },
+   {
+    "avgPosition": 25.91578947368421,
+    "domain": "hilokal.com",
+    "intersections": 1330,
+    "organicCount": 1330,
+    "organicEtv": 45200.19260689244
+   },
+   {
+    "avgPosition": 24.966999232540292,
+    "domain": "mykoreanlesson.com",
+    "intersections": 1303,
+    "organicCount": 1303,
+    "organicEtv": 86599.01040474325
+   },
+   {
+    "avgPosition": 15.556844547563806,
+    "domain": "asiasociety.org",
+    "intersections": 1293,
+    "organicCount": 1293,
+    "organicEtv": 45326.09953326173
+   },
+   {
+    "avgPosition": 19.99043824701195,
+    "domain": "kprofiles.com",
+    "intersections": 1255,
+    "organicCount": 1255,
+    "organicEtv": 8987.389899246395
+   },
+   {
+    "avgPosition": 25.356395816572807,
+    "domain": "linguajunkie.com",
+    "intersections": 1243,
+    "organicCount": 1243,
+    "organicEtv": 32744.8520958703
+   },
+   {
+    "avgPosition": 29.817299919159257,
+    "domain": "lingolifto.com",
+    "intersections": 1237,
+    "organicCount": 1237,
+    "organicEtv": 32127.431847587228
+   },
+   {
+    "avgPosition": 32.213419563459986,
+    "domain": "koreaboo.com",
+    "intersections": 1237,
+    "organicCount": 1237,
+    "organicEtv": 9183.915938466787
+   },
+   {
+    "avgPosition": 25.493506493506494,
+    "domain": "ranker.com",
+    "intersections": 1232,
+    "organicCount": 1232,
+    "organicEtv": 6173.787968588993
+   },
+   {
+    "avgPosition": 45.99022801302931,
+    "domain": "baidu.com",
+    "intersections": 1228,
+    "organicCount": 1228,
+    "organicEtv": 15208.042844241483
+   },
+   {
+    "avgPosition": 71.51639344262296,
+    "domain": "kpedia.jp",
+    "intersections": 1220,
+    "organicCount": 1220,
+    "organicEtv": 118152.55798414908
+   },
+   {
+    "avgPosition": 14.837860082304529,
+    "domain": "talktomeinkorean.com",
+    "intersections": 1215,
+    "organicCount": 1215,
+    "organicEtv": 27628.116936506703
+   },
+   {
+    "avgPosition": 20.235973597359735,
+    "domain": "topikguide.com",
+    "intersections": 1212,
+    "organicCount": 1212,
+    "organicEtv": 133712.91357983276
+   },
+   {
+    "avgPosition": 34.00166251039069,
+    "domain": "koreanpractice.com",
+    "intersections": 1203,
+    "organicCount": 1203,
+    "organicEtv": 117876.82592801376
+   },
+   {
+    "avgPosition": 31.33219178082192,
+    "domain": "bbc.com",
+    "intersections": 1168,
+    "organicCount": 1168,
+    "organicEtv": 11467.505906341596
+   },
+   {
+    "avgPosition": 23.129757785467127,
+    "domain": "seoul.go.kr",
+    "intersections": 1156,
+    "organicCount": 1156,
+    "organicEtv": 15060.034093169495
+   },
+   {
+    "avgPosition": 33.006065857885616,
+    "domain": "10mag.com",
+    "intersections": 1154,
+    "organicCount": 1154,
+    "organicEtv": 35367.9093322698
+   },
+   {
+    "avgPosition": 16.677391304347825,
+    "domain": "stackexchange.com",
+    "intersections": 1150,
+    "organicCount": 1150,
+    "organicEtv": 37365.95882572234
+   },
+   {
+    "avgPosition": 20.321899736147756,
+    "domain": "quizlet.com",
+    "intersections": 1137,
+    "organicCount": 1137,
+    "organicEtv": 127724.78266215695
+   },
+   {
+    "avgPosition": 23.82282003710575,
+    "domain": "optilingo.com",
+    "intersections": 1078,
+    "organicCount": 1078,
+    "organicEtv": 20422.966019125655
+   },
+   {
+    "avgPosition": 18.356676003734822,
+    "domain": "mydramalist.com",
+    "intersections": 1071,
+    "organicCount": 1071,
+    "organicEtv": 16507.15886316076
+   },
+   {
+    "avgPosition": 14.451977401129945,
+    "domain": "tandem.net",
+    "intersections": 1062,
+    "organicCount": 1062,
+    "organicEtv": 38089.18575917184
+   },
+   {
+    "avgPosition": 27.832703213610586,
+    "domain": "koreanexplorer.com.sg",
+    "intersections": 1058,
+    "organicCount": 1058,
+    "organicEtv": 23881.463033482432
+   },
+   {
+    "avgPosition": 21.840607210626185,
+    "domain": "translate.com",
+    "intersections": 1054,
+    "organicCount": 1054,
+    "organicEtv": 21535.36686933599
+   },
+   {
+    "avgPosition": 23.13346043851287,
+    "domain": "asianwiki.com",
+    "intersections": 1049,
+    "organicCount": 1049,
+    "organicEtv": 24661.30186633207
+   },
+   {
+    "avgPosition": 21.48137535816619,
+    "domain": "lexilogos.com",
+    "intersections": 1047,
+    "organicCount": 1047,
+    "organicEtv": 21570.66182521172
+   },
+   {
+    "avgPosition": 18.38588007736944,
+    "domain": "visitseoul.net",
+    "intersections": 1034,
+    "organicCount": 1034,
+    "organicEtv": 10240.71293705888
+   },
+   {
+    "avgPosition": 25.923902439024392,
+    "domain": "omniglot.com",
+    "intersections": 1025,
+    "organicCount": 1025,
+    "organicEtv": 40717.55453724228
+   },
+   {
+    "avgPosition": 24.388671875,
+    "domain": "apple.com",
+    "intersections": 1024,
+    "organicCount": 1024,
+    "organicEtv": 8301.943008163944
+   },
+   {
+    "avgPosition": 15.791788856304985,
+    "domain": "gobillykorean.com",
+    "intersections": 1023,
+    "organicCount": 1023,
+    "organicEtv": 20935.789923798293
+   }
+  ]
+ }
+}

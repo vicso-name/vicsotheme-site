@@ -1,0 +1,196 @@
+---
+import Base from '../../layouts/Base.astro';
+import Button from '../../components/Button.astro';
+import { bookingHref } from '../../config/site';
+import { cases, filters, featuredCats } from '../../data/cases';
+
+const stats = [
+  { v: '20K+', l: 'downloads across Google Play' },
+  { v: '6', l: 'live products: Android, iOS, web' },
+  { v: '4.2★', l: 'Hebrew app, 100+ reviews' },
+  { v: '3', l: 'stacks: Kotlin, Swift, Flutter' },
+];
+
+const featuredStats = [
+  { v: '10K+', l: 'downloads' },
+  { v: '4.2★', l: '109 reviews' },
+  { v: '3,200', l: 'active users' },
+  { v: '4×', l: 'ARR in 12 months', accent: true },
+];
+---
+<Base
+  title="Cases — Apps I Built and Still Run | Viktor Sokoliuk"
+  description="Live Android, iOS, Flutter and web products designed, built and run by Viktor Sokoliuk: 20K+ downloads, subscription revenue and native iOS ports."
+  breadcrumbs={[{ name: 'Cases', path: '/cases/' }]}
+  footerLinks={[{ href: '/', label: 'Home' }, { href: '/mvp/', label: 'MVP development' }]}
+>
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Cases · my own products</p>
+      <h1 class="hero-h1">Apps I designed, built and <span class="accent">still run myself.</span></h1>
+    </div>
+    <p class="lead hero-lead">No client logos here — just live products in the stores, with real users, real reviews and subscription revenue. Every one of them you can download today.</p>
+  </section>
+
+  <section class="band band-alt stats-band">
+    <dl class="wrap stats">
+      {stats.map((s) => <div><dt class="stat-v">{s.v}</dt><dd>{s.l}</dd></div>)}
+    </dl>
+  </section>
+
+  <section class="wrap list">
+    <div role="group" aria-label="Filter by platform" class="filters" data-case-filters>
+      {filters.map((f, i) => (
+        <button type="button" class="chip" data-filter={f.id} aria-pressed={i === 0 ? 'true' : 'false'}>{f.label}</button>
+      ))}
+    </div>
+
+    <a href="/cases/hebrew-app/" class="featured on-dark" data-cats={featuredCats.join(' ')}>
+      <div class="featured-copy">
+        <span class="featured-tag">Flagship · Android + iOS · EdTech</span>
+        <h2 class="featured-h">Learn Hebrew: a solo-built language app that pays for itself</h2>
+        <p class="featured-p">Kotlin/Compose on Android, a native SwiftUI port for iOS, my own Django API and a content site that feeds both stores.</p>
+        <span class="featured-cta">Read the full case →</span>
+      </div>
+      <dl class="featured-stats">
+        {featuredStats.map((s) => (
+          <div><dt class:list={['featured-v', { 'is-accent': s.accent }]}>{s.v}</dt><dd>{s.l}</dd></div>
+        ))}
+      </dl>
+    </a>
+
+    <div class="grid">
+      {cases.map((c) => (
+        <a href={c.href ?? `/cases/#${c.id}`} id={c.id} class="case card" data-cats={c.cats.join(' ')}>
+          <div class="tags">{c.tags.map((t) => <span class="tag">{t}</span>)}</div>
+          <h3 class="case-h">{c.title}</h3>
+          <p class="case-p">{c.desc}</p>
+          <div class="case-foot">
+            <div class="case-metric"><div class="case-v">{c.metric}</div><div class="case-l">{c.metricLabel}</div></div>
+            <span class="case-cta">Case →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <h2 class="call-h">I build client apps with the same care as my own.</h2>
+      <div class="btn-row">
+        <Button href="/mvp/">Start your MVP</Button>
+        <Button href={bookingHref} variant="secondary">Book a call</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: 40px;
+    align-items: end;
+  }
+  .hero-copy { display: flex; flex-direction: column; gap: 24px; }
+  .hero-h1 { font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; }
+  .hero-lead { max-width: 32rem; }
+
+  .stats-band { border-bottom: 1px solid var(--line); }
+  .stats {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-2);
+  }
+  .stats dd { margin: 0; }
+  .stat-v { font-family: var(--mono); font-size: 28px; color: var(--ink); }
+
+  .list { padding-top: 56px; padding-bottom: 96px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .chip {
+    min-height: 44px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--chip-border);
+  }
+  .chip[aria-pressed='true'] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  .featured, .featured:hover {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 32px;
+    padding: 40px;
+    margin-bottom: 24px;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: var(--radius-card);
+  }
+  .featured[hidden], .case[hidden] { display: none; }
+  .featured-copy { display: flex; flex-direction: column; gap: 16px; }
+  .featured-tag { font-family: var(--mono); font-size: 12px; color: var(--on-dark-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .featured-h { font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.1; }
+  .featured-p { color: var(--on-dark-2); }
+  .featured-cta { font-weight: 600; margin-top: 8px; }
+  .featured:hover .featured-cta { text-decoration: underline; }
+  .featured-stats {
+    margin: 0;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--dark-line);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: var(--mono);
+  }
+  .featured-stats > div { padding: 20px; border-right: 1px solid var(--dark-line); border-bottom: 1px solid var(--dark-line); margin: 0 -1px -1px 0; }
+  .featured-stats dd { margin: 0; font-size: 12px; color: var(--on-dark-muted); }
+  .featured-v { font-size: 28px; }
+  .featured-v.is-accent { color: var(--accent-on-dark); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px; }
+  .case { text-decoration: none; padding: 28px; display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 24px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: var(--mono); font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--text-2); }
+  .case-h { font-size: 23px; letter-spacing: -0.02em; line-height: 1.2; }
+  .case-p { color: var(--text-2); font-size: 15px; }
+  .case-foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line-soft); display: flex; justify-content: space-between; align-items: end; gap: 12px; }
+  .case-metric { font-family: var(--mono); }
+  .case-v { font-size: 22px; }
+  .case-l { font-size: 12px; color: var(--muted); }
+  .case-cta { font-size: 14px; font-weight: 600; }
+
+  .call { padding-top: 88px; padding-bottom: 88px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 32px; }
+  .call-h { font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.035em; line-height: 1.05; max-width: 44rem; }
+</style>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-case-filters]');
+  bar?.addEventListener('click', (event) => {
+    const btn = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
+    if (!btn) return;
+    const f = btn.dataset.filter ?? 'all';
+    bar.querySelectorAll<HTMLButtonElement>('button[data-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+    document.querySelectorAll<HTMLElement>('[data-cats]').forEach((el) => {
+      el.hidden = f !== 'all' && !(el.dataset.cats ?? '').split(' ').includes(f);
+    });
+  });
+</script>
