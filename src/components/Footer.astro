@@ -1,12 +1,16 @@
 ---
 import { site, isSet, legalLine } from '../config/site';
 
+export interface FooterLink { href: string; label: string }
+interface Props { links?: FooterLink[] }
+
 const year = new Date().getFullYear();
-const links = [
+const defaults: FooterLink[] = [
   { href: '/cases/', label: 'Cases' },
   { href: site.social.linkedin, label: 'LinkedIn' },
   { href: site.social.github, label: 'GitHub' },
-].filter((l) => isSet(l.href));
+];
+const links = (Astro.props.links ?? defaults).filter((l) => isSet(l.href));
 ---
 <footer class="site-footer">
   <div class="wrap site-footer-inner">

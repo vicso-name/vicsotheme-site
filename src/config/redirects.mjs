@@ -3,12 +3,12 @@
  * the sitemap filter and scripts/check-seo.mjs.
  */
 export const redirects = {
-  // Old blog (removed earlier)
+  // Old blog (removed earlier) — point straight at final targets, never at another stub
   '/blog': '/',
-  '/blog/astro-vs-wordpress-2026': '/services/cms-content-architecture/',
-  '/blog/how-to-publish-google-play': '/services/mobile-product-engineering/',
-  '/blog/why-flutter-gets-hate': '/services/mobile-product-engineering/',
-  '/blog/why-i-build-language-apps': '/services/edtech-learning-systems/',
+  '/blog/astro-vs-wordpress-2026': '/services/',
+  '/blog/how-to-publish-google-play': '/mvp/',
+  '/blog/why-flutter-gets-hate': '/mvp/',
+  '/blog/why-i-build-language-apps': '/cases/hebrew-app/',
 
   // v1 service pages → v2
   '/services/mobile-product-engineering': '/mvp/',

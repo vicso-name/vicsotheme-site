@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site, isSet } from '../config/site';
+
+const details = [
+  { t: 'Reply time', d: 'Within one working day, Monday to Friday.' },
+  { t: 'Location', d: `${site.city}, ${site.country}. CET+1, overlaps with all of Europe.` },
+  { t: 'Contracts', d: 'Estonian company, EU VAT invoices, NDA on request.' },
+];
+---
+<Base
+  title="Contact Viktor Sokoliuk — Mobile App Developer, EU"
+  description={`Contact Viktor Sokoliuk, independent app developer in ${site.city}. Describe your MVP, fractional CTO or agency project and get a reply within one working day.`}
+  breadcrumbs={[{ name: 'Contact', path: '/contact/' }]}
+>
+  <section class="wrap contact">
+    <div class="contact-copy">
+      <p class="eyebrow">Contact</p>
+      <h1 class="h1 contact-h1">Tell me what you want to build.</h1>
+      <p class="lead contact-lead">Two lines about your product, users and deadline are enough. You talk to the person who writes the code.</p>
+      <div class="btn-row">
+        <Button href={`mailto:${site.email}`} variant="secondary">{site.email}</Button>
+        {isSet(site.bookingUrl) && <Button href={site.bookingUrl}>Book a 20-min call</Button>}
+      </div>
+      <ul class="details">
+        {details.map((x) => <li><span class="details-t">{x.t}</span><span class="details-d">{x.d}</span></li>)}
+      </ul>
+    </div>
+    <LeadForm id="contact-form" subject="New enquiry from vicsotheme.com">
+      <Fragment slot="label">Send message</Fragment>
+    </LeadForm>
+  </section>
+</Base>
+
+<style>
+  .contact {
+    padding-top: 80px;
+    padding-bottom: 96px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 56px;
+    align-items: start;
+  }
+  .contact-copy { display: flex; flex-direction: column; gap: 28px; }
+  .contact-h1 { font-size: clamp(40px, 5vw, 64px); }
+  .contact-lead { max-width: 34rem; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .details { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 24px; }
+  .details li { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--ink); }
+  .details-t { font-weight: 600; }
+  .details-d { color: var(--text-2); font-size: 15px; }
+</style>

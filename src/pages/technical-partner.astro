@@ -1,0 +1,234 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import Faq from '../components/Faq.astro';
+import { site, bookingHref } from '../config/site';
+
+const { prices } = site;
+const DEFAULT = 1;
+
+const signs = [
+  'An agency or freelancer builds your product and nobody on your side can check their work.',
+  "Investors ask about your tech stack and you answer with your developer's words.",
+  "Releases keep slipping and you can't tell whether it's people, process or code.",
+  "You're about to hire your first developers and don't know what good looks like.",
+];
+
+const models = [
+  { id: 'advisor', name: 'Advisor', time: '2 days a month', price: `${prices.ctoAdvisor}/mo`, desc: 'For founders working with an agency or freelancers who need an independent technical voice.', items: ['Monthly strategy session', 'Review of agency estimates and invoices', 'Architecture and stack decisions', 'Async answers within one working day'] },
+  { id: 'part-time', name: 'Part-time CTO', time: '1 day a week', price: `${prices.ctoPartTime}/mo`, desc: 'For startups with a small team that needs direction, process and someone accountable for tech.', items: ['Weekly call with founders and team', 'Code review and release process', 'Hiring: job specs, interviews, test tasks', 'Roadmap and investor tech questions', 'Vendor and cost control'] },
+  { id: 'hands-on', name: 'Hands-on', time: '2–3 days a week', price: `${prices.ctoHandsOn}/mo`, desc: 'For products where the CTO also needs to ship code until the team grows.', items: ['Everything in Part-time CTO', 'Building critical features myself', 'Mobile releases and store reviews', 'Monitoring, incidents, on-call setup', 'Handover to a full-time CTO when ready'] },
+];
+
+const month = [
+  { w: 'Week 1', t: 'Technical audit', d: 'Code, infrastructure, costs, security and team. A written report in plain language.' },
+  { w: 'Week 2', t: 'Top three risks', d: 'What will hurt first, what it costs to fix, and what can wait.' },
+  { w: 'Weeks 3–4', t: 'Roadmap &amp; rhythm', d: 'A 90-day technical roadmap, release cadence and the metrics we review together.' },
+];
+
+const fit = ['Pre-seed to Series A, 0–10 developers', 'Mobile-first or app plus web product', 'EdTech, subscription and consumer apps', 'Non-technical founders who want to understand decisions'];
+const notFit = ['Teams of 30+ engineers that need a full-time leader', 'Regulated banking or medical device software', 'Someone to sign off a project without reading it'];
+
+const faqs = [
+  { q: 'How much does a fractional CTO cost?', a: `From ${prices.ctoAdvisor} per month for the Advisor plan. Most early-stage startups choose the Part-time CTO plan at ${prices.ctoPartTime} per month, a fraction of a full-time senior salary.` },
+  { q: 'Fractional CTO or a full-time hire?', a: 'Full-time makes sense once you have a team of roughly ten developers or more. Before that, a part-time lead gives you the same decisions at a lower cost, and helps you hire the right full-time person later.' },
+  { q: 'Do you write code too?', a: 'Yes. On the Hands-on plan I build features myself; on the others I review code and step in when something is urgent.' },
+  { q: 'How do we start?', a: 'A 20-minute call, then a paid technical audit in the first week. If we both want to continue, the monthly plan starts from there.' },
+];
+
+const check = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>';
+---
+<Base
+  title="Fractional CTO for Startups — Part-Time Technical Lead | Viktor Sokoliuk"
+  description="Fractional CTO for early-stage startups in the EU: architecture, hiring, vendor control, roadmap and code review a few days a month. Advisor, part-time and hands-on plans."
+  breadcrumbs={[{ name: 'Fractional CTO', path: '/technical-partner/' }]}
+  footerLinks={[{ href: '/', label: 'Home' }, { href: '/mvp/', label: 'MVP development' }]}
+>
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Fractional CTO · technical partner</p>
+      <h1 class="hero-h1">A senior technical lead for your startup, <span class="accent">without a full-time salary.</span></h1>
+      <p class="lead hero-lead">Architecture, vendor and hiring decisions, roadmap and code review — a few days a month, from someone who builds and runs his own products.</p>
+      <div class="btn-row">
+        <Button href="#call" arrow>Book an intro call</Button>
+        <Button href="#models" variant="secondary">Engagement options</Button>
+      </div>
+    </div>
+    <div class="card signs">
+      <h2 class="signs-h">You probably need one if…</h2>
+      <ul class="signs-list">
+        {signs.map((s, i) => (
+          <li><span class="signs-n">{String(i + 1).padStart(2, '0')}</span><span>{s}</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band band-alt">
+    <div class="wrap what">
+      <h2 class="h2">What is a fractional CTO?</h2>
+      <div class="what-body">
+        <p>A fractional CTO is an experienced technical leader who works for your company part-time, usually a set number of days per month. You get the decisions and oversight of a CTO while your product and team are still too small for a full-time hire.</p>
+        <p>With me that also means hands-on help: I can review a pull request, fix a store rejection or prototype a feature myself when that is faster than explaining it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="models" class="wrap section-pad">
+    <div class="models-head">
+      <h2 class="h2">Choose how much of me you need</h2>
+      <div role="group" aria-label="Engagement model" class="tabs" data-model-tabs>
+        {models.map((m, i) => (
+          <button type="button" class="tab" aria-pressed={i === DEFAULT ? 'true' : 'false'} aria-controls={`model-${m.id}`} data-model={m.id}>{m.name}</button>
+        ))}
+      </div>
+    </div>
+    {models.map((m, i) => (
+      <div id={`model-${m.id}`} class="model on-dark" hidden={i !== DEFAULT} data-model-panel>
+        <div class="model-main">
+          <span class="model-time">{m.time}</span>
+          <h3 class="model-name">{m.name}</h3>
+          <p class="model-desc">{m.desc}</p>
+          <div class="model-price">{m.price}</div>
+          <span class="model-note">Monthly, cancel with 30 days' notice.</span>
+        </div>
+        <ul class="model-items">
+          {m.items.map((it) => <li><Fragment set:html={check} /><span>{it}</span></li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="band">
+    <div class="wrap section-pad">
+      <h2 class="h2 mb-40">The first 30 days</h2>
+      <ol class="month">
+        {month.map((s) => (
+          <li><span class="month-n">{s.w}</span><span class="month-t" set:html={s.t} /><span class="month-d">{s.d}</span></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap section-pad fit">
+      <div class="fit-box card">
+        <h2 class="fit-h">A good fit</h2>
+        <ul class="fit-list">{fit.map((f) => <li>{f}</li>)}</ul>
+      </div>
+      <div class="fit-box fit-box-alt">
+        <h2 class="fit-h">Not a fit</h2>
+        <ul class="fit-list">{notFit.map((f) => <li>{f}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap faq-section">
+    <h2 class="h2">Fractional CTO questions</h2>
+    <Faq items={faqs} />
+  </section>
+
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <h2 class="h-cta call-h">Start with a 20-minute call. If I'm not the right person, I'll say so.</h2>
+      <div class="btn-row">
+        <Button href={bookingHref}>Book a 20-min call</Button>
+        <Button href={`mailto:${site.email}`} variant="secondary">{site.email}</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .section-pad { padding-top: 88px; padding-bottom: 88px; }
+  .mb-40 { margin-bottom: 40px; }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 72px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: 56px;
+    align-items: end;
+  }
+  .hero-copy { display: flex; flex-direction: column; gap: 28px; }
+  .hero-h1 { font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; }
+  .hero-lead { max-width: 34rem; }
+  .signs { padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+  .signs-h { font-size: 20px; font-weight: 600; }
+  .signs-list { padding: 0; list-style: none; display: flex; flex-direction: column; }
+  .signs-list li { display: flex; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line-soft); }
+  .signs-n { font-family: var(--mono); color: var(--accent); }
+
+  .what { padding-top: 80px; padding-bottom: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; }
+  .what-body { display: flex; flex-direction: column; gap: 16px; color: var(--text-2); }
+
+  .models-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 32px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px; background: var(--line-soft); border-radius: 8px; }
+  .tab {
+    min-height: 44px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    border-radius: var(--radius-btn);
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .tab[aria-pressed='true'] { background: var(--ink); color: var(--bg); }
+  .model {
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: var(--radius-card);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 40px;
+  }
+  .model[hidden] { display: none; }
+  .model-main { display: flex; flex-direction: column; gap: 14px; }
+  .model-time { font-family: var(--mono); font-size: 13px; color: var(--on-dark-muted); }
+  .model-name { font-size: 32px; letter-spacing: -0.02em; }
+  .model-desc { color: var(--on-dark-2); }
+  .model-price { font-family: var(--mono); font-size: 32px; margin-top: 8px; }
+  .model-note { font-size: 14px; color: var(--on-dark-muted); }
+  .model-items { padding: 0; list-style: none; display: flex; flex-direction: column; }
+  .model-items li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--dark-line); }
+  .model-items :global(svg) { flex: none; margin-top: 4px; }
+
+  .month { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; }
+  .month li { display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 1px solid var(--ink); }
+  .month-n { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+  .month-t { font-size: 20px; font-weight: 600; }
+  .month-d { color: var(--text-2); font-size: 15px; }
+
+  .fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px; }
+  .fit-box { padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+  .fit-box-alt { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-card); }
+  .fit-h { font-size: 24px; letter-spacing: -0.02em; }
+  .fit-list { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--text-2); }
+
+  .faq-section { padding-top: 72px; padding-bottom: 88px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 48px; }
+
+  .call { padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .call-h { max-width: 50rem; }
+</style>
+
+<script>
+  const tabs = document.querySelector<HTMLElement>('[data-model-tabs]');
+  tabs?.addEventListener('click', (event) => {
+    const btn = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-model]');
+    if (!btn) return;
+    tabs.querySelectorAll<HTMLButtonElement>('button[data-model]').forEach((b) => {
+      const on = b === btn;
+      b.setAttribute('aria-pressed', String(on));
+      const panel = document.getElementById(`model-${b.dataset.model}`);
+      if (panel) panel.hidden = !on;
+    });
+  });
+</script>

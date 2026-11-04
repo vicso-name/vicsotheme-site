@@ -149,26 +149,6 @@ h1, h2, h3, p, ul, ol { margin: 0; }
 }
 
 /* ── Forms ── */
-.field { display: flex; flex-direction: column; gap: 8px; }
-.field label { font-size: 15px; font-weight: 600; }
-.field input,
-.field textarea,
-.field select {
-  font: inherit;
-  font-size: 16px;
-  color: var(--ink);
-  background: var(--surface);
-  border: 1px solid var(--input-border);
-  border-radius: var(--radius-btn);
-  min-height: 48px;
-  padding: 12px 14px;
-  width: 100%;
-}
-.field textarea { min-height: 132px; resize: vertical; }
-.field input:focus-visible,
-.field textarea:focus-visible,
-.field select:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
-
-.form-status { font-size: 15px; min-height: 1.55em; }
+.form-status { font-size: 15px; min-height: 1.55em; margin: 0; }
 .form-status[data-state="success"] { color: #1F7A3A; }
 .form-status[data-state="error"] { color: #B42318; }

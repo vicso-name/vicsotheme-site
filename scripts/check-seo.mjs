@@ -55,7 +55,7 @@ if (!fs.existsSync(root)) {
       seen.add(final);
       final = redirectMap.get(final.replace(/\/$/, '') || '/');
     }
-    if (final !== target) warn(`Redirect chain ${source} → ${target} → … → ${final}`);
+    if (final !== target) fail(`Redirect chain ${source} → ${target} → … → ${final}`);
     if (!fs.existsSync(routeToFile(final))) fail(`Redirect ${source} ends at missing page ${final}`);
   }
 

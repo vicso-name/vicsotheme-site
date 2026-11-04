@@ -1,0 +1,105 @@
+---
+/**
+ * Formspree form: posts with fetch (JSON response) and falls back to a plain
+ * POST without JS. Extra hidden fields go in `hidden`; the submit label can
+ * contain a live part via the `label` slot.
+ */
+import { site } from '../config/site';
+
+interface Props {
+  id: string;
+  subject: string;
+  messageLabel?: string;
+  hidden?: Record<string, string>;
+  class?: string;
+}
+const { id, subject, messageLabel = 'Message', hidden = {}, class: extra } = Astro.props;
+---
+<form
+  id={id}
+  class:list={['lead-form', extra]}
+  action={site.formspree}
+  method="POST"
+  data-lead-form
+  data-email={site.email}
+>
+  <input type="hidden" name="_subject" value={subject} />
+  {Object.entries(hidden).map(([name, value]) => <input type="hidden" name={name} value={value} />)}
+  <div class="lead-hp" aria-hidden="true">
+    <label for={`${id}-hp`}>Leave this field empty</label>
+    <input id={`${id}-hp`} type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <label for={`${id}-name`}>Your name</label>
+  <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+
+  <label for={`${id}-email`}>Email</label>
+  <input id={`${id}-email`} name="email" type="email" autocomplete="email" required />
+
+  <label for={`${id}-message`}>{messageLabel}</label>
+  <textarea id={`${id}-message`} name="message" rows="4" required></textarea>
+
+  <button type="submit" class="btn btn-primary lead-submit"><slot name="label">Send</slot></button>
+  <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+</form>
+
+<style>
+  .lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+  }
+  label { font-size: 14px; font-weight: 600; }
+  input, textarea {
+    font: inherit;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-btn);
+  }
+  input { min-height: 48px; padding: 0 14px; }
+  textarea { padding: 12px 14px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
+  .lead-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+</style>
+
+<script>
+  const MSG_OK = 'Thanks — your message is in. I reply within one working day.';
+
+  document.querySelectorAll<HTMLFormElement>('form[data-lead-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-form-status]');
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const fallbackEmail = form.dataset.email;
+
+    const show = (state: 'success' | 'error' | '', text: string) => {
+      if (!status) return;
+      status.dataset.state = state;
+      status.textContent = text;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      button?.setAttribute('disabled', '');
+      show('', 'Sending…');
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input:not([type="hidden"]), textarea').forEach((el) => { el.value = ''; });
+        show('success', MSG_OK);
+      } catch {
+        show('error', `Sending failed. Please try again or email ${fallbackEmail ?? 'me directly'}.`);
+      } finally {
+        button?.removeAttribute('disabled');
+      }
+    });
+  });
+</script>

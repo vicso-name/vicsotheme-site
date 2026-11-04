@@ -25,6 +25,17 @@ export const site = {
     github: TBD,
   },
 
+  /** Client testimonial on /mvp/. */
+  testimonial: {
+    quote: TBD,
+    name: TBD,
+    role: TBD,
+    company: TBD,
+  },
+
+  /** "Full guide: how much an MVP costs" link on /mvp/ (hidden until set). */
+  mvpCostGuideUrl: TBD,
+
   /** Year the Hebrew app was first released (CaseHebrew hero). */
   heroYear: TBD,
 
