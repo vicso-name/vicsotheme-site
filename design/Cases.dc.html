@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cases — Viktor Sokoliuk</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+a{color:#16181D}a:hover{color:#2449D8}
+</style>
+</helmet>
+<div style="font-family: 'Schibsted Grotesk', system-ui, sans-serif; color: #16181D; background: #F4F3EF; min-height: 100vh; font-size: 17px; line-height: 1.55">
+
+<header style="border-bottom: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 10px">
+<span style="font-weight: 700; font-size: 19px; letter-spacing: -0.01em">Viktor Sokoliuk</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5E66">product engineer · EU</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 15px">
+<a href="Mvp.dc.html" style="text-decoration: none; padding: 10px 0">MVP development</a>
+<a href="TechnicalPartner.dc.html" style="text-decoration: none; padding: 10px 0">Fractional CTO</a>
+<a href="Main.dc.html" style="text-decoration: none; padding: 10px 0">For agencies</a>
+<a href="Cases.dc.html" aria-current="page" style="text-decoration: underline; text-underline-offset: 6px; padding: 10px 0">Cases</a>
+<a href="#call" style="text-decoration: none; padding: 11px 18px; background: #16181D; color: #F4F3EF; border-radius: 6px; font-weight: 600">Book a 20-min call</a>
+</nav>
+</div>
+</header>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 80px 24px 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 40px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #5B5E66">Cases · my own products</p>
+<h1 style="margin: 0; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700">Apps I designed, built and <span style="color: {{accent}}">still run myself.</span></h1>
+</div>
+<p style="margin: 0; max-width: 32rem; font-size: 19px; color: #3A3D44">No client logos here — just live products in the stores, with real users, real reviews and subscription revenue. Every one of them you can download today.</p>
+</section>
+
+<section style="border-top: 1px solid #D9D7D0; border-bottom: 1px solid #D9D7D0; background: #ECEAE4">
+<div style="max-width: 1240px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 20px; font-size: 14px; color: #3A3D44">
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #16181D">20K+</div>downloads across Google Play</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #16181D">6</div>live products: Android, iOS, web</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #16181D">4.2★</div>Hebrew app, 100+ reviews</div>
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #16181D">3</div>stacks: Kotlin, Swift, Flutter</div>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 96px">
+<div role="group" aria-label="Filter by platform" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+<button type="button" onClick="{{f.pick}}" aria-pressed="{{f.selected}}" style="{{f.style}}">{{f.label}}</button>
+</sc-for>
+</div>
+
+<sc-if value="{{showFeatured}}" hint-placeholder-val="{{true}}">
+<a href="CaseHebrew.dc.html" style="text-decoration: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px; padding: 40px; margin-bottom: 24px; background: #16181D; color: #F4F3EF; border-radius: 10px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A9ACB4; text-transform: uppercase; letter-spacing: 0.04em">Flagship · Android + iOS · EdTech</span>
+<h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.1">Learn Hebrew: a solo-built language app that pays for itself</h2>
+<p style="margin: 0; color: #C9CBD1">Kotlin/Compose on Android, a native SwiftUI port for iOS, my own Django API and a content site that feeds both stores.</p>
+<span style="font-weight: 600; margin-top: 8px">Read the full case →</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #33363E; border-radius: 8px; font-family: 'JetBrains Mono', monospace">
+<div style="padding: 20px; border-right: 1px solid #33363E; border-bottom: 1px solid #33363E"><div style="font-size: 28px">10K+</div><div style="font-size: 12px; color: #A9ACB4">downloads</div></div>
+<div style="padding: 20px; border-bottom: 1px solid #33363E"><div style="font-size: 28px">4.2★</div><div style="font-size: 12px; color: #A9ACB4">109 reviews</div></div>
+<div style="padding: 20px; border-right: 1px solid #33363E"><div style="font-size: 28px">3,200</div><div style="font-size: 12px; color: #A9ACB4">active users</div></div>
+<div style="padding: 20px"><div style="font-size: 28px; color: #8FA6FF">4×</div><div style="font-size: 12px; color: #A9ACB4">ARR in 12 months</div></div>
+</div>
+</a>
+</sc-if>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px">
+<sc-for list="{{cases}}" as="c" hint-placeholder-count="5">
+<a href="{{c.href}}" style="text-decoration: none; background: #FFFFFF; border: 1px solid #D9D7D0; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{c.tags}}" as="t" hint-placeholder-count="2">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 3px 8px; border: 1px solid #D9D7D0; border-radius: 4px; color: #3A3D44">{{t}}</span>
+</sc-for>
+</div>
+<h3 style="margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2">{{c.title}}</h3>
+<p style="margin: 0; color: #3A3D44; font-size: 15px">{{c.desc}}</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #E6E4DE; display: flex; justify-content: space-between; align-items: end; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace"><div style="font-size: 22px">{{c.metric}}</div><div style="font-size: 12px; color: #5B5E66">{{c.metricLabel}}</div></div>
+<span style="font-size: 14px; font-weight: 600">{{c.cta}}</span>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section id="call" style="border-top: 1px solid #D9D7D0; background: #ECEAE4">
+<div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 32px">
+<h2 style="margin: 0; font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.035em; line-height: 1.05; max-width: 44rem">I build client apps with the same care as my own.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="Mvp.dc.html" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: {{accent}}; color: #FFFFFF; border-radius: 6px; font-weight: 600">Start your MVP</a>
+<a href="#call" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #16181D; border-radius: 6px; font-weight: 600">Book a call</a>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #D9D7D0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5B5E66">
+<span>© 2026 Viktor Sokoliuk · [COMPANY NAME] OÜ, Tallinn</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="Main.dc.html" style="color: #5B5E66">Home</a><a href="Mvp.dc.html" style="color: #5B5E66">MVP development</a><a href="#call" style="color: #5B5E66">На русском</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2449D8","options":["#2449D8","#C2410C","#0F766E","#16181D"]},"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'all' };
+  }
+  renderVals() {
+    const all = [
+      { title: 'Learn Hebrew – Read & Speak (iOS)', desc: 'Native SwiftUI port of the Android app: 106 tasks in 5 phases, StoreKit subscriptions, shared API.', tags: ['iOS', 'SwiftUI'], cats: ['ios'], metric: '7.41%', metricLabel: 'day-7 download-to-paid', cta: 'Case →', href: 'CaseHebrew.dc.html' },
+      { title: 'Korean Alphabet: Hangul', desc: 'Hangul course with Phrase X-Ray breakdowns, stroke-order practice and a learning path. Now on iOS too.', tags: ['Android', 'iOS'], cats: ['android', 'ios'], metric: '10K+', metricLabel: 'downloads on Google Play', cta: 'Case →', href: '#hangul' },
+      { title: 'Learn Poker: Lessons & Trainer', desc: 'Texas Hold&#39;em trainer: five drills, SM-2 daily review, hand simulator, localized to Brazilian Portuguese.', tags: ['Android', 'Compose'], cats: ['android'], metric: '~20', metricLabel: 'downloads to first paid subscriber', cta: 'Case →', href: '#poker' },
+      { title: 'Estonian Verbs: Conjugation', desc: 'Flutter app on my own language-app framework: Bloc, spaced repetition, offline audio, EN/RU interface.', tags: ['Flutter'], cats: ['flutter'], metric: '50', metricLabel: 'verbs × 7 practice blocks', cta: 'Case →', href: '#verbs' },
+      { title: 'hebrewedu.com', desc: 'Astro content site with browser games, an alphabet course and a French version, built to send search traffic into the apps.', tags: ['Web', 'Astro', 'SEO'], cats: ['web'], metric: 'EN + FR', metricLabel: 'mirrored content', cta: 'Case →', href: '#hebrewedu' }
+    ].map((c) => ({ ...c, desc: c.desc.replace('&#39;', "'") }));
+    const f = this.state.filter;
+    const filters = [
+      { id: 'all', label: 'All' }, { id: 'android', label: 'Android' }, { id: 'ios', label: 'iOS' }, { id: 'flutter', label: 'Flutter' }, { id: 'web', label: 'Web' }
+    ];
+    const on = 'all: unset; box-sizing: border-box; min-height: 44px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 999px; cursor: pointer; font-size: 15px; font-weight: 600; background: #16181D; color: #F4F3EF; border: 1px solid #16181D';
+    const off = 'all: unset; box-sizing: border-box; min-height: 44px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 999px; cursor: pointer; font-size: 15px; font-weight: 600; color: #16181D; border: 1px solid #B9B7B0';
+    return {
+      accent: this.props.accent ?? '#2449D8',
+      showFeatured: f === 'all' || f === 'android' || f === 'ios',
+      filters: filters.map((x) => ({ ...x, selected: f === x.id, style: f === x.id ? on : off, pick: () => this.setState({ filter: x.id }) })),
+      cases: all.filter((c) => f === 'all' || c.cats.includes(f))
+    };
+  }
+}
+</script>
+</body>
+</html>
