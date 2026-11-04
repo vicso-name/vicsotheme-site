@@ -14,7 +14,7 @@ export const site = {
   jobTitle: 'Product engineer',
 
   email: 'vic.sokoliuk@gmail.com',
-  city: 'Tallinn',
+  city: 'Pärnu',
   country: 'Estonia',
   countryCode: 'EE',
   companyName: TBD,
