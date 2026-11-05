@@ -1,0 +1,322 @@
+---
+import { Image, getImage } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import Button from '../../components/Button.astro';
+import { site, bookingHref } from '../../config/site';
+import { abs, personId } from '../../lib/schema';
+import { games, gameHref, gamesBase } from '../../data/games';
+import gameplayImg from '../../assets/cases/hnq-gameplay.png';
+import mapImg from '../../assets/cases/hnq-title-map.png';
+
+const path = '/cases/hebrewedu-games/';
+const title = 'HebrewEdu Games — 8 Hebrew learning games built in 32 days';
+const description = 'How I built eight Hebrew learning browser games for hebrewedu.com in 32 days on one shared Phaser engine: design first, a game template, 2,808 tests as gates.';
+const published = '2026-11-05';
+const numbersQuest = `${gamesBase}hebrew-numbers-quest/`;
+
+const imgSizes = '(min-width: 1240px) 1192px, 100vw';
+const schemaImage = await getImage({ src: gameplayImg, format: 'webp', width: 1280 });
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: published,
+    dateModified: published,
+    image: abs(schemaImage.src),
+    mainEntityOfPage: abs(path),
+    author: { '@type': 'Person', '@id': personId, name: site.name, url: abs('/') },
+    publisher: { '@type': 'Person', '@id': personId, name: site.name },
+  },
+];
+
+const stats = [
+  { v: '8', l: 'games live, Oct 3 → Nov 3' },
+  { v: '1–2 days', l: 'brief to live, for most games', accent: true },
+  { v: '2,808', l: 'automated tests, all passing' },
+  { v: '8.5K', l: 'lines of shared engine code' },
+  { v: '#2', l: 'landing page on the site in month one' },
+];
+
+const facts = [
+  { t: 'My role', d: 'Game design, engineering, content pipeline, audio, site integration, analytics.' },
+  { t: 'Stack', d: 'Phaser 3, TypeScript, Vite, pnpm monorepo, Tiled maps, Astro, GA4.' },
+  { t: 'Content', d: '22 letters, 184 nouns in 13 themes, numbers 0–20, 14 everyday dialogues.' },
+  { t: 'Why games', d: 'Free play pages bring search traffic and send learners to the iOS and Android apps.' },
+];
+
+const questFacts = [
+  { t: 'Worlds · levels', d: '2 · 9 + 2 quizzes' },
+  { t: 'Stars to collect', d: '27' },
+  { t: 'Hazards', d: '8, from geese to chimney smoke' },
+  { t: 'Tests', d: '429' },
+  { t: 'Brief → live', d: 'Oct 24 → Oct 25' },
+  { t: 'JS, gzipped', d: '382 KB' },
+];
+
+const steps = [
+  { t: 'Game brief', d: 'What it teaches, the mechanic, the content.' },
+  { t: 'Claude Design', d: 'Every screen and state, art and key frames.' },
+  { t: '/new-game skill', d: 'Copies the starter, builds phase by phase to the export.' },
+  { t: 'verify:game', d: 'Types, tests, build, no external requests in the bundle.' },
+  { t: 'Site handoff', d: 'Synced into Astro, landing page, GA4 events, live.' },
+];
+
+const packages = [
+  { t: 'game-core', d: 'Mastery and review scheduling, distractors, lives, scoring — pure logic, no engine' },
+  { t: 'runtime-phaser', d: 'Loader with retry, safe areas, audio that never crashes the game, Hebrew text helpers' },
+  { t: 'ui-kit', d: 'Themeable buttons, cards, tiles, Hebrew keyboard, speech bubbles' },
+  { t: 'platform-web', d: 'Saves, analytics to the host page, app store links' },
+  { t: 'word-content', d: '184 nouns with niqqud, plain spelling, English and audio' },
+];
+
+const engineering = [
+  { t: 'Right-to-left, done right', d: 'Hebrew is never reversed in code. Fixed an RTL placement bug in Phaser on high-DPI screens, and fonts load before any text is drawn so vowel marks render correctly.' },
+  { t: "Audio that can't break the game", d: 'One audio context per game, unlocked by a tap. A missing sound is silent, never a crash. Generated speech is cached and its cost logged.' },
+  { t: 'Phone and desktop', d: 'Large touch buttons, forgiving jump timing, full keyboard play. Layout maths is tested from 568×320 to 1920×1080.' },
+  { t: 'Built to include', d: 'Reduced motion respected, contrast checked by tests, feedback never by colour alone, every prompt works without sound.' },
+];
+
+const gaps = [
+  'No offline mode yet — the games need a connection.',
+  "Game content is drawn on canvas, so screen readers can't read it.",
+  'Three games use generated speech; a native-speaker review is still in progress.',
+  'Too early for usage numbers — the series is one month old.',
+];
+
+const newTab = { target: '_blank', rel: 'noopener' };
+---
+<Base
+  title={title}
+  description={description}
+  ogType="article"
+  schema={schema}
+  breadcrumbs={[{ name: 'Cases', path: '/cases/' }, { name: 'HebrewEdu Games', path }]}
+  footerLinks={[{ href: '/', label: 'Home' }, { href: '/cases/', label: 'Cases' }]}
+>
+  <section class="wrap hero">
+    <a href="/cases/" class="back">← All cases</a>
+    <p class="eyebrow">Case · own product · browser games</p>
+    <h1 class="hero-h1">Eight learning games in 32 days, <span class="accent">on one shared engine.</span></h1>
+    <p class="lead hero-lead">I built a small game studio pipeline for hebrewedu.com: a brief goes in, Claude Design draws the screens, and a tested Phaser game comes out — usually within one or two days.</p>
+    <div class="btn-row">
+      <Button href={numbersQuest} target="_blank">Play Numbers Quest ↗<span class="visually-hidden"> (opens in a new tab)</span></Button>
+      <Button href={gamesBase} variant="secondary" target="_blank">All 8 games ↗<span class="visually-hidden"> (opens in a new tab)</span></Button>
+    </div>
+  </section>
+
+  <section class="wrap shot">
+    <figure class="shot-fig">
+      <Image
+        src={gameplayImg}
+        alt="Hebrew Numbers Quest gameplay: the player bumped the wrong block 3, the correct block 2 glows with its Hebrew label"
+        width={1280}
+        height={800}
+        widths={[640, 960, 1280]}
+        sizes={imgSizes}
+        format="webp"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <figcaption>Numbers Quest · wrong answer → the right block glows with its pointed and everyday spelling, and the word is spoken</figcaption>
+    </figure>
+  </section>
+
+  <section class="stats-band">
+    <dl class="wrap stats">
+      {stats.map((s) => <div><dt class:list={['stat-v', { accent: s.accent }]}>{s.v}</dt><dd>{s.l}</dd></div>)}
+    </dl>
+  </section>
+
+  <section class="wrap facts">
+    {facts.map((f) => <div class="fact"><div class="fact-t">{f.t}</div>{f.d}</div>)}
+  </section>
+
+  <section class="band">
+    <div class="wrap pad-80 quest">
+      <div class="quest-copy">
+        <span class="kicker">Featured · Hebrew Numbers Quest</span>
+        <h2 class="h2">A platformer that teaches numbers 0–20</h2>
+        <p class="text-2">Run through a market and over rooftops, bump number blocks to hear them, then prove you know them at question gates. Wrong answers are designed, not random: neighbours, sound-alikes like <span lang="he" dir="rtl">שָׁלוֹשׁ</span> / <span lang="he" dir="rtl">שֵׁשׁ</span>, digit vs teen, and the numbers you personally keep mixing up.</p>
+        <dl class="quest-facts">
+          {questFacts.map((f) => <div><dt>{f.t}</dt><dd>{f.d}</dd></div>)}
+        </dl>
+      </div>
+      <figure class="map-fig">
+        <Image
+          src={mapImg}
+          alt="Numbers Quest world map: The Market 0–10 and Rooftops and Walls 11–20, with level stops along a path"
+          width={1280}
+          height={800}
+          widths={[640, 960, 1280]}
+          sizes="(min-width: 1240px) 572px, 100vw"
+          format="webp"
+          loading="lazy"
+        />
+        <figcaption>World map · the second world unlocks after the Market gate quiz</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band-dark on-dark">
+    <div class="wrap pad-88">
+      <h2 class="h2 mb-14">The game factory</h2>
+      <p class="factory-lead">Every game starts from the same template and goes through the same gates. AI does the heavy lifting; the checks keep it honest.</p>
+      <ol class="steps">
+        {steps.map((s, i) => (
+          <li>
+            <span class="step-n">{String(i + 1).padStart(2, '0')}</span>
+            <span class="step-t">{s.t}</span>
+            <span class="step-d">{s.d}</span>
+          </li>
+        ))}
+      </ol>
+      <div class="table-wrap" role="region" aria-label="Shared packages" tabindex="0">
+        <table class="pkg">
+          <thead>
+            <tr><th scope="col">Shared package</th><th scope="col">What every game gets</th></tr>
+          </thead>
+          <tbody>
+            {packages.map((p) => <tr><th scope="row">{p.t}</th><td>{p.d}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap pad-88">
+    <h2 class="h2 mb-40">All eight games</h2>
+    <div class="games">
+      {games.map((g) => (
+        <a href={gameHref(g)} class="game" {...newTab}>
+          <span class="game-date">{g.date}</span>
+          <span class="game-name">{g.name}<span class="visually-hidden"> (opens in a new tab)</span></span>
+          <span class="game-mech">{g.mechanic}</span>
+          <span class="game-teaches">Teaches: {g.teaches}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="band band-alt">
+    <div class="wrap pad-80">
+      <h2 class="h2 mb-40">Engineering that players never see</h2>
+      <div class="eng">
+        {engineering.map((e) => <div class="eng-item"><span class="eng-t">{e.t}</span><span class="eng-d">{e.d}</span></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap pad-88 lessons">
+    <div class="lesson card">
+      <span class="lesson-k">Not done yet</span>
+      <h2 class="lesson-h">Honest gaps</h2>
+      <ul class="gaps">
+        {gaps.map((g) => <li>{g}</li>)}
+      </ul>
+    </div>
+    <div class="lesson lesson-dark on-dark">
+      <span class="lesson-k">What this means for you</span>
+      <h2 class="lesson-h">AI speed with a senior's safety net</h2>
+      <p>The same approach — a shared foundation, design first, tests as gates — is how I build MVPs: fast, without the weekend-prototype mess.</p>
+      <div class="lesson-links">
+        <a href="/mvp/">MVP packages →</a>
+        <a href="/app-cost-calculator/">Price your app →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="call" class="band band-alt">
+    <div class="wrap call">
+      <h2 class="call-h">Need an interactive learning product? Let's talk.</h2>
+      <div class="btn-row">
+        <Button href={bookingHref}>Book a 20-min call</Button>
+        <Button href="/cases/hebrew-app/" variant="secondary">Case: Learn Hebrew app →</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn-row :global(.btn) { padding: 0 22px; }
+  .pad-80 { padding-top: 80px; padding-bottom: 80px; }
+  .pad-88 { padding-top: 88px; padding-bottom: 88px; }
+  .mb-14 { margin-bottom: 14px; }
+  .mb-40 { margin-bottom: 40px; }
+  .kicker, .fact-t, .lesson-k { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .hero { padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 26px; }
+  .back { font-size: 15px; text-decoration: none; color: var(--text-2); display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; }
+  .hero-h1 { max-width: 62rem; font-size: clamp(38px, 5vw, 68px); line-height: 1.03; letter-spacing: -0.035em; font-weight: 700; }
+  .hero-lead { max-width: 44rem; }
+
+  .shot { padding-bottom: 48px; }
+  figure { margin: 0; border-radius: var(--radius-card); overflow: hidden; }
+  figure img { width: 100%; height: auto; aspect-ratio: 1280 / 800; object-fit: cover; }
+  figcaption { padding: 12px 18px; font-family: var(--mono); font-size: 12px; }
+  .shot-fig { border: 1px solid var(--ink); background: var(--ink); }
+  .shot-fig figcaption { color: var(--on-dark-2); }
+  .map-fig { border: 1px solid var(--line); background: var(--surface); }
+  .map-fig figcaption { color: var(--muted); }
+
+  .stats-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+  .stats { margin-top: 0; margin-bottom: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+  .stats > div { padding: 28px 20px 28px 0; }
+  .stats dd { margin: 0; font-size: 14px; color: var(--muted); }
+  .stat-v { font-family: var(--mono); font-size: 32px; letter-spacing: -0.02em; }
+
+  .facts { padding-top: 64px; padding-bottom: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; font-size: 15px; }
+  .fact { padding-top: 14px; border-top: 1px solid var(--ink); }
+  .fact-t { margin-bottom: 6px; }
+
+  .quest { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: center; }
+  .quest-copy { display: flex; flex-direction: column; gap: 18px; }
+  .quest-facts { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); font-size: 15px; }
+  .quest-facts > div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .quest-facts > div:nth-child(odd) { padding-right: 12px; }
+  .quest-facts dt { color: var(--muted); font-size: 13px; }
+  .quest-facts dd { margin: 0; font-family: var(--mono); }
+
+  .factory-lead { margin-bottom: 40px; color: var(--on-dark-2); max-width: 42rem; }
+  .steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; }
+  .steps li { padding: 18px; border: 1px solid var(--dark-line); border-radius: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .step-n { font-family: var(--mono); font-size: 12px; color: var(--on-dark-muted); }
+  .step-t { font-weight: 600; }
+  .step-d { font-size: 14px; color: var(--on-dark-2); }
+
+  .table-wrap { margin-top: 48px; overflow-x: auto; border: 1px solid var(--dark-line); border-radius: var(--radius-card); }
+  .pkg { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; }
+  .pkg th, .pkg td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--dark-line); }
+  .pkg tbody tr:last-child > * { border-bottom: 0; }
+  .pkg thead th { font-family: var(--mono); font-size: 12px; color: var(--on-dark-muted); font-weight: 500; }
+  .pkg tbody th { font-family: var(--mono); font-weight: 500; }
+  .pkg td { color: var(--on-dark-2); }
+
+  .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 20px; }
+  .game { text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .game-date { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .game-name { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .game-mech { font-size: 15px; color: var(--text-2); }
+  .game-teaches { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: 13px; color: var(--muted); }
+
+  .eng { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px; }
+  .eng-item { display: flex; flex-direction: column; gap: 8px; }
+  .eng-t { font-weight: 600; font-size: 19px; }
+  .eng-d { color: var(--text-2); font-size: 15px; }
+
+  .lessons { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px; }
+  .lesson { padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+  .lesson-h { font-size: 24px; letter-spacing: -0.02em; }
+  .gaps { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--text-2); }
+  .lesson-dark { background: var(--ink); color: var(--bg); border-radius: var(--radius-card); }
+  .lesson-dark .lesson-k { color: var(--on-dark-muted); }
+  .lesson-dark p { color: var(--on-dark-2); }
+  .lesson-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px; }
+  .lesson-links a, .lesson-links a:hover { color: var(--bg); font-weight: 600; }
+
+  .call { padding-top: 88px; padding-bottom: 88px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 32px; }
+  .call-h { font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.035em; line-height: 1.05; max-width: 44rem; }
+</style>
