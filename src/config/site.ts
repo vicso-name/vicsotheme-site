@@ -85,6 +85,7 @@ export const site = {
   },
 
   hebrewedu: 'https://hebrewedu.com/',
+  hanguledu: 'https://hanguledu.com/',
 
   formspree: 'https://formspree.io/f/mdabeqkd',
   gscVerification: 'tx8IsE5ya6PCfZBcCKREggMUHuKMPRWN4T-xp9wtq3Q',

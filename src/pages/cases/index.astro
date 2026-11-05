@@ -32,6 +32,13 @@ const featuredStats = [
     <p class="lead hero-lead">No client logos here — just live products in the stores, with real users, real reviews and subscription revenue. Every one of them you can download today.</p>
   </section>
 
+  <section class="wrap principle">
+    <div class="principle-item">
+      <span class="principle-t">Create value, not text.</span>
+      <span class="principle-d">Every site I build earns its traffic with something people use — a game, a calculator, a lookup tool — not with filler articles. Search engines and users reward the same thing.</span>
+    </div>
+  </section>
+
   <section class="band band-alt stats-band">
     <dl class="wrap stats">
       {stats.map((s) => <div><dt class="stat-v">{s.v}</dt><dd>{s.l}</dd></div>)}
@@ -99,6 +106,11 @@ const featuredStats = [
   .hero-copy { display: flex; flex-direction: column; gap: 24px; }
   .hero-h1 { font-size: clamp(40px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; }
   .hero-lead { max-width: 32rem; }
+
+  .principle { padding-bottom: 48px; }
+  .principle-item { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--ink); max-width: 44rem; }
+  .principle-t { font-weight: 600; }
+  .principle-d { color: var(--text-2); font-size: 15px; }
 
   .stats-band { border-bottom: 1px solid var(--line); }
   .stats {
