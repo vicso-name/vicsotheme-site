@@ -1,0 +1,96 @@
+lang,keyword,volume,kd,cpc,seed,intent
+et,tehisintellekt,3600,2,1.00,tehisintellekt rakendus,info
+et,kodulehe tegemine,1600,33,8.61,kodulehe tegemine,commercial
+et,e-pood,880,48,0.99,e-poe tegemine,info
+et,idufirma,720,0,5.69,MVP arendus,info
+et,flutter,390,92,3.98,flutter arendaja,info
+et,MVP,390,25,0.35,MVP arendus,info
+et,woocommerce,390,55,3.43,e-poe tegemine,info
+et,chatbot,260,60,0.96,tehisintellekt rakendus,info
+et,trinidad wiseman oü,260,17,0.00,tarkvaraarendus,nav
+et,äpp,170,10,3.95,äpi arendus,info
+et,tarkvaraarendaja,170,0,0.44,tarkvaraarendus,info
+et,kodulehe loomine,140,48,8.68,kodulehe tegemine,commercial
+et,tarkvaraarendus,140,0,4.56,tarkvaraarendus,commercial
+et,veebiarendus,140,6,7.17,veebiarendus,commercial
+et,wordpress koduleht,140,10,5.07,wordpress kodulehe tegemine,info
+et,veebilehe loomine,110,13,6.73,veebilehe tegemine hind,commercial
+et,veebilehe tegemine,110,30,8.60,veebilehe tegemine hind,commercial
+et,e-poe loomine,90,11,10.57,e-poe tegemine,commercial
+et,e-poe tegemine,90,1,9.17,e-poe tegemine,commercial
+et,kodulehe tegemine hind,90,0,8.85,kodulehe tegemine,commercial
+et,veebidisain,90,1,7.58,kodulehe tegemine,commercial
+et,web design agency oü,90,2,2.43,veebiarendus,nav
+et,kodulehe hooldus,70,0,4.52,kodulehe tegemine,commercial
+et,mobiilirakendus,70,0,2.22,mobiilirakenduse arendus,info
+et,programmeerija,70,0,0.00,tarkvaraarendus,info
+et,automatiseerimine,50,7,4.18,tehisintellekt rakendus,info
+et,tasuta kodulehe tegemine,50,7,2.93,kodulehe tegemine,info
+et,twn,50,32,0.00,tarkvaraarendus,nav
+et,wordpress kodulehe tegemine,50,0,9.07,wordpress kodulehe tegemine,commercial
+et,wordpressiga kodulehe tegemine,50,13,9.07,wordpress kodulehe tegemine,commercial
+et,e-poe arendus,40,0,4.47,e-poe tegemine,commercial
+et,it teenused,40,,9.65,IT partner,commercial
+et,IT tugi,40,19,0.00,IT partner,commercial
+et,kodulehe haldus,40,4,4.22,kodulehe tegemine,commercial
+et,kodulehe hind,40,0,3.95,kodulehe tegemine,commercial
+et,kodulehe tegemine wordpress,40,0,0.00,wordpress kodulehe tegemine,commercial
+et,kodulehe tegemine wordpressiga,40,9,0.00,wordpress kodulehe tegemine,commercial
+et,vdisain oü,40,,5.15,veebiarendus,nav
+et,veebiagentuur,40,,2.91,kodulehe tegemine,commercial
+et,voog kodulehe tegemine,40,7,2.43,kodulehe tegemine,nav
+et,tarkvara arendus,30,1,7.08,tarkvaraarendus,commercial
+et,veebiarendaja,30,0,8.11,veebiarendus,commercial
+et,xysum,30,,0.00,veebiarendus,nav
+et,e poe tegemine hind,20,35,7.96,e-poe tegemine,commercial
+et,e-poe tegemine tasuta,20,38,3.67,e-poe tegemine,info
+et,e-poe tegemine wordpress,20,40,0.00,e-poe tegemine,commercial
+et,kodulehe tellimine,20,70,16.45,kodulehe tegemine,commercial
+et,soodne koduleht,20,6,0.97,kodulehe tegemine,commercial
+et,agiilne tarkvaraarendus,10,11,0.00,tarkvaraarendus,commercial
+et,AI lahendused,10,,3.54,tehisintellekt rakendus,commercial
+et,äpi loomine,10,10,2.69,äpi tegemine,commercial
+et,äpi tegemine,10,11,0.00,äpi tegemine,commercial
+et,äppi tegemine,10,12,3.99,äpi tegemine,commercial
+et,columbus it partner,10,,0.00,IT partner,nav
+et,e poe loomine tasuta,10,,2.85,e-poe tegemine,info
+et,e poe platvorm,10,24,4.89,e-poe tegemine,commercial
+et,ettevõtte kodulehe tegemine,10,,13.19,kodulehe tegemine,commercial
+et,ise kodulehe tegemine,10,37,1.73,kodulehe tegemine,info
+et,IT outsourcing,10,,0.00,IT partner,commercial
+et,it partner,10,42,0.00,IT partner,commercial
+et,kodulehe tegemine hinnakiri,10,,0.00,kodulehe tegemine,commercial
+et,kodulehe tegemine ise,10,37,0.00,kodulehe tegemine,info
+et,kodulehe tegemine koolitus,10,38,0.00,kodulehe tegemine,info
+et,kodulehe tegemine oü,10,,0.00,kodulehe tegemine,nav
+et,kodulehe tegemine tartus,10,100,0.00,kodulehe tegemine,nav
+et,kodulehe tegemine tasuta,10,7,2.79,kodulehe tegemine,info
+et,kodulehe tegija,10,11,7.31,kodulehe tegemine,commercial
+et,kodulehe tegijad,10,11,2.63,kodulehe tegemine,commercial
+et,kui palju maksab e poe tegemine,10,,0.00,e-poe tegemine,commercial
+et,kui palju maksab kodulehe tegemine,10,38,4.21,kodulehe tegemine,commercial
+et,lihtne e pood,10,,0.00,e-poe tegemine,info
+et,lihtsa kodulehe tegemine,10,,5.49,kodulehe tegemine,commercial
+et,mobiiliäpp,10,12,0.00,mobiilirakenduse arendus,info
+et,mobiilirakenduse arendus,10,,0.00,mobiilirakenduse arendus,commercial
+et,mobiilirakenduse tegemine,10,38,0.00,mobiilirakenduse arendus,commercial
+et,oma kodulehe tegemine,10,,0.00,kodulehe tegemine,info
+et,palju maksab kodulehe tegemine,10,38,5.21,kodulehe tegemine,commercial
+et,tarkvaraarendus ettevõtted,10,37,4.89,tarkvaraarendus,commercial
+et,tarkvaraarendusettevõte,10,,0.00,tarkvaraarendus,commercial
+et,tasuta e pood,10,,3.09,e-poe tegemine,info
+et,valmis e pood,10,44,5.57,e-poe tegemine,commercial
+et,veebilehe tegemine hind,10,70,5.31,veebilehe tegemine hind,commercial
+et,veebistuudio,10,,0.00,kodulehe tegemine,commercial
+et,wordpress arendaja,10,,0.00,wordpress arendaja,commercial
+et,wordpress arendus,10,,4.09,wordpress arendaja,commercial
+et,äpi arendus,0,,0.00,äpi arendus,commercial
+et,e poe haldus,0,,0.00,e-poe tegemine,commercial
+et,firma kodulehe tegemine,0,,0.00,kodulehe tegemine,commercial
+et,firmale kodulehe tegemine,0,,0.00,kodulehe tegemine,commercial
+et,flutter arendaja,0,,0.00,flutter arendaja,commercial
+et,kodulehe tegemine e pood,0,,0.00,e-poe tegemine,commercial
+et,MVP arendus,0,,0.00,MVP arendus,commercial
+et,rakenduse arendamine hind,0,,0.00,rakenduse arendamine hind,commercial
+et,soodne kodulehe tegemine,0,,0.00,kodulehe tegemine,commercial
+et,tehisintellekt rakendus,0,,0.00,tehisintellekt rakendus,info
